@@ -7,7 +7,7 @@
     "github_url": "https://github.com/replicate/cog-sdxl",
     "paper_url": "https://arxiv.org/abs/2307.01952",
     "license_url": "https://github.com/Stability-AI/generative-models/blob/main/model_licenses/LICENSE-SDXL1.0",
-    "run_count": 55502875,
+    "run_count": 0,
     "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/61004930-fb88-4e09-9bd4-74fd8b4aa677/sdxl_cover.png",
     "default_example": {
         "id": "dzsqmb3bg4lqpjkz2iptjqgccm",

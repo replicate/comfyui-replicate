@@ -7,7 +7,7 @@
     "github_url": "https://github.com/a16z-infra/cog-llama-template",
     "paper_url": "https://ai.meta.com/research/publications/llama-2-open-foundation-and-fine-tuned-chat-models/",
     "license_url": "https://ai.meta.com/resources/models-and-libraries/llama-downloads/",
-    "run_count": 8000388,
+    "run_count": 0,
     "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/33ad1ead-8954-4b3b-bd46-125c7e18143f/llama-logo.png",
     "default_example": {
         "id": "7xhvtyjbutohmf2ia5k2men57y",

@@ -7,15 +7,16 @@
     "github_url": "https://github.com/fofr/cog-comfyui-sd3",
     "paper_url": "https://arxiv.org/pdf/2403.03206",
     "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
-    "run_count": 247100,
-    "cover_image_url": "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp",
+    "run_count": 0,
+    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
     "default_example": {
-        "id": "qajxd850zxrgg0cg1kpr0h6nkg",
+        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
         "model": "stability-ai/stable-diffusion-3",
         "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
         "status": "succeeded",
         "input": {
             "cfg": 4.5,
+            "seed": 448433150,
             "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
             "aspect_ratio": "3:2",
             "output_format": "webp",
@@ -23,25 +24,26 @@
             "negative_prompt": "ugly, distorted"
         },
         "output": [
-            "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp"
+            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
         ],
-        "logs": "Random seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:03,  7.80it/s]\n 11%|█         | 3/28 [00:00<00:03,  7.81it/s]\n 14%|█▍        | 4/28 [00:00<00:03,  7.81it/s]\n 18%|█▊        | 5/28 [00:00<00:02,  7.78it/s]\n 21%|██▏       | 6/28 [00:00<00:02,  7.79it/s]\n 25%|██▌       | 7/28 [00:00<00:02,  7.73it/s]\n 29%|██▊       | 8/28 [00:01<00:02,  7.72it/s]\n 32%|███▏      | 9/28 [00:01<00:02,  7.73it/s]\n 36%|███▌      | 10/28 [00:01<00:02,  7.76it/s]\n 39%|███▉      | 11/28 [00:01<00:02,  7.77it/s]\n 43%|████▎     | 12/28 [00:01<00:02,  7.79it/s]\n 46%|████▋     | 13/28 [00:01<00:01,  7.78it/s]\n 50%|█████     | 14/28 [00:01<00:01,  7.80it/s]\n 54%|█████▎    | 15/28 [00:01<00:01,  7.78it/s]\n 57%|█████▋    | 16/28 [00:02<00:01,  7.78it/s]\n 61%|██████    | 17/28 [00:02<00:01,  7.77it/s]\n 64%|██████▍   | 18/28 [00:02<00:01,  7.78it/s]\n 68%|██████▊   | 19/28 [00:02<00:01,  7.79it/s]\n 71%|███████▏  | 20/28 [00:02<00:01,  7.78it/s]\n 75%|███████▌  | 21/28 [00:02<00:00,  7.77it/s]\n 79%|███████▊  | 22/28 [00:02<00:00,  7.79it/s]\n 82%|████████▏ | 23/28 [00:02<00:00,  7.78it/s]\n 86%|████████▌ | 24/28 [00:03<00:00,  7.78it/s]\n 89%|████████▉ | 25/28 [00:03<00:00,  7.77it/s]\n 93%|█████████▎| 26/28 [00:03<00:00,  7.77it/s]\n 96%|█████████▋| 27/28 [00:03<00:00,  7.75it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.76it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.77it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 3.99 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
+        "logs": "Seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 2.28 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
         "error": null,
         "metrics": {
-            "predict_time": 4.481755,
-            "total_time": 4.498663
+            "total_time": 2.798271,
+            "image_count": 1,
+            "predict_time": 2.781864785
         },
-        "created_at": "2024-06-12T14:50:18.239000Z",
-        "started_at": "2024-06-12T14:50:18.255908Z",
-        "completed_at": "2024-06-12T14:50:22.737663Z",
+        "created_at": "2024-06-26T18:02:16.683000Z",
+        "started_at": "2024-06-26T18:02:16.699406Z",
+        "completed_at": "2024-06-26T18:02:19.481271Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg",
-            "cancel": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg/cancel"
+            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
+            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
         }
     },
     "latest_version": {
-        "id": "3a1a11ffb268059b7f68a898c8b872324256df188bb98efffe3a8a84a3e55b46",
-        "created_at": "2024-06-14T20:23:45.292343+00:00",
+        "id": "a8d1db0fc9cd083dbbda86a399e2bf3c384df661479c9353c68fb6afb4436999",
+        "created_at": "2024-06-26T18:44:50.759868+00:00",
         "cog_version": "0.9.9",
         "openapi_schema": {
             "info": {
@@ -316,7 +318,7 @@
                             "guidance_scale": {
                                 "type": "number",
                                 "title": "Guidance Scale",
-                                "default": 4.5,
+                                "default": 7,
                                 "maximum": 50,
                                 "minimum": 0,
                                 "x-order": 5,
