@@ -221,7 +221,7 @@ def create_comfyui_node(schemas, model_info):
                     print("No output received from the model")
                     output = None
             else:
-                output = "".join(list(output))
+                output = "".join(list(output)).strip()
 
             return (output,)
 
