@@ -1,0 +1,715 @@
+{
+    "url": "https://replicate.com/meta/meta-llama-3-70b-instruct",
+    "owner": "meta",
+    "name": "meta-llama-3-70b-instruct",
+    "description": "A 70 billion parameter language model from Meta, fine tuned for chat completions",
+    "visibility": "public",
+    "github_url": "https://github.com/meta-llama/llama3",
+    "paper_url": null,
+    "license_url": "https://github.com/meta-llama/llama3/blob/main/LICENSE",
+    "run_count": 47171779,
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/12ed0c29-9236-4a21-ac5a-7faff3045ab1/meta-logo.png",
+    "default_example": {
+        "id": "7zr9g2asx9rgj0cey8698vm4d4",
+        "model": "meta/meta-llama-3-70b-instruct",
+        "version": "fbfb20b472b2f3bdd101412a9f70a0ed4fc0ced78a77ff00970ee7a2383c575d",
+        "status": "succeeded",
+        "input": {
+            "top_p": 0.9,
+            "prompt": "Work through this problem step by step:\n\nQ: Sarah has 7 llamas. Her friend gives her 3 more trucks of llamas. Each truck has 5 llamas. How many llamas does Sarah have in total?",
+            "max_tokens": 512,
+            "min_tokens": 0,
+            "temperature": 0.6,
+            "prompt_template": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{prompt}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+            "presence_penalty": 1.15,
+            "frequency_penalty": 0.2
+        },
+        "output": [
+            "Let",
+            "'s",
+            " break",
+            " this",
+            " problem",
+            " down",
+            " step",
+            " by",
+            " step",
+            ".\n\n",
+            "Step",
+            " ",
+            "1",
+            ":",
+            " Sarah",
+            " already",
+            " has",
+            " ",
+            "7",
+            " ll",
+            "amas",
+            ".\n\n",
+            "Step",
+            " ",
+            "2",
+            ":",
+            " Her",
+            " friend",
+            " gives",
+            " her",
+            " ",
+            "3",
+            " trucks",
+            " of",
+            " ll",
+            "amas",
+            ".",
+            " We",
+            " need",
+            " to",
+            " find",
+            " out",
+            " how",
+            " many",
+            " ll",
+            "amas",
+            " are",
+            " in",
+            " these",
+            " ",
+            "3",
+            " trucks",
+            ".\n\n",
+            "Step",
+            " ",
+            "3",
+            ":",
+            " Each",
+            " truck",
+            " has",
+            " ",
+            "5",
+            " ll",
+            "amas",
+            ",",
+            " so",
+            " we",
+            " multiply",
+            " the",
+            " number",
+            " of",
+            " trucks",
+            " (",
+            "3",
+            ")",
+            " by",
+            " the",
+            " number",
+            " of",
+            " ll",
+            "amas",
+            " per",
+            " truck",
+            " (",
+            "5",
+            "):\n\n",
+            "3",
+            " trucks",
+            " x",
+            " ",
+            "5",
+            " ll",
+            "amas",
+            "/tr",
+            "uck",
+            " =",
+            " ",
+            "3",
+            " x",
+            " ",
+            "5",
+            " =",
+            " ",
+            "15",
+            " ll",
+            "amas",
+            "\n\n",
+            "Step",
+            " ",
+            "4",
+            ":",
+            " Sarah",
+            " already",
+            " had",
+            " ",
+            "7",
+            " ll",
+            "amas",
+            ",",
+            " and",
+            " now",
+            " she",
+            " gets",
+            " ",
+            "15",
+            " more",
+            " ll",
+            "amas",
+            " from",
+            " her",
+            " friend",
+            ".",
+            " To",
+            " find",
+            " the",
+            " total",
+            " number",
+            " of",
+            " ll",
+            "amas",
+            " Sarah",
+            " has",
+            ",",
+            " we",
+            " add",
+            " the",
+            " two",
+            " numbers",
+            " together",
+            ":\n\n",
+            "7",
+            " ll",
+            "amas",
+            " (",
+            "already",
+            " had",
+            ")",
+            " +",
+            " ",
+            "15",
+            " ll",
+            "amas",
+            " (",
+            "from",
+            " her",
+            " friend",
+            ")",
+            " =",
+            " ",
+            "22",
+            " ll",
+            "amas",
+            "\n\n",
+            "Therefore",
+            ",",
+            " Sarah",
+            " has",
+            " a",
+            " total",
+            " of",
+            " ",
+            "22",
+            " ll",
+            "amas",
+            ".",
+            ""
+        ],
+        "logs": "",
+        "error": "",
+        "metrics": {
+            "total_time": 3.47,
+            "input_token_count": 54,
+            "tokens_per_second": 41.72998441835564,
+            "output_token_count": 166,
+            "predict_time": 4.045511
+        },
+        "created_at": "2024-04-18T16:31:19.530000Z",
+        "started_at": "2024-04-18T16:31:19Z",
+        "completed_at": "2024-04-18T16:31:23Z",
+        "urls": {
+            "stream": "https://streaming-api.svc.us.c.replicate.net/v1/streams/cvg64spwkdzlpdltjkmv6jotmwn2cq5btgxirmsbejvsxx7xp2la",
+            "get": "https://api.replicate.com/v1/predictions/7zr9g2asx9rgj0cey8698vm4d4",
+            "cancel": "https://api.replicate.com/v1/predictions/7zr9g2asx9rgj0cey8698vm4d4/cancel"
+        }
+    },
+    "latest_version": {
+        "id": "fbfb20b472b2f3bdd101412a9f70a0ed4fc0ced78a77ff00970ee7a2383c575d",
+        "created_at": "2024-04-17T21:58:54.806446+00:00",
+        "cog_version": "0.9.4",
+        "openapi_schema": {
+            "info": {
+                "title": "Cog",
+                "version": "0.1.0"
+            },
+            "paths": {
+                "/": {
+                    "get": {
+                        "summary": "Root",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Root  Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "root__get"
+                    }
+                },
+                "/ready": {
+                    "get": {
+                        "summary": "Ready",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Ready Ready Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "ready_ready_get"
+                    }
+                },
+                "/shutdown": {
+                    "post": {
+                        "summary": "Start Shutdown",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Start Shutdown Shutdown Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "start_shutdown_shutdown_post"
+                    }
+                },
+                "/predictions": {
+                    "post": {
+                        "summary": "Predict",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model",
+                        "operationId": "predict_predictions_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/PredictionRequest"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "/health-check": {
+                    "get": {
+                        "summary": "Healthcheck",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Healthcheck Health Check Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "healthcheck_health_check_get"
+                    }
+                },
+                "/predictions/{prediction_id}": {
+                    "put": {
+                        "summary": "Predict Idempotent",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            },
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model (idempotent creation).",
+                        "operationId": "predict_idempotent_predictions__prediction_id__put",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/components/schemas/PredictionRequest"
+                                            }
+                                        ],
+                                        "title": "Prediction Request"
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                },
+                "/predictions/{prediction_id}/cancel": {
+                    "post": {
+                        "summary": "Cancel",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Cancel Predictions  Prediction Id  Cancel Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            }
+                        ],
+                        "description": "Cancel a running prediction",
+                        "operationId": "cancel_predictions__prediction_id__cancel_post"
+                    }
+                }
+            },
+            "openapi": "3.0.2",
+            "components": {
+                "schemas": {
+                    "Input": {
+                        "type": "object",
+                        "title": "Input",
+                        "properties": {
+                            "top_k": {
+                                "type": "integer",
+                                "title": "Top K",
+                                "default": 50,
+                                "x-order": 5,
+                                "description": "The number of highest probability tokens to consider for generating the output. If > 0, only keep the top k tokens with highest probability (top-k filtering)."
+                            },
+                            "top_p": {
+                                "type": "number",
+                                "title": "Top P",
+                                "default": 0.9,
+                                "x-order": 4,
+                                "description": "A probability threshold for generating the output. If < 1.0, only keep the top tokens with cumulative probability >= top_p (nucleus filtering). Nucleus filtering is described in Holtzman et al. (http://arxiv.org/abs/1904.09751)."
+                            },
+                            "prompt": {
+                                "type": "string",
+                                "title": "Prompt",
+                                "default": "",
+                                "x-order": 0,
+                                "description": "Prompt"
+                            },
+                            "max_tokens": {
+                                "type": "integer",
+                                "title": "Max Tokens",
+                                "default": 512,
+                                "x-order": 2,
+                                "description": "The maximum number of tokens the model should generate as output."
+                            },
+                            "min_tokens": {
+                                "type": "integer",
+                                "title": "Min Tokens",
+                                "default": 0,
+                                "x-order": 1,
+                                "description": "The minimum number of tokens the model should generate as output."
+                            },
+                            "temperature": {
+                                "type": "number",
+                                "title": "Temperature",
+                                "default": 0.6,
+                                "x-order": 3,
+                                "description": "The value used to modulate the next token probabilities."
+                            },
+                            "prompt_template": {
+                                "type": "string",
+                                "title": "Prompt Template",
+                                "default": "{prompt}",
+                                "x-order": 8,
+                                "description": "Prompt template. The string `{prompt}` will be substituted for the input prompt. If you want to generate dialog output, use this template as a starting point and construct the prompt string manually, leaving `prompt_template={prompt}`."
+                            },
+                            "presence_penalty": {
+                                "type": "number",
+                                "title": "Presence Penalty",
+                                "default": 1.15,
+                                "x-order": 6,
+                                "description": "Presence penalty"
+                            },
+                            "frequency_penalty": {
+                                "type": "number",
+                                "title": "Frequency Penalty",
+                                "default": 0.2,
+                                "x-order": 7,
+                                "description": "Frequency penalty"
+                            }
+                        }
+                    },
+                    "Output": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Output",
+                        "x-cog-array-type": "iterator",
+                        "x-cog-array-display": "concatenate"
+                    },
+                    "Status": {
+                        "enum": [
+                            "starting",
+                            "processing",
+                            "succeeded",
+                            "canceled",
+                            "failed"
+                        ],
+                        "type": "string",
+                        "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "WebhookEvent": {
+                        "enum": [
+                            "start",
+                            "output",
+                            "logs",
+                            "completed"
+                        ],
+                        "type": "string",
+                        "title": "WebhookEvent",
+                        "description": "An enumeration."
+                    },
+                    "ValidationError": {
+                        "type": "object",
+                        "title": "ValidationError",
+                        "required": [
+                            "loc",
+                            "msg",
+                            "type"
+                        ],
+                        "properties": {
+                            "loc": {
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "title": "Location"
+                            },
+                            "msg": {
+                                "type": "string",
+                                "title": "Message"
+                            },
+                            "type": {
+                                "type": "string",
+                                "title": "Error Type"
+                            }
+                        }
+                    },
+                    "PredictionRequest": {
+                        "type": "object",
+                        "title": "PredictionRequest",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "webhook": {
+                                "type": "string",
+                                "title": "Webhook",
+                                "format": "uri",
+                                "maxLength": 65536,
+                                "minLength": 1
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            },
+                            "webhook_events_filter": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/WebhookEvent"
+                                },
+                                "default": [
+                                    "start",
+                                    "output",
+                                    "logs",
+                                    "completed"
+                                ]
+                            }
+                        }
+                    },
+                    "PredictionResponse": {
+                        "type": "object",
+                        "title": "PredictionResponse",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "logs": {
+                                "type": "string",
+                                "title": "Logs",
+                                "default": ""
+                            },
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/Output"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            },
+                            "metrics": {
+                                "type": "object",
+                                "title": "Metrics"
+                            },
+                            "version": {
+                                "type": "string",
+                                "title": "Version"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "started_at": {
+                                "type": "string",
+                                "title": "Started At",
+                                "format": "date-time"
+                            },
+                            "completed_at": {
+                                "type": "string",
+                                "title": "Completed At",
+                                "format": "date-time"
+                            }
+                        }
+                    },
+                    "HTTPValidationError": {
+                        "type": "object",
+                        "title": "HTTPValidationError",
+                        "properties": {
+                            "detail": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                },
+                                "title": "Detail"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
