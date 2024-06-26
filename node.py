@@ -8,6 +8,7 @@ import io
 from torchvision import transforms
 import torch
 import base64
+import time
 
 
 def convert_to_comfyui_input_type(openapi_type, openapi_format=None):
@@ -74,6 +75,8 @@ def convert_schema_to_comfyui(schema, schemas):
         else:
             input_types["optional"][prop_name] = (input_type, input_config)
 
+    input_types["optional"]["force_rerun"] = ("BOOLEAN", {"default": False})
+
     return reorder_input_types(input_types, schema)
 
 
@@ -92,6 +95,11 @@ def reorder_input_types(input_types, schema):
             ordered_input_types["optional"][prop_name] = input_types["optional"][
                 prop_name
             ]
+
+    # force_rerun is always at the end of optional inputs
+    ordered_input_types["optional"]["force_rerun"] = input_types["optional"][
+        "force_rerun"
+    ]
 
     return ordered_input_types
 
@@ -128,6 +136,10 @@ def create_comfyui_node(schemas, model_info):
 
     class ReplicateToComfyUI:
         @classmethod
+        def IS_CHANGED(cls, **kwargs):
+            return time.time() if kwargs["force_rerun"] else ""
+
+        @classmethod
         def INPUT_TYPES(cls):
             return convert_schema_to_comfyui(input_schema, schemas)
 
@@ -160,7 +172,6 @@ def create_comfyui_node(schemas, model_info):
                     if input_type == "IMAGE":
                         kwargs[key] = self.handle_image_input(value)
 
-            print(f"Running {replicate_model} with {kwargs}")
             # Truncate any base64 values in kwargs for logging
             truncated_kwargs = {
                 k: v[:20] + "..."
