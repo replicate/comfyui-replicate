@@ -11,7 +11,7 @@
     "cover_image_url": null,
     "default_example": null,
     "latest_version": {
-        "id": "b63acc3f54e3c08cb3b081f049ebc881420035dfc6db48f554530e9c4bc02ba3",
+        "id": "5a6809ca6288247d06daf6365557e5e429063f32a21146b2a807c682652136b8",
         "created_at": "2024-04-19T21:06:45.886873+00:00",
         "cog_version": "0.10.0-alpha5",
         "openapi_schema": {
