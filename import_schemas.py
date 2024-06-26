@@ -3,9 +3,23 @@ import json
 import os
 
 models_to_import = [
+    "andreasjansson/blip-2",
+    "bytedance/sdxl-lightning-4step",
     "fofr/face-to-many",
+    "fofr/sd3-with-chaos",
+    "fofr/toolkit",
+    "meta/llama-2-70b-chat",
     "meta/meta-llama-3-70b-instruct",
     "meta/meta-llama-3-8b-instruct",
+    "mistralai/mixtral-8x7b-instruct-v0.1",
+    "philz1337x/clarity-upscaler",
+    "salesforce/blip",
+    "smoretalk/rembg-enhance",
+    "stability-ai/sdxl",
+    "stability-ai/stable-diffusion-3",
+    "yorickvp/llava-13b",
+    "yorickvp/llava-v1.6-34b",
+    "yorickvp/llava-v1.6-mistral-7b",
 ]
 
 

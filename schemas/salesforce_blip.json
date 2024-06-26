@@ -1,0 +1,254 @@
+{
+    "url": "https://replicate.com/salesforce/blip",
+    "owner": "salesforce",
+    "name": "blip",
+    "description": "Generate image captions",
+    "visibility": "public",
+    "github_url": "https://github.com/salesforce/BLIP",
+    "paper_url": "https://arxiv.org/abs/2201.12086",
+    "license_url": "https://github.com/salesforce/BLIP/blob/main/LICENSE.txt",
+    "run_count": 90263850,
+    "cover_image_url": "https://replicate.delivery/mgxm/f4e50a7b-e8ca-432f-8e68-082034ebcc70/demo.jpg",
+    "default_example": {
+        "id": "i5xhgehjkjfyhlx7dg2f5tnrti",
+        "model": "salesforce/blip",
+        "version": "5a977fcb091363cc3938cc870c9f6242f5938267040e6837373387bb90d23099",
+        "status": "succeeded",
+        "input": {
+            "task": "image_captioning",
+            "image": "https://replicate.delivery/mgxm/f4e50a7b-e8ca-432f-8e68-082034ebcc70/demo.jpg"
+        },
+        "output": [
+            {
+                "text": "Caption: a woman sitting on the beach with a dog"
+            }
+        ],
+        "logs": null,
+        "error": null,
+        "metrics": {
+            "predict_time": 6.644098,
+            "total_time": 100.906686
+        },
+        "created_at": "2022-02-06T17:52:02.993876Z",
+        "started_at": "2022-02-06T17:53:37.256464Z",
+        "completed_at": "2022-02-06T17:53:43.900562Z",
+        "urls": {
+            "get": "https://api.replicate.com/v1/predictions/i5xhgehjkjfyhlx7dg2f5tnrti",
+            "cancel": "https://api.replicate.com/v1/predictions/i5xhgehjkjfyhlx7dg2f5tnrti/cancel"
+        }
+    },
+    "latest_version": {
+        "id": "2e1dddc8621f72155f24cf2e0adbde548458d3cab9f00c0139eea840d0ac4746",
+        "created_at": "2022-09-29T02:21:53.164660+00:00",
+        "cog_version": "0.4.1",
+        "openapi_schema": {
+            "info": {
+                "title": "Cog",
+                "version": "0.1.0"
+            },
+            "paths": {
+                "/": {
+                    "get": {
+                        "summary": "Root",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {}
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "root__get"
+                    }
+                },
+                "/predictions": {
+                    "post": {
+                        "summary": "Predict",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/Response"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "description": "Run a single prediction on the model",
+                        "operationId": "predict_predictions_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/Request"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "openapi": "3.0.2",
+            "components": {
+                "schemas": {
+                    "task": {
+                        "enum": [
+                            "image_captioning",
+                            "visual_question_answering",
+                            "image_text_matching"
+                        ],
+                        "type": "string",
+                        "title": "task",
+                        "description": "An enumeration."
+                    },
+                    "Input": {
+                        "type": "object",
+                        "title": "Input",
+                        "required": [
+                            "image"
+                        ],
+                        "properties": {
+                            "task": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/task"
+                                    }
+                                ],
+                                "default": "image_captioning",
+                                "x-order": 1,
+                                "description": "Choose a task."
+                            },
+                            "image": {
+                                "type": "string",
+                                "title": "Image",
+                                "format": "uri",
+                                "x-order": 0,
+                                "description": "Input image"
+                            },
+                            "caption": {
+                                "type": "string",
+                                "title": "Caption",
+                                "x-order": 3,
+                                "description": "Type caption for the input image for image text matching task."
+                            },
+                            "question": {
+                                "type": "string",
+                                "title": "Question",
+                                "x-order": 2,
+                                "description": "Type question for the input image for visual question answering task."
+                            }
+                        }
+                    },
+                    "Output": {
+                        "type": "string",
+                        "title": "Output"
+                    },
+                    "Status": {
+                        "enum": [
+                            "processing",
+                            "succeeded",
+                            "failed"
+                        ],
+                        "type": "string",
+                        "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "Request": {
+                        "type": "object",
+                        "title": "Request",
+                        "properties": {
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            }
+                        },
+                        "description": "The request body for a prediction"
+                    },
+                    "Response": {
+                        "type": "object",
+                        "title": "Response",
+                        "required": [
+                            "status"
+                        ],
+                        "properties": {
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/Output"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            }
+                        },
+                        "description": "The response body for a prediction"
+                    },
+                    "ValidationError": {
+                        "type": "object",
+                        "title": "ValidationError",
+                        "required": [
+                            "loc",
+                            "msg",
+                            "type"
+                        ],
+                        "properties": {
+                            "loc": {
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "title": "Location"
+                            },
+                            "msg": {
+                                "type": "string",
+                                "title": "Message"
+                            },
+                            "type": {
+                                "type": "string",
+                                "title": "Error Type"
+                            }
+                        }
+                    },
+                    "HTTPValidationError": {
+                        "type": "object",
+                        "title": "HTTPValidationError",
+                        "properties": {
+                            "detail": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                },
+                                "title": "Detail"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,49 +1,59 @@
 {
-    "url": "https://replicate.com/fofr/face-to-many",
-    "owner": "fofr",
-    "name": "face-to-many",
-    "description": "Turn a face into 3D, emoji, pixel art, video game, claymation or toy",
+    "url": "https://replicate.com/philz1337x/clarity-upscaler",
+    "owner": "philz1337x",
+    "name": "clarity-upscaler",
+    "description": "High resolution image Upscaler and Enhancer. Use at ClarityAI.co. A free Magnific alternative. Twitter/X: @philz1337x",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-face-to-many",
-    "paper_url": null,
-    "license_url": "https://github.com/fofr/cog-face-to-many/blob/main/weights_licenses.md",
-    "run_count": 10959565,
-    "cover_image_url": "https://replicate.delivery/pbxt/R1ayGe5efoQbaoRzgDEJdLsIZ20lWRiprvoW1F4uKAZIha6kA/ComfyUI_00001_.png",
+    "github_url": "https://github.com/philz1337x/clarity-upscaler",
+    "paper_url": "https://clarityai.co",
+    "license_url": "https://github.com/philz1337x/clarity-upscaler/blob/main/LICENSE.txt",
+    "run_count": 2714449,
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/76fbe6df-517d-480a-a6e4-dce383b40bbb/Bildschirmfoto_2024-03-30_um_09.2.png",
     "default_example": {
-        "id": "pft2dadbcdnh25z5ktctsj3sze",
-        "model": "fofr/face-to-many",
-        "version": "edc6439ac55af138defbca7c472b38bcdd62c61797e8e0c2fae88696cd8afb25",
+        "id": "snbeynewvsrgp0ceqsc8gjk6sm",
+        "model": "philz1337x/clarity-upscaler",
+        "version": "3bb9d3412f14261c2f8cfa15a56dd7b33f44af54777c517b860a3f678a5d7f3b",
         "status": "succeeded",
         "input": {
-            "image": "https://replicate.delivery/pbxt/KW7Getr2zD5ECxySdBZtLmPa322lNkXrpkMdKcmxeaDmq2b1/MTk4MTczMTkzNzI1Mjg5NjYy.webp",
-            "style": "Clay",
-            "prompt": "a person in a post apocalyptic war game",
-            "negative_prompt": "",
-            "prompt_strength": 4.5,
-            "denoising_strength": 0.65,
-            "instant_id_strength": 0.8
+            "seed": 1337,
+            "image": "https://replicate.delivery/pbxt/KiDB5iqtTcxiTI17WASotG1Ei0TNJCztdU6J02pnMYAd8B1X/13_before-4.png",
+            "prompt": "masterpiece, best quality, highres, <lora:more_details:0.5> <lora:SDXLrender_v2.0:1>",
+            "dynamic": 6,
+            "sd_model": "juggernaut_reborn.safetensors [338b85bc4f]",
+            "scheduler": "DPM++ 3M SDE Karras",
+            "creativity": 0.35,
+            "lora_links": "",
+            "downscaling": false,
+            "resemblance": 0.6,
+            "scale_factor": 2,
+            "tiling_width": 112,
+            "tiling_height": 144,
+            "custom_sd_model": "",
+            "negative_prompt": "(worst quality, low quality, normal quality:2) JuggernautNegative-neg",
+            "num_inference_steps": 18,
+            "downscaling_resolution": 768
         },
         "output": [
-            "https://replicate.delivery/pbxt/R1ayGe5efoQbaoRzgDEJdLsIZ20lWRiprvoW1F4uKAZIha6kA/ComfyUI_00001_.png"
+            "https://replicate.delivery/pbxt/00paK5p2fY36XykEcte0skfqnSl3akRGTm4TC2l2wiU0E4QlA/1337-89fd2a6e-f5bd-11ee-87b9-bec9d6ff70a9.png"
         ],
-        "logs": "Random seed set to: 3672888193\nChecking inputs\n✅ /tmp/inputs/input.webp\n====================================\nRunning workflow\ngot prompt\nExecuting node 3, title: LoRA Stacker, class type: LoRA Stacker\nExecuting node 2, title: Efficient Loader, class type: Efficient Loader\nRequested to load SDXLClipModel\nLoading 1 new model\n----------------------------------------\n\u001b[36mEfficient Loader Models Cache:\u001b[0m\nCkpt:\n[1] albedobaseXL_v13\nLora:\n[1] base_ckpt: albedobaseXL_v13\nlora(mod,clip): ClayAnimationRedm(1,1)\nExecuting node 41, title: Apply InstantID, class type: ApplyInstantID\nExecuting node 51, title: VAE Encode, class type: VAEEncode\nExecuting node 4, title: KSampler (Efficient), class type: KSampler (Efficient)\nRequested to load SDXL\nRequested to load ControlNet\nRequested to load ControlNet\nLoading 3 new models\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|▌         | 1/20 [00:00<00:05,  3.26it/s]\n 10%|█         | 2/20 [00:00<00:05,  3.26it/s]\n 15%|█▌        | 3/20 [00:00<00:05,  3.28it/s]\n 20%|██        | 4/20 [00:01<00:04,  3.28it/s]\n 25%|██▌       | 5/20 [00:01<00:04,  3.28it/s]\n 30%|███       | 6/20 [00:01<00:04,  3.29it/s]\n 35%|███▌      | 7/20 [00:02<00:03,  3.27it/s]\n 40%|████      | 8/20 [00:02<00:03,  3.27it/s]\n 45%|████▌     | 9/20 [00:02<00:03,  3.29it/s]\n 50%|█████     | 10/20 [00:03<00:03,  3.29it/s]\n 55%|█████▌    | 11/20 [00:03<00:02,  3.29it/s]\n 60%|██████    | 12/20 [00:03<00:02,  3.30it/s]\n 65%|██████▌   | 13/20 [00:03<00:02,  3.30it/s]\n 70%|███████   | 14/20 [00:04<00:01,  3.30it/s]\n 75%|███████▌  | 15/20 [00:04<00:01,  3.30it/s]\n 80%|████████  | 16/20 [00:04<00:01,  3.32it/s]\n 85%|████████▌ | 17/20 [00:05<00:00,  3.32it/s]\n 90%|█████████ | 18/20 [00:05<00:00,  3.33it/s]\n 95%|█████████▌| 19/20 [00:05<00:00,  3.37it/s]\n100%|██████████| 20/20 [00:06<00:00,  3.41it/s]\n100%|██████████| 20/20 [00:06<00:00,  3.31it/s]\nExecuting node 5, title: Save Image, class type: SaveImage\nPrompt executed in 20.70 seconds\noutputs:  {'4': {'images': []}, '5': {'images': [{'filename': 'ComfyUI_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nContents of /tmp/outputs:\nComfyUI_00001_.png",
+        "logs": "Running prediction\n[Tiled Diffusion] upscaling image with 4x-UltraSharp...\n[Tiled Diffusion] ControlNet found, support is enabled.\n2024-04-08 15:34:42,215 - ControlNet - \u001b[0;32mINFO\u001b[0m - unit_separate = False, style_align = False\n2024-04-08 15:34:42,215 - ControlNet - \u001b[0;32mINFO\u001b[0m - Loading model from cache: control_v11f1e_sd15_tile\n2024-04-08 15:34:42,234 - ControlNet - \u001b[0;32mINFO\u001b[0m - Using preprocessor: tile_resample\n2024-04-08 15:34:42,234 - ControlNet - \u001b[0;32mINFO\u001b[0m - preprocessor resolution = 1536\n2024-04-08 15:34:42,310 - ControlNet - \u001b[0;32mINFO\u001b[0m - ControlNet Hooked - Time = 0.0993812084197998\nMultiDiffusion hooked into 'DPM++ 3M SDE Karras' sampler, Tile size: 144x112, Tile count: 4, Batch size: 4, Tile batches: 1 (ext: ContrlNet)\n[Tiled VAE]: the input size is tiny and unnecessary to tile.\nMultiDiffusion Sampling:   0%|          | 0/10 [00:00<?, ?it/s]\n  0%|          | 0/7 [00:00<?, ?it/s]\u001b[A\nTotal progress:   0%|          | 0/7 [00:00<?, ?it/s]\u001b[A\n 14%|█▍        | 1/7 [00:00<00:05,  1.10it/s]\u001b[A\nTotal progress:  29%|██▊       | 2/7 [00:00<00:02,  2.22it/s]\u001b[A\n 29%|██▊       | 2/7 [00:01<00:04,  1.11it/s]\u001b[A\nTotal progress:  43%|████▎     | 3/7 [00:01<00:02,  1.57it/s]\u001b[A\n 43%|████▎     | 3/7 [00:02<00:03,  1.11it/s]\u001b[A\nTotal progress:  57%|█████▋    | 4/7 [00:02<00:02,  1.36it/s]\u001b[A\n 57%|█████▋    | 4/7 [00:03<00:02,  1.11it/s]\u001b[A\nTotal progress:  71%|███████▏  | 5/7 [00:03<00:01,  1.26it/s]\u001b[A\n 71%|███████▏  | 5/7 [00:04<00:01,  1.11it/s]\u001b[A\nTotal progress:  86%|████████▌ | 6/7 [00:04<00:00,  1.21it/s]\u001b[A\n 86%|████████▌ | 6/7 [00:05<00:00,  1.11it/s]\u001b[A\n100%|██████████| 7/7 [00:06<00:00,  1.11it/s]\u001b[A\n100%|██████████| 7/7 [00:06<00:00,  1.11it/s]\nTotal progress: 100%|██████████| 7/7 [00:05<00:00,  1.18it/s]\u001b[A[Tiled VAE]: the input size is tiny and unnecessary to tile.\nTotal progress: 100%|██████████| 7/7 [00:06<00:00,  1.18it/s]\u001b[A\nTotal progress: 100%|██████████| 7/7 [00:06<00:00,  1.11it/s]\nPrediction took 11.742665767669678 seconds",
         "error": null,
         "metrics": {
-            "predict_time": 23.016322,
-            "total_time": 23.051238
+            "predict_time": 12.806754,
+            "total_time": 12.82782
         },
-        "created_at": "2024-03-05T13:45:50.761895Z",
-        "started_at": "2024-03-05T13:45:50.796811Z",
-        "completed_at": "2024-03-05T13:46:13.813133Z",
+        "created_at": "2024-04-08T15:34:38.558000Z",
+        "started_at": "2024-04-08T15:34:38.579066Z",
+        "completed_at": "2024-04-08T15:34:51.385820Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/pft2dadbcdnh25z5ktctsj3sze",
-            "cancel": "https://api.replicate.com/v1/predictions/pft2dadbcdnh25z5ktctsj3sze/cancel"
+            "get": "https://api.replicate.com/v1/predictions/snbeynewvsrgp0ceqsc8gjk6sm",
+            "cancel": "https://api.replicate.com/v1/predictions/snbeynewvsrgp0ceqsc8gjk6sm/cancel"
         }
     },
     "latest_version": {
-        "id": "a07f252abbbd832009640b27f063ea52d87d7a23a185ca165bec23b5adc8deaf",
-        "created_at": "2024-04-09T11:22:38.160380+00:00",
-        "cog_version": "0.8.6",
+        "id": "dfad41707589d68ecdccd1dfa600d55a208f9310748e44bfe35b4a6291453d5e",
+        "created_at": "2024-06-24T10:54:00.909883+00:00",
+        "cog_version": "0.8.0-beta11",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -264,108 +274,192 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "image"
+                        ],
                         "properties": {
+                            "mask": {
+                                "type": "string",
+                                "title": "Mask",
+                                "format": "uri",
+                                "x-order": 18,
+                                "description": "Mask image to mark areas that should be preserved during upscaling"
+                            },
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 8,
-                                "description": "Fix the random seed for reproducibility"
+                                "default": 1337,
+                                "x-order": 12,
+                                "description": "Random seed. Leave blank to randomize the seed"
                             },
                             "image": {
                                 "type": "string",
                                 "title": "Image",
                                 "format": "uri",
                                 "x-order": 0,
-                                "description": "An image of a person to be converted"
-                            },
-                            "style": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/style"
-                                    }
-                                ],
-                                "default": "3D",
-                                "x-order": 1,
-                                "description": "Style to convert to"
+                                "description": "input image"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "a person",
-                                "x-order": 2
+                                "default": "masterpiece, best quality, highres, <lora:more_details:0.5> <lora:SDXLrender_v2.0:1>",
+                                "x-order": 1,
+                                "description": "Prompt"
                             },
-                            "lora_scale": {
+                            "dynamic": {
                                 "type": "number",
-                                "title": "Lora Scale",
-                                "default": 1,
+                                "title": "Dynamic",
+                                "default": 6,
+                                "maximum": 50,
+                                "minimum": 1,
+                                "x-order": 4,
+                                "description": "HDR, try from 3 - 9"
+                            },
+                            "handfix": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/handfix"
+                                    }
+                                ],
+                                "default": "disabled",
+                                "x-order": 19,
+                                "description": "Use clarity to fix hands in the image"
+                            },
+                            "pattern": {
+                                "type": "boolean",
+                                "title": "Pattern",
+                                "default": false,
+                                "x-order": 20,
+                                "description": "Upscale a pattern with seamless tiling"
+                            },
+                            "sharpen": {
+                                "type": "number",
+                                "title": "Sharpen",
+                                "default": 0,
+                                "maximum": 10,
+                                "minimum": 0,
+                                "x-order": 17,
+                                "description": "Sharpen the image after upscaling. The higher the value, the more sharpening is applied. 0 for no sharpening"
+                            },
+                            "sd_model": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/sd_model"
+                                    }
+                                ],
+                                "default": "juggernaut_reborn.safetensors [338b85bc4f]",
+                                "x-order": 9,
+                                "description": "Stable Diffusion model checkpoint"
+                            },
+                            "scheduler": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/scheduler"
+                                    }
+                                ],
+                                "default": "DPM++ 3M SDE Karras",
+                                "x-order": 10,
+                                "description": "scheduler"
+                            },
+                            "creativity": {
+                                "type": "number",
+                                "title": "Creativity",
+                                "default": 0.35,
                                 "maximum": 1,
                                 "minimum": 0,
-                                "x-order": 10,
-                                "description": "How strong the LoRA will be"
+                                "x-order": 5,
+                                "description": "Creativity, try from 0.3 - 0.9"
                             },
-                            "custom_lora_url": {
+                            "lora_links": {
                                 "type": "string",
-                                "title": "Custom Lora Url",
-                                "x-order": 9,
-                                "description": "URL to a Replicate custom LoRA. Must be in the format https://replicate.delivery/pbxt/[id]/trained_model.tar or https://pbxt.replicate.delivery/[id]/trained_model.tar"
+                                "title": "Lora Links",
+                                "default": "",
+                                "x-order": 15,
+                                "description": "Link to a lora file you want to use in your upscaling. Multiple links possible, seperated by comma"
+                            },
+                            "downscaling": {
+                                "type": "boolean",
+                                "title": "Downscaling",
+                                "default": false,
+                                "x-order": 13,
+                                "description": "Downscale the image before upscaling. Can improve quality and speed for images with high resolution but lower quality"
+                            },
+                            "resemblance": {
+                                "type": "number",
+                                "title": "Resemblance",
+                                "default": 0.6,
+                                "maximum": 3,
+                                "minimum": 0,
+                                "x-order": 6,
+                                "description": "Resemblance, try from 0.3 - 1.6"
+                            },
+                            "scale_factor": {
+                                "type": "number",
+                                "title": "Scale Factor",
+                                "default": 2,
+                                "x-order": 3,
+                                "description": "Scale factor"
+                            },
+                            "tiling_width": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/tiling_width"
+                                    }
+                                ],
+                                "default": 112,
+                                "x-order": 7,
+                                "description": "Fractality, set lower tile width for a high Fractality"
+                            },
+                            "output_format": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/output_format"
+                                    }
+                                ],
+                                "default": "png",
+                                "x-order": 21,
+                                "description": "Format of the output images"
+                            },
+                            "tiling_height": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/tiling_height"
+                                    }
+                                ],
+                                "default": 144,
+                                "x-order": 8,
+                                "description": "Fractality, set lower tile height for a high Fractality"
+                            },
+                            "custom_sd_model": {
+                                "type": "string",
+                                "title": "Custom Sd Model",
+                                "default": "",
+                                "x-order": 16
                             },
                             "negative_prompt": {
                                 "type": "string",
                                 "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 3,
-                                "description": "Things you do not want in the image"
+                                "default": "(worst quality, low quality, normal quality:2) JuggernautNegative-neg",
+                                "x-order": 2,
+                                "description": "Negative Prompt"
                             },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 4.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 5,
-                                "description": "Strength of the prompt. This is the CFG scale, higher numbers lead to stronger prompt, lower numbers will keep more of a likeness to the original."
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 18,
+                                "maximum": 100,
+                                "minimum": 1,
+                                "x-order": 11,
+                                "description": "Number of denoising steps"
                             },
-                            "denoising_strength": {
-                                "type": "number",
-                                "title": "Denoising Strength",
-                                "default": 0.65,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 4,
-                                "description": "How much of the original image to keep. 1 is the complete destruction of the original image, 0 is the original image"
-                            },
-                            "instant_id_strength": {
-                                "type": "number",
-                                "title": "Instant Id Strength",
-                                "default": 1,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "How strong the InstantID will be."
-                            },
-                            "control_depth_strength": {
-                                "type": "number",
-                                "title": "Control Depth Strength",
-                                "default": 0.8,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 6,
-                                "description": "Strength of depth controlnet. The bigger this is, the more controlnet affects the output."
+                            "downscaling_resolution": {
+                                "type": "integer",
+                                "title": "Downscaling Resolution",
+                                "default": 768,
+                                "x-order": 14,
+                                "description": "Downscaling resolution"
                             }
                         }
-                    },
-                    "style": {
-                        "enum": [
-                            "3D",
-                            "Emoji",
-                            "Video game",
-                            "Pixels",
-                            "Clay",
-                            "Toy"
-                        ],
-                        "type": "string",
-                        "title": "style",
-                        "description": "An enumeration."
                     },
                     "Output": {
                         "type": "array",
@@ -387,6 +481,63 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "handfix": {
+                        "enum": [
+                            "disabled",
+                            "hands_only",
+                            "image_and_hands"
+                        ],
+                        "type": "string",
+                        "title": "handfix",
+                        "description": "An enumeration."
+                    },
+                    "sd_model": {
+                        "enum": [
+                            "epicrealism_naturalSinRC1VAE.safetensors [84d76a0328]",
+                            "juggernaut_reborn.safetensors [338b85bc4f]",
+                            "flat2DAnimerge_v45Sharp.safetensors"
+                        ],
+                        "type": "string",
+                        "title": "sd_model",
+                        "description": "An enumeration."
+                    },
+                    "scheduler": {
+                        "enum": [
+                            "DPM++ 2M Karras",
+                            "DPM++ SDE Karras",
+                            "DPM++ 2M SDE Exponential",
+                            "DPM++ 2M SDE Karras",
+                            "Euler a",
+                            "Euler",
+                            "LMS",
+                            "Heun",
+                            "DPM2",
+                            "DPM2 a",
+                            "DPM++ 2S a",
+                            "DPM++ 2M",
+                            "DPM++ SDE",
+                            "DPM++ 2M SDE",
+                            "DPM++ 2M SDE Heun",
+                            "DPM++ 2M SDE Heun Karras",
+                            "DPM++ 2M SDE Heun Exponential",
+                            "DPM++ 3M SDE",
+                            "DPM++ 3M SDE Karras",
+                            "DPM++ 3M SDE Exponential",
+                            "DPM fast",
+                            "DPM adaptive",
+                            "LMS Karras",
+                            "DPM2 Karras",
+                            "DPM2 a Karras",
+                            "DPM++ 2S a Karras",
+                            "Restart",
+                            "DDIM",
+                            "PLMS",
+                            "UniPC"
+                        ],
+                        "type": "string",
+                        "title": "scheduler",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -396,6 +547,62 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
+                        "description": "An enumeration."
+                    },
+                    "tiling_width": {
+                        "enum": [
+                            16,
+                            32,
+                            48,
+                            64,
+                            80,
+                            96,
+                            112,
+                            128,
+                            144,
+                            160,
+                            176,
+                            192,
+                            208,
+                            224,
+                            240,
+                            256
+                        ],
+                        "type": "integer",
+                        "title": "tiling_width",
+                        "description": "An enumeration."
+                    },
+                    "output_format": {
+                        "enum": [
+                            "webp",
+                            "jpg",
+                            "png"
+                        ],
+                        "type": "string",
+                        "title": "output_format",
+                        "description": "An enumeration."
+                    },
+                    "tiling_height": {
+                        "enum": [
+                            16,
+                            32,
+                            48,
+                            64,
+                            80,
+                            96,
+                            112,
+                            128,
+                            144,
+                            160,
+                            176,
+                            192,
+                            208,
+                            224,
+                            240,
+                            256
+                        ],
+                        "type": "integer",
+                        "title": "tiling_height",
                         "description": "An enumeration."
                     },
                     "ValidationError": {
@@ -465,10 +672,11 @@
                                 },
                                 "default": [
                                     "start",
-                                    "output",
                                     "logs",
-                                    "completed"
-                                ]
+                                    "completed",
+                                    "output"
+                                ],
+                                "uniqueItems": true
                             }
                         }
                     },

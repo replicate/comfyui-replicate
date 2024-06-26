@@ -1,0 +1,1063 @@
+{
+    "url": "https://replicate.com/stability-ai/sdxl",
+    "owner": "stability-ai",
+    "name": "sdxl",
+    "description": "A text-to-image generative AI model that creates beautiful images",
+    "visibility": "public",
+    "github_url": "https://github.com/replicate/cog-sdxl",
+    "paper_url": "https://arxiv.org/abs/2307.01952",
+    "license_url": "https://github.com/Stability-AI/generative-models/blob/main/model_licenses/LICENSE-SDXL1.0",
+    "run_count": 55490453,
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/61004930-fb88-4e09-9bd4-74fd8b4aa677/sdxl_cover.png",
+    "default_example": {
+        "id": "dzsqmb3bg4lqpjkz2iptjqgccm",
+        "model": "stability-ai/sdxl",
+        "version": "c221b2b8ef527988fb59bf24a8b97c4561f1c671f73bd389f866bfb27c061316",
+        "status": "succeeded",
+        "input": {
+            "width": 768,
+            "height": 768,
+            "prompt": "An astronaut riding a rainbow unicorn, cinematic, dramatic",
+            "refine": "expert_ensemble_refiner",
+            "scheduler": "K_EULER",
+            "lora_scale": 0.6,
+            "num_outputs": 1,
+            "guidance_scale": 7.5,
+            "apply_watermark": false,
+            "high_noise_frac": 0.8,
+            "negative_prompt": "",
+            "prompt_strength": 0.8,
+            "num_inference_steps": 25
+        },
+        "output": [
+            "https://pbxt.replicate.delivery/YXbcLudoHBIYHV6L0HbcTx5iRzLFMwygLr3vhGpZI35caXbE/out-0.png"
+        ],
+        "logs": "Using seed: 16010\nPrompt: An astronaut riding a rainbow unicorn, cinematic, dramatic\ntxt2img mode\n  0%|          | 0/16 [00:00<?, ?it/s]\n  6%|▋         | 1/16 [00:00<00:01,  7.96it/s]\n 12%|█▎        | 2/16 [00:00<00:01,  7.89it/s]\n 19%|█▉        | 3/16 [00:00<00:01,  7.86it/s]\n 25%|██▌       | 4/16 [00:00<00:01,  7.85it/s]\n 31%|███▏      | 5/16 [00:00<00:01,  7.83it/s]\n 38%|███▊      | 6/16 [00:00<00:01,  7.82it/s]\n 44%|████▍     | 7/16 [00:00<00:01,  7.81it/s]\n 50%|█████     | 8/16 [00:01<00:01,  7.80it/s]\n 56%|█████▋    | 9/16 [00:01<00:00,  7.80it/s]\n 62%|██████▎   | 10/16 [00:01<00:00,  7.78it/s]\n 69%|██████▉   | 11/16 [00:01<00:00,  7.79it/s]\n 75%|███████▌  | 12/16 [00:01<00:00,  7.79it/s]\n 81%|████████▏ | 13/16 [00:01<00:00,  7.78it/s]\n 88%|████████▊ | 14/16 [00:01<00:00,  7.79it/s]\n 94%|█████████▍| 15/16 [00:01<00:00,  7.79it/s]\n100%|██████████| 16/16 [00:02<00:00,  7.79it/s]\n100%|██████████| 16/16 [00:02<00:00,  7.81it/s]\n  0%|          | 0/5 [00:00<?, ?it/s]\n 20%|██        | 1/5 [00:00<00:00,  7.47it/s]\n 40%|████      | 2/5 [00:00<00:00,  7.42it/s]\n 60%|██████    | 3/5 [00:00<00:00,  7.40it/s]\n 80%|████████  | 4/5 [00:00<00:00,  7.39it/s]\n100%|██████████| 5/5 [00:00<00:00,  7.39it/s]\n100%|██████████| 5/5 [00:00<00:00,  7.40it/s]",
+        "error": null,
+        "metrics": {
+            "predict_time": 4.981337,
+            "total_time": 4.95241
+        },
+        "created_at": "2023-10-12T17:10:07.956869Z",
+        "started_at": "2023-10-12T17:10:07.927942Z",
+        "completed_at": "2023-10-12T17:10:12.909279Z",
+        "urls": {
+            "get": "https://api.replicate.com/v1/predictions/dzsqmb3bg4lqpjkz2iptjqgccm",
+            "cancel": "https://api.replicate.com/v1/predictions/dzsqmb3bg4lqpjkz2iptjqgccm/cancel"
+        }
+    },
+    "latest_version": {
+        "id": "7762fd07cf82c948538e41f63f77d685e02b063e37e496e96eefd46c929f9bdc",
+        "created_at": "2024-05-23T23:26:26.222931+00:00",
+        "cog_version": "0.9.5",
+        "openapi_schema": {
+            "info": {
+                "title": "Cog",
+                "version": "0.1.0"
+            },
+            "paths": {
+                "/": {
+                    "get": {
+                        "summary": "Root",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Root  Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "root__get"
+                    }
+                },
+                "/shutdown": {
+                    "post": {
+                        "summary": "Start Shutdown",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Start Shutdown Shutdown Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "start_shutdown_shutdown_post"
+                    }
+                },
+                "/trainings": {
+                    "post": {
+                        "summary": "Train",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/TrainingResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "operationId": "train_trainings_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/TrainingRequest"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "/predictions": {
+                    "post": {
+                        "summary": "Predict",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model",
+                        "operationId": "predict_predictions_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/PredictionRequest"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "/health-check": {
+                    "get": {
+                        "summary": "Healthcheck",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Healthcheck Health Check Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "healthcheck_health_check_get"
+                    }
+                },
+                "/trainings/{training_id}": {
+                    "put": {
+                        "summary": "Train Idempotent",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "training_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Training ID"
+                                },
+                                "required": true
+                            },
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "operationId": "train_idempotent_trainings__training_id__put",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/components/schemas/TrainingRequest"
+                                            }
+                                        ],
+                                        "title": "Training Request"
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                },
+                "/predictions/{prediction_id}": {
+                    "put": {
+                        "summary": "Predict Idempotent",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            },
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model (idempotent creation).",
+                        "operationId": "predict_idempotent_predictions__prediction_id__put",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/components/schemas/PredictionRequest"
+                                            }
+                                        ],
+                                        "title": "Prediction Request"
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                },
+                "/trainings/{training_id}/cancel": {
+                    "post": {
+                        "summary": "Cancel Training",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Cancel Training Trainings  Training Id  Cancel Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "training_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Training ID"
+                                },
+                                "required": true
+                            }
+                        ],
+                        "operationId": "cancel_training_trainings__training_id__cancel_post"
+                    }
+                },
+                "/predictions/{prediction_id}/cancel": {
+                    "post": {
+                        "summary": "Cancel",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Cancel Predictions  Prediction Id  Cancel Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            }
+                        ],
+                        "description": "Cancel a running prediction",
+                        "operationId": "cancel_predictions__prediction_id__cancel_post"
+                    }
+                }
+            },
+            "openapi": "3.0.2",
+            "components": {
+                "schemas": {
+                    "Input": {
+                        "type": "object",
+                        "title": "Input",
+                        "properties": {
+                            "mask": {
+                                "type": "string",
+                                "title": "Mask",
+                                "format": "uri",
+                                "x-order": 3,
+                                "description": "Input mask for inpaint mode. Black areas will be preserved, white areas will be inpainted."
+                            },
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 11,
+                                "description": "Random seed. Leave blank to randomize the seed"
+                            },
+                            "image": {
+                                "type": "string",
+                                "title": "Image",
+                                "format": "uri",
+                                "x-order": 2,
+                                "description": "Input image for img2img or inpaint mode"
+                            },
+                            "width": {
+                                "type": "integer",
+                                "title": "Width",
+                                "default": 1024,
+                                "x-order": 4,
+                                "description": "Width of output image"
+                            },
+                            "height": {
+                                "type": "integer",
+                                "title": "Height",
+                                "default": 1024,
+                                "x-order": 5,
+                                "description": "Height of output image"
+                            },
+                            "prompt": {
+                                "type": "string",
+                                "title": "Prompt",
+                                "default": "An astronaut riding a rainbow unicorn",
+                                "x-order": 0,
+                                "description": "Input prompt"
+                            },
+                            "refine": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/refine"
+                                    }
+                                ],
+                                "default": "no_refiner",
+                                "x-order": 12,
+                                "description": "Which refine style to use"
+                            },
+                            "scheduler": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/scheduler"
+                                    }
+                                ],
+                                "default": "K_EULER",
+                                "x-order": 7,
+                                "description": "scheduler"
+                            },
+                            "lora_scale": {
+                                "type": "number",
+                                "title": "Lora Scale",
+                                "default": 0.6,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 16,
+                                "description": "LoRA additive scale. Only applicable on trained models."
+                            },
+                            "num_outputs": {
+                                "type": "integer",
+                                "title": "Num Outputs",
+                                "default": 1,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 6,
+                                "description": "Number of images to output."
+                            },
+                            "refine_steps": {
+                                "type": "integer",
+                                "title": "Refine Steps",
+                                "x-order": 14,
+                                "description": "For base_image_refiner, the number of steps to refine, defaults to num_inference_steps"
+                            },
+                            "guidance_scale": {
+                                "type": "number",
+                                "title": "Guidance Scale",
+                                "default": 7.5,
+                                "maximum": 50,
+                                "minimum": 1,
+                                "x-order": 9,
+                                "description": "Scale for classifier-free guidance"
+                            },
+                            "apply_watermark": {
+                                "type": "boolean",
+                                "title": "Apply Watermark",
+                                "default": true,
+                                "x-order": 15,
+                                "description": "Applies a watermark to enable determining if an image is generated in downstream applications. If you have other provisions for generating or deploying images safely, you can use this to disable watermarking."
+                            },
+                            "high_noise_frac": {
+                                "type": "number",
+                                "title": "High Noise Frac",
+                                "default": 0.8,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 13,
+                                "description": "For expert_ensemble_refiner, the fraction of noise to use"
+                            },
+                            "negative_prompt": {
+                                "type": "string",
+                                "title": "Negative Prompt",
+                                "default": "",
+                                "x-order": 1,
+                                "description": "Input Negative Prompt"
+                            },
+                            "prompt_strength": {
+                                "type": "number",
+                                "title": "Prompt Strength",
+                                "default": 0.8,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 10,
+                                "description": "Prompt strength when using img2img / inpaint. 1.0 corresponds to full destruction of information in image"
+                            },
+                            "replicate_weights": {
+                                "type": "string",
+                                "title": "Replicate Weights",
+                                "x-order": 17,
+                                "description": "Replicate LoRA weights to use. Leave blank to use the default weights."
+                            },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 50,
+                                "maximum": 500,
+                                "minimum": 1,
+                                "x-order": 8,
+                                "description": "Number of denoising steps"
+                            },
+                            "disable_safety_checker": {
+                                "type": "boolean",
+                                "title": "Disable Safety Checker",
+                                "default": false,
+                                "x-order": 18,
+                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                            }
+                        }
+                    },
+                    "Output": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
+                    },
+                    "Status": {
+                        "enum": [
+                            "starting",
+                            "processing",
+                            "succeeded",
+                            "canceled",
+                            "failed"
+                        ],
+                        "type": "string",
+                        "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "refine": {
+                        "enum": [
+                            "no_refiner",
+                            "expert_ensemble_refiner",
+                            "base_image_refiner"
+                        ],
+                        "type": "string",
+                        "title": "refine",
+                        "description": "An enumeration."
+                    },
+                    "scheduler": {
+                        "enum": [
+                            "DDIM",
+                            "DPMSolverMultistep",
+                            "HeunDiscrete",
+                            "KarrasDPM",
+                            "K_EULER_ANCESTRAL",
+                            "K_EULER",
+                            "PNDM"
+                        ],
+                        "type": "string",
+                        "title": "scheduler",
+                        "description": "An enumeration."
+                    },
+                    "WebhookEvent": {
+                        "enum": [
+                            "start",
+                            "output",
+                            "logs",
+                            "completed"
+                        ],
+                        "type": "string",
+                        "title": "WebhookEvent",
+                        "description": "An enumeration."
+                    },
+                    "lr_scheduler": {
+                        "enum": [
+                            "constant",
+                            "linear"
+                        ],
+                        "type": "string",
+                        "title": "lr_scheduler",
+                        "description": "An enumeration."
+                    },
+                    "TrainingInput": {
+                        "type": "object",
+                        "title": "TrainingInput",
+                        "required": [
+                            "input_images"
+                        ],
+                        "properties": {
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 1,
+                                "description": "Random seed for reproducible training. Leave empty to use a random seed"
+                            },
+                            "ti_lr": {
+                                "type": "number",
+                                "title": "Ti Lr",
+                                "default": 0.0003,
+                                "x-order": 8,
+                                "description": "Scaling of learning rate for training textual inversion embeddings. Don't alter unless you know what you're doing."
+                            },
+                            "is_lora": {
+                                "type": "boolean",
+                                "title": "Is Lora",
+                                "default": true,
+                                "x-order": 6,
+                                "description": "Whether to use LoRA training. If set to False, will use Full fine tuning"
+                            },
+                            "lora_lr": {
+                                "type": "number",
+                                "title": "Lora Lr",
+                                "default": 0.0001,
+                                "x-order": 9,
+                                "description": "Scaling of learning rate for training LoRA embeddings. Don't alter unless you know what you're doing."
+                            },
+                            "verbose": {
+                                "type": "boolean",
+                                "title": "Verbose",
+                                "default": true,
+                                "x-order": 19,
+                                "description": "verbose output"
+                            },
+                            "lora_rank": {
+                                "type": "integer",
+                                "title": "Lora Rank",
+                                "default": 32,
+                                "x-order": 10,
+                                "description": "Rank of LoRA embeddings. Don't alter unless you know what you're doing."
+                            },
+                            "resolution": {
+                                "type": "integer",
+                                "title": "Resolution",
+                                "default": 768,
+                                "x-order": 2,
+                                "description": "Square pixel resolution which your images will be resized to for training"
+                            },
+                            "input_images": {
+                                "type": "string",
+                                "title": "Input Images",
+                                "format": "uri",
+                                "x-order": 0,
+                                "description": "A .zip or .tar file containing the image files that will be used for fine-tuning"
+                            },
+                            "lr_scheduler": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/lr_scheduler"
+                                    }
+                                ],
+                                "default": "constant",
+                                "x-order": 11,
+                                "description": "Learning rate scheduler to use for training"
+                            },
+                            "token_string": {
+                                "type": "string",
+                                "title": "Token String",
+                                "default": "TOK",
+                                "x-order": 13,
+                                "description": "A unique string that will be trained to refer to the concept in the input images. Can be anything, but TOK works well"
+                            },
+                            "caption_prefix": {
+                                "type": "string",
+                                "title": "Caption Prefix",
+                                "default": "a photo of TOK, ",
+                                "x-order": 14,
+                                "description": "Text which will be used as prefix during automatic captioning. Must contain the `token_string`. For example, if caption text is 'a photo of TOK', automatic captioning will expand to 'a photo of TOK under a bridge', 'a photo of TOK holding a cup', etc."
+                            },
+                            "lr_warmup_steps": {
+                                "type": "integer",
+                                "title": "Lr Warmup Steps",
+                                "default": 100,
+                                "x-order": 12,
+                                "description": "Number of warmup steps for lr schedulers with warmups."
+                            },
+                            "max_train_steps": {
+                                "type": "integer",
+                                "title": "Max Train Steps",
+                                "default": 1000,
+                                "x-order": 5,
+                                "description": "Number of individual training steps. Takes precedence over num_train_epochs"
+                            },
+                            "num_train_epochs": {
+                                "type": "integer",
+                                "title": "Num Train Epochs",
+                                "default": 4000,
+                                "x-order": 4,
+                                "description": "Number of epochs to loop through your training dataset"
+                            },
+                            "train_batch_size": {
+                                "type": "integer",
+                                "title": "Train Batch Size",
+                                "default": 4,
+                                "x-order": 3,
+                                "description": "Batch size (per device) for training"
+                            },
+                            "unet_learning_rate": {
+                                "type": "number",
+                                "title": "Unet Learning Rate",
+                                "default": 1e-06,
+                                "x-order": 7,
+                                "description": "Learning rate for the U-Net. We recommend this value to be somewhere between `1e-6` to `1e-5`."
+                            },
+                            "checkpointing_steps": {
+                                "type": "integer",
+                                "title": "Checkpointing Steps",
+                                "default": 999999,
+                                "x-order": 20,
+                                "description": "Number of steps between saving checkpoints. Set to very very high number to disable checkpointing, because you don't need one."
+                            },
+                            "clipseg_temperature": {
+                                "type": "number",
+                                "title": "Clipseg Temperature",
+                                "default": 1,
+                                "x-order": 18,
+                                "description": "How blurry you want the CLIPSeg mask to be. We recommend this value be something between `0.5` to `1.0`. If you want to have more sharp mask (but thus more errorful), you can decrease this value."
+                            },
+                            "mask_target_prompts": {
+                                "type": "string",
+                                "title": "Mask Target Prompts",
+                                "x-order": 15,
+                                "description": "Prompt that describes part of the image that you will find important. For example, if you are fine-tuning your pet, `photo of a dog` will be a good prompt. Prompt-based masking is used to focus the fine-tuning process on the important/salient parts of the image"
+                            },
+                            "input_images_filetype": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/input_images_filetype"
+                                    }
+                                ],
+                                "default": "infer",
+                                "x-order": 21,
+                                "description": "Filetype of the input images. Can be either `zip` or `tar`. By default its `infer`, and it will be inferred from the ext of input file."
+                            },
+                            "crop_based_on_salience": {
+                                "type": "boolean",
+                                "title": "Crop Based On Salience",
+                                "default": true,
+                                "x-order": 16,
+                                "description": "If you want to crop the image to `target_size` based on the important parts of the image, set this to True. If you want to crop the image based on face detection, set this to False"
+                            },
+                            "use_face_detection_instead": {
+                                "type": "boolean",
+                                "title": "Use Face Detection Instead",
+                                "default": false,
+                                "x-order": 17,
+                                "description": "If you want to use face detection instead of CLIPSeg for masking. For face applications, we recommend using this option."
+                            }
+                        }
+                    },
+                    "TrainingOutput": {
+                        "type": "object",
+                        "title": "TrainingOutput",
+                        "required": [
+                            "weights"
+                        ],
+                        "properties": {
+                            "weights": {
+                                "type": "string",
+                                "title": "Weights",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "TrainingRequest": {
+                        "type": "object",
+                        "title": "TrainingRequest",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/TrainingInput"
+                            },
+                            "webhook": {
+                                "type": "string",
+                                "title": "Webhook",
+                                "format": "uri",
+                                "maxLength": 65536,
+                                "minLength": 1
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            },
+                            "webhook_events_filter": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/WebhookEvent"
+                                },
+                                "default": [
+                                    "start",
+                                    "output",
+                                    "logs",
+                                    "completed"
+                                ]
+                            }
+                        }
+                    },
+                    "ValidationError": {
+                        "type": "object",
+                        "title": "ValidationError",
+                        "required": [
+                            "loc",
+                            "msg",
+                            "type"
+                        ],
+                        "properties": {
+                            "loc": {
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "title": "Location"
+                            },
+                            "msg": {
+                                "type": "string",
+                                "title": "Message"
+                            },
+                            "type": {
+                                "type": "string",
+                                "title": "Error Type"
+                            }
+                        }
+                    },
+                    "TrainingResponse": {
+                        "type": "object",
+                        "title": "TrainingResponse",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "logs": {
+                                "type": "string",
+                                "title": "Logs",
+                                "default": ""
+                            },
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/TrainingInput"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/TrainingOutput"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            },
+                            "metrics": {
+                                "type": "object",
+                                "title": "Metrics"
+                            },
+                            "version": {
+                                "type": "string",
+                                "title": "Version"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "started_at": {
+                                "type": "string",
+                                "title": "Started At",
+                                "format": "date-time"
+                            },
+                            "completed_at": {
+                                "type": "string",
+                                "title": "Completed At",
+                                "format": "date-time"
+                            }
+                        }
+                    },
+                    "PredictionRequest": {
+                        "type": "object",
+                        "title": "PredictionRequest",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "webhook": {
+                                "type": "string",
+                                "title": "Webhook",
+                                "format": "uri",
+                                "maxLength": 65536,
+                                "minLength": 1
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            },
+                            "webhook_events_filter": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/WebhookEvent"
+                                },
+                                "default": [
+                                    "start",
+                                    "output",
+                                    "logs",
+                                    "completed"
+                                ]
+                            }
+                        }
+                    },
+                    "PredictionResponse": {
+                        "type": "object",
+                        "title": "PredictionResponse",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "logs": {
+                                "type": "string",
+                                "title": "Logs",
+                                "default": ""
+                            },
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/Output"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            },
+                            "metrics": {
+                                "type": "object",
+                                "title": "Metrics"
+                            },
+                            "version": {
+                                "type": "string",
+                                "title": "Version"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "started_at": {
+                                "type": "string",
+                                "title": "Started At",
+                                "format": "date-time"
+                            },
+                            "completed_at": {
+                                "type": "string",
+                                "title": "Completed At",
+                                "format": "date-time"
+                            }
+                        }
+                    },
+                    "HTTPValidationError": {
+                        "type": "object",
+                        "title": "HTTPValidationError",
+                        "properties": {
+                            "detail": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                },
+                                "title": "Detail"
+                            }
+                        }
+                    },
+                    "input_images_filetype": {
+                        "enum": [
+                            "zip",
+                            "tar",
+                            "infer"
+                        ],
+                        "type": "string",
+                        "title": "input_images_filetype",
+                        "description": "An enumeration."
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,49 +1,48 @@
 {
-    "url": "https://replicate.com/fofr/face-to-many",
-    "owner": "fofr",
-    "name": "face-to-many",
-    "description": "Turn a face into 3D, emoji, pixel art, video game, claymation or toy",
+    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
+    "owner": "stability-ai",
+    "name": "stable-diffusion-3",
+    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-face-to-many",
-    "paper_url": null,
-    "license_url": "https://github.com/fofr/cog-face-to-many/blob/main/weights_licenses.md",
-    "run_count": 10959565,
-    "cover_image_url": "https://replicate.delivery/pbxt/R1ayGe5efoQbaoRzgDEJdLsIZ20lWRiprvoW1F4uKAZIha6kA/ComfyUI_00001_.png",
+    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
+    "paper_url": "https://arxiv.org/pdf/2403.03206",
+    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "run_count": 245662,
+    "cover_image_url": "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp",
     "default_example": {
-        "id": "pft2dadbcdnh25z5ktctsj3sze",
-        "model": "fofr/face-to-many",
-        "version": "edc6439ac55af138defbca7c472b38bcdd62c61797e8e0c2fae88696cd8afb25",
+        "id": "qajxd850zxrgg0cg1kpr0h6nkg",
+        "model": "stability-ai/stable-diffusion-3",
+        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
         "status": "succeeded",
         "input": {
-            "image": "https://replicate.delivery/pbxt/KW7Getr2zD5ECxySdBZtLmPa322lNkXrpkMdKcmxeaDmq2b1/MTk4MTczMTkzNzI1Mjg5NjYy.webp",
-            "style": "Clay",
-            "prompt": "a person in a post apocalyptic war game",
-            "negative_prompt": "",
-            "prompt_strength": 4.5,
-            "denoising_strength": 0.65,
-            "instant_id_strength": 0.8
+            "cfg": 4.5,
+            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
+            "aspect_ratio": "3:2",
+            "output_format": "webp",
+            "output_quality": 79,
+            "negative_prompt": "ugly, distorted"
         },
         "output": [
-            "https://replicate.delivery/pbxt/R1ayGe5efoQbaoRzgDEJdLsIZ20lWRiprvoW1F4uKAZIha6kA/ComfyUI_00001_.png"
+            "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp"
         ],
-        "logs": "Random seed set to: 3672888193\nChecking inputs\n✅ /tmp/inputs/input.webp\n====================================\nRunning workflow\ngot prompt\nExecuting node 3, title: LoRA Stacker, class type: LoRA Stacker\nExecuting node 2, title: Efficient Loader, class type: Efficient Loader\nRequested to load SDXLClipModel\nLoading 1 new model\n----------------------------------------\n\u001b[36mEfficient Loader Models Cache:\u001b[0m\nCkpt:\n[1] albedobaseXL_v13\nLora:\n[1] base_ckpt: albedobaseXL_v13\nlora(mod,clip): ClayAnimationRedm(1,1)\nExecuting node 41, title: Apply InstantID, class type: ApplyInstantID\nExecuting node 51, title: VAE Encode, class type: VAEEncode\nExecuting node 4, title: KSampler (Efficient), class type: KSampler (Efficient)\nRequested to load SDXL\nRequested to load ControlNet\nRequested to load ControlNet\nLoading 3 new models\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|▌         | 1/20 [00:00<00:05,  3.26it/s]\n 10%|█         | 2/20 [00:00<00:05,  3.26it/s]\n 15%|█▌        | 3/20 [00:00<00:05,  3.28it/s]\n 20%|██        | 4/20 [00:01<00:04,  3.28it/s]\n 25%|██▌       | 5/20 [00:01<00:04,  3.28it/s]\n 30%|███       | 6/20 [00:01<00:04,  3.29it/s]\n 35%|███▌      | 7/20 [00:02<00:03,  3.27it/s]\n 40%|████      | 8/20 [00:02<00:03,  3.27it/s]\n 45%|████▌     | 9/20 [00:02<00:03,  3.29it/s]\n 50%|█████     | 10/20 [00:03<00:03,  3.29it/s]\n 55%|█████▌    | 11/20 [00:03<00:02,  3.29it/s]\n 60%|██████    | 12/20 [00:03<00:02,  3.30it/s]\n 65%|██████▌   | 13/20 [00:03<00:02,  3.30it/s]\n 70%|███████   | 14/20 [00:04<00:01,  3.30it/s]\n 75%|███████▌  | 15/20 [00:04<00:01,  3.30it/s]\n 80%|████████  | 16/20 [00:04<00:01,  3.32it/s]\n 85%|████████▌ | 17/20 [00:05<00:00,  3.32it/s]\n 90%|█████████ | 18/20 [00:05<00:00,  3.33it/s]\n 95%|█████████▌| 19/20 [00:05<00:00,  3.37it/s]\n100%|██████████| 20/20 [00:06<00:00,  3.41it/s]\n100%|██████████| 20/20 [00:06<00:00,  3.31it/s]\nExecuting node 5, title: Save Image, class type: SaveImage\nPrompt executed in 20.70 seconds\noutputs:  {'4': {'images': []}, '5': {'images': [{'filename': 'ComfyUI_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nContents of /tmp/outputs:\nComfyUI_00001_.png",
+        "logs": "Random seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:03,  7.80it/s]\n 11%|█         | 3/28 [00:00<00:03,  7.81it/s]\n 14%|█▍        | 4/28 [00:00<00:03,  7.81it/s]\n 18%|█▊        | 5/28 [00:00<00:02,  7.78it/s]\n 21%|██▏       | 6/28 [00:00<00:02,  7.79it/s]\n 25%|██▌       | 7/28 [00:00<00:02,  7.73it/s]\n 29%|██▊       | 8/28 [00:01<00:02,  7.72it/s]\n 32%|███▏      | 9/28 [00:01<00:02,  7.73it/s]\n 36%|███▌      | 10/28 [00:01<00:02,  7.76it/s]\n 39%|███▉      | 11/28 [00:01<00:02,  7.77it/s]\n 43%|████▎     | 12/28 [00:01<00:02,  7.79it/s]\n 46%|████▋     | 13/28 [00:01<00:01,  7.78it/s]\n 50%|█████     | 14/28 [00:01<00:01,  7.80it/s]\n 54%|█████▎    | 15/28 [00:01<00:01,  7.78it/s]\n 57%|█████▋    | 16/28 [00:02<00:01,  7.78it/s]\n 61%|██████    | 17/28 [00:02<00:01,  7.77it/s]\n 64%|██████▍   | 18/28 [00:02<00:01,  7.78it/s]\n 68%|██████▊   | 19/28 [00:02<00:01,  7.79it/s]\n 71%|███████▏  | 20/28 [00:02<00:01,  7.78it/s]\n 75%|███████▌  | 21/28 [00:02<00:00,  7.77it/s]\n 79%|███████▊  | 22/28 [00:02<00:00,  7.79it/s]\n 82%|████████▏ | 23/28 [00:02<00:00,  7.78it/s]\n 86%|████████▌ | 24/28 [00:03<00:00,  7.78it/s]\n 89%|████████▉ | 25/28 [00:03<00:00,  7.77it/s]\n 93%|█████████▎| 26/28 [00:03<00:00,  7.77it/s]\n 96%|█████████▋| 27/28 [00:03<00:00,  7.75it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.76it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.77it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 3.99 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
         "error": null,
         "metrics": {
-            "predict_time": 23.016322,
-            "total_time": 23.051238
+            "predict_time": 4.481755,
+            "total_time": 4.498663
         },
-        "created_at": "2024-03-05T13:45:50.761895Z",
-        "started_at": "2024-03-05T13:45:50.796811Z",
-        "completed_at": "2024-03-05T13:46:13.813133Z",
+        "created_at": "2024-06-12T14:50:18.239000Z",
+        "started_at": "2024-06-12T14:50:18.255908Z",
+        "completed_at": "2024-06-12T14:50:22.737663Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/pft2dadbcdnh25z5ktctsj3sze",
-            "cancel": "https://api.replicate.com/v1/predictions/pft2dadbcdnh25z5ktctsj3sze/cancel"
+            "get": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg",
+            "cancel": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg/cancel"
         }
     },
     "latest_version": {
-        "id": "a07f252abbbd832009640b27f063ea52d87d7a23a185ca165bec23b5adc8deaf",
-        "created_at": "2024-04-09T11:22:38.160380+00:00",
-        "cog_version": "0.8.6",
+        "id": "3a1a11ffb268059b7f68a898c8b872324256df188bb98efffe3a8a84a3e55b46",
+        "created_at": "2024-06-14T20:23:45.292343+00:00",
+        "cog_version": "0.9.9",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -268,104 +267,94 @@
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 8,
-                                "description": "Fix the random seed for reproducibility"
+                                "x-order": 7,
+                                "description": "Random seed. Leave blank to randomize the seed"
                             },
                             "image": {
                                 "type": "string",
                                 "title": "Image",
                                 "format": "uri",
-                                "x-order": 0,
-                                "description": "An image of a person to be converted"
-                            },
-                            "style": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/style"
-                                    }
-                                ],
-                                "default": "3D",
-                                "x-order": 1,
-                                "description": "Style to convert to"
+                                "x-order": 2,
+                                "description": "Input image for img2img mode"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "a person",
-                                "x-order": 2
+                                "default": "",
+                                "x-order": 0,
+                                "description": "Input prompt"
                             },
-                            "lora_scale": {
-                                "type": "number",
-                                "title": "Lora Scale",
+                            "num_outputs": {
+                                "type": "integer",
+                                "title": "Num Outputs",
                                 "default": 1,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 10,
-                                "description": "How strong the LoRA will be"
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 4,
+                                "description": "Number of images to output."
                             },
-                            "custom_lora_url": {
-                                "type": "string",
-                                "title": "Custom Lora Url",
+                            "aspect_ratio": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/aspect_ratio"
+                                    }
+                                ],
+                                "default": "1:1",
+                                "x-order": 3,
+                                "description": "Aspect ratio for the generated image"
+                            },
+                            "output_format": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/output_format"
+                                    }
+                                ],
+                                "default": "webp",
+                                "x-order": 8,
+                                "description": "Format of the output images"
+                            },
+                            "guidance_scale": {
+                                "type": "number",
+                                "title": "Guidance Scale",
+                                "default": 4.5,
+                                "maximum": 50,
+                                "minimum": 0,
+                                "x-order": 5,
+                                "description": "Scale for classifier-free guidance"
+                            },
+                            "output_quality": {
+                                "type": "integer",
+                                "title": "Output Quality",
+                                "default": 80,
+                                "maximum": 100,
+                                "minimum": 0,
                                 "x-order": 9,
-                                "description": "URL to a Replicate custom LoRA. Must be in the format https://replicate.delivery/pbxt/[id]/trained_model.tar or https://pbxt.replicate.delivery/[id]/trained_model.tar"
+                                "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
                             },
                             "negative_prompt": {
                                 "type": "string",
                                 "title": "Negative Prompt",
                                 "default": "",
-                                "x-order": 3,
-                                "description": "Things you do not want in the image"
+                                "x-order": 1,
+                                "description": "Input negative prompt"
                             },
                             "prompt_strength": {
                                 "type": "number",
                                 "title": "Prompt Strength",
-                                "default": 4.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 5,
-                                "description": "Strength of the prompt. This is the CFG scale, higher numbers lead to stronger prompt, lower numbers will keep more of a likeness to the original."
-                            },
-                            "denoising_strength": {
-                                "type": "number",
-                                "title": "Denoising Strength",
-                                "default": 0.65,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 4,
-                                "description": "How much of the original image to keep. 1 is the complete destruction of the original image, 0 is the original image"
-                            },
-                            "instant_id_strength": {
-                                "type": "number",
-                                "title": "Instant Id Strength",
-                                "default": 1,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "How strong the InstantID will be."
-                            },
-                            "control_depth_strength": {
-                                "type": "number",
-                                "title": "Control Depth Strength",
-                                "default": 0.8,
+                                "default": 0.6,
                                 "maximum": 1,
                                 "minimum": 0,
                                 "x-order": 6,
-                                "description": "Strength of depth controlnet. The bigger this is, the more controlnet affects the output."
+                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
+                            },
+                            "disable_safety_checker": {
+                                "type": "boolean",
+                                "title": "Disable Safety Checker",
+                                "default": false,
+                                "x-order": 10,
+                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
                             }
                         }
-                    },
-                    "style": {
-                        "enum": [
-                            "3D",
-                            "Emoji",
-                            "Video game",
-                            "Pixels",
-                            "Clay",
-                            "Toy"
-                        ],
-                        "type": "string",
-                        "title": "style",
-                        "description": "An enumeration."
                     },
                     "Output": {
                         "type": "array",
@@ -396,6 +385,32 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
+                        "description": "An enumeration."
+                    },
+                    "aspect_ratio": {
+                        "enum": [
+                            "1:1",
+                            "16:9",
+                            "21:9",
+                            "2:3",
+                            "3:2",
+                            "4:5",
+                            "5:4",
+                            "9:16",
+                            "9:21"
+                        ],
+                        "type": "string",
+                        "title": "aspect_ratio",
+                        "description": "An enumeration."
+                    },
+                    "output_format": {
+                        "enum": [
+                            "webp",
+                            "jpg",
+                            "png"
+                        ],
+                        "type": "string",
+                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

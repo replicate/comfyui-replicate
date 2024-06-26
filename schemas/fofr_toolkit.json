@@ -1,48 +1,44 @@
 {
-    "url": "https://replicate.com/fofr/face-to-many",
+    "url": "https://replicate.com/fofr/toolkit",
     "owner": "fofr",
-    "name": "face-to-many",
-    "description": "Turn a face into 3D, emoji, pixel art, video game, claymation or toy",
+    "name": "toolkit",
+    "description": "Video toolkit – convert, make GIFs, extract audio",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-face-to-many",
+    "github_url": "https://github.com/fofr/cog-cpu-toolkit",
     "paper_url": null,
-    "license_url": "https://github.com/fofr/cog-face-to-many/blob/main/weights_licenses.md",
-    "run_count": 10959565,
-    "cover_image_url": "https://replicate.delivery/pbxt/R1ayGe5efoQbaoRzgDEJdLsIZ20lWRiprvoW1F4uKAZIha6kA/ComfyUI_00001_.png",
+    "license_url": "https://github.com/fofr/cog-cpu-toolkit/blob/main/LICENSE",
+    "run_count": 2681,
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/f357612c-ef1c-4a61-94a4-8f02717a51a1/toolkit-cover.jpg",
     "default_example": {
-        "id": "pft2dadbcdnh25z5ktctsj3sze",
-        "model": "fofr/face-to-many",
-        "version": "edc6439ac55af138defbca7c472b38bcdd62c61797e8e0c2fae88696cd8afb25",
+        "id": "43ems6bbbt5czcn2ktxe4xjtc4",
+        "model": "fofr/toolkit",
+        "version": "13d8a443e688f30e85af80d42b055e950a3c880842416c4ba61b7190b1fe51e8",
         "status": "succeeded",
         "input": {
-            "image": "https://replicate.delivery/pbxt/KW7Getr2zD5ECxySdBZtLmPa322lNkXrpkMdKcmxeaDmq2b1/MTk4MTczMTkzNzI1Mjg5NjYy.webp",
-            "style": "Clay",
-            "prompt": "a person in a post apocalyptic war game",
-            "negative_prompt": "",
-            "prompt_strength": 4.5,
-            "denoising_strength": 0.65,
-            "instant_id_strength": 0.8
+            "fps": 0,
+            "task": "convert_input_to_gif",
+            "input_file": "https://replicate.delivery/pbxt/K4PoZN3Q6JIiG61inQLKTxIYVpOVoAYCfxwQksNGTfnmGLUf/video%20(2).mp4"
         },
         "output": [
-            "https://replicate.delivery/pbxt/R1ayGe5efoQbaoRzgDEJdLsIZ20lWRiprvoW1F4uKAZIha6kA/ComfyUI_00001_.png"
+            "https://replicate.delivery/pbxt/QiMxG3cT8poUNJriq4LwebTXijrcUigRpBG6HAiqnCnfFfGkA/video.gif"
         ],
-        "logs": "Random seed set to: 3672888193\nChecking inputs\n✅ /tmp/inputs/input.webp\n====================================\nRunning workflow\ngot prompt\nExecuting node 3, title: LoRA Stacker, class type: LoRA Stacker\nExecuting node 2, title: Efficient Loader, class type: Efficient Loader\nRequested to load SDXLClipModel\nLoading 1 new model\n----------------------------------------\n\u001b[36mEfficient Loader Models Cache:\u001b[0m\nCkpt:\n[1] albedobaseXL_v13\nLora:\n[1] base_ckpt: albedobaseXL_v13\nlora(mod,clip): ClayAnimationRedm(1,1)\nExecuting node 41, title: Apply InstantID, class type: ApplyInstantID\nExecuting node 51, title: VAE Encode, class type: VAEEncode\nExecuting node 4, title: KSampler (Efficient), class type: KSampler (Efficient)\nRequested to load SDXL\nRequested to load ControlNet\nRequested to load ControlNet\nLoading 3 new models\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|▌         | 1/20 [00:00<00:05,  3.26it/s]\n 10%|█         | 2/20 [00:00<00:05,  3.26it/s]\n 15%|█▌        | 3/20 [00:00<00:05,  3.28it/s]\n 20%|██        | 4/20 [00:01<00:04,  3.28it/s]\n 25%|██▌       | 5/20 [00:01<00:04,  3.28it/s]\n 30%|███       | 6/20 [00:01<00:04,  3.29it/s]\n 35%|███▌      | 7/20 [00:02<00:03,  3.27it/s]\n 40%|████      | 8/20 [00:02<00:03,  3.27it/s]\n 45%|████▌     | 9/20 [00:02<00:03,  3.29it/s]\n 50%|█████     | 10/20 [00:03<00:03,  3.29it/s]\n 55%|█████▌    | 11/20 [00:03<00:02,  3.29it/s]\n 60%|██████    | 12/20 [00:03<00:02,  3.30it/s]\n 65%|██████▌   | 13/20 [00:03<00:02,  3.30it/s]\n 70%|███████   | 14/20 [00:04<00:01,  3.30it/s]\n 75%|███████▌  | 15/20 [00:04<00:01,  3.30it/s]\n 80%|████████  | 16/20 [00:04<00:01,  3.32it/s]\n 85%|████████▌ | 17/20 [00:05<00:00,  3.32it/s]\n 90%|█████████ | 18/20 [00:05<00:00,  3.33it/s]\n 95%|█████████▌| 19/20 [00:05<00:00,  3.37it/s]\n100%|██████████| 20/20 [00:06<00:00,  3.41it/s]\n100%|██████████| 20/20 [00:06<00:00,  3.31it/s]\nExecuting node 5, title: Save Image, class type: SaveImage\nPrompt executed in 20.70 seconds\noutputs:  {'4': {'images': []}, '5': {'images': [{'filename': 'ComfyUI_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nContents of /tmp/outputs:\nComfyUI_00001_.png",
+        "logs": "Running ffmpeg command: ffmpeg -i /tmp/tmpgyow6svvvideo (2).mp4 -pix_fmt yuv420p -vf fps=12,scale=512:-1:flags=lanczos -c:v gif /tmp/outputs/video.gif\nffmpeg version 5.1.4-0+deb12u1 Copyright (c) 2000-2023 the FFmpeg developers\nbuilt with gcc 12 (Debian 12.2.0-14)\nconfiguration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared\nlibavutil      57. 28.100 / 57. 28.100\nlibavcodec     59. 37.100 / 59. 37.100\nlibavformat    59. 27.100 / 59. 27.100\nlibavdevice    59.  7.100 / 59.  7.100\nlibavfilter     8. 44.100 /  8. 44.100\nlibswscale      6.  7.100 /  6.  7.100\nlibswresample   4.  7.100 /  4.  7.100\nlibpostproc    56.  6.100 / 56.  6.100\nInput #0, mov,mp4,m4a,3gp,3g2,mj2, from '/tmp/tmpgyow6svvvideo (2).mp4':\nMetadata:\nmajor_brand     : isom\nminor_version   : 512\ncompatible_brands: isomiso2avc1mp41\nencoder         : Lavf59.27.100\nDuration: 00:00:03.38, start: 0.000000, bitrate: 1631 kb/s\nStream #0:0[0x1](eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 1465 kb/s, 23.98 fps, 23.98 tbr, 24k tbn (default)\nMetadata:\nhandler_name    : Core Media Video\nvendor_id       : [0][0][0][0]\nencoder         : Lavc59.37.100 libx264\nStream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 157 kb/s (default)\nMetadata:\nhandler_name    : Core Media Audio\nvendor_id       : [0][0][0][0]\nStream mapping:\nStream #0:0 -> #0:0 (h264 (native) -> gif (native))\nPress [q] to stop, [?] for help\nIncompatible pixel format 'yuv420p' for codec 'gif', auto-selecting format 'bgr8'\nOutput #0, gif, to '/tmp/outputs/video.gif':\nMetadata:\nmajor_brand     : isom\nminor_version   : 512\ncompatible_brands: isomiso2avc1mp41\nencoder         : Lavf59.27.100\nStream #0:0(eng): Video: gif, bgr8(pc, gbr/bt709/bt709, progressive), 512x288 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 12 fps, 100 tbn (default)\nMetadata:\nhandler_name    : Core Media Video\nvendor_id       : [0][0][0][0]\nencoder         : Lavc59.37.100 gif\nframe=    1 fps=0.0 q=-0.0 size=       0kB time=00:00:00.01 bitrate=   0.0kbits/s speed=0.128x\nframe=   41 fps=0.0 q=-0.0 Lsize=     622kB time=00:00:03.34 bitrate=1525.6kbits/s speed=8.68x\nvideo:622kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.003140%",
         "error": null,
         "metrics": {
-            "predict_time": 23.016322,
-            "total_time": 23.051238
+            "predict_time": 1.456677,
+            "total_time": 1.471223
         },
-        "created_at": "2024-03-05T13:45:50.761895Z",
-        "started_at": "2024-03-05T13:45:50.796811Z",
-        "completed_at": "2024-03-05T13:46:13.813133Z",
+        "created_at": "2023-12-18T12:47:58.510153Z",
+        "started_at": "2023-12-18T12:47:58.524699Z",
+        "completed_at": "2023-12-18T12:47:59.981376Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/pft2dadbcdnh25z5ktctsj3sze",
-            "cancel": "https://api.replicate.com/v1/predictions/pft2dadbcdnh25z5ktctsj3sze/cancel"
+            "get": "https://api.replicate.com/v1/predictions/43ems6bbbt5czcn2ktxe4xjtc4",
+            "cancel": "https://api.replicate.com/v1/predictions/43ems6bbbt5czcn2ktxe4xjtc4/cancel"
         }
     },
     "latest_version": {
-        "id": "a07f252abbbd832009640b27f063ea52d87d7a23a185ca165bec23b5adc8deaf",
-        "created_at": "2024-04-09T11:22:38.160380+00:00",
+        "id": "19711d11c243800f08364ba9ae9078f54874f21363ba445dabdbf082b5d69565",
+        "created_at": "2024-01-09T11:20:21.732230+00:00",
         "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
@@ -261,111 +257,53 @@
             "openapi": "3.0.2",
             "components": {
                 "schemas": {
+                    "task": {
+                        "enum": [
+                            "convert_input_to_mp4",
+                            "convert_input_to_gif",
+                            "extract_video_audio_as_mp3",
+                            "zipped_frames_to_mp4",
+                            "zipped_frames_to_gif",
+                            "extract_frames_from_input",
+                            "reverse_video",
+                            "bounce_video"
+                        ],
+                        "type": "string",
+                        "title": "task",
+                        "description": "An enumeration."
+                    },
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "task",
+                            "input_file"
+                        ],
                         "properties": {
-                            "seed": {
+                            "fps": {
                                 "type": "integer",
-                                "title": "Seed",
-                                "x-order": 8,
-                                "description": "Fix the random seed for reproducibility"
+                                "title": "Fps",
+                                "default": 0,
+                                "x-order": 2,
+                                "description": "frames per second, if relevant. Use 0 to keep original fps (or use default). Converting to GIF defaults to 12fps"
                             },
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 0,
-                                "description": "An image of a person to be converted"
-                            },
-                            "style": {
+                            "task": {
                                 "allOf": [
                                     {
-                                        "$ref": "#/components/schemas/style"
+                                        "$ref": "#/components/schemas/task"
                                     }
                                 ],
-                                "default": "3D",
+                                "x-order": 0,
+                                "description": "Task to perform"
+                            },
+                            "input_file": {
+                                "type": "string",
+                                "title": "Input File",
+                                "format": "uri",
                                 "x-order": 1,
-                                "description": "Style to convert to"
-                            },
-                            "prompt": {
-                                "type": "string",
-                                "title": "Prompt",
-                                "default": "a person",
-                                "x-order": 2
-                            },
-                            "lora_scale": {
-                                "type": "number",
-                                "title": "Lora Scale",
-                                "default": 1,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 10,
-                                "description": "How strong the LoRA will be"
-                            },
-                            "custom_lora_url": {
-                                "type": "string",
-                                "title": "Custom Lora Url",
-                                "x-order": 9,
-                                "description": "URL to a Replicate custom LoRA. Must be in the format https://replicate.delivery/pbxt/[id]/trained_model.tar or https://pbxt.replicate.delivery/[id]/trained_model.tar"
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 3,
-                                "description": "Things you do not want in the image"
-                            },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 4.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 5,
-                                "description": "Strength of the prompt. This is the CFG scale, higher numbers lead to stronger prompt, lower numbers will keep more of a likeness to the original."
-                            },
-                            "denoising_strength": {
-                                "type": "number",
-                                "title": "Denoising Strength",
-                                "default": 0.65,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 4,
-                                "description": "How much of the original image to keep. 1 is the complete destruction of the original image, 0 is the original image"
-                            },
-                            "instant_id_strength": {
-                                "type": "number",
-                                "title": "Instant Id Strength",
-                                "default": 1,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "How strong the InstantID will be."
-                            },
-                            "control_depth_strength": {
-                                "type": "number",
-                                "title": "Control Depth Strength",
-                                "default": 0.8,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 6,
-                                "description": "Strength of depth controlnet. The bigger this is, the more controlnet affects the output."
+                                "description": "File – zip, image or video to process"
                             }
                         }
-                    },
-                    "style": {
-                        "enum": [
-                            "3D",
-                            "Emoji",
-                            "Video game",
-                            "Pixels",
-                            "Clay",
-                            "Toy"
-                        ],
-                        "type": "string",
-                        "title": "style",
-                        "description": "An enumeration."
                     },
                     "Output": {
                         "type": "array",
