@@ -1,48 +1,47 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/lucataco/pasd-magnify",
+    "owner": "lucataco",
+    "name": "pasd-magnify",
+    "description": "(Academic and Non-commercial use only) Pixel-Aware Stable Diffusion for Realistic Image Super-resolution and Personalized Stylization",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
-    "run_count": 247100,
-    "cover_image_url": "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp",
+    "github_url": "https://github.com/lucataco/cog-PASD-Magnify",
+    "paper_url": "https://huggingface.co/papers/2308.14469",
+    "license_url": null,
+    "run_count": 30273,
+    "cover_image_url": "https://replicate.delivery/pbxt/MGJy2aTpJB7dI1sQ49nfZpdQh2pesLIF6cC22ySbGo0LhcKSA/output-20240108153527.jpg",
     "default_example": {
-        "id": "qajxd850zxrgg0cg1kpr0h6nkg",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "wo45dqtbfv6zj3pwqldqj3qbxe",
+        "model": "lucataco/pasd-magnify",
+        "version": "d59e83ee13c42b137aee558c483e3acc0a8ecdacb1444a7be48152f008dcc195",
         "status": "succeeded",
         "input": {
-            "cfg": 4.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 79,
-            "negative_prompt": "ugly, distorted"
+            "image": "https://replicate.delivery/pbxt/KBuUhAMqvkXfjTqqOyg1TqIXSzgUhCbjIzaFoNb7fUdkK685/frog.png",
+            "prompt": "Frog, clean, high-resolution, 8k, best quality, masterpiece",
+            "n_prompt": "dotted, noise, blur, lowres, oversmooth, longbody, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality",
+            "denoise_steps": 20,
+            "guidance_scale": 7.5,
+            "upsample_scale": 2,
+            "conditioning_scale": 1.1
         },
-        "output": [
-            "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Random seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:03,  7.80it/s]\n 11%|█         | 3/28 [00:00<00:03,  7.81it/s]\n 14%|█▍        | 4/28 [00:00<00:03,  7.81it/s]\n 18%|█▊        | 5/28 [00:00<00:02,  7.78it/s]\n 21%|██▏       | 6/28 [00:00<00:02,  7.79it/s]\n 25%|██▌       | 7/28 [00:00<00:02,  7.73it/s]\n 29%|██▊       | 8/28 [00:01<00:02,  7.72it/s]\n 32%|███▏      | 9/28 [00:01<00:02,  7.73it/s]\n 36%|███▌      | 10/28 [00:01<00:02,  7.76it/s]\n 39%|███▉      | 11/28 [00:01<00:02,  7.77it/s]\n 43%|████▎     | 12/28 [00:01<00:02,  7.79it/s]\n 46%|████▋     | 13/28 [00:01<00:01,  7.78it/s]\n 50%|█████     | 14/28 [00:01<00:01,  7.80it/s]\n 54%|█████▎    | 15/28 [00:01<00:01,  7.78it/s]\n 57%|█████▋    | 16/28 [00:02<00:01,  7.78it/s]\n 61%|██████    | 17/28 [00:02<00:01,  7.77it/s]\n 64%|██████▍   | 18/28 [00:02<00:01,  7.78it/s]\n 68%|██████▊   | 19/28 [00:02<00:01,  7.79it/s]\n 71%|███████▏  | 20/28 [00:02<00:01,  7.78it/s]\n 75%|███████▌  | 21/28 [00:02<00:00,  7.77it/s]\n 79%|███████▊  | 22/28 [00:02<00:00,  7.79it/s]\n 82%|████████▏ | 23/28 [00:02<00:00,  7.78it/s]\n 86%|████████▌ | 24/28 [00:03<00:00,  7.78it/s]\n 89%|████████▉ | 25/28 [00:03<00:00,  7.77it/s]\n 93%|█████████▎| 26/28 [00:03<00:00,  7.77it/s]\n 96%|█████████▋| 27/28 [00:03<00:00,  7.75it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.76it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.77it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 3.99 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
+        "output": "https://replicate.delivery/pbxt/MGJy2aTpJB7dI1sQ49nfZpdQh2pesLIF6cC22ySbGo0LhcKSA/output-20240108153527.jpg",
+        "logs": "Using seed: 2896644955\nSeed set to 2896644955\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|▌         | 1/20 [00:00<00:12,  1.54it/s]\n 10%|█         | 2/20 [00:01<00:10,  1.76it/s]\n 15%|█▌        | 3/20 [00:01<00:09,  1.82it/s]\n 20%|██        | 4/20 [00:02<00:08,  1.86it/s]\n 25%|██▌       | 5/20 [00:02<00:07,  1.89it/s]\n 30%|███       | 6/20 [00:03<00:07,  1.90it/s]\n 35%|███▌      | 7/20 [00:03<00:06,  1.91it/s]\n 40%|████      | 8/20 [00:04<00:06,  1.91it/s]\n 45%|████▌     | 9/20 [00:04<00:05,  1.92it/s]\n 50%|█████     | 10/20 [00:05<00:05,  1.92it/s]\n 55%|█████▌    | 11/20 [00:05<00:04,  1.92it/s]\n 60%|██████    | 12/20 [00:06<00:04,  1.92it/s]\n 65%|██████▌   | 13/20 [00:06<00:03,  1.92it/s]\n 70%|███████   | 14/20 [00:07<00:03,  1.92it/s]\n 75%|███████▌  | 15/20 [00:07<00:02,  1.93it/s]\n 80%|████████  | 16/20 [00:08<00:02,  1.93it/s]\n 85%|████████▌ | 17/20 [00:08<00:01,  1.93it/s]\n 90%|█████████ | 18/20 [00:09<00:01,  1.93it/s]\n 95%|█████████▌| 19/20 [00:09<00:00,  1.93it/s]\n100%|██████████| 20/20 [00:10<00:00,  1.93it/s]\n100%|██████████| 20/20 [00:10<00:00,  1.90it/s]\n[Tiled VAE]: the input size is tiny and unnecessary to tile.\n[Tiled VAE]: Done in 11.102s, max VRAM alloc 5803.197 MB",
         "error": null,
         "metrics": {
-            "predict_time": 4.481755,
-            "total_time": 4.498663
+            "predict_time": 13.316808,
+            "total_time": 143.462103
         },
-        "created_at": "2024-06-12T14:50:18.239000Z",
-        "started_at": "2024-06-12T14:50:18.255908Z",
-        "completed_at": "2024-06-12T14:50:22.737663Z",
+        "created_at": "2024-01-08T15:33:16.794743Z",
+        "started_at": "2024-01-08T15:35:26.940038Z",
+        "completed_at": "2024-01-08T15:35:40.256846Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg",
-            "cancel": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg/cancel"
+            "get": "https://api.replicate.com/v1/predictions/wo45dqtbfv6zj3pwqldqj3qbxe",
+            "cancel": "https://api.replicate.com/v1/predictions/wo45dqtbfv6zj3pwqldqj3qbxe/cancel"
         }
     },
     "latest_version": {
-        "id": "3a1a11ffb268059b7f68a898c8b872324256df188bb98efffe3a8a84a3e55b46",
-        "created_at": "2024-06-14T20:23:45.292343+00:00",
-        "cog_version": "0.9.9",
+        "id": "d59e83ee13c42b137aee558c483e3acc0a8ecdacb1444a7be48152f008dcc195",
+        "created_at": "2024-01-08T15:17:33.283172+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -263,6 +262,9 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "image"
+                        ],
                         "properties": {
                             "seed": {
                                 "type": "integer",
@@ -274,95 +276,65 @@
                                 "type": "string",
                                 "title": "Image",
                                 "format": "uri",
-                                "x-order": 2,
-                                "description": "Input image for img2img mode"
+                                "x-order": 0,
+                                "description": "Input image"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0,
-                                "description": "Input prompt"
+                                "default": "Frog, clean, high-resolution, 8k, best quality, masterpiece",
+                                "x-order": 1,
+                                "description": "Prompt"
                             },
-                            "num_outputs": {
+                            "n_prompt": {
+                                "type": "string",
+                                "title": "N Prompt",
+                                "default": "dotted, noise, blur, lowres, oversmooth, longbody, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality",
+                                "x-order": 2,
+                                "description": "Negative Prompt"
+                            },
+                            "denoise_steps": {
                                 "type": "integer",
-                                "title": "Num Outputs",
-                                "default": 1,
-                                "maximum": 4,
-                                "minimum": 1,
-                                "x-order": 4,
-                                "description": "Number of images to output."
-                            },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
+                                "title": "Denoise Steps",
+                                "default": 20,
+                                "maximum": 50,
+                                "minimum": 10,
                                 "x-order": 3,
-                                "description": "Aspect ratio for the generated image"
-                            },
-                            "output_format": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/output_format"
-                                    }
-                                ],
-                                "default": "webp",
-                                "x-order": 8,
-                                "description": "Format of the output images"
+                                "description": "Denoise Steps"
                             },
                             "guidance_scale": {
                                 "type": "number",
                                 "title": "Guidance Scale",
-                                "default": 4.5,
-                                "maximum": 50,
-                                "minimum": 0,
-                                "x-order": 5,
-                                "description": "Scale for classifier-free guidance"
-                            },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 80,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 9,
-                                "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 1,
-                                "description": "Input negative prompt"
-                            },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.6,
-                                "maximum": 1,
-                                "minimum": 0,
+                                "default": 7.5,
+                                "maximum": 10,
+                                "minimum": 0.5,
                                 "x-order": 6,
-                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
+                                "description": "Guidance Scale"
                             },
-                            "disable_safety_checker": {
-                                "type": "boolean",
-                                "title": "Disable Safety Checker",
-                                "default": false,
-                                "x-order": 10,
-                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                            "upsample_scale": {
+                                "type": "integer",
+                                "title": "Upsample Scale",
+                                "default": 2,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 4,
+                                "description": "Upsample Scale"
+                            },
+                            "conditioning_scale": {
+                                "type": "number",
+                                "title": "Conditioning Scale",
+                                "default": 1.1,
+                                "maximum": 1.5,
+                                "minimum": 0.5,
+                                "x-order": 5,
+                                "description": "Conditioning Scale"
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -385,32 +357,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "2:3",
-                            "3:2",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

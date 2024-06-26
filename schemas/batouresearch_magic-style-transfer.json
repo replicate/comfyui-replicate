@@ -1,48 +1,58 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/batouresearch/magic-style-transfer",
+    "owner": "batouresearch",
+    "name": "magic-style-transfer",
+    "description": "Restyle an image with the style of another one. I strongly suggest to upscale the results with Clarity AI",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
-    "run_count": 247100,
-    "cover_image_url": "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp",
+    "github_url": "https://github.com/BatouResearch/Cog-Face-to-Anything/tree/magic-style-transfer",
+    "paper_url": null,
+    "license_url": null,
+    "run_count": 3724,
+    "cover_image_url": "https://replicate.delivery/pbxt/CgdTGuA9wdoWGhVUMgpPIv9mh4rpLnYYViUmeLKV8wF2QGRJA/out-0.png",
     "default_example": {
-        "id": "qajxd850zxrgg0cg1kpr0h6nkg",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "imodeq3bqxpre5bebcdqoi75l4",
+        "model": "batouresearch/magic-style-transfer",
+        "version": "3b5fa5d360c361090f11164292e45cc5d14cea8d089591d47c580cac9ec1c7ca",
         "status": "succeeded",
         "input": {
-            "cfg": 4.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 79,
-            "negative_prompt": "ugly, distorted"
+            "image": "https://replicate.delivery/pbxt/KbUKCMMihGkSc5MXYYYkjEI6hlf1GNmGgwugu6JfSQATqiCN/3d.jpeg",
+            "prompt": "modern interior living room",
+            "ip_image": "https://replicate.delivery/pbxt/KbUKD3uoQjyTzdWbeAqYrypl0RWVJc0gI5UHHa3yYWNaqIoc/DALL%C2%B7E%202024-03-20%2017.57.33%20-%20Create%20a%20professional%20photograph%20of%20a%20modern%20interior%20design.%20This%20image%20should%20capture%20a%20living%20room%20space%20that%20combines%20contemporary%20elegance%20with%20c.webp",
+            "ip_scale": 1,
+            "strength": 1,
+            "scheduler": "K_EULER",
+            "lora_scale": 0.9,
+            "num_outputs": 1,
+            "guidance_scale": 4,
+            "resizing_scale": 1,
+            "apply_watermark": true,
+            "negative_prompt": "",
+            "background_color": "#A2A2A2",
+            "num_inference_steps": 30,
+            "condition_canny_scale": 0.5,
+            "condition_depth_scale": 0.5
         },
         "output": [
-            "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp"
+            "https://replicate.delivery/pbxt/CgdTGuA9wdoWGhVUMgpPIv9mh4rpLnYYViUmeLKV8wF2QGRJA/out-0.png"
         ],
-        "logs": "Random seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:03,  7.80it/s]\n 11%|█         | 3/28 [00:00<00:03,  7.81it/s]\n 14%|█▍        | 4/28 [00:00<00:03,  7.81it/s]\n 18%|█▊        | 5/28 [00:00<00:02,  7.78it/s]\n 21%|██▏       | 6/28 [00:00<00:02,  7.79it/s]\n 25%|██▌       | 7/28 [00:00<00:02,  7.73it/s]\n 29%|██▊       | 8/28 [00:01<00:02,  7.72it/s]\n 32%|███▏      | 9/28 [00:01<00:02,  7.73it/s]\n 36%|███▌      | 10/28 [00:01<00:02,  7.76it/s]\n 39%|███▉      | 11/28 [00:01<00:02,  7.77it/s]\n 43%|████▎     | 12/28 [00:01<00:02,  7.79it/s]\n 46%|████▋     | 13/28 [00:01<00:01,  7.78it/s]\n 50%|█████     | 14/28 [00:01<00:01,  7.80it/s]\n 54%|█████▎    | 15/28 [00:01<00:01,  7.78it/s]\n 57%|█████▋    | 16/28 [00:02<00:01,  7.78it/s]\n 61%|██████    | 17/28 [00:02<00:01,  7.77it/s]\n 64%|██████▍   | 18/28 [00:02<00:01,  7.78it/s]\n 68%|██████▊   | 19/28 [00:02<00:01,  7.79it/s]\n 71%|███████▏  | 20/28 [00:02<00:01,  7.78it/s]\n 75%|███████▌  | 21/28 [00:02<00:00,  7.77it/s]\n 79%|███████▊  | 22/28 [00:02<00:00,  7.79it/s]\n 82%|████████▏ | 23/28 [00:02<00:00,  7.78it/s]\n 86%|████████▌ | 24/28 [00:03<00:00,  7.78it/s]\n 89%|████████▉ | 25/28 [00:03<00:00,  7.77it/s]\n 93%|█████████▎| 26/28 [00:03<00:00,  7.77it/s]\n 96%|█████████▋| 27/28 [00:03<00:00,  7.75it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.76it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.77it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 3.99 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
+        "logs": "Using seed: 28214\nPrompt: modern interior living room\nOriginal width:1024, height:1024\nAspect Ratio: 1.00\nnew_width:1024, new_height:1024\nYou have 2 ControlNets and you have passed 1 prompts. The conditionings will be fixed across the prompts.\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|▎         | 1/30 [00:00<00:13,  2.17it/s]\n  7%|▋         | 2/30 [00:00<00:10,  2.69it/s]\n 10%|█         | 3/30 [00:01<00:10,  2.59it/s]\n 13%|█▎        | 4/30 [00:01<00:10,  2.55it/s]\n 17%|█▋        | 5/30 [00:01<00:09,  2.52it/s]\n 20%|██        | 6/30 [00:02<00:09,  2.51it/s]\n 23%|██▎       | 7/30 [00:02<00:09,  2.50it/s]\n 27%|██▋       | 8/30 [00:03<00:08,  2.49it/s]\n 30%|███       | 9/30 [00:03<00:08,  2.49it/s]\n 33%|███▎      | 10/30 [00:03<00:08,  2.49it/s]\n 37%|███▋      | 11/30 [00:04<00:07,  2.49it/s]\n 40%|████      | 12/30 [00:04<00:07,  2.49it/s]\n 43%|████▎     | 13/30 [00:05<00:06,  2.49it/s]\n 47%|████▋     | 14/30 [00:05<00:06,  2.49it/s]\n 50%|█████     | 15/30 [00:05<00:06,  2.49it/s]\n 53%|█████▎    | 16/30 [00:06<00:05,  2.49it/s]\n 57%|█████▋    | 17/30 [00:06<00:05,  2.48it/s]\n 60%|██████    | 18/30 [00:07<00:04,  2.48it/s]\n 63%|██████▎   | 19/30 [00:07<00:04,  2.48it/s]\n 67%|██████▋   | 20/30 [00:08<00:04,  2.49it/s]\n 70%|███████   | 21/30 [00:08<00:03,  2.48it/s]\n 73%|███████▎  | 22/30 [00:08<00:03,  2.49it/s]\n 77%|███████▋  | 23/30 [00:09<00:02,  2.49it/s]\n 80%|████████  | 24/30 [00:09<00:02,  2.49it/s]\n 83%|████████▎ | 25/30 [00:10<00:02,  2.49it/s]\n 87%|████████▋ | 26/30 [00:10<00:01,  2.49it/s]\n 90%|█████████ | 27/30 [00:10<00:01,  2.49it/s]\n 93%|█████████▎| 28/30 [00:11<00:00,  2.49it/s]\n 97%|█████████▋| 29/30 [00:11<00:00,  2.49it/s]\n100%|██████████| 30/30 [00:12<00:00,  2.49it/s]\n100%|██████████| 30/30 [00:12<00:00,  2.49it/s]",
         "error": null,
         "metrics": {
-            "predict_time": 4.481755,
-            "total_time": 4.498663
+            "predict_time": 14.568553,
+            "total_time": 168.721412
         },
-        "created_at": "2024-06-12T14:50:18.239000Z",
-        "started_at": "2024-06-12T14:50:18.255908Z",
-        "completed_at": "2024-06-12T14:50:22.737663Z",
+        "created_at": "2024-03-20T16:58:43.897037Z",
+        "started_at": "2024-03-20T17:01:18.049896Z",
+        "completed_at": "2024-03-20T17:01:32.618449Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg",
-            "cancel": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg/cancel"
+            "get": "https://api.replicate.com/v1/predictions/imodeq3bqxpre5bebcdqoi75l4",
+            "cancel": "https://api.replicate.com/v1/predictions/imodeq3bqxpre5bebcdqoi75l4/cancel"
         }
     },
     "latest_version": {
-        "id": "3a1a11ffb268059b7f68a898c8b872324256df188bb98efffe3a8a84a3e55b46",
-        "created_at": "2024-06-14T20:23:45.292343+00:00",
-        "cog_version": "0.9.9",
+        "id": "3b5fa5d360c361090f11164292e45cc5d14cea8d089591d47c580cac9ec1c7ca",
+        "created_at": "2024-03-20T16:29:29.505365+00:00",
+        "cog_version": "0.9.5",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -267,22 +277,66 @@
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 7,
+                                "x-order": 15,
                                 "description": "Random seed. Leave blank to randomize the seed"
                             },
                             "image": {
                                 "type": "string",
                                 "title": "Image",
                                 "format": "uri",
-                                "x-order": 2,
-                                "description": "Input image for img2img mode"
+                                "x-order": 1,
+                                "description": "Input image"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
+                                "default": "An astronaut riding a rainbow unicorn",
                                 "x-order": 0,
                                 "description": "Input prompt"
+                            },
+                            "ip_image": {
+                                "type": "string",
+                                "title": "Ip Image",
+                                "format": "uri",
+                                "x-order": 2,
+                                "description": "Input image for img2img or inpaint mode"
+                            },
+                            "ip_scale": {
+                                "type": "number",
+                                "title": "Ip Scale",
+                                "default": 0.3,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 6,
+                                "description": "IP Adapter strength."
+                            },
+                            "strength": {
+                                "type": "number",
+                                "title": "Strength",
+                                "default": 0.9,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 7,
+                                "description": "When img2img is active, the denoising strength. 1 means total destruction of the input image."
+                            },
+                            "scheduler": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/scheduler"
+                                    }
+                                ],
+                                "default": "K_EULER",
+                                "x-order": 13,
+                                "description": "scheduler"
+                            },
+                            "lora_scale": {
+                                "type": "number",
+                                "title": "Lora Scale",
+                                "default": 0.9,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 5,
+                                "description": "LoRA additive scale. Only applicable on trained models."
                             },
                             "num_outputs": {
                                 "type": "integer",
@@ -290,69 +344,80 @@
                                 "default": 1,
                                 "maximum": 4,
                                 "minimum": 1,
-                                "x-order": 4,
-                                "description": "Number of images to output."
+                                "x-order": 12,
+                                "description": "Number of images to output"
                             },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
-                                "x-order": 3,
-                                "description": "Aspect ratio for the generated image"
-                            },
-                            "output_format": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/output_format"
-                                    }
-                                ],
-                                "default": "webp",
-                                "x-order": 8,
-                                "description": "Format of the output images"
+                            "lora_weights": {
+                                "type": "string",
+                                "title": "Lora Weights",
+                                "x-order": 17,
+                                "description": "Replicate LoRA weights to use. Leave blank to use the default weights."
                             },
                             "guidance_scale": {
                                 "type": "number",
                                 "title": "Guidance Scale",
-                                "default": 4.5,
+                                "default": 4,
                                 "maximum": 50,
-                                "minimum": 0,
-                                "x-order": 5,
+                                "minimum": 1,
+                                "x-order": 14,
                                 "description": "Scale for classifier-free guidance"
                             },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 80,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 9,
-                                "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
+                            "resizing_scale": {
+                                "type": "number",
+                                "title": "Resizing Scale",
+                                "default": 1,
+                                "maximum": 10,
+                                "minimum": 1,
+                                "x-order": 10,
+                                "description": "If you want the image to have a solid margin. Scale of the solid margin. 1.0 means no resizing."
+                            },
+                            "apply_watermark": {
+                                "type": "boolean",
+                                "title": "Apply Watermark",
+                                "default": true,
+                                "x-order": 16,
+                                "description": "Applies a watermark to enable determining if an image is generated in downstream applications. If you have other provisions for generating or deploying images safely, you can use this to disable watermarking."
                             },
                             "negative_prompt": {
                                 "type": "string",
                                 "title": "Negative Prompt",
                                 "default": "",
-                                "x-order": 1,
-                                "description": "Input negative prompt"
+                                "x-order": 8,
+                                "description": "Input Negative Prompt"
                             },
-                            "prompt_strength": {
+                            "background_color": {
+                                "type": "string",
+                                "title": "Background Color",
+                                "default": "#A2A2A2",
+                                "x-order": 9,
+                                "description": "When passing an image with alpha channel, it will be replaced with this color"
+                            },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 30,
+                                "maximum": 500,
+                                "minimum": 1,
+                                "x-order": 11,
+                                "description": "Number of denoising steps"
+                            },
+                            "condition_canny_scale": {
                                 "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.6,
-                                "maximum": 1,
+                                "title": "Condition Canny Scale",
+                                "default": 0.15,
+                                "maximum": 2,
                                 "minimum": 0,
-                                "x-order": 6,
-                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
+                                "x-order": 4,
+                                "description": "The bigger this number is, the more ControlNet interferes"
                             },
-                            "disable_safety_checker": {
-                                "type": "boolean",
-                                "title": "Disable Safety Checker",
-                                "default": false,
-                                "x-order": 10,
-                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                            "condition_depth_scale": {
+                                "type": "number",
+                                "title": "Condition Depth Scale",
+                                "default": 0.35,
+                                "maximum": 2,
+                                "minimum": 0,
+                                "x-order": 3,
+                                "description": "The bigger this number is, the more ControlNet interferes"
                             }
                         }
                     },
@@ -376,6 +441,20 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "scheduler": {
+                        "enum": [
+                            "DDIM",
+                            "DPMSolverMultistep",
+                            "HeunDiscrete",
+                            "KarrasDPM",
+                            "K_EULER_ANCESTRAL",
+                            "K_EULER",
+                            "PNDM"
+                        ],
+                        "type": "string",
+                        "title": "scheduler",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -385,32 +464,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "2:3",
-                            "3:2",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

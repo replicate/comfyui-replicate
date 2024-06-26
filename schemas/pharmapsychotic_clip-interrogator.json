@@ -1,48 +1,42 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/pharmapsychotic/clip-interrogator",
+    "owner": "pharmapsychotic",
+    "name": "clip-interrogator",
+    "description": "The CLIP Interrogator is a prompt engineering tool that combines OpenAI's CLIP and Salesforce's BLIP to optimize text prompts to match a given image. Use the resulting prompts with text-to-image models like Stable Diffusion to create cool art!",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
-    "run_count": 247100,
-    "cover_image_url": "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp",
+    "github_url": "https://github.com/pharmapsychotic/clip-interrogator",
+    "paper_url": null,
+    "license_url": "https://github.com/pharmapsychotic/clip-interrogator/blob/main/LICENSE",
+    "run_count": 1886309,
+    "cover_image_url": "https://replicate.delivery/pbxt/HrXsgowfhbZi3dImGZoIcvnz7oZfMtFY4UAEU8vBIakTd8JQ/watercolour-4799014_960_720.jpg",
     "default_example": {
-        "id": "qajxd850zxrgg0cg1kpr0h6nkg",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "6iveqabqxrf55lw2xez2owwn6e",
+        "model": "pharmapsychotic/clip-interrogator",
+        "version": "41fdb702d3fbe06c9835e39ac6ddfb8dee872835b22d6e8a7e0a467c793155f9",
         "status": "succeeded",
         "input": {
-            "cfg": 4.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 79,
-            "negative_prompt": "ugly, distorted"
+            "image": "https://replicate.delivery/pbxt/HrXsgowfhbZi3dImGZoIcvnz7oZfMtFY4UAEU8vBIakTd8JQ/watercolour-4799014_960_720.jpg",
+            "clip_model_name": "ViT-L/14"
         },
-        "output": [
-            "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Random seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:03,  7.80it/s]\n 11%|█         | 3/28 [00:00<00:03,  7.81it/s]\n 14%|█▍        | 4/28 [00:00<00:03,  7.81it/s]\n 18%|█▊        | 5/28 [00:00<00:02,  7.78it/s]\n 21%|██▏       | 6/28 [00:00<00:02,  7.79it/s]\n 25%|██▌       | 7/28 [00:00<00:02,  7.73it/s]\n 29%|██▊       | 8/28 [00:01<00:02,  7.72it/s]\n 32%|███▏      | 9/28 [00:01<00:02,  7.73it/s]\n 36%|███▌      | 10/28 [00:01<00:02,  7.76it/s]\n 39%|███▉      | 11/28 [00:01<00:02,  7.77it/s]\n 43%|████▎     | 12/28 [00:01<00:02,  7.79it/s]\n 46%|████▋     | 13/28 [00:01<00:01,  7.78it/s]\n 50%|█████     | 14/28 [00:01<00:01,  7.80it/s]\n 54%|█████▎    | 15/28 [00:01<00:01,  7.78it/s]\n 57%|█████▋    | 16/28 [00:02<00:01,  7.78it/s]\n 61%|██████    | 17/28 [00:02<00:01,  7.77it/s]\n 64%|██████▍   | 18/28 [00:02<00:01,  7.78it/s]\n 68%|██████▊   | 19/28 [00:02<00:01,  7.79it/s]\n 71%|███████▏  | 20/28 [00:02<00:01,  7.78it/s]\n 75%|███████▌  | 21/28 [00:02<00:00,  7.77it/s]\n 79%|███████▊  | 22/28 [00:02<00:00,  7.79it/s]\n 82%|████████▏ | 23/28 [00:02<00:00,  7.78it/s]\n 86%|████████▌ | 24/28 [00:03<00:00,  7.78it/s]\n 89%|████████▉ | 25/28 [00:03<00:00,  7.77it/s]\n 93%|█████████▎| 26/28 [00:03<00:00,  7.77it/s]\n 96%|█████████▋| 27/28 [00:03<00:00,  7.75it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.76it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.77it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 3.99 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
+        "output": "a watercolor painting of a sea turtle, a digital painting, by Kubisi art, featured on dribbble, medibang, warm saturated palette, red and green tones, turquoise horizon, digital art h 9 6 0, detailed scenery —width 672, illustration:.4, spray art, artstatiom",
+        "logs": "0%|          | 0/50 [00:00<?, ?it/s]\n 24%|██▍       | 12/50 [00:00<00:00, 119.71it/s]\n 48%|████▊     | 24/50 [00:00<00:00, 117.53it/s]\n 72%|███████▏  | 36/50 [00:00<00:00, 117.99it/s]\n 96%|█████████▌| 48/50 [00:00<00:00, 118.17it/s]\n100%|██████████| 50/50 [00:00<00:00, 119.05it/s]\n  0%|          | 0/6 [00:00<?, ?it/s]\n100%|██████████| 6/6 [00:00<00:00, 93.98it/s]\n  0%|          | 0/1 [00:00<?, ?it/s]\n100%|██████████| 1/1 [00:00<00:00, 33.81it/s]\nFlavor chain:   0%|          | 0/25 [00:00<?, ?it/s]\nFlavor chain:   4%|▍         | 1/25 [00:03<01:12,  3.01s/it]\nFlavor chain:   8%|▊         | 2/25 [00:05<01:08,  2.97s/it]\nFlavor chain:  12%|█▏        | 3/25 [00:09<01:06,  3.02s/it]\nFlavor chain:  16%|█▌        | 4/25 [00:12<01:03,  3.05s/it]\nFlavor chain:  20%|██        | 5/25 [00:15<01:00,  3.04s/it]\nFlavor chain:  24%|██▍       | 6/25 [00:18<00:57,  3.05s/it]\nFlavor chain:  28%|██▊       | 7/25 [00:21<00:55,  3.09s/it]\nFlavor chain:  32%|███▏      | 8/25 [00:24<00:55,  3.25s/it]\nFlavor chain:  36%|███▌      | 9/25 [00:28<00:53,  3.33s/it]\nFlavor chain:  40%|████      | 10/25 [00:32<00:51,  3.45s/it]\nFlavor chain:  40%|████      | 10/25 [00:33<00:49,  3.31s/it]",
         "error": null,
         "metrics": {
-            "predict_time": 4.481755,
-            "total_time": 4.498663
+            "predict_time": 37.674196,
+            "total_time": 215.894706
         },
-        "created_at": "2024-06-12T14:50:18.239000Z",
-        "started_at": "2024-06-12T14:50:18.255908Z",
-        "completed_at": "2024-06-12T14:50:22.737663Z",
+        "created_at": "2022-11-27T22:29:05.240885Z",
+        "started_at": "2022-11-27T22:32:03.461395Z",
+        "completed_at": "2022-11-27T22:32:41.135591Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg",
-            "cancel": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg/cancel"
+            "get": "https://api.replicate.com/v1/predictions/6iveqabqxrf55lw2xez2owwn6e",
+            "cancel": "https://api.replicate.com/v1/predictions/6iveqabqxrf55lw2xez2owwn6e/cancel"
         }
     },
     "latest_version": {
-        "id": "3a1a11ffb268059b7f68a898c8b872324256df188bb98efffe3a8a84a3e55b46",
-        "created_at": "2024-06-14T20:23:45.292343+00:00",
-        "cog_version": "0.9.9",
+        "id": "8151e1c9f47e696fa316146a2e35812ccf79cfc9eba05b11c7f450155102af70",
+        "created_at": "2023-09-10T00:36:33.326917+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -260,108 +254,55 @@
             "openapi": "3.0.2",
             "components": {
                 "schemas": {
+                    "mode": {
+                        "enum": [
+                            "best",
+                            "classic",
+                            "fast",
+                            "negative"
+                        ],
+                        "type": "string",
+                        "title": "mode",
+                        "description": "An enumeration."
+                    },
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "image"
+                        ],
                         "properties": {
-                            "seed": {
-                                "type": "integer",
-                                "title": "Seed",
-                                "x-order": 7,
-                                "description": "Random seed. Leave blank to randomize the seed"
+                            "mode": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/mode"
+                                    }
+                                ],
+                                "default": "best",
+                                "x-order": 2,
+                                "description": "Prompt mode (best takes 10-20 seconds, fast takes 1-2 seconds)."
                             },
                             "image": {
                                 "type": "string",
                                 "title": "Image",
                                 "format": "uri",
-                                "x-order": 2,
-                                "description": "Input image for img2img mode"
-                            },
-                            "prompt": {
-                                "type": "string",
-                                "title": "Prompt",
-                                "default": "",
                                 "x-order": 0,
-                                "description": "Input prompt"
+                                "description": "Input image"
                             },
-                            "num_outputs": {
-                                "type": "integer",
-                                "title": "Num Outputs",
-                                "default": 1,
-                                "maximum": 4,
-                                "minimum": 1,
-                                "x-order": 4,
-                                "description": "Number of images to output."
-                            },
-                            "aspect_ratio": {
+                            "clip_model_name": {
                                 "allOf": [
                                     {
-                                        "$ref": "#/components/schemas/aspect_ratio"
+                                        "$ref": "#/components/schemas/clip_model_name"
                                     }
                                 ],
-                                "default": "1:1",
-                                "x-order": 3,
-                                "description": "Aspect ratio for the generated image"
-                            },
-                            "output_format": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/output_format"
-                                    }
-                                ],
-                                "default": "webp",
-                                "x-order": 8,
-                                "description": "Format of the output images"
-                            },
-                            "guidance_scale": {
-                                "type": "number",
-                                "title": "Guidance Scale",
-                                "default": 4.5,
-                                "maximum": 50,
-                                "minimum": 0,
-                                "x-order": 5,
-                                "description": "Scale for classifier-free guidance"
-                            },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 80,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 9,
-                                "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
+                                "default": "ViT-L-14/openai",
                                 "x-order": 1,
-                                "description": "Input negative prompt"
-                            },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.6,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 6,
-                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
-                            },
-                            "disable_safety_checker": {
-                                "type": "boolean",
-                                "title": "Disable Safety Checker",
-                                "default": false,
-                                "x-order": 10,
-                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                                "description": "Choose ViT-L for Stable Diffusion 1, ViT-H for Stable Diffusion 2, or ViT-bigG for Stable Diffusion XL."
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
+                        "type": "string",
                         "title": "Output"
                     },
                     "Status": {
@@ -385,32 +326,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "2:3",
-                            "3:2",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {
@@ -445,6 +360,16 @@
                                 "title": "Error Type"
                             }
                         }
+                    },
+                    "clip_model_name": {
+                        "enum": [
+                            "ViT-L-14/openai",
+                            "ViT-H-14/laion2b_s32b_b79k",
+                            "ViT-bigG-14/laion2b_s39b_b160k"
+                        ],
+                        "type": "string",
+                        "title": "clip_model_name",
+                        "description": "An enumeration."
                     },
                     "PredictionRequest": {
                         "type": "object",

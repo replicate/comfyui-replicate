@@ -1,48 +1,45 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/cuuupid/idm-vton",
+    "owner": "cuuupid",
+    "name": "idm-vton",
+    "description": "Best-in-class clothing virtual try on in the wild (non-commercial use only)",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
-    "run_count": 247100,
-    "cover_image_url": "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp",
+    "github_url": "https://github.com/yisol/IDM-VTON",
+    "paper_url": "https://arxiv.org/abs/2403.05139",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "run_count": 199318,
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/e6753f2f-78a9-43af-8a2e-ef379d9d5f51/replicate-prediction-qh5eq80v2hrg.png",
     "default_example": {
-        "id": "qajxd850zxrgg0cg1kpr0h6nkg",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "chz7vk2mt5rgg0cenfqaj2war8",
+        "model": "cuuupid/idm-vton",
+        "version": "e3893af4fb4bd5741752b35b395348c5f7a9ab5c4776264f5d38e41418081ed7",
         "status": "succeeded",
         "input": {
-            "cfg": 4.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 79,
-            "negative_prompt": "ugly, distorted"
+            "seed": 42,
+            "steps": 30,
+            "garm_img": "https://replicate.delivery/pbxt/KgwTlZyFx5aUU3gc5gMiKuD5nNPTgliMlLUWx160G4z99YjO/sweater.webp",
+            "human_img": "https://replicate.delivery/pbxt/KgwTlhCMvDagRrcVzZJbuozNJ8esPqiNAIJS3eMgHrYuHmW4/KakaoTalk_Photo_2024-04-04-21-44-45.png",
+            "garment_des": "cute pink top"
         },
-        "output": [
-            "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Random seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:03,  7.80it/s]\n 11%|█         | 3/28 [00:00<00:03,  7.81it/s]\n 14%|█▍        | 4/28 [00:00<00:03,  7.81it/s]\n 18%|█▊        | 5/28 [00:00<00:02,  7.78it/s]\n 21%|██▏       | 6/28 [00:00<00:02,  7.79it/s]\n 25%|██▌       | 7/28 [00:00<00:02,  7.73it/s]\n 29%|██▊       | 8/28 [00:01<00:02,  7.72it/s]\n 32%|███▏      | 9/28 [00:01<00:02,  7.73it/s]\n 36%|███▌      | 10/28 [00:01<00:02,  7.76it/s]\n 39%|███▉      | 11/28 [00:01<00:02,  7.77it/s]\n 43%|████▎     | 12/28 [00:01<00:02,  7.79it/s]\n 46%|████▋     | 13/28 [00:01<00:01,  7.78it/s]\n 50%|█████     | 14/28 [00:01<00:01,  7.80it/s]\n 54%|█████▎    | 15/28 [00:01<00:01,  7.78it/s]\n 57%|█████▋    | 16/28 [00:02<00:01,  7.78it/s]\n 61%|██████    | 17/28 [00:02<00:01,  7.77it/s]\n 64%|██████▍   | 18/28 [00:02<00:01,  7.78it/s]\n 68%|██████▊   | 19/28 [00:02<00:01,  7.79it/s]\n 71%|███████▏  | 20/28 [00:02<00:01,  7.78it/s]\n 75%|███████▌  | 21/28 [00:02<00:00,  7.77it/s]\n 79%|███████▊  | 22/28 [00:02<00:00,  7.79it/s]\n 82%|████████▏ | 23/28 [00:02<00:00,  7.78it/s]\n 86%|████████▌ | 24/28 [00:03<00:00,  7.78it/s]\n 89%|████████▉ | 25/28 [00:03<00:00,  7.77it/s]\n 93%|█████████▎| 26/28 [00:03<00:00,  7.77it/s]\n 96%|█████████▋| 27/28 [00:03<00:00,  7.75it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.76it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.77it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 3.99 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
+        "output": "https://replicate.delivery/pbxt/Tfs5JETdzlURKyKeUOltKwch7udHf8e2xmNsftwid7ca2E6UC/output.jpg",
+        "logs": "0%|          | 0/1 [00:00<?, ?it/s]\n100%|██████████| 1/1 [00:03<00:00,  3.51s/it]\n100%|██████████| 1/1 [00:03<00:00,  3.51s/it]\n  0%|          | 0/1 [00:00<?, ?it/s]\n100%|██████████| 1/1 [00:03<00:00,  3.50s/it]\n100%|██████████| 1/1 [00:03<00:00,  3.50s/it]\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|▎         | 1/30 [00:00<00:06,  4.49it/s]\n  7%|▋         | 2/30 [00:00<00:06,  4.46it/s]\n 10%|█         | 3/30 [00:00<00:05,  4.50it/s]\n 13%|█▎        | 4/30 [00:00<00:05,  4.49it/s]\n 17%|█▋        | 5/30 [00:01<00:05,  4.51it/s]\n 20%|██        | 6/30 [00:01<00:05,  4.53it/s]\n 23%|██▎       | 7/30 [00:01<00:05,  4.53it/s]\n 27%|██▋       | 8/30 [00:01<00:04,  4.53it/s]\n 30%|███       | 9/30 [00:01<00:04,  4.52it/s]\n 33%|███▎      | 10/30 [00:02<00:04,  4.52it/s]\n 37%|███▋      | 11/30 [00:02<00:04,  4.51it/s]\n 40%|████      | 12/30 [00:02<00:04,  4.48it/s]\n 43%|████▎     | 13/30 [00:02<00:03,  4.48it/s]\n 47%|████▋     | 14/30 [00:03<00:03,  4.51it/s]\n 50%|█████     | 15/30 [00:03<00:03,  4.51it/s]\n 53%|█████▎    | 16/30 [00:03<00:03,  4.51it/s]\n 57%|█████▋    | 17/30 [00:03<00:02,  4.50it/s]\n 60%|██████    | 18/30 [00:03<00:02,  4.50it/s]\n 63%|██████▎   | 19/30 [00:04<00:02,  4.49it/s]\n 67%|██████▋   | 20/30 [00:04<00:02,  4.47it/s]\n 70%|███████   | 21/30 [00:04<00:02,  4.47it/s]\n 73%|███████▎  | 22/30 [00:04<00:01,  4.46it/s]\n 77%|███████▋  | 23/30 [00:05<00:01,  4.47it/s]\n 80%|████████  | 24/30 [00:05<00:01,  4.47it/s]\n 83%|████████▎ | 25/30 [00:05<00:01,  4.49it/s]\n 87%|████████▋ | 26/30 [00:05<00:00,  4.49it/s]\n 90%|█████████ | 27/30 [00:06<00:00,  4.49it/s]\n 93%|█████████▎| 28/30 [00:06<00:00,  4.50it/s]\n 97%|█████████▋| 29/30 [00:06<00:00,  4.50it/s]\n100%|██████████| 30/30 [00:06<00:00,  4.50it/s]\n100%|██████████| 30/30 [00:06<00:00,  4.50it/s]",
         "error": null,
         "metrics": {
-            "predict_time": 4.481755,
-            "total_time": 4.498663
+            "predict_time": 16.590835,
+            "total_time": 16.600048
         },
-        "created_at": "2024-06-12T14:50:18.239000Z",
-        "started_at": "2024-06-12T14:50:18.255908Z",
-        "completed_at": "2024-06-12T14:50:22.737663Z",
+        "created_at": "2024-04-05T01:45:07.025000Z",
+        "started_at": "2024-04-05T01:45:07.034213Z",
+        "completed_at": "2024-04-05T01:45:23.625048Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg",
-            "cancel": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg/cancel"
+            "get": "https://api.replicate.com/v1/predictions/chz7vk2mt5rgg0cenfqaj2war8",
+            "cancel": "https://api.replicate.com/v1/predictions/chz7vk2mt5rgg0cenfqaj2war8/cancel"
         }
     },
     "latest_version": {
-        "id": "3a1a11ffb268059b7f68a898c8b872324256df188bb98efffe3a8a84a3e55b46",
-        "created_at": "2024-06-14T20:23:45.292343+00:00",
-        "cog_version": "0.9.9",
+        "id": "906425dbca90663ff5427624839572cc56ea7d380343d13e2a4c4b09d3f0c30f",
+        "created_at": "2024-04-25T03:18:00.940610+00:00",
+        "cog_version": "v0.9.5+dev",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -263,106 +260,89 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "garm_img",
+                            "human_img"
+                        ],
                         "properties": {
+                            "crop": {
+                                "type": "boolean",
+                                "title": "Crop",
+                                "default": false,
+                                "x-order": 5,
+                                "description": "Use cropping? (check this if your image is not 3:4)"
+                            },
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 7,
-                                "description": "Random seed. Leave blank to randomize the seed"
+                                "default": 42,
+                                "x-order": 9
                             },
-                            "image": {
+                            "steps": {
+                                "type": "integer",
+                                "title": "Steps",
+                                "default": 30,
+                                "maximum": 40,
+                                "minimum": 1,
+                                "x-order": 8
+                            },
+                            "category": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/category"
+                                    }
+                                ],
+                                "default": "upper_body",
+                                "x-order": 4,
+                                "description": "Category of garment"
+                            },
+                            "force_dc": {
+                                "type": "boolean",
+                                "title": "Force Dc",
+                                "default": false,
+                                "x-order": 6,
+                                "description": "Use the DressCode version of IDM-VTON (this is default false, except if category=dresses)"
+                            },
+                            "garm_img": {
                                 "type": "string",
-                                "title": "Image",
+                                "title": "Garm Img",
+                                "format": "uri",
+                                "x-order": 0,
+                                "description": "Garment, should match the category, can be a product image or even a photo of someone"
+                            },
+                            "mask_img": {
+                                "type": "string",
+                                "title": "Mask Img",
+                                "format": "uri",
+                                "x-order": 3,
+                                "description": "Mask image, optional (but faster)"
+                            },
+                            "human_img": {
+                                "type": "string",
+                                "title": "Human Img",
                                 "format": "uri",
                                 "x-order": 2,
-                                "description": "Input image for img2img mode"
+                                "description": "Model, if this is not 3:4 check crop"
                             },
-                            "prompt": {
-                                "type": "string",
-                                "title": "Prompt",
-                                "default": "",
-                                "x-order": 0,
-                                "description": "Input prompt"
-                            },
-                            "num_outputs": {
-                                "type": "integer",
-                                "title": "Num Outputs",
-                                "default": 1,
-                                "maximum": 4,
-                                "minimum": 1,
-                                "x-order": 4,
-                                "description": "Number of images to output."
-                            },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
-                                "x-order": 3,
-                                "description": "Aspect ratio for the generated image"
-                            },
-                            "output_format": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/output_format"
-                                    }
-                                ],
-                                "default": "webp",
-                                "x-order": 8,
-                                "description": "Format of the output images"
-                            },
-                            "guidance_scale": {
-                                "type": "number",
-                                "title": "Guidance Scale",
-                                "default": 4.5,
-                                "maximum": 50,
-                                "minimum": 0,
-                                "x-order": 5,
-                                "description": "Scale for classifier-free guidance"
-                            },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 80,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 9,
-                                "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 1,
-                                "description": "Input negative prompt"
-                            },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.6,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 6,
-                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
-                            },
-                            "disable_safety_checker": {
+                            "mask_only": {
                                 "type": "boolean",
-                                "title": "Disable Safety Checker",
+                                "title": "Mask Only",
                                 "default": false,
-                                "x-order": 10,
-                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                                "x-order": 7,
+                                "description": "Return only the mask"
+                            },
+                            "garment_des": {
+                                "type": "string",
+                                "title": "Garment Des",
+                                "x-order": 1,
+                                "description": "Description of garment e.g. Short Sleeve Round Neck T-shirt"
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -376,6 +356,16 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "category": {
+                        "enum": [
+                            "upper_body",
+                            "lower_body",
+                            "dresses"
+                        ],
+                        "type": "string",
+                        "title": "category",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -385,32 +375,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "2:3",
-                            "3:2",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

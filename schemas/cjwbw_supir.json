@@ -1,48 +1,58 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/cjwbw/supir",
+    "owner": "cjwbw",
+    "name": "supir",
+    "description": "Practicing Model Scaling for Photo-Realistic Image Restoration In the Wild. This version uses LLaVA-13b for captioning.",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
-    "run_count": 247100,
-    "cover_image_url": "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp",
+    "github_url": "https://github.com/chenxwh/SUPIR",
+    "paper_url": "https://github.com/chenxwh/SUPIR/tree/master",
+    "license_url": "https://github.com/Fanghua-Yu/SUPIR/blob/master/LICENSE",
+    "run_count": 103856,
+    "cover_image_url": "https://replicate.delivery/pbxt/tsZTAUpHvDorAJcaZDd1BpYsBcijNfwhXfDUCAIvrqTsdnZSA/out.png",
     "default_example": {
-        "id": "qajxd850zxrgg0cg1kpr0h6nkg",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "o4b2mqtbpcxyuo52addzll2g6i",
+        "model": "cjwbw/supir",
+        "version": "1302b550b4f7681da87ed0e405016d443fe1fafd64dabce6673401855a5039b5",
         "status": "succeeded",
         "input": {
-            "cfg": 4.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 79,
-            "negative_prompt": "ugly, distorted"
+            "image": "https://replicate.delivery/pbxt/KSFJ6sJWyEiPWysywNsAr2enzigJA3NZpG4YMrxrSFEIEShi/05.png",
+            "s_cfg": 7.5,
+            "s_churn": 5,
+            "s_noise": 1.003,
+            "upscale": 1,
+            "a_prompt": "Cinematic, High Contrast, highly detailed, taken using a Canon EOS R camera, hyper detailed photo - realistic maximum detail, 32k, Color Grading, ultra HD, extreme meticulous detailing, skin pore detailing, hyper sharpness, perfect without deformations.",
+            "min_size": 1024,
+            "n_prompt": "painting, oil painting, illustration, drawing, art, sketch, oil painting, cartoon, CG Style, 3D render, unreal engine, blurring, dirty, messy, worst quality, low quality, frames, watermark, signature, jpeg artifacts, deformed, lowres, over-smooth",
+            "s_stage1": -1,
+            "s_stage2": 1,
+            "edm_steps": 50,
+            "use_llava": true,
+            "linear_CFG": false,
+            "model_name": "SUPIR-v0Q",
+            "color_fix_type": "Wavelet",
+            "spt_linear_CFG": 1,
+            "linear_s_stage2": false,
+            "spt_linear_s_stage2": 0
         },
-        "output": [
-            "https://replicate.delivery/pbxt/xSNDMDlOk4IzHxJZ1ntRe80wu1JD65y2lLRkO0YWxnBXP7eSA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Random seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:03,  7.80it/s]\n 11%|█         | 3/28 [00:00<00:03,  7.81it/s]\n 14%|█▍        | 4/28 [00:00<00:03,  7.81it/s]\n 18%|█▊        | 5/28 [00:00<00:02,  7.78it/s]\n 21%|██▏       | 6/28 [00:00<00:02,  7.79it/s]\n 25%|██▌       | 7/28 [00:00<00:02,  7.73it/s]\n 29%|██▊       | 8/28 [00:01<00:02,  7.72it/s]\n 32%|███▏      | 9/28 [00:01<00:02,  7.73it/s]\n 36%|███▌      | 10/28 [00:01<00:02,  7.76it/s]\n 39%|███▉      | 11/28 [00:01<00:02,  7.77it/s]\n 43%|████▎     | 12/28 [00:01<00:02,  7.79it/s]\n 46%|████▋     | 13/28 [00:01<00:01,  7.78it/s]\n 50%|█████     | 14/28 [00:01<00:01,  7.80it/s]\n 54%|█████▎    | 15/28 [00:01<00:01,  7.78it/s]\n 57%|█████▋    | 16/28 [00:02<00:01,  7.78it/s]\n 61%|██████    | 17/28 [00:02<00:01,  7.77it/s]\n 64%|██████▍   | 18/28 [00:02<00:01,  7.78it/s]\n 68%|██████▊   | 19/28 [00:02<00:01,  7.79it/s]\n 71%|███████▏  | 20/28 [00:02<00:01,  7.78it/s]\n 75%|███████▌  | 21/28 [00:02<00:00,  7.77it/s]\n 79%|███████▊  | 22/28 [00:02<00:00,  7.79it/s]\n 82%|████████▏ | 23/28 [00:02<00:00,  7.78it/s]\n 86%|████████▌ | 24/28 [00:03<00:00,  7.78it/s]\n 89%|████████▉ | 25/28 [00:03<00:00,  7.77it/s]\n 93%|█████████▎| 26/28 [00:03<00:00,  7.77it/s]\n 96%|█████████▋| 27/28 [00:03<00:00,  7.75it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.76it/s]\n100%|██████████| 28/28 [00:03<00:00,  7.77it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 3.99 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
+        "output": "https://replicate.delivery/pbxt/tsZTAUpHvDorAJcaZDd1BpYsBcijNfwhXfDUCAIvrqTsdnZSA/out.png",
+        "logs": "Using seed: 12774\nCaptions from LLaVA: ['The image features a beautiful bird perched on a thin, dry branch in a field. The bird is colorful and stands out against the brown background of the field. The branch is located in the middle of the scene, with the bird sitting on it, drawing attention to itself. The field is filled with a variety of flowers, adding a vibrant touch to the scene. The overall style of the image is artistic, with a focus on the bird and its natural surroundings.']\nSeed set to 12774",
         "error": null,
         "metrics": {
-            "predict_time": 4.481755,
-            "total_time": 4.498663
+            "predict_time": 18.567178,
+            "total_time": 859.898094
         },
-        "created_at": "2024-06-12T14:50:18.239000Z",
-        "started_at": "2024-06-12T14:50:18.255908Z",
-        "completed_at": "2024-06-12T14:50:22.737663Z",
+        "created_at": "2024-02-23T16:04:32.875679Z",
+        "started_at": "2024-02-23T16:18:34.206595Z",
+        "completed_at": "2024-02-23T16:18:52.773773Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg",
-            "cancel": "https://api.replicate.com/v1/predictions/qajxd850zxrgg0cg1kpr0h6nkg/cancel"
+            "get": "https://api.replicate.com/v1/predictions/o4b2mqtbpcxyuo52addzll2g6i",
+            "cancel": "https://api.replicate.com/v1/predictions/o4b2mqtbpcxyuo52addzll2g6i/cancel"
         }
     },
     "latest_version": {
-        "id": "3a1a11ffb268059b7f68a898c8b872324256df188bb98efffe3a8a84a3e55b46",
-        "created_at": "2024-06-14T20:23:45.292343+00:00",
-        "cog_version": "0.9.9",
+        "id": "1302b550b4f7681da87ed0e405016d443fe1fafd64dabce6673401855a5039b5",
+        "created_at": "2024-02-23T16:02:47.711057+00:00",
+        "cog_version": "0.9.4",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -263,106 +273,158 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "image"
+                        ],
                         "properties": {
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 7,
+                                "x-order": 18,
                                 "description": "Random seed. Leave blank to randomize the seed"
                             },
                             "image": {
                                 "type": "string",
                                 "title": "Image",
                                 "format": "uri",
-                                "x-order": 2,
-                                "description": "Input image for img2img mode"
+                                "x-order": 1,
+                                "description": "Low quality input image."
                             },
-                            "prompt": {
-                                "type": "string",
-                                "title": "Prompt",
-                                "default": "",
-                                "x-order": 0,
-                                "description": "Input prompt"
+                            "s_cfg": {
+                                "type": "number",
+                                "title": "S Cfg",
+                                "default": 7.5,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 12,
+                                "description": " Classifier-free guidance scale for prompts."
                             },
-                            "num_outputs": {
+                            "s_churn": {
+                                "type": "number",
+                                "title": "S Churn",
+                                "default": 5,
+                                "x-order": 10,
+                                "description": "Original churn hy-param of EDM."
+                            },
+                            "s_noise": {
+                                "type": "number",
+                                "title": "S Noise",
+                                "default": 1.003,
+                                "x-order": 11,
+                                "description": "Original noise hy-param of EDM."
+                            },
+                            "upscale": {
                                 "type": "integer",
-                                "title": "Num Outputs",
+                                "title": "Upscale",
                                 "default": 1,
-                                "maximum": 4,
+                                "x-order": 2,
+                                "description": "Upsampling ratio of given inputs."
+                            },
+                            "a_prompt": {
+                                "type": "string",
+                                "title": "A Prompt",
+                                "default": "Cinematic, High Contrast, highly detailed, taken using a Canon EOS R camera, hyper detailed photo - realistic maximum detail, 32k, Color Grading, ultra HD, extreme meticulous detailing, skin pore detailing, hyper sharpness, perfect without deformations.",
+                                "x-order": 6,
+                                "description": "Additive positive prompt for the inputs."
+                            },
+                            "min_size": {
+                                "type": "number",
+                                "title": "Min Size",
+                                "default": 1024,
+                                "x-order": 3,
+                                "description": "Minimum resolution of output images."
+                            },
+                            "n_prompt": {
+                                "type": "string",
+                                "title": "N Prompt",
+                                "default": "painting, oil painting, illustration, drawing, art, sketch, oil painting, cartoon, CG Style, 3D render, unreal engine, blurring, dirty, messy, worst quality, low quality, frames, watermark, signature, jpeg artifacts, deformed, lowres, over-smooth",
+                                "x-order": 7,
+                                "description": "Negative prompt for the inputs."
+                            },
+                            "s_stage1": {
+                                "type": "integer",
+                                "title": "S Stage1",
+                                "default": -1,
+                                "x-order": 9,
+                                "description": "Control Strength of Stage1 (negative means invalid)."
+                            },
+                            "s_stage2": {
+                                "type": "number",
+                                "title": "S Stage2",
+                                "default": 1,
+                                "x-order": 13,
+                                "description": "Control Strength of Stage2."
+                            },
+                            "edm_steps": {
+                                "type": "integer",
+                                "title": "Edm Steps",
+                                "default": 50,
+                                "maximum": 500,
                                 "minimum": 1,
                                 "x-order": 4,
-                                "description": "Number of images to output."
+                                "description": "Number of steps for EDM Sampling Schedule."
                             },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
-                                "x-order": 3,
-                                "description": "Aspect ratio for the generated image"
-                            },
-                            "output_format": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/output_format"
-                                    }
-                                ],
-                                "default": "webp",
-                                "x-order": 8,
-                                "description": "Format of the output images"
-                            },
-                            "guidance_scale": {
-                                "type": "number",
-                                "title": "Guidance Scale",
-                                "default": 4.5,
-                                "maximum": 50,
-                                "minimum": 0,
-                                "x-order": 5,
-                                "description": "Scale for classifier-free guidance"
-                            },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 80,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 9,
-                                "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 1,
-                                "description": "Input negative prompt"
-                            },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.6,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 6,
-                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
-                            },
-                            "disable_safety_checker": {
+                            "use_llava": {
                                 "type": "boolean",
-                                "title": "Disable Safety Checker",
+                                "title": "Use Llava",
+                                "default": true,
+                                "x-order": 5,
+                                "description": "Use LLaVA model to get captions."
+                            },
+                            "linear_CFG": {
+                                "type": "boolean",
+                                "title": "Linear Cfg",
                                 "default": false,
-                                "x-order": 10,
-                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                                "x-order": 14,
+                                "description": "Linearly (with sigma) increase CFG from 'spt_linear_CFG' to s_cfg."
+                            },
+                            "model_name": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/model_name"
+                                    }
+                                ],
+                                "default": "SUPIR-v0Q",
+                                "x-order": 0,
+                                "description": "Choose a model. SUPIR-v0Q is the default training settings with paper. SUPIR-v0F is high generalization and high image quality in most cases. Training with light degradation settings. Stage1 encoder of SUPIR-v0F remains more details when facing light degradations."
+                            },
+                            "color_fix_type": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/color_fix_type"
+                                    }
+                                ],
+                                "default": "Wavelet",
+                                "x-order": 8,
+                                "description": "Color Fixing Type.."
+                            },
+                            "spt_linear_CFG": {
+                                "type": "number",
+                                "title": "Spt Linear Cfg",
+                                "default": 1,
+                                "x-order": 16,
+                                "description": "Start point of linearly increasing CFG."
+                            },
+                            "linear_s_stage2": {
+                                "type": "boolean",
+                                "title": "Linear S Stage2",
+                                "default": false,
+                                "x-order": 15,
+                                "description": "Linearly (with sigma) increase s_stage2 from 'spt_linear_s_stage2' to s_stage2."
+                            },
+                            "spt_linear_s_stage2": {
+                                "type": "number",
+                                "title": "Spt Linear S Stage2",
+                                "default": 0,
+                                "x-order": 17,
+                                "description": "Start point of linearly increasing s_stage2."
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -376,6 +438,15 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "model_name": {
+                        "enum": [
+                            "SUPIR-v0Q",
+                            "SUPIR-v0F"
+                        ],
+                        "type": "string",
+                        "title": "model_name",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -387,30 +458,14 @@
                         "title": "WebhookEvent",
                         "description": "An enumeration."
                     },
-                    "aspect_ratio": {
+                    "color_fix_type": {
                         "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "2:3",
-                            "3:2",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
+                            "None",
+                            "AdaIn",
+                            "Wavelet"
                         ],
                         "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
+                        "title": "color_fix_type",
                         "description": "An enumeration."
                     },
                     "ValidationError": {
