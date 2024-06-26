@@ -4,8 +4,10 @@ import replicate
 import requests
 from PIL import Image
 from io import BytesIO
+import io
 from torchvision import transforms
 import torch
+import base64
 
 
 def convert_to_comfyui_input_type(openapi_type, openapi_format=None):
@@ -58,6 +60,8 @@ def convert_schema_to_comfyui(schema, schemas):
             input_config["min"] = prop_data["minimum"]
         if "maximum" in prop_data:
             input_config["max"] = prop_data["maximum"]
+        if input_type == "FLOAT":
+            input_config["step"] = 0.01
 
         if "prompt" in prop_name and prop_data.get("type") == "string":
             input_config["multiline"] = True
@@ -76,8 +80,6 @@ def convert_schema_to_comfyui(schema, schemas):
 
 def reorder_input_types(input_types, schema):
     ordered_input_types = {"required": {}, "optional": {}}
-
-    # Sort properties based on "x-order" if available
     sorted_properties = sorted(
         schema["properties"].items(), key=lambda x: x[1].get("x-order", float("inf"))
     )
@@ -134,8 +136,40 @@ def create_comfyui_node(schemas, model_info):
         FUNCTION = "run_openapi_to_comfyui"
         CATEGORY = "Replicate"
 
+        def handle_image_input(self, image):
+            if isinstance(image, torch.Tensor):
+                image = image.permute(0, 3, 1, 2).squeeze(0)
+                to_pil = transforms.ToPILImage()
+                pil_image = to_pil(image)
+            else:
+                pil_image = image
+
+            buffer = io.BytesIO()
+            pil_image.save(buffer, format="PNG")
+            buffer.seek(0)
+            img_str = base64.b64encode(buffer.getvalue()).decode()
+            return f"data:image/png;base64,{img_str}"
+
         def run_openapi_to_comfyui(self, **kwargs):
+            # Convert IMAGE inputs to base64 URI
+            for key, value in kwargs.items():
+                if value is not None:
+                    input_type = (
+                        self.INPUT_TYPES()["required"].get(key, (None,))[0]
+                        or self.INPUT_TYPES().get("optional", {}).get(key, (None,))[0]
+                    )
+                    if input_type == "IMAGE":
+                        kwargs[key] = self.handle_image_input(value)
+
             print(f"Running {replicate_model} with {kwargs}")
+            # Truncate any base64 values in kwargs for logging
+            truncated_kwargs = {
+                k: v[:20] + "..."
+                if isinstance(v, str) and v.startswith("data:image")
+                else v
+                for k, v in kwargs.items()
+            }
+            print(f"Running {replicate_model} with {truncated_kwargs}")
             output = replicate.run(replicate_model, input=kwargs)
             print(f"Output: {output}")
 
