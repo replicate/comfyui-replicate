@@ -4,204 +4,16 @@
     "name": "meta-llama-3-8b-instruct",
     "description": "An 8 billion parameter language model from Meta, fine tuned for chat completions",
     "visibility": "public",
-    "github_url": "https://github.com/meta-llama/llama3",
+    "github_url": null,
     "paper_url": null,
-    "license_url": "https://github.com/meta-llama/llama3/blob/main/LICENSE",
-    "run_count": 21431865,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/927d3fce-75e3-4af9-92da-f537bc34072a/meta-logo.png",
-    "default_example": {
-        "id": "855g9wxd7hrgp0cf7tsv1ewzgc",
-        "model": "replicate-internal/llama-3-8b-instruct-int8-triton",
-        "version": "b63acc3f54e3c08cb3b081f049ebc881420035dfc6db48f554530e9c4bc02ba3",
-        "status": "succeeded",
-        "input": {
-            "top_p": 0.95,
-            "prompt": "Johnny has 8 billion parameters. His friend Tommy has 70 billion parameters. What does this mean when it comes to speed?",
-            "temperature": 0.7,
-            "system_prompt": "You are a helpful assistant",
-            "length_penalty": 1,
-            "max_new_tokens": 512,
-            "stop_sequences": "<|end_of_text|>,<|eot_id|>",
-            "prompt_template": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n{system_prompt}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{prompt}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
-            "presence_penalty": 0
-        },
-        "output": [
-            "The",
-            " number",
-            " of",
-            " parameters",
-            " in",
-            " a",
-            " neural",
-            " network",
-            " can",
-            " impact",
-            " its",
-            " speed",
-            ",",
-            " but",
-            " it",
-            "'s",
-            " not",
-            " the",
-            " only",
-            " factor",
-            ".\n\n",
-            "In",
-            " general",
-            ",",
-            " a",
-            " larger",
-            " number",
-            " of",
-            " parameters",
-            " can",
-            " lead",
-            " to",
-            ":\n\n",
-            "1",
-            ".",
-            " Increased",
-            " computational",
-            " complexity",
-            ":",
-            " More",
-            " parameters",
-            " mean",
-            " more",
-            " calculations",
-            " are",
-            " required",
-            " to",
-            " process",
-            " the",
-            " data",
-            ".\n",
-            "2",
-            ".",
-            " Increased",
-            " memory",
-            " requirements",
-            ":",
-            " Larger",
-            " models",
-            " require",
-            " more",
-            " memory",
-            " to",
-            " store",
-            " their",
-            " parameters",
-            ",",
-            " which",
-            " can",
-            " impact",
-            " system",
-            " performance",
-            ".\n\n",
-            "However",
-            ",",
-            " it",
-            "'s",
-            " worth",
-            " noting",
-            " that",
-            " the",
-            " relationship",
-            " between",
-            " the",
-            " number",
-            " of",
-            " parameters",
-            " and",
-            " speed",
-            " is",
-            " not",
-            " always",
-            " linear",
-            ".",
-            " Other",
-            " factors",
-            ",",
-            " such",
-            " as",
-            ":\n\n",
-            "*",
-            " Model",
-            " architecture",
-            "\n",
-            "*",
-            " Optim",
-            "izer",
-            " choice",
-            "\n",
-            "*",
-            " Hyper",
-            "parameter",
-            " tuning",
-            "\n\n",
-            "can",
-            " also",
-            " impact",
-            " the",
-            " speed",
-            " of",
-            " a",
-            " neural",
-            " network",
-            ".\n\n",
-            "In",
-            " the",
-            " case",
-            " of",
-            " Johnny",
-            " and",
-            " Tommy",
-            ",",
-            " it",
-            "'s",
-            " difficult",
-            " to",
-            " say",
-            " which",
-            " one",
-            "'s",
-            " model",
-            " will",
-            " be",
-            " faster",
-            " without",
-            " more",
-            " information",
-            " about",
-            " the",
-            " models",
-            " themselves",
-            "."
-        ],
-        "logs": "Random seed used: `57440`\nNote: Random seed will not impact output if greedy decoding is used.\nFormatted prompt: `<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJohnny has 8 billion parameters. His friend Tommy has 70 billion parameters. What does this mean when it comes to speed?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n`Random seed used: `57440`\nNote: Random seed will not impact output if greedy decoding is used.\nFormatted prompt: `<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJohnny has 8 billion parameters. His friend Tommy has 70 billion parameters. What does this mean when it comes to speed?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n`",
-        "error": null,
-        "metrics": {
-            "total_time": 1.657073,
-            "input_token_count": 39,
-            "tokens_per_second": 92.80206135476371,
-            "output_token_count": 149,
-            "predict_time": 1.652461,
-            "time_to_first_token": 0.060728942999999994
-        },
-        "created_at": "2024-05-03T13:45:13.788000Z",
-        "started_at": "2024-05-03T13:45:13.792612Z",
-        "completed_at": "2024-05-03T13:45:15.445073Z",
-        "urls": {
-            "stream": "https://streaming-api.svc.us.c.replicate.net/v1/streams/hscsfwedhigbbnorfpq7c4i3lbac5srhaqgvb4b5m2iuof3rotwq",
-            "get": "https://api.replicate.com/v1/predictions/855g9wxd7hrgp0cf7tsv1ewzgc",
-            "cancel": "https://api.replicate.com/v1/predictions/855g9wxd7hrgp0cf7tsv1ewzgc/cancel"
-        }
-    },
+    "license_url": null,
+    "run_count": 0,
+    "cover_image_url": null,
+    "default_example": null,
     "latest_version": {
-        "id": "5a6809ca6288247d06daf6365557e5e429063f32a21146b2a807c682652136b8",
-        "created_at": "2024-04-17T21:58:45.726276+00:00",
-        "cog_version": "0.9.4",
+        "id": "b63acc3f54e3c08cb3b081f049ebc881420035dfc6db48f554530e9c4bc02ba3",
+        "created_at": "2024-04-19T21:06:45.886873+00:00",
+        "cog_version": "0.10.0-alpha5",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -224,24 +36,6 @@
                             }
                         },
                         "operationId": "root__get"
-                    }
-                },
-                "/ready": {
-                    "get": {
-                        "summary": "Ready",
-                        "responses": {
-                            "200": {
-                                "content": {
-                                    "application/json": {
-                                        "schema": {
-                                            "title": "Response Ready Ready Get"
-                                        }
-                                    }
-                                },
-                                "description": "Successful Response"
-                            }
-                        },
-                        "operationId": "ready_ready_get"
                     }
                 },
                 "/shutdown": {
@@ -440,69 +234,84 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "prompt"
+                        ],
                         "properties": {
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 10,
+                                "description": "Random seed. Leave blank to randomize the seed"
+                            },
                             "top_k": {
                                 "type": "integer",
                                 "title": "Top K",
-                                "default": 50,
-                                "x-order": 5,
-                                "description": "The number of highest probability tokens to consider for generating the output. If > 0, only keep the top k tokens with highest probability (top-k filtering)."
+                                "default": 0,
+                                "minimum": -1,
+                                "x-order": 6,
+                                "description": "When decoding text, samples from the top k most likely tokens; lower to ignore less likely tokens"
                             },
                             "top_p": {
                                 "type": "number",
                                 "title": "Top P",
-                                "default": 0.9,
-                                "x-order": 4,
-                                "description": "A probability threshold for generating the output. If < 1.0, only keep the top tokens with cumulative probability >= top_p (nucleus filtering). Nucleus filtering is described in Holtzman et al. (http://arxiv.org/abs/1904.09751)."
+                                "default": 0.95,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 5,
+                                "description": "When decoding text, samples from the top p percentage of most likely tokens; lower to ignore less likely tokens"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
                                 "x-order": 0,
-                                "description": "Prompt"
-                            },
-                            "max_tokens": {
-                                "type": "integer",
-                                "title": "Max Tokens",
-                                "default": 512,
-                                "x-order": 2,
-                                "description": "The maximum number of tokens the model should generate as output."
-                            },
-                            "min_tokens": {
-                                "type": "integer",
-                                "title": "Min Tokens",
-                                "default": 0,
-                                "x-order": 1,
-                                "description": "The minimum number of tokens the model should generate as output."
+                                "description": "Prompt to send to the model."
                             },
                             "temperature": {
                                 "type": "number",
                                 "title": "Temperature",
-                                "default": 0.6,
-                                "x-order": 3,
-                                "description": "The value used to modulate the next token probabilities."
+                                "default": 0.7,
+                                "maximum": 5,
+                                "minimum": 0,
+                                "x-order": 4,
+                                "description": "Adjusts randomness of outputs, greater than 1 is random and 0 is deterministic, 0.75 is a good starting value."
+                            },
+                            "system_prompt": {
+                                "type": "string",
+                                "title": "System Prompt",
+                                "default": "You are a helpful assistant",
+                                "x-order": 1,
+                                "description": "System prompt to send to the model. This is prepended to the prompt and helps guide system behavior."
+                            },
+                            "length_penalty": {
+                                "type": "number",
+                                "title": "Length Penalty",
+                                "default": 1,
+                                "maximum": 5,
+                                "minimum": 0,
+                                "x-order": 8,
+                                "description": "A parameter that controls how long the outputs are. If < 1, the model will tend to generate shorter outputs, and > 1 will tend to generate longer outputs."
+                            },
+                            "stop_sequences": {
+                                "type": "string",
+                                "title": "Stop Sequences",
+                                "default": "<|end_of_text|>,<|eot_id|>",
+                                "x-order": 7,
+                                "description": "A comma-separated list of sequences to stop generation at. For example, '<end>,<stop>' will stop generation at the first instance of 'end' or '<stop>'."
                             },
                             "prompt_template": {
                                 "type": "string",
                                 "title": "Prompt Template",
-                                "default": "{prompt}",
-                                "x-order": 8,
-                                "description": "Prompt template. The string `{prompt}` will be substituted for the input prompt. If you want to generate dialog output, use this template as a starting point and construct the prompt string manually, leaving `prompt_template={prompt}`."
+                                "default": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n{system_prompt}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{prompt}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                                "x-order": 11,
+                                "description": "Template for formatting the prompt. Can be an arbitrary string, but must contain the substring `{prompt}`."
                             },
                             "presence_penalty": {
                                 "type": "number",
                                 "title": "Presence Penalty",
-                                "default": 1.15,
-                                "x-order": 6,
-                                "description": "Presence penalty"
-                            },
-                            "frequency_penalty": {
-                                "type": "number",
-                                "title": "Frequency Penalty",
-                                "default": 0.2,
-                                "x-order": 7,
-                                "description": "Frequency penalty"
+                                "default": 0,
+                                "x-order": 9,
+                                "description": "A parameter that penalizes repeated tokens regardless of the number of appearances. As the value increases, the model will be less likely to repeat tokens in the output."
                             }
                         }
                     },
