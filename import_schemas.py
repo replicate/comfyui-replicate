@@ -7,8 +7,10 @@ models_to_import = [
     "bytedance/sdxl-lightning-4step",
     "fofr/face-to-many",
     "fofr/sd3-with-chaos",
-    "fofr/toolkit",
+    "meta/llama-2-7b-chat",
     "meta/llama-2-70b-chat",
+    "replicate-internal/llama-3-8b-instruct-int8-triton",
+    "replicate-internal/llama-3-70b-instruct-fp16-8xa100-triton",
     "meta/meta-llama-3-70b-instruct",
     "meta/meta-llama-3-8b-instruct",
     "mistralai/mixtral-8x7b-instruct-v0.1",
@@ -20,6 +22,19 @@ models_to_import = [
     "yorickvp/llava-13b",
     "yorickvp/llava-v1.6-34b",
     "yorickvp/llava-v1.6-mistral-7b",
+    "snowflake/snowflake-arctic-instruct",
+    "batouresearch/high-resolution-controlnet-tile",
+    "batouresearch/magic-style-transfer",
+    "batouresearch/magic-image-refiner",
+    "lucataco/pasd-magnify",
+    "cjwbw/supir",
+    "lucataco/qwen-vl-chat",
+    "omniedgeio/face-swap",
+    "ai-forever/kandinsky-2.2",
+    "pharmapsychotic/clip-interrogator",
+    "cuuupid/idm-vton",
+    "cuuupid/glm-4v-9b",
+    "lucataco/moondream2",
 ]
 
 
@@ -27,6 +42,7 @@ def format_json_file(file_path):
     try:
         with open(file_path, "r") as f:
             data = json.load(f)
+            data["run_count"] = 0
 
         with open(file_path, "w") as f:
             json.dump(data, f, indent=4, ensure_ascii=False)

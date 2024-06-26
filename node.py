@@ -62,6 +62,7 @@ def convert_schema_to_comfyui(schema, schemas):
             input_config["max"] = prop_data["maximum"]
         if input_type == "FLOAT":
             input_config["step"] = 0.01
+            input_config["round"] = 0.001
 
         if "prompt" in prop_name and prop_data.get("type") == "string":
             input_config["multiline"] = True
@@ -106,7 +107,10 @@ def reorder_input_types(input_types, schema):
 
 def get_return_type(schemas, model_info):
     output_schema = schemas["components"]["schemas"].get("Output")
-    default_example_output = model_info.get("default_example", {}).get("output", [])
+    default_example = model_info.get("default_example")
+    default_example_output = (
+        default_example.get("output", []) if default_example else []
+    )
 
     if (
         output_schema
@@ -132,7 +136,6 @@ def create_comfyui_node(schemas, model_info):
     node_name = f"Replicate {author}/{name}"
     input_schema = schemas["components"]["schemas"]["Input"]
     return_type = get_return_type(schemas, model_info)
-    print(f"{node_name} - {return_type}")
 
     class ReplicateToComfyUI:
         @classmethod
@@ -251,29 +254,3 @@ def get_node_class_mappings():
 
 
 NODE_CLASS_MAPPINGS = get_node_class_mappings()
-print(NODE_CLASS_MAPPINGS)
-
-# # Load the schema
-# with open("schema.json", "r") as f:
-#     schema = json.load(f)
-#     openapi_schema = schema["latest_version"]["openapi_schema"]
-
-# # Create the ComfyUI node
-# ComfyUINode = create_comfyui_node(openapi_schema, schema)
-
-# # Print the resulting node class
-# print(ComfyUINode.INPUT_TYPES())
-
-# # Create an instance of the node and pass in defaults
-# node_instance = ComfyUINode()
-# defaults = {
-#     "seed": 0,
-#     "image": "https://example.com/default_image.png",
-#     "style": "3D",
-#     "prompt": "a person",
-#     "lora_scale": 1.0
-# }
-
-# # Run the node with the defaults
-# result = node_instance.run_openapi_to_comfyui(**defaults)
-# print(result)
