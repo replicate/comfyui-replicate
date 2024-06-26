@@ -39,6 +39,7 @@ def convert_schema_to_comfyui(schema, schemas):
 
     for prop_name, prop_data in schema["properties"].items():
         prop_data = resolve_schema(prop_data, schemas)
+        default_value = prop_data.get("default", None)
 
         if "allOf" in prop_data:
             prop_data = resolve_schema(prop_data["allOf"][0], schemas)
@@ -51,8 +52,6 @@ def convert_schema_to_comfyui(schema, schemas):
             )
         else:
             input_type = "STRING"
-
-        default_value = prop_data.get("default", None)
 
         input_config = {"default": default_value}
 
@@ -230,7 +229,17 @@ def create_comfyui_nodes_from_schemas(schemas_dir):
     return nodes
 
 
-NODE_CLASS_MAPPINGS = create_comfyui_nodes_from_schemas("schemas")
+_cached_node_class_mappings = None
+
+
+def get_node_class_mappings():
+    global _cached_node_class_mappings
+    if _cached_node_class_mappings is None:
+        _cached_node_class_mappings = create_comfyui_nodes_from_schemas("schemas")
+    return _cached_node_class_mappings
+
+
+NODE_CLASS_MAPPINGS = get_node_class_mappings()
 print(NODE_CLASS_MAPPINGS)
 
 # # Load the schema
