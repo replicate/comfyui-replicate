@@ -33,6 +33,8 @@ models_to_import = [
     "cuuupid/idm-vton",
     "cuuupid/glm-4v-9b",
     "lucataco/moondream2",
+    "cjwbw/hyper-sdxl-1step-t2i",
+    "cjwbw/pixart-sigma",
 ]
 
 
