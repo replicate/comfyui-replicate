@@ -1,3 +1,7 @@
+DEFAULT_STEP = 0.01
+DEFAULT_ROUND = 0.001
+
+
 def convert_to_comfyui_input_type(openapi_type, openapi_format=None):
     type_mapping = {
         "string": "STRING",
@@ -59,13 +63,14 @@ def schema_to_comfyui_input_types(schema):
         if "maximum" in prop_data:
             input_config["max"] = prop_data["maximum"]
         if input_type == "FLOAT":
-            input_config["step"] = 0.01
-            input_config["round"] = 0.001
+            input_config["step"] = DEFAULT_STEP
+            input_config["round"] = DEFAULT_ROUND
 
         if "prompt" in prop_name and prop_data.get("type") == "string":
             input_config["multiline"] = True
 
             # Meta prompt_template needs `{prompt}` to be sent through
+            # dynamicPrompts would strip it out
             if "template" not in prop_name:
                 input_config["dynamicPrompts"] = True
 
@@ -76,10 +81,10 @@ def schema_to_comfyui_input_types(schema):
 
     input_types["optional"]["force_rerun"] = ("BOOLEAN", {"default": False})
 
-    return reorder_input_types(input_types, input_schema)
+    return order_inputs(input_types, input_schema)
 
 
-def reorder_input_types(input_types, input_schema):
+def order_inputs(input_types, input_schema):
     ordered_input_types = {"required": {}, "optional": {}}
     sorted_properties = sorted(
         input_schema["properties"].items(),
@@ -96,7 +101,6 @@ def reorder_input_types(input_types, input_schema):
                 prop_name
             ]
 
-    # force_rerun is always at the end of optional inputs
     ordered_input_types["optional"]["force_rerun"] = input_types["optional"][
         "force_rerun"
     ]
