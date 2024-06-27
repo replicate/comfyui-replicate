@@ -15,36 +15,35 @@
         "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
         "status": "succeeded",
         "input": {
-            "cfg": 4.5,
-            "seed": 448433150,
+            "cfg": 3.5,
             "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
             "aspect_ratio": "3:2",
             "output_format": "webp",
-            "output_quality": 79,
-            "negative_prompt": "ugly, distorted"
+            "output_quality": 90,
+            "negative_prompt": ""
         },
         "output": [
             "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
         ],
-        "logs": "Seed set to: 448433150\nRunning workflow\ngot prompt\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\nExecuting node 271, title: KSampler, class type: KSampler\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\nExecuting node 231, title: VAE Decode, class type: VAEDecode\nExecuting node 273, title: Save Image, class type: SaveImage\nPrompt executed in 2.28 seconds\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nR8_SD3_00001_.png",
-        "error": null,
+        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
+        "error": "",
         "metrics": {
-            "total_time": 2.798271,
+            "total_time": 2.317,
             "image_count": 1,
             "predict_time": 2.781864785
         },
         "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16.699406Z",
-        "completed_at": "2024-06-26T18:02:19.481271Z",
+        "started_at": "2024-06-26T18:02:16Z",
+        "completed_at": "2024-06-26T18:02:19Z",
         "urls": {
             "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
             "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
         }
     },
     "latest_version": {
-        "id": "a8d1db0fc9cd083dbbda86a399e2bf3c384df661479c9353c68fb6afb4436999",
-        "created_at": "2024-06-26T18:44:50.759868+00:00",
-        "cog_version": "0.9.9",
+        "id": "8ed5310807da2e35da9f2ec47ad31540279196d721332519f6560de9efe93348",
+        "created_at": "2024-06-27T11:14:37.819006+00:00",
+        "cog_version": "0.9.7",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -266,34 +265,42 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
+                            "cfg": {
+                                "type": "number",
+                                "title": "Cfg",
+                                "default": 3.5,
+                                "maximum": 20,
+                                "minimum": 0,
+                                "x-order": 2,
+                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
+                            },
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 7,
-                                "description": "Random seed. Leave blank to randomize the seed"
+                                "x-order": 8,
+                                "description": "Set a seed for reproducibility. Random by default."
                             },
                             "image": {
                                 "type": "string",
                                 "title": "Image",
                                 "format": "uri",
-                                "x-order": 2,
-                                "description": "Input image for img2img mode"
+                                "x-order": 3,
+                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
+                            },
+                            "steps": {
+                                "type": "integer",
+                                "title": "Steps",
+                                "default": 28,
+                                "maximum": 28,
+                                "minimum": 1,
+                                "x-order": 5,
+                                "description": "Number of steps to run the sampler for."
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
                                 "default": "",
-                                "x-order": 0,
-                                "description": "Input prompt"
-                            },
-                            "num_outputs": {
-                                "type": "integer",
-                                "title": "Num Outputs",
-                                "default": 1,
-                                "maximum": 4,
-                                "minimum": 1,
-                                "x-order": 4,
-                                "description": "Number of images to output."
+                                "x-order": 0
                             },
                             "aspect_ratio": {
                                 "allOf": [
@@ -302,8 +309,8 @@
                                     }
                                 ],
                                 "default": "1:1",
-                                "x-order": 3,
-                                "description": "Aspect ratio for the generated image"
+                                "x-order": 1,
+                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
                             },
                             "output_format": {
                                 "allOf": [
@@ -312,49 +319,33 @@
                                     }
                                 ],
                                 "default": "webp",
-                                "x-order": 8,
+                                "x-order": 6,
                                 "description": "Format of the output images"
-                            },
-                            "guidance_scale": {
-                                "type": "number",
-                                "title": "Guidance Scale",
-                                "default": 7,
-                                "maximum": 50,
-                                "minimum": 0,
-                                "x-order": 5,
-                                "description": "Scale for classifier-free guidance"
                             },
                             "output_quality": {
                                 "type": "integer",
                                 "title": "Output Quality",
-                                "default": 80,
+                                "default": 90,
                                 "maximum": 100,
                                 "minimum": 0,
-                                "x-order": 9,
-                                "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
+                                "x-order": 7,
+                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
                             },
                             "negative_prompt": {
                                 "type": "string",
                                 "title": "Negative Prompt",
                                 "default": "",
-                                "x-order": 1,
-                                "description": "Input negative prompt"
+                                "x-order": 9,
+                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
                             },
                             "prompt_strength": {
                                 "type": "number",
                                 "title": "Prompt Strength",
-                                "default": 0.6,
+                                "default": 0.85,
                                 "maximum": 1,
                                 "minimum": 0,
-                                "x-order": 6,
-                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
-                            },
-                            "disable_safety_checker": {
-                                "type": "boolean",
-                                "title": "Disable Safety Checker",
-                                "default": false,
-                                "x-order": 10,
-                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                                "x-order": 4,
+                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
                             }
                         }
                     },
