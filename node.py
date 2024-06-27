@@ -30,7 +30,7 @@ def create_comfyui_node(schema):
             return schema_to_comfyui_input_types(schema)
 
         RETURN_TYPES = (return_type,)
-        FUNCTION = "run_openapi_to_comfyui"
+        FUNCTION = "run_replicate_model"
         CATEGORY = "Replicate"
 
         def convert_image_to_base64(self, image):
@@ -87,7 +87,7 @@ def create_comfyui_node(schema):
                 print("No output received from the model")
                 return None
 
-        def run_openapi_to_comfyui(self, **kwargs):
+        def run_replicate_model(self, **kwargs):
             for key, value in kwargs.items():
                 if value is not None:
                     input_type = (
