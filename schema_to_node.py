@@ -118,24 +118,38 @@ def inputs_that_need_arrays(schema):
 
     return array_inputs
 
+
+def is_type(default_example_output, extensions):
+    if isinstance(
+        default_example_output, str
+    ) and default_example_output.lower().endswith(extensions):
+        return True
+    elif (
+        isinstance(default_example_output, list)
+        and default_example_output
+        and isinstance(default_example_output[0], str)
+        and default_example_output[0].lower().endswith(extensions)
+    ):
+        return True
+    return False
+
+
 def get_return_type(schema):
     image_extensions = (".png", ".jpg", ".jpeg", ".gif", ".webp")
+    video_extensions = (".mp4", ".mkv", ".webm", ".mov", ".mpg", ".mpeg")
+    audio_extensions = (".mp3", ".wav")
+
     openapi_schema = schema["latest_version"]["openapi_schema"]
     output_schema = openapi_schema["components"]["schemas"].get("Output")
     default_example = schema.get("default_example")
     default_example_output = default_example.get("output") if default_example else None
 
-    if isinstance(
-        default_example_output, str
-    ) and default_example_output.lower().endswith(image_extensions):
+    if is_type(default_example_output, image_extensions):
         return "IMAGE"
-    elif (
-        isinstance(default_example_output, list)
-        and default_example_output
-        and isinstance(default_example_output[0], str)
-        and default_example_output[0].lower().endswith(image_extensions)
-    ):
-        return "IMAGE"
+    elif is_type(default_example_output, video_extensions):
+        return "VIDEO_URI"
+    elif is_type(default_example_output, audio_extensions):
+        return "AUDIO_URI"
 
     if output_schema:
         if (
