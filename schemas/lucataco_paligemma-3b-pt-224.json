@@ -1,52 +1,42 @@
 {
-    "url": "https://replicate.com/fofr/tooncrafter",
-    "owner": "fofr",
-    "name": "tooncrafter",
-    "description": "Create videos from illustrated input images",
+    "url": "https://replicate.com/lucataco/paligemma-3b-pt-224",
+    "owner": "lucataco",
+    "name": "paligemma-3b-pt-224",
+    "description": "PaliGemma 3B, an open VLM by Google, pre-trained with 224*224 input images and 128 token input/output text sequences",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-tooncrafter",
-    "paper_url": "https://doubiiu.github.io/projects/ToonCrafter/",
-    "license_url": "https://github.com/fofr/cog-comfyui-tooncrafter/blob/main/LICENSE",
+    "github_url": "https://github.com/lucataco/cog-paligemma-3b-pt-224",
+    "paper_url": "https://arxiv.org/abs/2310.09199",
+    "license_url": "https://ai.google.dev/gemma/terms",
     "run_count": 0,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/e3adaa0a-c534-496c-81d1-281f9000fbb4/tooncrafter.gif",
+    "cover_image_url": "https://replicate.delivery/pbxt/Kv6Dn1Mk1tZe7vfVaRuPNBJcoDBYhRGQ33OTkq70l375ULSi/car.jpg",
     "default_example": {
-        "id": "gw8thp06j1rgp0cfvbtsvrq9vc",
-        "model": "fofr/tooncrafter",
-        "version": "51bf654d60d307ab45c4ffe09546a3c9606f8f33861ab28f5bb0e43ad3fa40ed",
+        "id": "8m2yqtrtfdrgm0cff5cb3zasv8",
+        "model": "lucataco/paligemma-3b-pt-224",
+        "version": "c519755cce71af83c3831c3b3b7fe6c1de4a4dc27eff91f9e79639e14924a078",
         "status": "succeeded",
         "input": {
-            "loop": false,
-            "prompt": "",
-            "image_1": "https://replicate.delivery/pbxt/L1pQdyf4fPVRzU5WxhhHAdH2Eo05X3zhirvNzwAKJ80lA7Qh/replicate-prediction-5cvynz9d91rgg0cfsvqschdpww-0.webp",
-            "image_2": "https://replicate.delivery/pbxt/L1pQeBF582rKH3FFAYJCxdFUurBZ1axNFVwKxEd1wIALydhh/replicate-prediction-5cvynz9d91rgg0cfsvqschdpww-1.webp",
-            "image_3": "https://replicate.delivery/pbxt/L1pQdTPwSZxnfDkPkM3eArBmHWd5xttTnSkKBhszXJ88pIff/replicate-prediction-5cvynz9d91rgg0cfsvqschdpww-3.webp",
-            "max_width": 512,
-            "max_height": 512,
-            "interpolate": false,
-            "negative_prompt": "",
-            "color_correction": true
+            "image": "https://replicate.delivery/pbxt/Kv6Dn1Mk1tZe7vfVaRuPNBJcoDBYhRGQ33OTkq70l375ULSi/car.jpg",
+            "prompt": "caption es"
         },
-        "output": [
-            "https://replicate.delivery/pbxt/aDDntBsXmmL6DZMIRURYbxjeer1PZxmT9TIl0MOfqcrYqT1lA/ToonCrafter_00001.mp4"
-        ],
-        "logs": "Random seed set to: 1500914532\nChecking inputs\n✅ /tmp/inputs/input_1.png\n✅ /tmp/inputs/input_2.png\n✅ /tmp/inputs/input_3.png\n====================================\nChecking weights\n✅ tooncrafter_512_interp-fp16.safetensors\n✅ stable-diffusion-2-1-clip-fp16.safetensors\n✅ CLIP-ViT-H-fp16.safetensors\n====================================\nRunning workflow\ngot prompt\nExecuting node 1, title: Load Image, class type: LoadImage\nDownloading model to: /src/ComfyUI/models/checkpoints/dynamicrafter/tooncrafter_512_interp-fp16.safetensors\nExecuting node 52, title: DownloadAndLoadDynamiCrafterModel, class type: DownloadAndLoadDynamiCrafterModel\nFetching 1 files:   0%|          | 0/1 [00:00<?, ?it/s]/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/huggingface_hub/file_download.py:1194: UserWarning: `local_dir_use_symlinks` parameter is deprecated and will be ignored. The process to download files to a local folder has been updated and do not rely on symlinks anymore. You only need to pass a destination folder as`local_dir`.\nFor more details, check out https://huggingface.co/docs/huggingface_hub/main/en/guides/download#download-files-to-local-folder.\nwarnings.warn(\nFetching 1 files: 100%|██████████| 1/1 [00:13<00:00, 13.65s/it]\nFetching 1 files: 100%|██████████| 1/1 [00:13<00:00, 13.65s/it]\nLoading model from: /src/ComfyUI/models/checkpoints/dynamicrafter/tooncrafter_512_interp-fp16.safetensors\nLatentVisualDiffusion: Running in v-prediction mode\nAE working on z of shape (1, 4, 32, 32) = 4096 dimensions.\nWorking with z of shape (1, 4, 32, 32) = 4096 dimensions.\nvanilla\nmaking attention of type 'vanilla' with 512 in_channels\nmemory-efficient-cross-attn-fusion\nmaking attention of type 'memory-efficient-cross-attn-fusion' with 512 in_channels\nmemory-efficient-cross-attn-fusion\nmaking attention of type 'memory-efficient-cross-attn-fusion' with 512 in_channels\n>>> model checkpoint loaded.\nModel using dtype: torch.float16\nExecuting node 61, title: DownloadAndLoadCLIPVisionModel, class type: DownloadAndLoadCLIPVisionModel\nLoading model from: /src/ComfyUI/models/clip_vision/CLIP-ViT-H-fp16.safetensors\nExecuting node 59, title: DownloadAndLoadCLIPModel, class type: DownloadAndLoadCLIPModel\nclip missing: ['text_model.encoder.layers.23.layer_norm1.weight', 'text_model.encoder.layers.23.layer_norm1.bias', 'text_model.encoder.layers.23.self_attn.q_proj.weight', 'text_model.encoder.layers.23.self_attn.q_proj.bias', 'text_model.encoder.layers.23.self_attn.k_proj.weight', 'text_model.encoder.layers.23.self_attn.k_proj.bias', 'text_model.encoder.layers.23.self_attn.v_proj.weight', 'text_model.encoder.layers.23.self_attn.v_proj.bias', 'text_model.encoder.layers.23.self_attn.out_proj.weight', 'text_model.encoder.layers.23.self_attn.out_proj.bias', 'text_model.encoder.layers.23.layer_norm2.weight', 'text_model.encoder.layers.23.layer_norm2.bias', 'text_model.encoder.layers.23.mlp.fc1.weight', 'text_model.encoder.layers.23.mlp.fc1.bias', 'text_model.encoder.layers.23.mlp.fc2.weight', 'text_model.encoder.layers.23.mlp.fc2.bias', 'text_projection.weight']\nLoading model from: /src/ComfyUI/models/clip/stable-diffusion-2-1-clip-fp16.safetensors\nRequested to load SD2ClipModel\nLoading 1 new model\nExecuting node 49, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\nExecuting node 50, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\nExecuting node 70, title: 🔧 Image Resize, class type: ImageResize+\nExecuting node 2, title: Load Image, class type: LoadImage\nExecuting node 303, title: Load Image, class type: LoadImage\nExecuting node 28, title: Image Batch Multi, class type: ImageBatchMulti\nExecuting node 6, title: Get Image Size & Count, class type: GetImageSizeAndCount\nExecuting node 65, title: 🔧 Image Resize, class type: ImageResize+\nExecuting node 57, title: ToonCrafterInterpolation, class type: ToonCrafterInterpolation\nVAE using dtype: torch.bfloat16\nRequested to load CLIPVisionModelProjection\nLoading 1 new model\nDDIM Sampler:   0%|          | 0/20 [00:00<?, ?it/s]\nDDIM Sampler:   5%|▌         | 1/20 [00:00<00:13,  1.37it/s]\nDDIM Sampler:  10%|█         | 2/20 [00:01<00:11,  1.51it/s]\nDDIM Sampler:  15%|█▌        | 3/20 [00:01<00:10,  1.56it/s]\nDDIM Sampler:  20%|██        | 4/20 [00:02<00:10,  1.59it/s]\nDDIM Sampler:  25%|██▌       | 5/20 [00:03<00:09,  1.60it/s]\nDDIM Sampler:  30%|███       | 6/20 [00:03<00:08,  1.61it/s]\nDDIM Sampler:  35%|███▌      | 7/20 [00:04<00:08,  1.62it/s]\nDDIM Sampler:  40%|████      | 8/20 [00:05<00:07,  1.62it/s]\nDDIM Sampler:  45%|████▌     | 9/20 [00:05<00:06,  1.62it/s]\nDDIM Sampler:  50%|█████     | 10/20 [00:06<00:06,  1.62it/s]\nDDIM Sampler:  55%|█████▌    | 11/20 [00:06<00:05,  1.63it/s]\nDDIM Sampler:  60%|██████    | 12/20 [00:07<00:04,  1.63it/s]\nDDIM Sampler:  65%|██████▌   | 13/20 [00:08<00:04,  1.63it/s]\nDDIM Sampler:  70%|███████   | 14/20 [00:08<00:03,  1.63it/s]\nDDIM Sampler:  75%|███████▌  | 15/20 [00:09<00:03,  1.63it/s]\nDDIM Sampler:  80%|████████  | 16/20 [00:09<00:02,  1.63it/s]\nDDIM Sampler:  85%|████████▌ | 17/20 [00:10<00:01,  1.63it/s]\nDDIM Sampler:  90%|█████████ | 18/20 [00:11<00:01,  1.63it/s]\nDDIM Sampler:  95%|█████████▌| 19/20 [00:11<00:00,  1.63it/s]\nDDIM Sampler: 100%|██████████| 20/20 [00:12<00:00,  1.63it/s]\nDDIM Sampler: 100%|██████████| 20/20 [00:12<00:00,  1.61it/s]\nDDIM Sampler:   0%|          | 0/20 [00:00<?, ?it/s]\nDDIM Sampler:   5%|▌         | 1/20 [00:00<00:11,  1.63it/s]\nDDIM Sampler:  10%|█         | 2/20 [00:01<00:11,  1.63it/s]\nDDIM Sampler:  15%|█▌        | 3/20 [00:01<00:10,  1.63it/s]\nDDIM Sampler:  20%|██        | 4/20 [00:02<00:09,  1.63it/s]\nDDIM Sampler:  25%|██▌       | 5/20 [00:03<00:09,  1.63it/s]\nDDIM Sampler:  30%|███       | 6/20 [00:03<00:08,  1.63it/s]\nDDIM Sampler:  35%|███▌      | 7/20 [00:04<00:07,  1.63it/s]\nDDIM Sampler:  40%|████      | 8/20 [00:04<00:07,  1.63it/s]\nDDIM Sampler:  45%|████▌     | 9/20 [00:05<00:06,  1.63it/s]\nDDIM Sampler:  50%|█████     | 10/20 [00:06<00:06,  1.63it/s]\nDDIM Sampler:  55%|█████▌    | 11/20 [00:06<00:05,  1.63it/s]\nDDIM Sampler:  60%|██████    | 12/20 [00:07<00:04,  1.63it/s]\nDDIM Sampler:  65%|██████▌   | 13/20 [00:07<00:04,  1.63it/s]\nDDIM Sampler:  70%|███████   | 14/20 [00:08<00:03,  1.63it/s]\nDDIM Sampler:  75%|███████▌  | 15/20 [00:09<00:03,  1.63it/s]\nDDIM Sampler:  80%|████████  | 16/20 [00:09<00:02,  1.63it/s]\nDDIM Sampler:  85%|████████▌ | 17/20 [00:10<00:01,  1.63it/s]\nDDIM Sampler:  90%|█████████ | 18/20 [00:11<00:01,  1.63it/s]\nDDIM Sampler:  95%|█████████▌| 19/20 [00:11<00:00,  1.63it/s]\nDDIM Sampler: 100%|██████████| 20/20 [00:12<00:00,  1.63it/s]\nDDIM Sampler: 100%|██████████| 20/20 [00:12<00:00,  1.63it/s]\nExecuting node 58, title: ToonCrafterDecode, class type: ToonCrafterDecode\nVAE using dtype: torch.bfloat16\nUsing xformers\n/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/torch/nn/modules/conv.py:605: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)\nreturn F.conv3d(\nUsing xformers\nExecuting node 67, title: Color Match, class type: ColorMatch\nExecuting node 29, title: Video Combine 🎥🅥🅗🅢, class type: VHS_VideoCombine\nPrompt executed in 59.29 seconds\noutputs:  {'6': {'text': ['3x512x512']}, '29': {'gifs': [{'filename': 'ToonCrafter_00001.mp4', 'subfolder': '', 'type': 'output', 'format': 'video/h264-mp4'}]}}\n====================================\nToonCrafter_00001.png\nToonCrafter_00001.mp4",
+        "output": "persona estacionada en una calle",
+        "logs": null,
         "error": null,
         "metrics": {
-            "predict_time": 61.900853,
-            "total_time": 138.475881
+            "predict_time": 0.578439,
+            "total_time": 0.625058
         },
-        "created_at": "2024-06-02T21:57:22.192000Z",
-        "started_at": "2024-06-02T21:58:38.767028Z",
-        "completed_at": "2024-06-02T21:59:40.667881Z",
+        "created_at": "2024-05-14T23:02:48.187000Z",
+        "started_at": "2024-05-14T23:02:48.233619Z",
+        "completed_at": "2024-05-14T23:02:48.812058Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/gw8thp06j1rgp0cfvbtsvrq9vc",
-            "cancel": "https://api.replicate.com/v1/predictions/gw8thp06j1rgp0cfvbtsvrq9vc/cancel"
+            "get": "https://api.replicate.com/v1/predictions/8m2yqtrtfdrgm0cff5cb3zasv8",
+            "cancel": "https://api.replicate.com/v1/predictions/8m2yqtrtfdrgm0cff5cb3zasv8/cancel"
         }
     },
     "latest_version": {
-        "id": "51bf654d60d307ab45c4ffe09546a3c9606f8f33861ab28f5bb0e43ad3fa40ed",
-        "created_at": "2024-06-02T21:50:44.774566+00:00",
-        "cog_version": "0.9.7",
+        "id": "c519755cce71af83c3831c3b3b7fe6c1de4a4dc27eff91f9e79639e14924a078",
+        "created_at": "2024-05-14T22:58:12.484677+00:00",
+        "cog_version": "0.9.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -268,146 +258,27 @@
                         "type": "object",
                         "title": "Input",
                         "required": [
-                            "image_1",
-                            "image_2"
+                            "image"
                         ],
                         "properties": {
-                            "loop": {
-                                "type": "boolean",
-                                "title": "Loop",
-                                "default": false,
-                                "x-order": 14,
-                                "description": "Loop the video"
-                            },
-                            "seed": {
-                                "type": "integer",
-                                "title": "Seed",
-                                "x-order": 17,
-                                "description": "Set a seed for reproducibility. Random by default."
+                            "image": {
+                                "type": "string",
+                                "title": "Image",
+                                "format": "uri",
+                                "x-order": 0,
+                                "description": "Grayscale input image"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
-                            },
-                            "image_1": {
-                                "type": "string",
-                                "title": "Image 1",
-                                "format": "uri",
-                                "x-order": 4,
-                                "description": "First input image"
-                            },
-                            "image_2": {
-                                "type": "string",
-                                "title": "Image 2",
-                                "format": "uri",
-                                "x-order": 5,
-                                "description": "Second input image"
-                            },
-                            "image_3": {
-                                "type": "string",
-                                "title": "Image 3",
-                                "format": "uri",
-                                "x-order": 6,
-                                "description": "Third input image (optional)"
-                            },
-                            "image_4": {
-                                "type": "string",
-                                "title": "Image 4",
-                                "format": "uri",
-                                "x-order": 7,
-                                "description": "Fourth input image (optional)"
-                            },
-                            "image_5": {
-                                "type": "string",
-                                "title": "Image 5",
-                                "format": "uri",
-                                "x-order": 8,
-                                "description": "Fifth input image (optional)"
-                            },
-                            "image_6": {
-                                "type": "string",
-                                "title": "Image 6",
-                                "format": "uri",
-                                "x-order": 9,
-                                "description": "Sixth input image (optional)"
-                            },
-                            "image_7": {
-                                "type": "string",
-                                "title": "Image 7",
-                                "format": "uri",
-                                "x-order": 10,
-                                "description": "Seventh input image (optional)"
-                            },
-                            "image_8": {
-                                "type": "string",
-                                "title": "Image 8",
-                                "format": "uri",
-                                "x-order": 11,
-                                "description": "Eighth input image (optional)"
-                            },
-                            "image_9": {
-                                "type": "string",
-                                "title": "Image 9",
-                                "format": "uri",
-                                "x-order": 12,
-                                "description": "Ninth input image (optional)"
-                            },
-                            "image_10": {
-                                "type": "string",
-                                "title": "Image 10",
-                                "format": "uri",
-                                "x-order": 13,
-                                "description": "Tenth input image (optional)"
-                            },
-                            "max_width": {
-                                "type": "integer",
-                                "title": "Max Width",
-                                "default": 512,
-                                "maximum": 768,
-                                "minimum": 256,
-                                "x-order": 2,
-                                "description": "Maximum width of the video"
-                            },
-                            "max_height": {
-                                "type": "integer",
-                                "title": "Max Height",
-                                "default": 512,
-                                "maximum": 768,
-                                "minimum": 256,
-                                "x-order": 3,
-                                "description": "Maximum height of the video"
-                            },
-                            "interpolate": {
-                                "type": "boolean",
-                                "title": "Interpolate",
-                                "default": false,
-                                "x-order": 15,
-                                "description": "Enable 2x interpolation using FILM"
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
+                                "default": "caption es",
                                 "x-order": 1,
-                                "description": "Things you do not want to see in your video"
-                            },
-                            "color_correction": {
-                                "type": "boolean",
-                                "title": "Color Correction",
-                                "default": true,
-                                "x-order": 16,
-                                "description": "If the colors are coming out strange, or if the colors between your input images are very different, disable this"
+                                "description": "Input prompt"
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
+                        "type": "string",
                         "title": "Output"
                     },
                     "Status": {

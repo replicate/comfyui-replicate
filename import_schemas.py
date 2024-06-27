@@ -29,12 +29,15 @@ models_to_import = [
     "lucataco/qwen-vl-chat",
     "omniedgeio/face-swap",
     "ai-forever/kandinsky-2.2",
-    "pharmapsychotic/clip-interrogator",
+    "lucataco/sdxl-clip-interrogator",
+    "lucataco/paligemma-3b-pt-224",
+    "lucataco/llama-3-vision-alpha",
     "cuuupid/idm-vton",
     "cuuupid/glm-4v-9b",
     "lucataco/moondream2",
     "cjwbw/hyper-sdxl-1step-t2i",
     "cjwbw/pixart-sigma",
+    "lucataco/hunyuandit-v1.1",
 ]
 
 
