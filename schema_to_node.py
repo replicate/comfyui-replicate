@@ -108,6 +108,16 @@ def order_inputs(input_types, input_schema):
     return ordered_input_types
 
 
+def inputs_that_need_arrays(schema):
+    openapi_schema = schema["latest_version"]["openapi_schema"]
+    input_schema = openapi_schema["components"]["schemas"]["Input"]
+    array_inputs = []
+    for prop_name, prop_data in input_schema["properties"].items():
+        if prop_data.get("type") == "array":
+            array_inputs.append(prop_name)
+
+    return array_inputs
+
 def get_return_type(schema):
     image_extensions = (".png", ".jpg", ".jpeg", ".gif", ".webp")
     openapi_schema = schema["latest_version"]["openapi_schema"]
