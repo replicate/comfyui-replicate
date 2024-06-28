@@ -1,44 +1,7 @@
+#!/usr/bin/env python3
 import replicate
 import json
 import os
-
-models_to_import = [
-    "andreasjansson/blip-2",
-    "bytedance/sdxl-lightning-4step",
-    "fofr/face-to-many",
-    "fofr/sd3-with-chaos",
-    "meta/llama-2-7b-chat",
-    "meta/llama-2-70b-chat",
-    # "meta/meta-llama-3-70b-instruct",
-    # "meta/meta-llama-3-8b-instruct",
-    "mistralai/mixtral-8x7b-instruct-v0.1",
-    "philz1337x/clarity-upscaler",
-    "salesforce/blip",
-    "smoretalk/rembg-enhance",
-    "stability-ai/sdxl",
-    "stability-ai/stable-diffusion-3",
-    "yorickvp/llava-13b",
-    "yorickvp/llava-v1.6-34b",
-    "yorickvp/llava-v1.6-mistral-7b",
-    "snowflake/snowflake-arctic-instruct",
-    "batouresearch/high-resolution-controlnet-tile",
-    "batouresearch/magic-style-transfer",
-    "batouresearch/magic-image-refiner",
-    "lucataco/pasd-magnify",
-    "cjwbw/supir",
-    "lucataco/qwen-vl-chat",
-    "omniedgeio/face-swap",
-    "ai-forever/kandinsky-2.2",
-    "lucataco/sdxl-clip-interrogator",
-    "lucataco/paligemma-3b-pt-224",
-    "lucataco/llama-3-vision-alpha",
-    "cuuupid/idm-vton",
-    "cuuupid/glm-4v-9b",
-    "lucataco/moondream2",
-    "cjwbw/hyper-sdxl-1step-t2i",
-    "cjwbw/pixart-sigma",
-    "lucataco/hunyuandit-v1.1",
-]
 
 
 def format_json_file(file_path):
@@ -62,7 +25,10 @@ def format_json_files_in_directory(directory):
             format_json_file(file_path)
 
 
-for model in models_to_import:
+with open("supported_models.json", "r") as f:
+    supported_models = json.load(f)
+
+for model in supported_models["models"]:
     m = replicate.models.get(model)
     with open(f"schemas/{model.replace('/', '_')}.json", "w") as f:
         f.write(m.json())
