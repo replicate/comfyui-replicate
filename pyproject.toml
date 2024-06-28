@@ -5,7 +5,7 @@ version = "1.0.1"
 license = "LICENSE"
 
 [project.urls]
-Repository = "https://github.com/fofr/comfyui-replicate"
+Repository = "https://github.com/replicate/comfyui-replicate"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
