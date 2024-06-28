@@ -1,6 +1,5 @@
 import os
 import json
-import replicate
 import requests
 from PIL import Image
 from io import BytesIO
@@ -9,12 +8,15 @@ from torchvision import transforms
 import torch
 import base64
 import time
+from replicate.client import Client
 from .schema_to_node import (
     schema_to_comfyui_input_types,
     get_return_type,
     name_and_version,
     inputs_that_need_arrays,
 )
+
+replicate = Client(headers={"User-Agent": "comfyui-replicate/1.0.1"})
 
 
 def create_comfyui_node(schema):
