@@ -1,42 +1,68 @@
 {
-    "url": "https://replicate.com/omniedgeio/face-swap",
-    "owner": "omniedgeio",
-    "name": "face-swap",
-    "description": "Face Swap",
+    "url": "https://replicate.com/fofr/controlnet-preprocessors",
+    "owner": "fofr",
+    "name": "controlnet-preprocessors",
+    "description": "Canny, soft edge, depth, lineart, segmentation, pose, etc",
     "visibility": "public",
-    "github_url": null,
+    "github_url": "https://github.com/fofr/cog-controlnet-preprocessors",
     "paper_url": null,
-    "license_url": null,
+    "license_url": "https://github.com/fofr/cog-controlnet-preprocessors/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/fb14a12a-692b-4452-82b9-f91788bdf406/image_grid_corrected.png",
     "default_example": {
-        "id": "oio7grdblfg4jssdg7ebbmzyie",
-        "model": "omniedgeio/face-swap",
-        "version": "c2d783366e8d32e6e82c40682fab6b4c23b9c6eff2692c0cf7585fc16c238cfe",
+        "id": "54kd4flb5sdiepnoqgs7raf2wa",
+        "model": "fofr/controlnet-preprocessors",
+        "version": "f6584ef76cf07a2014ffe1e9bdb1a5cfa714f031883ab43f8d4b05506625988e",
         "status": "succeeded",
         "input": {
-            "swap_image": "https://replicate.delivery/pbxt/JoBuzfSVFLb5lBqkf3v9xMnqx3jFCYhM5JcVInFFwab8sLg0/long-trench-coat.png",
-            "target_image": "https://replicate.delivery/pbxt/JoBuz3wGiVFQ1TDEcsGZbYcNh0bHpvwOi32T1fmxhRujqcu7/9X2.png"
+            "hed": true,
+            "sam": true,
+            "mlsd": true,
+            "pidi": true,
+            "canny": true,
+            "image": "https://replicate.delivery/pbxt/JrCCMJ7WAdjQSIkZUQrUkOmyDeFhkRkgQgH1S3QvryX8Iypg/IMG_7845.jpeg",
+            "leres": true,
+            "midas": true,
+            "content": true,
+            "lineart": true,
+            "open_pose": true,
+            "normal_bae": true,
+            "face_detector": true,
+            "lineart_anime": true
         },
-        "output": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
-        "logs": "/root/.pyenv/versions/3.9.18/lib/python3.9/site-packages/insightface/utils/transform.py:68: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.\nP = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4\n(2048, 2048, 3) None None",
+        "output": [
+            "https://replicate.delivery/pbxt/uw93lneIWuUTMCo5rrKKTTDUAu6XbNImxkZ4hfuwZVMLgN3RA/canny.png",
+            "https://replicate.delivery/pbxt/zs4XRbOlkxZeZaoZ52xnXe48s18KyBTVf4bfZRJhtfokBs5OC/content.png",
+            "https://replicate.delivery/pbxt/QhUeh3vdAuU2H6ykifMReU14F6zm4IoeqRfOrCOfDTydDYzdE/face_detector.png",
+            "https://replicate.delivery/pbxt/hwMZ86nAfbxWXKxAemdIOz6umijHKz7HTUXcVlqnuuuNgN3RA/hed.png",
+            "https://replicate.delivery/pbxt/JyyRt4DuftzAbyghuqaRjSjhsaNqQF5fbdizkqAdaNQNgN3RA/midas.png",
+            "https://replicate.delivery/pbxt/IpkTd18fexldvkpJWhYNJQZ5EnukEfIeukLTi1JfpE7wBs5OC/mlsd.png",
+            "https://replicate.delivery/pbxt/T5HOBsOKHHqMNVTrLeOKci4jGfkyfeSsstGYVwgSglc5A2cHB/open_pose.png",
+            "https://replicate.delivery/pbxt/hMP1a8Y41vIoHBDEtN02eE6gCT41LXXebtcJh108fwbcAbujA/pidi.png",
+            "https://replicate.delivery/pbxt/2J93cnvbxxpdMhQbFLWUvsEZcSStPahCj3Ni73GkQhyDYzdE/normal_bae.png",
+            "https://replicate.delivery/pbxt/lf9Y6I3bBPVRN6a6ffVKlvjqrcxBVoQZnckerKNfnVM9Bs5OC/lineart.png",
+            "https://replicate.delivery/pbxt/dCeKSeaACpgEuUdemacT4S7YfEBxf44vBE1xsueeg61zHwm7IA/lineart_anime.png",
+            "https://replicate.delivery/pbxt/fdBSo7qeUFodVU4IP6cnyPOEULcKogpk2DCCTkUZcZUQgN3RA/sam.png",
+            "https://replicate.delivery/pbxt/Y5S0q7BS7zZ8OxOLTNQ67QBhFsPjiaOzuPRRPcAJoXIEYzdE/leres.png"
+        ],
+        "logs": "Processing image with canny\nProcessing image with content\nProcessing image with face_detector\nE0000 00:00:1699685889.055007     259 gl_context.cc:408] INTERNAL: ; RET_CHECK failure (mediapipe/gpu/gl_context_egl.cc:303) successeglMakeCurrent() returned error 0x3008;  (entering GL context)\nE0000 00:00:1699685889.055045     259 gl_context.cc:408] INTERNAL: ; RET_CHECK failure (mediapipe/gpu/gl_context_egl.cc:303) successeglMakeCurrent() returned error 0x3008;  (entering GL context)\nE0000 00:00:1699685889.055053     259 gl_context.cc:408] INTERNAL: ; RET_CHECK failure (mediapipe/gpu/gl_context_egl.cc:303) successeglMakeCurrent() returned error 0x3008;  (entering GL context)\nProcessing image with hed\nProcessing image with midas\nProcessing image with mlsd\nProcessing image with open_pose\nProcessing image with pidi\nProcessing image with normal_bae\nProcessing image with lineart\nProcessing image with lineart_anime\nProcessing image with sam\nProcessing image with leres",
         "error": null,
         "metrics": {
-            "predict_time": 33.489191,
-            "total_time": 131.350929
+            "predict_time": 16.501693,
+            "total_time": 16.477354
         },
-        "created_at": "2023-11-02T19:49:46.959655Z",
-        "started_at": "2023-11-02T19:51:24.821393Z",
-        "completed_at": "2023-11-02T19:51:58.310584Z",
+        "created_at": "2023-11-11T06:58:08.625273Z",
+        "started_at": "2023-11-11T06:58:08.600934Z",
+        "completed_at": "2023-11-11T06:58:25.102627Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie",
-            "cancel": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie/cancel"
+            "get": "https://api.replicate.com/v1/predictions/54kd4flb5sdiepnoqgs7raf2wa",
+            "cancel": "https://api.replicate.com/v1/predictions/54kd4flb5sdiepnoqgs7raf2wa/cancel"
         }
     },
     "latest_version": {
-        "id": "3ba6c05c93f84644dda18df05bcd36745f600efd3d401238baa6ffff3317dc0f",
-        "created_at": "2024-06-28T07:13:42.455791+00:00",
-        "cog_version": "0.9.4",
+        "id": "f6584ef76cf07a2014ffe1e9bdb1a5cfa714f031883ab43f8d4b05506625988e",
+        "created_at": "2023-11-11T00:24:53.989632+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -258,30 +284,116 @@
                         "type": "object",
                         "title": "Input",
                         "required": [
-                            "target_image",
-                            "swap_image"
+                            "image"
                         ],
                         "properties": {
-                            "swap_image": {
-                                "type": "string",
-                                "title": "Swap Image",
-                                "format": "uri",
-                                "x-order": 1,
-                                "description": "Swap/source image"
+                            "hed": {
+                                "type": "boolean",
+                                "title": "Hed",
+                                "default": true,
+                                "x-order": 4,
+                                "description": "Run HED detection"
                             },
-                            "target_image": {
+                            "sam": {
+                                "type": "boolean",
+                                "title": "Sam",
+                                "default": true,
+                                "x-order": 12,
+                                "description": "Run Sam detection"
+                            },
+                            "mlsd": {
+                                "type": "boolean",
+                                "title": "Mlsd",
+                                "default": true,
+                                "x-order": 6,
+                                "description": "Run MLSD detection"
+                            },
+                            "pidi": {
+                                "type": "boolean",
+                                "title": "Pidi",
+                                "default": true,
+                                "x-order": 8,
+                                "description": "Run PidiNet detection"
+                            },
+                            "canny": {
+                                "type": "boolean",
+                                "title": "Canny",
+                                "default": true,
+                                "x-order": 1,
+                                "description": "Run canny edge detection"
+                            },
+                            "image": {
                                 "type": "string",
-                                "title": "Target Image",
+                                "title": "Image",
                                 "format": "uri",
                                 "x-order": 0,
-                                "description": "Target/base image"
+                                "description": "Image to preprocess"
+                            },
+                            "leres": {
+                                "type": "boolean",
+                                "title": "Leres",
+                                "default": true,
+                                "x-order": 13,
+                                "description": "Run Leres detection"
+                            },
+                            "midas": {
+                                "type": "boolean",
+                                "title": "Midas",
+                                "default": true,
+                                "x-order": 5,
+                                "description": "Run Midas detection"
+                            },
+                            "content": {
+                                "type": "boolean",
+                                "title": "Content",
+                                "default": true,
+                                "x-order": 2,
+                                "description": "Run content shuffle detection"
+                            },
+                            "lineart": {
+                                "type": "boolean",
+                                "title": "Lineart",
+                                "default": true,
+                                "x-order": 10,
+                                "description": "Run Lineart detection"
+                            },
+                            "open_pose": {
+                                "type": "boolean",
+                                "title": "Open Pose",
+                                "default": true,
+                                "x-order": 7,
+                                "description": "Run Openpose detection"
+                            },
+                            "normal_bae": {
+                                "type": "boolean",
+                                "title": "Normal Bae",
+                                "default": true,
+                                "x-order": 9,
+                                "description": "Run NormalBae detection"
+                            },
+                            "face_detector": {
+                                "type": "boolean",
+                                "title": "Face Detector",
+                                "default": true,
+                                "x-order": 3,
+                                "description": "Run face detection"
+                            },
+                            "lineart_anime": {
+                                "type": "boolean",
+                                "title": "Lineart Anime",
+                                "default": true,
+                                "x-order": 11,
+                                "description": "Run LineartAnime detection"
                             }
                         }
                     },
                     "Output": {
-                        "type": "string",
-                        "title": "Output",
-                        "format": "uri"
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
                     },
                     "Status": {
                         "enum": [

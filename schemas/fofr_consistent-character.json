@@ -1,0 +1,536 @@
+{
+    "url": "https://replicate.com/fofr/consistent-character",
+    "owner": "fofr",
+    "name": "consistent-character",
+    "description": "Create images of a given character in different poses",
+    "visibility": "public",
+    "github_url": "https://github.com/fofr/cog-consistent-character",
+    "paper_url": null,
+    "license_url": "https://github.com/fofr/cog-consistent-character/blob/main/LICENSE",
+    "run_count": 0,
+    "cover_image_url": "https://replicate.delivery/pbxt/0PQLx9Zz5fQkb6ZQmldEB2ElI9e61eYCeqWiaZSbCzUIqgnLB/ComfyUI_00005_.webp",
+    "default_example": {
+        "id": "xtht7vbzpdrgj0cfsvabq40rx4",
+        "model": "fofr/consistent-character",
+        "version": "e90b0b680b1dca1bab496f163fdfc7cff174f7cd18d094bf57664f1891f2e857",
+        "status": "succeeded",
+        "input": {
+            "prompt": "A closeup headshot photo of a young woman in a grey sweater",
+            "subject": "https://replicate.delivery/pbxt/L0gy7uyLE5UP0uz12cndDdSOIgw5R3rV5N6G2pbt7kEK9dCr/0_3.webp",
+            "output_format": "webp",
+            "output_quality": 80,
+            "randomise_poses": true,
+            "number_of_outputs": 5,
+            "number_of_images_per_pose": 1
+        },
+        "output": [
+            "https://replicate.delivery/pbxt/tm3Hm7oJsQIWLleQ46JHKDA2XoNzjiJaaFifmK9GQb8jI45SA/ComfyUI_00001_.webp",
+            "https://replicate.delivery/pbxt/HlWQ91wZRbrLMdPTndxQIz6pfdJSBXlENTTF8NMPvmKhE8cJA/ComfyUI_00002_.webp",
+            "https://replicate.delivery/pbxt/BqsfHIp2r8X9Gy7wVPtmbgAaIcI6ke509VWCYDQKdXceSwzlA/ComfyUI_00003_.webp",
+            "https://replicate.delivery/pbxt/S2bsYVLtLtpOJ9ZWdzd9bHbyay8f2opw4JpIocJQIBKCF8cJA/ComfyUI_00004_.webp",
+            "https://replicate.delivery/pbxt/0PQLx9Zz5fQkb6ZQmldEB2ElI9e61eYCeqWiaZSbCzUIqgnLB/ComfyUI_00005_.webp"
+        ],
+        "logs": "\u001b[33mWARNING: No face detected in the keypoints image!\u001b[0m\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:01<00:03,  1.16s/it]\n 50%|█████     | 2/4 [00:02<00:02,  1.16s/it]\n 75%|███████▌  | 3/4 [00:03<00:01,  1.15s/it]\n100%|██████████| 4/4 [00:04<00:00,  1.09it/s]\n100%|██████████| 4/4 [00:04<00:00,  1.01s/it]\n0: 640x640 1 eyes, 6.2ms\nSpeed: 1.8ms preprocess, 6.2ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((65.604126, 50.82901)) | crop region (196, 152) x 5.22706396279292 -> (1024, 794)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.46it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.41it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.45it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.11it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.83it/s]\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:02,  1.18it/s]\nRandom seed set to: 1563582084\n 50%|█████     | 2/4 [00:01<00:01,  1.18it/s]\n50%|█████     | 2/4 [00:02<00:02,  1.05s/it]\nProcessing interrupted\nPrompt executed in 23.49 seconds\nRunning workflow\ngot prompt\nExecuting node 9, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\nExecuting node 94, title: Load Image, class type: LoadImage\nExecuting node 2, title: Apply InstantID, class type: ApplyInstantID\n\u001b[33mWARNING: No face detected in the keypoints image!\u001b[0m\nExecuting node 95, title: Load Image, class type: LoadImage\nExecuting node 74, title: Apply ControlNet, class type: ControlNetApply\nExecuting node 11, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:01<00:03,  1.22s/it]\n 50%|█████     | 2/4 [00:02<00:02,  1.20s/it]\n 75%|███████▌  | 3/4 [00:03<00:01,  1.19s/it]\n100%|██████████| 4/4 [00:04<00:00,  1.05it/s]\n100%|██████████| 4/4 [00:04<00:00,  1.04s/it]\nExecuting node 13, title: VAE Decode, class type: VAEDecode\nExecuting node 98, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 2 eyess, 6.3ms\nSpeed: 1.9ms preprocess, 6.3ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((71.692566, 51.299713)) | crop region (215, 153) x 4.763873276691721 -> (1024, 728)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.20it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.29it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.41it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.07it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.75it/s]\nDetailer: segment upscale for ((65.798615, 57.932587)) | crop region (197, 173) x 5.201130483703671 -> (1024, 899)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.09it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.21it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.31it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.97it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.65it/s]\nExecuting node 103, title: Upscale Image By, class type: ImageScaleBy\nExecuting node 109, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 106, title: VAE Encode, class type: VAEEncode\nExecuting node 105, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:02,  1.19it/s]\n 50%|█████     | 2/4 [00:01<00:01,  1.19it/s]\n 75%|███████▌  | 3/4 [00:02<00:00,  1.19it/s]\n100%|██████████| 4/4 [00:02<00:00,  1.49it/s]\n100%|██████████| 4/4 [00:02<00:00,  1.36it/s]\nExecuting node 107, title: VAE Decode, class type: VAEDecode\nExecuting node 115, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 2 eyess, 6.2ms\nSpeed: 2.2ms preprocess, 6.2ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((106.669495, 76.339294)) | crop region (320, 229) x 3.2013045747658553 -> (1024, 733)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:00,  3.75it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.37it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.47it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.51it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.07it/s]\nDetailer: segment upscale for ((100.01367, 82.54938)) | crop region (300, 247) x 3.4146262219515835 -> (1024, 843)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.94it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.19it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.40it/s]\n100%|██████████| 4/4 [00:01<00:00,  4.41it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.89it/s]\nExecuting node 111, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 116, title: Save Image, class type: SaveImage\nPrompt executed in 34.42 seconds\noutputs:  {'116': {'images': [{'filename': 'ComfyUI_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nComfyUI_00001_.png\nRunning workflow\ngot prompt\nExecuting node 94, title: Load Image, class type: LoadImage\nExecuting node 2, title: Apply InstantID, class type: ApplyInstantID\n\u001b[33mWARNING: No face detected in the keypoints image!\u001b[0m\nExecuting node 95, title: Load Image, class type: LoadImage\nExecuting node 74, title: Apply ControlNet, class type: ControlNetApply\nExecuting node 11, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:01<00:03,  1.16s/it]\n 50%|█████     | 2/4 [00:02<00:02,  1.15s/it]\n 75%|███████▌  | 3/4 [00:03<00:01,  1.15s/it]\n100%|██████████| 4/4 [00:04<00:00,  1.09it/s]\n100%|██████████| 4/4 [00:04<00:00,  1.00s/it]\nExecuting node 13, title: VAE Decode, class type: VAEDecode\nExecuting node 98, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 2 eyess, 6.2ms\nSpeed: 1.9ms preprocess, 6.2ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((67.33923, 58.77098)) | crop region (202, 176) x 5.072516246660517 -> (1024, 892)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.33it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.36it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.43it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.10it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.79it/s]\nDetailer: segment upscale for ((74.21982, 59.5961)) | crop region (222, 178) x 4.613996963762767 -> (1024, 821)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.50it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.42it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.49it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.16it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.87it/s]\nExecuting node 103, title: Upscale Image By, class type: ImageScaleBy\nExecuting node 109, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 106, title: VAE Encode, class type: VAEEncode\nExecuting node 105, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:02,  1.18it/s]\n 50%|█████     | 2/4 [00:01<00:01,  1.19it/s]\n 75%|███████▌  | 3/4 [00:02<00:00,  1.19it/s]\n100%|██████████| 4/4 [00:02<00:00,  1.49it/s]\n100%|██████████| 4/4 [00:02<00:00,  1.36it/s]\nExecuting node 107, title: VAE Decode, class type: VAEDecode\nExecuting node 115, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 2 eyess, 6.0ms\nSpeed: 1.9ms preprocess, 6.0ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((95.37329, 85.64267)) | crop region (286, 256) x 3.581401070098768 -> (1024, 916)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:00,  3.39it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.32it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.45it/s]\n100%|██████████| 4/4 [00:01<00:00,  4.43it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.98it/s]\nDetailer: segment upscale for ((110.01688, 88.31497)) | crop region (330, 264) x 3.104900551374535 -> (1024, 819)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:00,  3.66it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.52it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.60it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.62it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.18it/s]\nExecuting node 111, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 116, title: Save Image, class type: SaveImage\nPrompt executed in 29.80 seconds\noutputs:  {'116': {'images': [{'filename': 'ComfyUI_00002_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nComfyUI_00001_.png\nComfyUI_00001_.webp\nComfyUI_00002_.png\nRunning workflow\ngot prompt\nExecuting node 94, title: Load Image, class type: LoadImage\nExecuting node 2, title: Apply InstantID, class type: ApplyInstantID\n\u001b[33mWARNING: No face detected in the keypoints image!\u001b[0m\nExecuting node 95, title: Load Image, class type: LoadImage\nExecuting node 74, title: Apply ControlNet, class type: ControlNetApply\nExecuting node 11, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:01<00:03,  1.15s/it]\n 50%|█████     | 2/4 [00:02<00:02,  1.16s/it]\n 75%|███████▌  | 3/4 [00:03<00:01,  1.15s/it]\n100%|██████████| 4/4 [00:04<00:00,  1.09it/s]\n100%|██████████| 4/4 [00:04<00:00,  1.00s/it]\nExecuting node 13, title: VAE Decode, class type: VAEDecode\nExecuting node 98, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 1 eyes, 6.2ms\nSpeed: 1.9ms preprocess, 6.2ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((78.32187, 59.628723)) | crop region (234, 178) x 4.378755536333697 -> (1024, 779)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.48it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.43it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.47it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.13it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.84it/s]\nExecuting node 103, title: Upscale Image By, class type: ImageScaleBy\nExecuting node 109, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 106, title: VAE Encode, class type: VAEEncode\nExecuting node 105, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:02,  1.18it/s]\n 50%|█████     | 2/4 [00:01<00:01,  1.19it/s]\n 75%|███████▌  | 3/4 [00:02<00:00,  1.19it/s]\n100%|██████████| 4/4 [00:02<00:00,  1.48it/s]\n100%|██████████| 4/4 [00:02<00:00,  1.36it/s]\nExecuting node 107, title: VAE Decode, class type: VAEDecode\nExecuting node 115, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 1 eyes, 6.1ms\nSpeed: 2.2ms preprocess, 6.1ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((115.780945, 88.26587)) | crop region (347, 264) x 2.9522228629896796 -> (1024, 779)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:00,  3.57it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.51it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.61it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.64it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.18it/s]\nExecuting node 111, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 116, title: Save Image, class type: SaveImage\nPrompt executed in 27.74 seconds\noutputs:  {'116': {'images': [{'filename': 'ComfyUI_00003_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nComfyUI_00001_.png\nComfyUI_00001_.webp\nComfyUI_00002_.png\nComfyUI_00002_.webp\nComfyUI_00003_.png\nRunning workflow\ngot prompt\nExecuting node 94, title: Load Image, class type: LoadImage\nExecuting node 2, title: Apply InstantID, class type: ApplyInstantID\n\u001b[33mWARNING: No face detected in the keypoints image!\u001b[0m\nExecuting node 95, title: Load Image, class type: LoadImage\nExecuting node 74, title: Apply ControlNet, class type: ControlNetApply\nExecuting node 11, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:01<00:03,  1.17s/it]\n 50%|█████     | 2/4 [00:02<00:02,  1.18s/it]\n 75%|███████▌  | 3/4 [00:03<00:01,  1.18s/it]\n100%|██████████| 4/4 [00:04<00:00,  1.06it/s]\n100%|██████████| 4/4 [00:04<00:00,  1.03s/it]\nExecuting node 13, title: VAE Decode, class type: VAEDecode\nExecuting node 98, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 2 eyess, 11.7ms\nSpeed: 3.3ms preprocess, 11.7ms inference, 1.3ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((75.96576, 59.817963)) | crop region (227, 179) x 4.511697901215161 -> (1024, 807)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.13it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.17it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.18it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.83it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.54it/s]\nDetailer: segment upscale for ((58.399414, 50.84218)) | crop region (175, 152) x 5.854694167074164 -> (1024, 889)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.37it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.29it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.31it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.95it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.68it/s]\nExecuting node 103, title: Upscale Image By, class type: ImageScaleBy\nExecuting node 109, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 106, title: VAE Encode, class type: VAEEncode\nRequested to load SDXL\nLoading 1 new model\nExecuting node 105, title: KSampler, class type: KSampler\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:02,  1.14it/s]\n 50%|█████     | 2/4 [00:01<00:01,  1.14it/s]\n 75%|███████▌  | 3/4 [00:02<00:00,  1.16it/s]\n100%|██████████| 4/4 [00:03<00:00,  1.46it/s]\n100%|██████████| 4/4 [00:03<00:00,  1.33it/s]\nExecuting node 107, title: VAE Decode, class type: VAEDecode\nExecuting node 115, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 2 eyess, 6.3ms\nSpeed: 2.1ms preprocess, 6.3ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((114.95831, 85.63855)) | crop region (344, 256) x 2.9776764276387335 -> (1024, 762)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.93it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.23it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.43it/s]\n100%|██████████| 4/4 [00:01<00:00,  4.29it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.84it/s]\nDetailer: segment upscale for ((88.263, 74.238495)) | crop region (264, 222) x 3.880336342526212 -> (1024, 861)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.87it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.08it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.25it/s]\n100%|██████████| 4/4 [00:01<00:00,  4.22it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.73it/s]\nExecuting node 111, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 116, title: Save Image, class type: SaveImage\nPrompt executed in 37.64 seconds\noutputs:  {'116': {'images': [{'filename': 'ComfyUI_00004_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nComfyUI_00001_.png\nComfyUI_00001_.webp\nComfyUI_00002_.png\nComfyUI_00002_.webp\nComfyUI_00003_.png\nComfyUI_00003_.webp\nComfyUI_00004_.png\nRunning workflow\ngot prompt\nExecuting node 94, title: Load Image, class type: LoadImage\nExecuting node 2, title: Apply InstantID, class type: ApplyInstantID\n\u001b[33mWARNING: No face detected in the keypoints image!\u001b[0m\nExecuting node 95, title: Load Image, class type: LoadImage\nExecuting node 74, title: Apply ControlNet, class type: ControlNetApply\nExecuting node 11, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:01<00:03,  1.20s/it]\n 50%|█████     | 2/4 [00:02<00:02,  1.20s/it]\n 75%|███████▌  | 3/4 [00:03<00:01,  1.17s/it]\n100%|██████████| 4/4 [00:04<00:00,  1.07it/s]\n100%|██████████| 4/4 [00:04<00:00,  1.03s/it]\nExecuting node 13, title: VAE Decode, class type: VAEDecode\nExecuting node 98, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 2 eyess, 6.4ms\nSpeed: 1.8ms preprocess, 6.4ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((79.470795, 57.959473)) | crop region (238, 173) x 4.304775848304084 -> (1024, 744)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.31it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.40it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.48it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.16it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.84it/s]\nDetailer: segment upscale for ((82.26346, 60.79883)) | crop region (246, 182) x 4.164515825624532 -> (1024, 757)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:01,  2.40it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.40it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  2.47it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.14it/s]\n100%|██████████| 4/4 [00:01<00:00,  2.84it/s]\nExecuting node 103, title: Upscale Image By, class type: ImageScaleBy\nExecuting node 109, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 106, title: VAE Encode, class type: VAEEncode\nExecuting node 105, title: KSampler, class type: KSampler\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:02,  1.18it/s]\n 50%|█████     | 2/4 [00:01<00:01,  1.19it/s]\n 75%|███████▌  | 3/4 [00:02<00:00,  1.19it/s]\n100%|██████████| 4/4 [00:02<00:00,  1.49it/s]\n100%|██████████| 4/4 [00:02<00:00,  1.36it/s]\nExecuting node 107, title: VAE Decode, class type: VAEDecode\nExecuting node 115, title: FaceDetailer, class type: FaceDetailer\n0: 640x640 2 eyess, 6.3ms\nSpeed: 2.1ms preprocess, 6.3ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)\nDetailer: segment upscale for ((120.392334, 90.564606)) | crop region (361, 271) x 2.8377965049987126 -> (1024, 769)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:00,  3.45it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.50it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.64it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.68it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.19it/s]\nDetailer: segment upscale for ((117.77075, 86.066315)) | crop region (353, 258) x 2.902640468090201 -> (1024, 748)\nRequested to load SDXL\nLoading 1 new model\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:00,  3.67it/s]\n 50%|█████     | 2/4 [00:00<00:00,  3.60it/s]\n 75%|███████▌  | 3/4 [00:00<00:00,  3.70it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.73it/s]\n100%|██████████| 4/4 [00:00<00:00,  4.27it/s]\nExecuting node 111, title: Image Filter Adjustments, class type: Image Filter Adjustments\nExecuting node 116, title: Save Image, class type: SaveImage\nPrompt executed in 29.42 seconds\noutputs:  {'116': {'images': [{'filename': 'ComfyUI_00005_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nComfyUI_00001_.png\nComfyUI_00001_.webp\nComfyUI_00002_.png\nComfyUI_00002_.webp\nComfyUI_00003_.png\nComfyUI_00003_.webp\nComfyUI_00004_.png\nComfyUI_00004_.webp\nComfyUI_00005_.png",
+        "error": null,
+        "metrics": {
+            "predict_time": 162.941541,
+            "total_time": 162.990091
+        },
+        "created_at": "2024-05-31T13:26:23.923000Z",
+        "started_at": "2024-05-31T13:26:23.971550Z",
+        "completed_at": "2024-05-31T13:29:06.913091Z",
+        "urls": {
+            "get": "https://api.replicate.com/v1/predictions/xtht7vbzpdrgj0cfsvabq40rx4",
+            "cancel": "https://api.replicate.com/v1/predictions/xtht7vbzpdrgj0cfsvabq40rx4/cancel"
+        }
+    },
+    "latest_version": {
+        "id": "9c77a3c2f884193fcee4d89645f02a0b9def9434f9e03cb98460456b831c8772",
+        "created_at": "2024-06-05T18:07:27.204388+00:00",
+        "cog_version": "0.9.7",
+        "openapi_schema": {
+            "info": {
+                "title": "Cog",
+                "version": "0.1.0"
+            },
+            "paths": {
+                "/": {
+                    "get": {
+                        "summary": "Root",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Root  Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "root__get"
+                    }
+                },
+                "/shutdown": {
+                    "post": {
+                        "summary": "Start Shutdown",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Start Shutdown Shutdown Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "start_shutdown_shutdown_post"
+                    }
+                },
+                "/predictions": {
+                    "post": {
+                        "summary": "Predict",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model",
+                        "operationId": "predict_predictions_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/PredictionRequest"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "/health-check": {
+                    "get": {
+                        "summary": "Healthcheck",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Healthcheck Health Check Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "healthcheck_health_check_get"
+                    }
+                },
+                "/predictions/{prediction_id}": {
+                    "put": {
+                        "summary": "Predict Idempotent",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            },
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model (idempotent creation).",
+                        "operationId": "predict_idempotent_predictions__prediction_id__put",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/components/schemas/PredictionRequest"
+                                            }
+                                        ],
+                                        "title": "Prediction Request"
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                },
+                "/predictions/{prediction_id}/cancel": {
+                    "post": {
+                        "summary": "Cancel",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Cancel Predictions  Prediction Id  Cancel Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            }
+                        ],
+                        "description": "Cancel a running prediction",
+                        "operationId": "cancel_predictions__prediction_id__cancel_post"
+                    }
+                }
+            },
+            "openapi": "3.0.2",
+            "components": {
+                "schemas": {
+                    "Input": {
+                        "type": "object",
+                        "title": "Input",
+                        "properties": {
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 8,
+                                "description": "Set a seed for reproducibility. Random by default."
+                            },
+                            "prompt": {
+                                "type": "string",
+                                "title": "Prompt",
+                                "default": "A headshot photo",
+                                "x-order": 0,
+                                "description": "Describe the subject. Include clothes and hairstyle for more consistency."
+                            },
+                            "subject": {
+                                "type": "string",
+                                "title": "Subject",
+                                "format": "uri",
+                                "x-order": 2,
+                                "description": "An image of a person. Best images are square close ups of a face, but they do not have to be."
+                            },
+                            "output_format": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/output_format"
+                                    }
+                                ],
+                                "default": "webp",
+                                "x-order": 6,
+                                "description": "Format of the output images"
+                            },
+                            "output_quality": {
+                                "type": "integer",
+                                "title": "Output Quality",
+                                "default": 80,
+                                "maximum": 100,
+                                "minimum": 0,
+                                "x-order": 7,
+                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
+                            },
+                            "negative_prompt": {
+                                "type": "string",
+                                "title": "Negative Prompt",
+                                "default": "",
+                                "x-order": 1,
+                                "description": "Things you do not want to see in your image"
+                            },
+                            "randomise_poses": {
+                                "type": "boolean",
+                                "title": "Randomise Poses",
+                                "default": true,
+                                "x-order": 5,
+                                "description": "Randomise the poses used."
+                            },
+                            "number_of_outputs": {
+                                "type": "integer",
+                                "title": "Number Of Outputs",
+                                "default": 3,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 3,
+                                "description": "The number of images to generate."
+                            },
+                            "disable_safety_checker": {
+                                "type": "boolean",
+                                "title": "Disable Safety Checker",
+                                "default": false,
+                                "x-order": 9,
+                                "description": "Disable safety checker for generated images."
+                            },
+                            "number_of_images_per_pose": {
+                                "type": "integer",
+                                "title": "Number Of Images Per Pose",
+                                "default": 1,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 4,
+                                "description": "The number of images to generate for each pose."
+                            }
+                        }
+                    },
+                    "Output": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output",
+                        "x-cog-array-type": "iterator"
+                    },
+                    "Status": {
+                        "enum": [
+                            "starting",
+                            "processing",
+                            "succeeded",
+                            "canceled",
+                            "failed"
+                        ],
+                        "type": "string",
+                        "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "WebhookEvent": {
+                        "enum": [
+                            "start",
+                            "output",
+                            "logs",
+                            "completed"
+                        ],
+                        "type": "string",
+                        "title": "WebhookEvent",
+                        "description": "An enumeration."
+                    },
+                    "output_format": {
+                        "enum": [
+                            "webp",
+                            "jpg",
+                            "png"
+                        ],
+                        "type": "string",
+                        "title": "output_format",
+                        "description": "An enumeration."
+                    },
+                    "ValidationError": {
+                        "type": "object",
+                        "title": "ValidationError",
+                        "required": [
+                            "loc",
+                            "msg",
+                            "type"
+                        ],
+                        "properties": {
+                            "loc": {
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "title": "Location"
+                            },
+                            "msg": {
+                                "type": "string",
+                                "title": "Message"
+                            },
+                            "type": {
+                                "type": "string",
+                                "title": "Error Type"
+                            }
+                        }
+                    },
+                    "PredictionRequest": {
+                        "type": "object",
+                        "title": "PredictionRequest",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "webhook": {
+                                "type": "string",
+                                "title": "Webhook",
+                                "format": "uri",
+                                "maxLength": 65536,
+                                "minLength": 1
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            },
+                            "webhook_events_filter": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/WebhookEvent"
+                                },
+                                "default": [
+                                    "start",
+                                    "output",
+                                    "logs",
+                                    "completed"
+                                ]
+                            }
+                        }
+                    },
+                    "PredictionResponse": {
+                        "type": "object",
+                        "title": "PredictionResponse",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "logs": {
+                                "type": "string",
+                                "title": "Logs",
+                                "default": ""
+                            },
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/Output"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            },
+                            "metrics": {
+                                "type": "object",
+                                "title": "Metrics"
+                            },
+                            "version": {
+                                "type": "string",
+                                "title": "Version"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "started_at": {
+                                "type": "string",
+                                "title": "Started At",
+                                "format": "date-time"
+                            },
+                            "completed_at": {
+                                "type": "string",
+                                "title": "Completed At",
+                                "format": "date-time"
+                            }
+                        }
+                    },
+                    "HTTPValidationError": {
+                        "type": "object",
+                        "title": "HTTPValidationError",
+                        "properties": {
+                            "detail": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                },
+                                "title": "Detail"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
