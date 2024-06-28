@@ -2,9 +2,9 @@
 
 Custom nodes for running [Replicate models](https://replicate.com/explore) in ComfyUI.
 
-Take a look at the [example workflows](https://github.com/fofr/comfyui-replicate/tree/main/example_workflows) and the [supported Replicate models](https://github.com/fofr/comfyui-replicate/blob/main/supported_models.json) to get started.
+Take a look at the [example workflows](https://github.com/replicate/comfyui-replicate/tree/main/example_workflows) and the [supported Replicate models](https://github.com/replicate/comfyui-replicate/blob/main/supported_models.json) to get started.
 
-![example-screenshot](https://github.com/fofr/comfyui-replicate/assets/319055/0eedb026-de3e-402a-b8fc-0a14c2fd209e)
+![example-screenshot](https://github.com/replicate/comfyui-replicate/assets/319055/0eedb026-de3e-402a-b8fc-0a14c2fd209e)
 
 ## Set your Replicate API token before running
 
@@ -30,7 +30,7 @@ set REPLICATE_API_TOKEN="r8_************"; python main.py
 
 ```sh
 cd ComfyUI/custom-nodes
-git clone https://github.com/fofr/comfyui-replicate
+git clone https://github.com/replicate/comfyui-replicate
 cd comfyui-replicate
 pip install -r requirements.txt
 ```
