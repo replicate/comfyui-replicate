@@ -1,0 +1,159 @@
+{
+  "last_node_id": 5,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "Replicate yorickvp/llava-v1.6-34b",
+      "pos": [
+        900,
+        386
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            4
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Replicate yorickvp/llava-v1.6-34b"
+      },
+      "widgets_values": [
+        "Describe this image",
+        1,
+        0.2,
+        1024,
+        "",
+        false
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1348,
+        390
+      ],
+      "size": [
+        366.6171875,
+        247.916015625
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 4,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "The image appears to be a stylized drawing of two individuals, likely a man and a woman, depicted in a cartoon or caricature style. The man has short, light-colored hair and a beard, and is wearing a dark suit with a white shirt and a black tie. The woman has long, blonde hair and is wearing what seems to be a black dress. Both characters are smiling and looking directly at the viewer. The background is a solid light blue color. There is a watermark or logo in the upper right corner of the image, but the text is not legible in this description. The overall style of the image is playful and artistic, with a focus on the facial features and expressions of the characters."
+      ]
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        551,
+        393
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "R8__00002_-4.webp",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      3,
+      1,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ]
+    }
+  },
+  "version": 0.4
+}
