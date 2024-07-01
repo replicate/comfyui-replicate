@@ -25,12 +25,12 @@ def format_json_files_in_directory(directory):
             format_json_file(file_path)
 
 
-with open("supported_models.json", "r") as f:
+with open("supported_models.json", "r", encoding="utf-8") as f:
     supported_models = json.load(f)
 
 for model in supported_models["models"]:
     m = replicate.models.get(model)
-    with open(f"schemas/{model.replace('/', '_')}.json", "w") as f:
+    with open(f"schemas/{model.replace('/', '_')}.json", "w", encoding="utf-8") as f:
         f.write(m.json())
 
 schemas_directory = "schemas"
