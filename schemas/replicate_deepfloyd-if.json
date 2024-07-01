@@ -1,42 +1,42 @@
 {
-    "url": "https://replicate.com/omniedgeio/face-swap",
-    "owner": "omniedgeio",
-    "name": "face-swap",
-    "description": "Face Swap",
+    "url": "https://replicate.com/andreasjansson/deepfloyd-if",
+    "owner": "andreasjansson",
+    "name": "deepfloyd-if",
+    "description": "The DeepFloyd IF model has been initially released as a non-commercial research-only model. Please make sure you read and abide to the license before using it.",
     "visibility": "public",
-    "github_url": null,
+    "github_url": "https://github.com/replicate/cog-deepfloyd-if",
     "paper_url": null,
-    "license_url": null,
+    "license_url": "https://huggingface.co/spaces/DeepFloyd/deepfloyd-if-license",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
+    "cover_image_url": "https://replicate.delivery/pbxt/KgfeOYshHUjf3JWOiY1PKDGdLV16PRIMAkGuujoqBjGTv5shA/out.png",
     "default_example": {
-        "id": "oio7grdblfg4jssdg7ebbmzyie",
-        "model": "omniedgeio/face-swap",
-        "version": "c2d783366e8d32e6e82c40682fab6b4c23b9c6eff2692c0cf7585fc16c238cfe",
+        "id": "ddoxxuloojfetbzu2mfkmmnbcu",
+        "model": "andreasjansson/deepfloyd-if",
+        "version": "642dcbffc8e8a3522242a4d4b8f3159470bf86a3eb7ccf852337cdc6440698c2",
         "status": "succeeded",
         "input": {
-            "swap_image": "https://replicate.delivery/pbxt/JoBuzfSVFLb5lBqkf3v9xMnqx3jFCYhM5JcVInFFwab8sLg0/long-trench-coat.png",
-            "target_image": "https://replicate.delivery/pbxt/JoBuz3wGiVFQ1TDEcsGZbYcNh0bHpvwOi32T1fmxhRujqcu7/9X2.png"
+            "seed": 1,
+            "prompt": "anime astronaut riding a horse on mars"
         },
-        "output": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
-        "logs": "/root/.pyenv/versions/3.9.18/lib/python3.9/site-packages/insightface/utils/transform.py:68: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.\nP = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4\n(2048, 2048, 3) None None",
+        "output": "https://replicate.delivery/pbxt/KgfeOYshHUjf3JWOiY1PKDGdLV16PRIMAkGuujoqBjGTv5shA/out.png",
+        "logs": "0%|          | 0/100 [00:00<?, ?it/s]\n  1%|          | 1/100 [00:02<04:21,  2.64s/it]\n  3%|▎         | 3/100 [00:02<01:13,  1.33it/s]\n  5%|▌         | 5/100 [00:03<00:39,  2.43it/s]\n  7%|▋         | 7/100 [00:03<00:25,  3.62it/s]\n  9%|▉         | 9/100 [00:03<00:18,  4.85it/s]\n 11%|█         | 11/100 [00:03<00:14,  6.05it/s]\n 13%|█▎        | 13/100 [00:03<00:12,  7.16it/s]\n 15%|█▌        | 15/100 [00:03<00:10,  8.11it/s]\n 17%|█▋        | 17/100 [00:04<00:09,  8.89it/s]\n 19%|█▉        | 19/100 [00:04<00:08,  9.50it/s]\n 21%|██        | 21/100 [00:04<00:07,  9.93it/s]\n 23%|██▎       | 23/100 [00:04<00:07, 10.29it/s]\n 25%|██▌       | 25/100 [00:04<00:07, 10.55it/s]\n 27%|██▋       | 27/100 [00:04<00:06, 10.70it/s]\n 29%|██▉       | 29/100 [00:05<00:06, 10.85it/s]\n 31%|███       | 31/100 [00:05<00:06, 10.97it/s]\n 33%|███▎      | 33/100 [00:05<00:06, 11.02it/s]\n 35%|███▌      | 35/100 [00:05<00:05, 11.06it/s]\n 37%|███▋      | 37/100 [00:05<00:05, 11.10it/s]\n 39%|███▉      | 39/100 [00:06<00:05, 11.15it/s]\n 41%|████      | 41/100 [00:06<00:05, 11.18it/s]\n 43%|████▎     | 43/100 [00:06<00:05, 11.18it/s]\n 45%|████▌     | 45/100 [00:06<00:04, 11.18it/s]\n 47%|████▋     | 47/100 [00:06<00:04, 11.20it/s]\n 49%|████▉     | 49/100 [00:06<00:04, 11.21it/s]\n 51%|█████     | 51/100 [00:07<00:04, 11.21it/s]\n 53%|█████▎    | 53/100 [00:07<00:04, 11.20it/s]\n 55%|█████▌    | 55/100 [00:07<00:04, 11.20it/s]\n 57%|█████▋    | 57/100 [00:07<00:03, 11.21it/s]\n 59%|█████▉    | 59/100 [00:07<00:03, 11.23it/s]\n 61%|██████    | 61/100 [00:08<00:03, 11.24it/s]\n 63%|██████▎   | 63/100 [00:08<00:03, 11.21it/s]\n 65%|██████▌   | 65/100 [00:08<00:03, 11.22it/s]\n 67%|██████▋   | 67/100 [00:08<00:02, 11.23it/s]\n 69%|██████▉   | 69/100 [00:08<00:02, 11.22it/s]\n 71%|███████   | 71/100 [00:08<00:02, 11.21it/s]\n 73%|███████▎  | 73/100 [00:09<00:02, 11.23it/s]\n 75%|███████▌  | 75/100 [00:09<00:02, 11.23it/s]\n 77%|███████▋  | 77/100 [00:09<00:02, 11.23it/s]\n 79%|███████▉  | 79/100 [00:09<00:01, 11.23it/s]\n 81%|████████  | 81/100 [00:09<00:01, 11.23it/s]\n 83%|████████▎ | 83/100 [00:09<00:01, 11.23it/s]\n 85%|████████▌ | 85/100 [00:10<00:01, 11.22it/s]\n 87%|████████▋ | 87/100 [00:10<00:01, 11.16it/s]\n 89%|████████▉ | 89/100 [00:10<00:00, 11.15it/s]\n 91%|█████████ | 91/100 [00:10<00:00, 11.16it/s]\n 93%|█████████▎| 93/100 [00:10<00:00, 11.18it/s]\n 95%|█████████▌| 95/100 [00:11<00:00, 11.16it/s]\n 97%|█████████▋| 97/100 [00:11<00:00, 11.16it/s]\n 99%|█████████▉| 99/100 [00:11<00:00, 11.11it/s]\n100%|██████████| 100/100 [00:11<00:00,  8.70it/s]\n  0%|          | 0/50 [00:00<?, ?it/s]\n  2%|▏         | 1/50 [00:00<00:35,  1.38it/s]\n  6%|▌         | 3/50 [00:00<00:12,  3.86it/s]\n 10%|█         | 5/50 [00:01<00:07,  5.74it/s]\n 14%|█▍        | 7/50 [00:01<00:06,  7.12it/s]\n 18%|█▊        | 9/50 [00:01<00:05,  8.12it/s]\n 22%|██▏       | 11/50 [00:01<00:04,  8.85it/s]\n 26%|██▌       | 13/50 [00:01<00:03,  9.36it/s]\n 30%|███       | 15/50 [00:02<00:03,  9.71it/s]\n 34%|███▍      | 17/50 [00:02<00:03,  9.96it/s]\n 38%|███▊      | 19/50 [00:02<00:03, 10.13it/s]\n 42%|████▏     | 21/50 [00:02<00:02, 10.26it/s]\n 46%|████▌     | 23/50 [00:02<00:02, 10.34it/s]\n 50%|█████     | 25/50 [00:02<00:02, 10.41it/s]\n 54%|█████▍    | 27/50 [00:03<00:02, 10.46it/s]\n 58%|█████▊    | 29/50 [00:03<00:02, 10.44it/s]\n 62%|██████▏   | 31/50 [00:03<00:01, 10.46it/s]\n 66%|██████▌   | 33/50 [00:03<00:01, 10.49it/s]\n 70%|███████   | 35/50 [00:03<00:01, 10.52it/s]\n 74%|███████▍  | 37/50 [00:04<00:01, 10.55it/s]\n 78%|███████▊  | 39/50 [00:04<00:01, 10.55it/s]\n 82%|████████▏ | 41/50 [00:04<00:00, 10.54it/s]\n 86%|████████▌ | 43/50 [00:04<00:00, 10.56it/s]\n 90%|█████████ | 45/50 [00:04<00:00, 10.57it/s]\n 94%|█████████▍| 47/50 [00:05<00:00, 10.58it/s]\n 98%|█████████▊| 49/50 [00:05<00:00, 10.59it/s]\n100%|██████████| 50/50 [00:05<00:00,  9.32it/s]\n  0%|          | 0/75 [00:00<?, ?it/s]\n  1%|▏         | 1/75 [00:00<00:27,  2.68it/s]\n  3%|▎         | 2/75 [00:00<00:15,  4.67it/s]\n  4%|▍         | 3/75 [00:00<00:11,  6.14it/s]\n  5%|▌         | 4/75 [00:00<00:09,  7.20it/s]\n  7%|▋         | 5/75 [00:00<00:08,  7.96it/s]\n  8%|▊         | 6/75 [00:00<00:08,  8.50it/s]\n  9%|▉         | 7/75 [00:00<00:07,  8.87it/s]\n 11%|█         | 8/75 [00:01<00:07,  9.12it/s]\n 12%|█▏        | 9/75 [00:01<00:07,  9.32it/s]\n 13%|█▎        | 10/75 [00:01<00:06,  9.47it/s]\n 15%|█▍        | 11/75 [00:01<00:06,  9.57it/s]\n 16%|█▌        | 12/75 [00:01<00:06,  9.62it/s]\n 17%|█▋        | 13/75 [00:01<00:06,  9.68it/s]\n 19%|█▊        | 14/75 [00:01<00:06,  9.72it/s]\n 20%|██        | 15/75 [00:01<00:06,  9.74it/s]\n 21%|██▏       | 16/75 [00:01<00:06,  9.75it/s]\n 23%|██▎       | 17/75 [00:02<00:05,  9.77it/s]\n 24%|██▍       | 18/75 [00:02<00:05,  9.76it/s]\n 25%|██▌       | 19/75 [00:02<00:05,  9.77it/s]\n 27%|██▋       | 20/75 [00:02<00:05,  9.79it/s]\n 28%|██▊       | 21/75 [00:02<00:05,  9.80it/s]\n 29%|██▉       | 22/75 [00:02<00:05,  9.80it/s]\n 31%|███       | 23/75 [00:02<00:05,  9.81it/s]\n 32%|███▏      | 24/75 [00:02<00:05,  9.82it/s]\n 33%|███▎      | 25/75 [00:02<00:05,  9.81it/s]\n 35%|███▍      | 26/75 [00:02<00:04,  9.82it/s]\n 36%|███▌      | 27/75 [00:03<00:04,  9.81it/s]\n 37%|███▋      | 28/75 [00:03<00:04,  9.82it/s]\n 39%|███▊      | 29/75 [00:03<00:04,  9.81it/s]\n 40%|████      | 30/75 [00:03<00:04,  9.82it/s]\n 41%|████▏     | 31/75 [00:03<00:04,  9.81it/s]\n 43%|████▎     | 32/75 [00:03<00:04,  9.79it/s]\n 44%|████▍     | 33/75 [00:03<00:04,  9.78it/s]\n 45%|████▌     | 34/75 [00:03<00:04,  9.77it/s]\n 47%|████▋     | 35/75 [00:03<00:04,  9.78it/s]\n 48%|████▊     | 36/75 [00:03<00:03,  9.78it/s]\n 49%|████▉     | 37/75 [00:04<00:03,  9.78it/s]\n 51%|█████     | 38/75 [00:04<00:03,  9.67it/s]\n 52%|█████▏    | 39/75 [00:04<00:03,  9.71it/s]\n 53%|█████▎    | 40/75 [00:04<00:03,  9.73it/s]\n 55%|█████▍    | 41/75 [00:04<00:03,  9.70it/s]\n 56%|█████▌    | 42/75 [00:04<00:03,  9.72it/s]\n 57%|█████▋    | 43/75 [00:04<00:03,  9.77it/s]\n 59%|█████▊    | 44/75 [00:04<00:03,  9.80it/s]\n 60%|██████    | 45/75 [00:04<00:03,  9.82it/s]\n 61%|██████▏   | 46/75 [00:04<00:02,  9.82it/s]\n 63%|██████▎   | 47/75 [00:05<00:02,  9.76it/s]\n 64%|██████▍   | 48/75 [00:05<00:02,  9.77it/s]\n 65%|██████▌   | 49/75 [00:05<00:02,  9.78it/s]\n 67%|██████▋   | 50/75 [00:05<00:02,  9.76it/s]\n 68%|██████▊   | 51/75 [00:05<00:02,  9.78it/s]\n 69%|██████▉   | 52/75 [00:05<00:02,  9.79it/s]\n 71%|███████   | 53/75 [00:05<00:02,  9.79it/s]\n 72%|███████▏  | 54/75 [00:05<00:02,  9.79it/s]\n 73%|███████▎  | 55/75 [00:05<00:02,  9.80it/s]\n 75%|███████▍  | 56/75 [00:05<00:01,  9.79it/s]\n 76%|███████▌  | 57/75 [00:06<00:01,  9.80it/s]\n 77%|███████▋  | 58/75 [00:06<00:01,  9.82it/s]\n 79%|███████▊  | 59/75 [00:06<00:01,  9.83it/s]\n 80%|████████  | 60/75 [00:06<00:01,  9.82it/s]\n 81%|████████▏ | 61/75 [00:06<00:01,  9.82it/s]\n 83%|████████▎ | 62/75 [00:06<00:01,  9.82it/s]\n 84%|████████▍ | 63/75 [00:06<00:01,  9.83it/s]\n 85%|████████▌ | 64/75 [00:06<00:01,  9.84it/s]\n 87%|████████▋ | 65/75 [00:06<00:01,  9.84it/s]\n 88%|████████▊ | 66/75 [00:07<00:00,  9.84it/s]\n 89%|████████▉ | 67/75 [00:07<00:00,  9.84it/s]\n 91%|█████████ | 68/75 [00:07<00:00,  9.85it/s]\n 92%|█████████▏| 69/75 [00:07<00:00,  9.85it/s]\n 93%|█████████▎| 70/75 [00:07<00:00,  9.84it/s]\n 95%|█████████▍| 71/75 [00:07<00:00,  9.84it/s]\n 96%|█████████▌| 72/75 [00:07<00:00,  9.84it/s]\n 97%|█████████▋| 73/75 [00:07<00:00,  9.83it/s]\n 99%|█████████▊| 74/75 [00:07<00:00,  9.83it/s]\n100%|██████████| 75/75 [00:07<00:00,  9.82it/s]\n100%|██████████| 75/75 [00:07<00:00,  9.46it/s]",
         "error": null,
         "metrics": {
-            "predict_time": 33.489191,
-            "total_time": 131.350929
+            "predict_time": 46.850276,
+            "total_time": 46.892784
         },
-        "created_at": "2023-11-02T19:49:46.959655Z",
-        "started_at": "2023-11-02T19:51:24.821393Z",
-        "completed_at": "2023-11-02T19:51:58.310584Z",
+        "created_at": "2023-04-28T19:17:15.654917Z",
+        "started_at": "2023-04-28T19:17:15.697425Z",
+        "completed_at": "2023-04-28T19:18:02.547701Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie",
-            "cancel": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie/cancel"
+            "get": "https://api.replicate.com/v1/predictions/ddoxxuloojfetbzu2mfkmmnbcu",
+            "cancel": "https://api.replicate.com/v1/predictions/ddoxxuloojfetbzu2mfkmmnbcu/cancel"
         }
     },
     "latest_version": {
-        "id": "bc479d7d8ecc50eb83839af0c28210db75cac9c23837e2722028df4cddfafa22",
-        "created_at": "2024-06-29T14:40:18.046009+00:00",
-        "cog_version": "0.9.4",
+        "id": "fb84d659df149f4515c351e394d22222a94144aa1403870c36025c8b28846c8d",
+        "created_at": "2023-04-28T22:01:31.547448+00:00",
+        "cog_version": "0.7.0-beta17",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -257,24 +257,19 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
-                        "required": [
-                            "target_image",
-                            "swap_image"
-                        ],
                         "properties": {
-                            "swap_image": {
-                                "type": "string",
-                                "title": "Swap Image",
-                                "format": "uri",
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
                                 "x-order": 1,
-                                "description": "Swap/source image"
+                                "description": "Random seed. Leave blank to randomize the seed"
                             },
-                            "target_image": {
+                            "prompt": {
                                 "type": "string",
-                                "title": "Target Image",
-                                "format": "uri",
+                                "title": "Prompt",
+                                "default": "a photo of an astronaut riding a horse on mars",
                                 "x-order": 0,
-                                "description": "Target/base image"
+                                "description": "Input prompt"
                             }
                         }
                     },
@@ -372,11 +367,12 @@
                                     "$ref": "#/components/schemas/WebhookEvent"
                                 },
                                 "default": [
+                                    "completed",
                                     "start",
-                                    "output",
                                     "logs",
-                                    "completed"
-                                ]
+                                    "output"
+                                ],
+                                "uniqueItems": true
                             }
                         }
                     },

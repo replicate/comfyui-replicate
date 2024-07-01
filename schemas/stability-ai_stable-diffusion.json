@@ -1,42 +1,48 @@
 {
-    "url": "https://replicate.com/omniedgeio/face-swap",
-    "owner": "omniedgeio",
-    "name": "face-swap",
-    "description": "Face Swap",
+    "url": "https://replicate.com/stability-ai/stable-diffusion",
+    "owner": "stability-ai",
+    "name": "stable-diffusion",
+    "description": "A latent text-to-image diffusion model capable of generating photo-realistic images given any text input",
     "visibility": "public",
-    "github_url": null,
-    "paper_url": null,
-    "license_url": null,
+    "github_url": "https://github.com/replicate/cog-stable-diffusion",
+    "paper_url": "https://arxiv.org/abs/2112.10752",
+    "license_url": "https://huggingface.co/spaces/CompVis/stable-diffusion-license",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
+    "cover_image_url": "https://replicate.delivery/pbxt/sWeZFZou6v3CPKuoJbqX46ugPaHT1DcsWYx0srPmGrMOCPYIA/out-0.png",
     "default_example": {
-        "id": "oio7grdblfg4jssdg7ebbmzyie",
-        "model": "omniedgeio/face-swap",
-        "version": "c2d783366e8d32e6e82c40682fab6b4c23b9c6eff2692c0cf7585fc16c238cfe",
+        "id": "uvb7ynit4bhpjds3vn4bx7npeq",
+        "model": "stability-ai/stable-diffusion",
+        "version": "db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
         "status": "succeeded",
         "input": {
-            "swap_image": "https://replicate.delivery/pbxt/JoBuzfSVFLb5lBqkf3v9xMnqx3jFCYhM5JcVInFFwab8sLg0/long-trench-coat.png",
-            "target_image": "https://replicate.delivery/pbxt/JoBuz3wGiVFQ1TDEcsGZbYcNh0bHpvwOi32T1fmxhRujqcu7/9X2.png"
+            "prompt": "an astronaut riding a horse on mars, hd, dramatic lighting",
+            "scheduler": "K_EULER",
+            "num_outputs": 1,
+            "guidance_scale": 7.5,
+            "image_dimensions": "512x512",
+            "num_inference_steps": 50
         },
-        "output": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
-        "logs": "/root/.pyenv/versions/3.9.18/lib/python3.9/site-packages/insightface/utils/transform.py:68: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.\nP = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4\n(2048, 2048, 3) None None",
+        "output": [
+            "https://replicate.delivery/pbxt/sWeZFZou6v3CPKuoJbqX46ugPaHT1DcsWYx0srPmGrMOCPYIA/out-0.png"
+        ],
+        "logs": "Using seed: 52443\ninput_shape: torch.Size([1, 77])\n  0%|          | 0/50 [00:00<?, ?it/s]\n 10%|█         | 5/50 [00:00<00:01, 41.06it/s]\n 20%|██        | 10/50 [00:00<00:00, 41.32it/s]\n 30%|███       | 15/50 [00:00<00:00, 43.77it/s]\n 42%|████▏     | 21/50 [00:00<00:00, 46.80it/s]\n 54%|█████▍    | 27/50 [00:00<00:00, 48.53it/s]\n 66%|██████▌   | 33/50 [00:00<00:00, 49.63it/s]\n 78%|███████▊  | 39/50 [00:00<00:00, 50.45it/s]\n 90%|█████████ | 45/50 [00:00<00:00, 50.90it/s]\n100%|██████████| 50/50 [00:01<00:00, 48.51it/s]",
         "error": null,
         "metrics": {
-            "predict_time": 33.489191,
-            "total_time": 131.350929
+            "predict_time": 1.889956,
+            "total_time": 2.03998
         },
-        "created_at": "2023-11-02T19:49:46.959655Z",
-        "started_at": "2023-11-02T19:51:24.821393Z",
-        "completed_at": "2023-11-02T19:51:58.310584Z",
+        "created_at": "2023-04-10T15:45:31.434998Z",
+        "started_at": "2023-04-10T15:45:31.585022Z",
+        "completed_at": "2023-04-10T15:45:33.474978Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie",
-            "cancel": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie/cancel"
+            "get": "https://api.replicate.com/v1/predictions/uvb7ynit4bhpjds3vn4bx7npeq",
+            "cancel": "https://api.replicate.com/v1/predictions/uvb7ynit4bhpjds3vn4bx7npeq/cancel"
         }
     },
     "latest_version": {
-        "id": "bc479d7d8ecc50eb83839af0c28210db75cac9c23837e2722028df4cddfafa22",
-        "created_at": "2024-06-29T14:40:18.046009+00:00",
-        "cog_version": "0.9.4",
+        "id": "ac732df83cea7fff18b8472768c88ad041fa750ff7682a21affe81863cbe77e4",
+        "created_at": "2023-07-10T06:50:41.613128+00:00",
+        "cog_version": "0.7.2",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -251,37 +257,121 @@
                     }
                 }
             },
-            "openapi": "3.0.2",
+            "openapi": "3.1.0",
             "components": {
                 "schemas": {
                     "Input": {
                         "type": "object",
                         "title": "Input",
-                        "required": [
-                            "target_image",
-                            "swap_image"
-                        ],
                         "properties": {
-                            "swap_image": {
-                                "type": "string",
-                                "title": "Swap Image",
-                                "format": "uri",
-                                "x-order": 1,
-                                "description": "Swap/source image"
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 8,
+                                "description": "Random seed. Leave blank to randomize the seed"
                             },
-                            "target_image": {
+                            "width": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/width"
+                                    }
+                                ],
+                                "default": 768,
+                                "x-order": 2,
+                                "description": "Width of generated image in pixels. Needs to be a multiple of 64"
+                            },
+                            "height": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/height"
+                                    }
+                                ],
+                                "default": 768,
+                                "x-order": 1,
+                                "description": "Height of generated image in pixels. Needs to be a multiple of 64"
+                            },
+                            "prompt": {
                                 "type": "string",
-                                "title": "Target Image",
-                                "format": "uri",
+                                "title": "Prompt",
+                                "default": "a vision of paradise. unreal engine",
                                 "x-order": 0,
-                                "description": "Target/base image"
+                                "description": "Input prompt"
+                            },
+                            "scheduler": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/scheduler"
+                                    }
+                                ],
+                                "default": "DPMSolverMultistep",
+                                "x-order": 7,
+                                "description": "Choose a scheduler."
+                            },
+                            "num_outputs": {
+                                "type": "integer",
+                                "title": "Num Outputs",
+                                "default": 1,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 4,
+                                "description": "Number of images to generate."
+                            },
+                            "guidance_scale": {
+                                "type": "number",
+                                "title": "Guidance Scale",
+                                "default": 7.5,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 6,
+                                "description": "Scale for classifier-free guidance"
+                            },
+                            "negative_prompt": {
+                                "type": "string",
+                                "title": "Negative Prompt",
+                                "x-order": 3,
+                                "description": "Specify things to not see in the output"
+                            },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 50,
+                                "maximum": 500,
+                                "minimum": 1,
+                                "x-order": 5,
+                                "description": "Number of denoising steps"
                             }
                         }
                     },
+                    "width": {
+                        "enum": [
+                            64,
+                            128,
+                            192,
+                            256,
+                            320,
+                            384,
+                            448,
+                            512,
+                            576,
+                            640,
+                            704,
+                            768,
+                            832,
+                            896,
+                            960,
+                            1024
+                        ],
+                        "type": "integer",
+                        "title": "width",
+                        "description": "An enumeration."
+                    },
                     "Output": {
-                        "type": "string",
-                        "title": "Output",
-                        "format": "uri"
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
                     },
                     "Status": {
                         "enum": [
@@ -293,6 +383,42 @@
                         ],
                         "type": "string",
                         "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "height": {
+                        "enum": [
+                            64,
+                            128,
+                            192,
+                            256,
+                            320,
+                            384,
+                            448,
+                            512,
+                            576,
+                            640,
+                            704,
+                            768,
+                            832,
+                            896,
+                            960,
+                            1024
+                        ],
+                        "type": "integer",
+                        "title": "height",
+                        "description": "An enumeration."
+                    },
+                    "scheduler": {
+                        "enum": [
+                            "DDIM",
+                            "K_EULER",
+                            "DPMSolverMultistep",
+                            "K_EULER_ANCESTRAL",
+                            "PNDM",
+                            "KLMS"
+                        ],
+                        "type": "string",
+                        "title": "scheduler",
                         "description": "An enumeration."
                     },
                     "WebhookEvent": {
@@ -372,11 +498,12 @@
                                     "$ref": "#/components/schemas/WebhookEvent"
                                 },
                                 "default": [
-                                    "start",
-                                    "output",
+                                    "completed",
                                     "logs",
-                                    "completed"
-                                ]
+                                    "output",
+                                    "start"
+                                ],
+                                "uniqueItems": true
                             }
                         }
                     },

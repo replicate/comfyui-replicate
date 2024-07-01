@@ -1,42 +1,46 @@
 {
-    "url": "https://replicate.com/omniedgeio/face-swap",
-    "owner": "omniedgeio",
-    "name": "face-swap",
-    "description": "Face Swap",
+    "url": "https://replicate.com/ai-forever/kandinsky-2",
+    "owner": "ai-forever",
+    "name": "kandinsky-2",
+    "description": "text2img model trained on LAION HighRes and fine-tuned on internal datasets",
     "visibility": "public",
-    "github_url": null,
+    "github_url": "https://github.com/chenxwh/Kandinsky-2",
     "paper_url": null,
-    "license_url": null,
+    "license_url": "https://github.com/ai-forever/Kandinsky-2/blob/main/license",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
+    "cover_image_url": "https://replicate.delivery/pbxt/NsOpfQRos43e40IzSq4SY7NTtxGodmSWo1m74K17SVpoUzuQA/out.png",
     "default_example": {
-        "id": "oio7grdblfg4jssdg7ebbmzyie",
-        "model": "omniedgeio/face-swap",
-        "version": "c2d783366e8d32e6e82c40682fab6b4c23b9c6eff2692c0cf7585fc16c238cfe",
+        "id": "wixq75uo65glnjcdgrqtngdz4q",
+        "model": "ai-forever/kandinsky-2",
+        "version": "9c0bf7d5cf2ed934c5921faf61882657c03c4def9d9cb88330c15bd795edb098",
         "status": "succeeded",
         "input": {
-            "swap_image": "https://replicate.delivery/pbxt/JoBuzfSVFLb5lBqkf3v9xMnqx3jFCYhM5JcVInFFwab8sLg0/long-trench-coat.png",
-            "target_image": "https://replicate.delivery/pbxt/JoBuz3wGiVFQ1TDEcsGZbYcNh0bHpvwOi32T1fmxhRujqcu7/9X2.png"
+            "prompt": "red cat, 4k photo",
+            "scheduler": "p_sampler",
+            "prior_steps": "5",
+            "guidance_scale": 4,
+            "prior_cf_scale": 4,
+            "num_inference_steps": 100
         },
-        "output": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
-        "logs": "/root/.pyenv/versions/3.9.18/lib/python3.9/site-packages/insightface/utils/transform.py:68: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.\nP = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4\n(2048, 2048, 3) None None",
+        "output": "https://replicate.delivery/pbxt/NsOpfQRos43e40IzSq4SY7NTtxGodmSWo1m74K17SVpoUzuQA/out.png",
+        "logs": "0%|          | 0/100 [00:00<?, ?it/s]\n  1%|          | 1/100 [00:00<01:21,  1.21it/s]\n  2%|▏         | 2/100 [00:01<01:08,  1.42it/s]\n  3%|▎         | 3/100 [00:02<01:04,  1.51it/s]\n  4%|▍         | 4/100 [00:02<01:02,  1.54it/s]\n  5%|▌         | 5/100 [00:03<01:00,  1.56it/s]\n  6%|▌         | 6/100 [00:03<01:00,  1.57it/s]\n  7%|▋         | 7/100 [00:04<00:59,  1.57it/s]\n  8%|▊         | 8/100 [00:05<00:58,  1.58it/s]\n  9%|▉         | 9/100 [00:05<00:57,  1.58it/s]\n 10%|█         | 10/100 [00:06<00:56,  1.58it/s]\n 11%|█         | 11/100 [00:07<00:56,  1.58it/s]\n 12%|█▏        | 12/100 [00:07<00:55,  1.58it/s]\n 13%|█▎        | 13/100 [00:08<00:54,  1.59it/s]\n 14%|█▍        | 14/100 [00:08<00:54,  1.58it/s]\n 15%|█▌        | 15/100 [00:09<00:53,  1.58it/s]\n 16%|█▌        | 16/100 [00:10<00:53,  1.58it/s]\n 17%|█▋        | 17/100 [00:10<00:52,  1.59it/s]\n 18%|█▊        | 18/100 [00:11<00:51,  1.59it/s]\n 19%|█▉        | 19/100 [00:12<00:51,  1.59it/s]\n 20%|██        | 20/100 [00:12<00:50,  1.58it/s]\n 21%|██        | 21/100 [00:13<00:50,  1.58it/s]\n 22%|██▏       | 22/100 [00:14<00:49,  1.58it/s]\n 23%|██▎       | 23/100 [00:14<00:48,  1.58it/s]\n 24%|██▍       | 24/100 [00:15<00:48,  1.58it/s]\n 25%|██▌       | 25/100 [00:15<00:47,  1.57it/s]\n 26%|██▌       | 26/100 [00:16<00:46,  1.58it/s]\n 27%|██▋       | 27/100 [00:17<00:46,  1.57it/s]\n 28%|██▊       | 28/100 [00:17<00:45,  1.58it/s]\n 29%|██▉       | 29/100 [00:18<00:45,  1.57it/s]\n 30%|███       | 30/100 [00:19<00:44,  1.57it/s]\n 31%|███       | 31/100 [00:19<00:44,  1.57it/s]\n 32%|███▏      | 32/100 [00:20<00:43,  1.57it/s]\n 33%|███▎      | 33/100 [00:21<00:42,  1.57it/s]\n 34%|███▍      | 34/100 [00:21<00:42,  1.57it/s]\n 35%|███▌      | 35/100 [00:22<00:41,  1.56it/s]\n 36%|███▌      | 36/100 [00:22<00:40,  1.56it/s]\n 37%|███▋      | 37/100 [00:23<00:40,  1.56it/s]\n 38%|███▊      | 38/100 [00:24<00:39,  1.56it/s]\n 39%|███▉      | 39/100 [00:24<00:39,  1.56it/s]\n 40%|████      | 40/100 [00:25<00:38,  1.56it/s]\n 41%|████      | 41/100 [00:26<00:37,  1.56it/s]\n 42%|████▏     | 42/100 [00:26<00:37,  1.55it/s]\n 43%|████▎     | 43/100 [00:27<00:36,  1.56it/s]\n 44%|████▍     | 44/100 [00:28<00:35,  1.56it/s]\n 45%|████▌     | 45/100 [00:28<00:35,  1.56it/s]\n 46%|████▌     | 46/100 [00:29<00:34,  1.56it/s]\n 47%|████▋     | 47/100 [00:30<00:33,  1.56it/s]\n 48%|████▊     | 48/100 [00:30<00:33,  1.56it/s]\n 49%|████▉     | 49/100 [00:31<00:32,  1.56it/s]\n 50%|█████     | 50/100 [00:31<00:32,  1.56it/s]\n 51%|█████     | 51/100 [00:32<00:31,  1.56it/s]\n 52%|█████▏    | 52/100 [00:33<00:30,  1.55it/s]\n 53%|█████▎    | 53/100 [00:33<00:30,  1.55it/s]\n 54%|█████▍    | 54/100 [00:34<00:29,  1.55it/s]\n 55%|█████▌    | 55/100 [00:35<00:28,  1.55it/s]\n 56%|█████▌    | 56/100 [00:35<00:28,  1.55it/s]\n 57%|█████▋    | 57/100 [00:36<00:27,  1.55it/s]\n 58%|█████▊    | 58/100 [00:37<00:27,  1.54it/s]\n 59%|█████▉    | 59/100 [00:37<00:26,  1.54it/s]\n 60%|██████    | 60/100 [00:38<00:25,  1.54it/s]\n 61%|██████    | 61/100 [00:39<00:25,  1.54it/s]\n 62%|██████▏   | 62/100 [00:39<00:24,  1.54it/s]\n 63%|██████▎   | 63/100 [00:40<00:24,  1.54it/s]\n 64%|██████▍   | 64/100 [00:41<00:23,  1.54it/s]\n 65%|██████▌   | 65/100 [00:41<00:22,  1.54it/s]\n 66%|██████▌   | 66/100 [00:42<00:22,  1.54it/s]\n 67%|██████▋   | 67/100 [00:42<00:21,  1.54it/s]\n 68%|██████▊   | 68/100 [00:43<00:20,  1.54it/s]\n 69%|██████▉   | 69/100 [00:44<00:20,  1.54it/s]\n 70%|███████   | 70/100 [00:44<00:19,  1.54it/s]\n 71%|███████   | 71/100 [00:45<00:18,  1.54it/s]\n 72%|███████▏  | 72/100 [00:46<00:18,  1.54it/s]\n 73%|███████▎  | 73/100 [00:46<00:17,  1.53it/s]\n 74%|███████▍  | 74/100 [00:47<00:16,  1.54it/s]\n 75%|███████▌  | 75/100 [00:48<00:16,  1.53it/s]\n 76%|███████▌  | 76/100 [00:48<00:15,  1.54it/s]\n 77%|███████▋  | 77/100 [00:49<00:14,  1.54it/s]\n 78%|███████▊  | 78/100 [00:50<00:14,  1.54it/s]\n 79%|███████▉  | 79/100 [00:50<00:13,  1.54it/s]\n 80%|████████  | 80/100 [00:51<00:13,  1.54it/s]\n 81%|████████  | 81/100 [00:52<00:12,  1.54it/s]\n 82%|████████▏ | 82/100 [00:52<00:11,  1.54it/s]\n 83%|████████▎ | 83/100 [00:53<00:11,  1.54it/s]\n 84%|████████▍ | 84/100 [00:54<00:10,  1.54it/s]\n 85%|████████▌ | 85/100 [00:54<00:09,  1.54it/s]\n 86%|████████▌ | 86/100 [00:55<00:09,  1.54it/s]\n 87%|████████▋ | 87/100 [00:55<00:08,  1.54it/s]\n 88%|████████▊ | 88/100 [00:56<00:07,  1.54it/s]\n 89%|████████▉ | 89/100 [00:57<00:07,  1.54it/s]\n 90%|█████████ | 90/100 [00:57<00:06,  1.54it/s]\n 91%|█████████ | 91/100 [00:58<00:05,  1.54it/s]\n 92%|█████████▏| 92/100 [00:59<00:05,  1.54it/s]\n 93%|█████████▎| 93/100 [00:59<00:04,  1.54it/s]\n 94%|█████████▍| 94/100 [01:00<00:03,  1.54it/s]\n 95%|█████████▌| 95/100 [01:01<00:03,  1.53it/s]\n 96%|█████████▌| 96/100 [01:01<00:02,  1.53it/s]\n 97%|█████████▋| 97/100 [01:02<00:01,  1.53it/s]\n 98%|█████████▊| 98/100 [01:03<00:01,  1.53it/s]\n 99%|█████████▉| 99/100 [01:03<00:00,  1.52it/s]\n100%|██████████| 100/100 [01:04<00:00,  1.52it/s]\n100%|██████████| 100/100 [01:04<00:00,  1.55it/s]",
         "error": null,
         "metrics": {
-            "predict_time": 33.489191,
-            "total_time": 131.350929
+            "predict_time": 71.261476,
+            "total_time": 71.555553
         },
-        "created_at": "2023-11-02T19:49:46.959655Z",
-        "started_at": "2023-11-02T19:51:24.821393Z",
-        "completed_at": "2023-11-02T19:51:58.310584Z",
+        "created_at": "2023-04-05T14:17:05.824020Z",
+        "started_at": "2023-04-05T14:17:06.118097Z",
+        "completed_at": "2023-04-05T14:18:17.379573Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie",
-            "cancel": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie/cancel"
+            "get": "https://api.replicate.com/v1/predictions/wixq75uo65glnjcdgrqtngdz4q",
+            "cancel": "https://api.replicate.com/v1/predictions/wixq75uo65glnjcdgrqtngdz4q/cancel"
         }
     },
     "latest_version": {
-        "id": "bc479d7d8ecc50eb83839af0c28210db75cac9c23837e2722028df4cddfafa22",
-        "created_at": "2024-06-29T14:40:18.046009+00:00",
-        "cog_version": "0.9.4",
+        "id": "3c6374e7a9a17e01afe306a5218cc67de55b19ea536466d6ea2602cfecea40a9",
+        "created_at": "2024-04-19T17:37:12.036077+00:00",
+        "cog_version": "v0.9.5+dev",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -257,31 +261,132 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
-                        "required": [
-                            "target_image",
-                            "swap_image"
-                        ],
                         "properties": {
-                            "swap_image": {
-                                "type": "string",
-                                "title": "Swap Image",
-                                "format": "uri",
-                                "x-order": 1,
-                                "description": "Swap/source image"
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 9,
+                                "description": "Random seed. Leave blank to randomize the seed"
                             },
-                            "target_image": {
+                            "width": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/width"
+                                    }
+                                ],
+                                "default": 512,
+                                "x-order": 6,
+                                "description": "Choose width. Lower the setting if out of memory."
+                            },
+                            "height": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/height"
+                                    }
+                                ],
+                                "default": 512,
+                                "x-order": 7,
+                                "description": "Choose height. Lower the setting if out of memory."
+                            },
+                            "prompt": {
                                 "type": "string",
-                                "title": "Target Image",
-                                "format": "uri",
+                                "title": "Prompt",
+                                "default": "red cat, 4k photo",
                                 "x-order": 0,
-                                "description": "Target/base image"
+                                "description": "Input Prompt"
+                            },
+                            "scheduler": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/scheduler"
+                                    }
+                                ],
+                                "default": "p_sampler",
+                                "x-order": 3,
+                                "description": "Choose a scheduler"
+                            },
+                            "batch_size": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/batch_size"
+                                    }
+                                ],
+                                "default": 1,
+                                "x-order": 8,
+                                "description": "Choose batch size. Lower the setting if out of memory."
+                            },
+                            "prior_steps": {
+                                "type": "string",
+                                "title": "Prior Steps",
+                                "default": "5",
+                                "x-order": 5
+                            },
+                            "output_format": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/output_format"
+                                    }
+                                ],
+                                "default": "webp",
+                                "x-order": 10,
+                                "description": "Format of the output images"
+                            },
+                            "guidance_scale": {
+                                "type": "number",
+                                "title": "Guidance Scale",
+                                "default": 4,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 2,
+                                "description": "Scale for classifier-free guidance"
+                            },
+                            "output_quality": {
+                                "type": "integer",
+                                "title": "Output Quality",
+                                "default": 80,
+                                "maximum": 100,
+                                "minimum": 0,
+                                "x-order": 11,
+                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
+                            },
+                            "prior_cf_scale": {
+                                "type": "integer",
+                                "title": "Prior Cf Scale",
+                                "default": 4,
+                                "x-order": 4
+                            },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 50,
+                                "maximum": 500,
+                                "minimum": 1,
+                                "x-order": 1,
+                                "description": "Number of denoising steps"
                             }
                         }
                     },
+                    "width": {
+                        "enum": [
+                            256,
+                            288,
+                            432,
+                            512,
+                            576,
+                            768,
+                            1024
+                        ],
+                        "type": "integer",
+                        "title": "width",
+                        "description": "An enumeration."
+                    },
                     "Output": {
-                        "type": "string",
-                        "title": "Output",
-                        "format": "uri"
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
                     },
                     "Status": {
                         "enum": [
@@ -295,6 +400,41 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "height": {
+                        "enum": [
+                            256,
+                            288,
+                            432,
+                            512,
+                            576,
+                            768,
+                            1024
+                        ],
+                        "type": "integer",
+                        "title": "height",
+                        "description": "An enumeration."
+                    },
+                    "scheduler": {
+                        "enum": [
+                            "ddim_sampler",
+                            "p_sampler",
+                            "plms_sampler"
+                        ],
+                        "type": "string",
+                        "title": "scheduler",
+                        "description": "An enumeration."
+                    },
+                    "batch_size": {
+                        "enum": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "type": "integer",
+                        "title": "batch_size",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -304,6 +444,16 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
+                        "description": "An enumeration."
+                    },
+                    "output_format": {
+                        "enum": [
+                            "webp",
+                            "jpg",
+                            "png"
+                        ],
+                        "type": "string",
+                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

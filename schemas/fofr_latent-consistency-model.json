@@ -1,42 +1,58 @@
 {
-    "url": "https://replicate.com/omniedgeio/face-swap",
-    "owner": "omniedgeio",
-    "name": "face-swap",
-    "description": "Face Swap",
+    "url": "https://replicate.com/fofr/latent-consistency-model",
+    "owner": "fofr",
+    "name": "latent-consistency-model",
+    "description": "Super-fast, 0.6s per image. LCM with img2img, large batching and canny controlnet",
     "visibility": "public",
-    "github_url": null,
+    "github_url": "https://github.com/fofr/cog-lcm",
     "paper_url": null,
-    "license_url": null,
+    "license_url": "https://github.com/fofr/cog-lcm/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
+    "cover_image_url": "https://replicate.delivery/pbxt/LF23xWrMie2vMCmbiswetET2BLperpEtNodZSN4yNfDkAClHB/out-0.jpg",
     "default_example": {
-        "id": "oio7grdblfg4jssdg7ebbmzyie",
-        "model": "omniedgeio/face-swap",
-        "version": "c2d783366e8d32e6e82c40682fab6b4c23b9c6eff2692c0cf7585fc16c238cfe",
+        "id": "uzzsxzjb2sus5xl5jqnxpjlyoq",
+        "model": "fofr/latent-consistency-model",
+        "version": "fd0f02756ae5c3244cfb45c0603296e7418c07d1501bc6e9463ea2d215d5e38f",
         "status": "succeeded",
         "input": {
-            "swap_image": "https://replicate.delivery/pbxt/JoBuzfSVFLb5lBqkf3v9xMnqx3jFCYhM5JcVInFFwab8sLg0/long-trench-coat.png",
-            "target_image": "https://replicate.delivery/pbxt/JoBuz3wGiVFQ1TDEcsGZbYcNh0bHpvwOi32T1fmxhRujqcu7/9X2.png"
+            "image": "https://replicate.delivery/pbxt/JlG0Efd2ubBp9yGnlOi7I9Se2rXnJSrPFogLf0YieKgjnWN6/download-6.png",
+            "width": 768,
+            "height": 768,
+            "prompt": "Self-portrait oil painting, a beautiful cyborg with golden hair, 8k",
+            "num_images": 1,
+            "guidance_scale": 8,
+            "archive_outputs": false,
+            "prompt_strength": 0.45,
+            "sizing_strategy": "width/height",
+            "lcm_origin_steps": 50,
+            "canny_low_threshold": 100,
+            "num_inference_steps": 4,
+            "canny_high_threshold": 200,
+            "control_guidance_end": 1,
+            "control_guidance_start": 0,
+            "controlnet_conditioning_scale": 2
         },
-        "output": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
-        "logs": "/root/.pyenv/versions/3.9.18/lib/python3.9/site-packages/insightface/utils/transform.py:68: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.\nP = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4\n(2048, 2048, 3) None None",
+        "output": [
+            "https://replicate.delivery/pbxt/LF23xWrMie2vMCmbiswetET2BLperpEtNodZSN4yNfDkAClHB/out-0.jpg"
+        ],
+        "logs": "Using seed: 38477\nFound 1 prompt:\n- Self-portrait oil painting, a beautiful cyborg with golden hair, 8k\nMaking 1 image\nUsing given dimensions\nimg2img mode\n  0%|          | 0/4 [00:00<?, ?it/s]\n 50%|█████     | 2/4 [00:00<00:00, 17.91it/s]\n100%|██████████| 4/4 [00:00<00:00, 17.82it/s]\n100%|██████████| 4/4 [00:00<00:00, 17.81it/s]",
         "error": null,
         "metrics": {
-            "predict_time": 33.489191,
-            "total_time": 131.350929
+            "predict_time": 0.845919,
+            "total_time": 1.28709
         },
-        "created_at": "2023-11-02T19:49:46.959655Z",
-        "started_at": "2023-11-02T19:51:24.821393Z",
-        "completed_at": "2023-11-02T19:51:58.310584Z",
+        "created_at": "2023-11-17T12:01:12.926959Z",
+        "started_at": "2023-11-17T12:01:13.368130Z",
+        "completed_at": "2023-11-17T12:01:14.214049Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie",
-            "cancel": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie/cancel"
+            "get": "https://api.replicate.com/v1/predictions/uzzsxzjb2sus5xl5jqnxpjlyoq",
+            "cancel": "https://api.replicate.com/v1/predictions/uzzsxzjb2sus5xl5jqnxpjlyoq/cancel"
         }
     },
     "latest_version": {
-        "id": "bc479d7d8ecc50eb83839af0c28210db75cac9c23837e2722028df4cddfafa22",
-        "created_at": "2024-06-29T14:40:18.046009+00:00",
-        "cog_version": "0.9.4",
+        "id": "683d19dc312f7a9f0428b04429a9ccefd28dbf7785fef083ad5cf991b65f406f",
+        "created_at": "2024-01-10T10:02:04.312938+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -257,31 +273,169 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
-                        "required": [
-                            "target_image",
-                            "swap_image"
-                        ],
                         "properties": {
-                            "swap_image": {
-                                "type": "string",
-                                "title": "Swap Image",
-                                "format": "uri",
-                                "x-order": 1,
-                                "description": "Swap/source image"
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 10,
+                                "description": "Random seed. Leave blank to randomize the seed"
                             },
-                            "target_image": {
+                            "image": {
                                 "type": "string",
-                                "title": "Target Image",
+                                "title": "Image",
                                 "format": "uri",
+                                "x-order": 4,
+                                "description": "Input image for img2img"
+                            },
+                            "width": {
+                                "type": "integer",
+                                "title": "Width",
+                                "default": 768,
+                                "x-order": 1,
+                                "description": "Width of output image. Lower if out of memory"
+                            },
+                            "height": {
+                                "type": "integer",
+                                "title": "Height",
+                                "default": 768,
+                                "x-order": 2,
+                                "description": "Height of output image. Lower if out of memory"
+                            },
+                            "prompt": {
+                                "type": "string",
+                                "title": "Prompt",
+                                "default": "Self-portrait oil painting, a beautiful cyborg with golden hair, 8k",
                                 "x-order": 0,
-                                "description": "Target/base image"
+                                "description": "For multiple prompts, enter each on a new line."
+                            },
+                            "num_images": {
+                                "type": "integer",
+                                "title": "Num Images",
+                                "default": 1,
+                                "maximum": 50,
+                                "minimum": 1,
+                                "x-order": 6,
+                                "description": "Number of images per prompt"
+                            },
+                            "control_image": {
+                                "type": "string",
+                                "title": "Control Image",
+                                "format": "uri",
+                                "x-order": 11,
+                                "description": "Image for controlnet conditioning"
+                            },
+                            "guidance_scale": {
+                                "type": "number",
+                                "title": "Guidance Scale",
+                                "default": 8,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 8,
+                                "description": "Scale for classifier-free guidance"
+                            },
+                            "archive_outputs": {
+                                "type": "boolean",
+                                "title": "Archive Outputs",
+                                "default": false,
+                                "x-order": 17,
+                                "description": "Option to archive the output images"
+                            },
+                            "prompt_strength": {
+                                "type": "number",
+                                "title": "Prompt Strength",
+                                "default": 0.8,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 5,
+                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
+                            },
+                            "sizing_strategy": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/sizing_strategy"
+                                    }
+                                ],
+                                "default": "width/height",
+                                "x-order": 3,
+                                "description": "Decide how to resize images – use width/height, resize based on input image or control image"
+                            },
+                            "lcm_origin_steps": {
+                                "type": "integer",
+                                "title": "Lcm Origin Steps",
+                                "default": 50,
+                                "minimum": 1,
+                                "x-order": 9
+                            },
+                            "canny_low_threshold": {
+                                "type": "number",
+                                "title": "Canny Low Threshold",
+                                "default": 100,
+                                "maximum": 255,
+                                "minimum": 1,
+                                "x-order": 15,
+                                "description": "Canny low threshold"
+                            },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 8,
+                                "maximum": 50,
+                                "minimum": 1,
+                                "x-order": 7,
+                                "description": "Number of denoising steps. Recommend 1 to 8 steps."
+                            },
+                            "canny_high_threshold": {
+                                "type": "number",
+                                "title": "Canny High Threshold",
+                                "default": 200,
+                                "maximum": 255,
+                                "minimum": 1,
+                                "x-order": 16,
+                                "description": "Canny high threshold"
+                            },
+                            "control_guidance_end": {
+                                "type": "number",
+                                "title": "Control Guidance End",
+                                "default": 1,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 14,
+                                "description": "Controlnet end"
+                            },
+                            "control_guidance_start": {
+                                "type": "number",
+                                "title": "Control Guidance Start",
+                                "default": 0,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 13,
+                                "description": "Controlnet start"
+                            },
+                            "disable_safety_checker": {
+                                "type": "boolean",
+                                "title": "Disable Safety Checker",
+                                "default": false,
+                                "x-order": 18,
+                                "description": "Disable safety checker for generated images. This feature is only available through the API"
+                            },
+                            "controlnet_conditioning_scale": {
+                                "type": "number",
+                                "title": "Controlnet Conditioning Scale",
+                                "default": 2,
+                                "maximum": 4,
+                                "minimum": 0.1,
+                                "x-order": 12,
+                                "description": "Controlnet conditioning scale"
                             }
                         }
                     },
                     "Output": {
-                        "type": "string",
-                        "title": "Output",
-                        "format": "uri"
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
                     },
                     "Status": {
                         "enum": [
@@ -338,6 +492,16 @@
                                 "title": "Error Type"
                             }
                         }
+                    },
+                    "sizing_strategy": {
+                        "enum": [
+                            "width/height",
+                            "input_image",
+                            "control_image"
+                        ],
+                        "type": "string",
+                        "title": "sizing_strategy",
+                        "description": "An enumeration."
                     },
                     "PredictionRequest": {
                         "type": "object",
