@@ -135,7 +135,7 @@ def create_comfyui_nodes_from_schemas(schemas_dir):
     schemas_dir_path = os.path.join(current_path, schemas_dir)
     for schema_file in os.listdir(schemas_dir_path):
         if schema_file.endswith(".json"):
-            with open(os.path.join(schemas_dir_path, schema_file), "r") as f:
+            with open(os.path.join(schemas_dir_path, schema_file), "r", encoding="utf-8") as f:
                 schema = json.load(f)
                 node_name, node_class = create_comfyui_node(schema)
                 nodes[node_name] = node_class
