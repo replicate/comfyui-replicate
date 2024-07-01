@@ -15,6 +15,7 @@
     "fofr/controlnet-preprocessors",
     "fofr/face-to-many",
     "fofr/sd3-with-chaos",
+    "fofr/style-transfer",
     "lucataco/hunyuandit-v1.1",
     "lucataco/llama-3-vision-alpha",
     "lucataco/moondream2",
