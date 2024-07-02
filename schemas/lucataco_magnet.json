@@ -1,42 +1,56 @@
 {
-    "url": "https://replicate.com/omniedgeio/face-swap",
-    "owner": "omniedgeio",
-    "name": "face-swap",
-    "description": "Face Swap",
+    "url": "https://replicate.com/lucataco/magnet",
+    "owner": "lucataco",
+    "name": "magnet",
+    "description": "MAGNeT: Masked Audio Generation using a Single Non-Autoregressive Transformer",
     "visibility": "public",
-    "github_url": null,
-    "paper_url": null,
-    "license_url": null,
+    "github_url": "https://github.com/lucataco/audiocraft",
+    "paper_url": "https://arxiv.org/abs/2401.04577",
+    "license_url": "https://github.com/facebookresearch/audiocraft?tab=MIT-1-ov-file#readme",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/b958c60f-aa4a-44ac-b251-34317cd96245/magnet.jpeg",
     "default_example": {
-        "id": "oio7grdblfg4jssdg7ebbmzyie",
-        "model": "omniedgeio/face-swap",
-        "version": "c2d783366e8d32e6e82c40682fab6b4c23b9c6eff2692c0cf7585fc16c238cfe",
+        "id": "6usmrb3bog2on4b52tcnpt74oa",
+        "model": "lucataco/magnet",
+        "version": "e8e2ecd4a1dabb58924aa8300b668290cafae166dd36baf65dad9875877de50e",
         "status": "succeeded",
         "input": {
-            "swap_image": "https://replicate.delivery/pbxt/JoBuzfSVFLb5lBqkf3v9xMnqx3jFCYhM5JcVInFFwab8sLg0/long-trench-coat.png",
-            "target_image": "https://replicate.delivery/pbxt/JoBuz3wGiVFQ1TDEcsGZbYcNh0bHpvwOi32T1fmxhRujqcu7/9X2.png"
+            "model": "facebook/magnet-small-10secs",
+            "top_p": 0.9,
+            "prompt": "80s electronic track with melodic synthesizers, catchy beat and groovy bass",
+            "max_cfg": 10,
+            "min_cfg": 1,
+            "span_score": "prod-stride1",
+            "variations": 3,
+            "temperature": 3,
+            "decoding_steps_stage_1": 20,
+            "decoding_steps_stage_2": 10,
+            "decoding_steps_stage_3": 10,
+            "decoding_steps_stage_4": 10
         },
-        "output": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
-        "logs": "/root/.pyenv/versions/3.9.18/lib/python3.9/site-packages/insightface/utils/transform.py:68: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.\nP = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4\n(2048, 2048, 3) None None",
+        "output": [
+            "https://replicate.delivery/pbxt/A09884lLfO3qWidseZLbU90KjWL3eteHOcSafheMaucmacXjE/0.wav",
+            "https://replicate.delivery/pbxt/dG0LoAeZINxcf0xueWgwgNHyF2tQv3Lvo7S7HfEew2JbNurRC/1.wav",
+            "https://replicate.delivery/pbxt/K55hoe139wzvBqXV4pkfDMfqbqRMaYVnJ6O8M1efLbteacXjE/2.wav"
+        ],
+        "logs": "/root/.pyenv/versions/3.10.13/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.\nwarnings.warn(\"torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.\")\nspiece.model:   0%|          | 0.00/792k [00:00<?, ?B/s]\nspiece.model: 100%|██████████| 792k/792k [00:00<00:00, 31.9MB/s]\ntokenizer.json:   0%|          | 0.00/1.39M [00:00<?, ?B/s]\ntokenizer.json: 100%|██████████| 1.39M/1.39M [00:00<00:00, 24.7MB/s]\nconfig.json:   0%|          | 0.00/1.21k [00:00<?, ?B/s]\nconfig.json: 100%|██████████| 1.21k/1.21k [00:00<00:00, 10.4MB/s]\nmodel.safetensors:   0%|          | 0.00/892M [00:00<?, ?B/s]\nmodel.safetensors:   4%|▎         | 31.5M/892M [00:00<00:05, 171MB/s]\nmodel.safetensors:   7%|▋         | 62.9M/892M [00:00<00:04, 193MB/s]\nmodel.safetensors:  11%|█         | 94.4M/892M [00:00<00:03, 208MB/s]\nmodel.safetensors:  14%|█▍        | 126M/892M [00:00<00:03, 231MB/s] \nmodel.safetensors:  18%|█▊        | 157M/892M [00:00<00:03, 213MB/s]\nmodel.safetensors:  22%|██▏       | 199M/892M [00:00<00:03, 227MB/s]\nmodel.safetensors:  26%|██▌       | 231M/892M [00:01<00:02, 232MB/s]\nmodel.safetensors:  29%|██▉       | 262M/892M [00:01<00:02, 234MB/s]\nmodel.safetensors:  33%|███▎      | 294M/892M [00:01<00:02, 235MB/s]\nmodel.safetensors:  36%|███▋      | 325M/892M [00:01<00:02, 239MB/s]\nmodel.safetensors:  40%|███▉      | 357M/892M [00:01<00:02, 233MB/s]\nmodel.safetensors:  44%|████▎     | 388M/892M [00:01<00:02, 233MB/s]\nmodel.safetensors:  47%|████▋     | 419M/892M [00:01<00:02, 235MB/s]\nmodel.safetensors:  51%|█████     | 451M/892M [00:01<00:01, 236MB/s]\nmodel.safetensors:  54%|█████▍    | 482M/892M [00:02<00:01, 227MB/s]\nmodel.safetensors:  58%|█████▊    | 514M/892M [00:02<00:01, 229MB/s]\nmodel.safetensors:  61%|██████    | 545M/892M [00:02<00:01, 228MB/s]\nmodel.safetensors:  65%|██████▍   | 577M/892M [00:02<00:01, 230MB/s]\nmodel.safetensors:  68%|██████▊   | 608M/892M [00:02<00:01, 238MB/s]\nmodel.safetensors:  72%|███████▏  | 640M/892M [00:02<00:01, 246MB/s]\nmodel.safetensors:  75%|███████▌  | 671M/892M [00:02<00:00, 245MB/s]\nmodel.safetensors:  79%|███████▉  | 703M/892M [00:03<00:00, 244MB/s]\nmodel.safetensors:  82%|████████▏ | 734M/892M [00:03<00:00, 242MB/s]\nmodel.safetensors:  86%|████████▌ | 765M/892M [00:03<00:00, 175MB/s]\nmodel.safetensors:  88%|████████▊ | 786M/892M [00:03<00:00, 155MB/s]\nmodel.safetensors:  92%|█████████▏| 818M/892M [00:03<00:00, 175MB/s]\nmodel.safetensors:  95%|█████████▌| 849M/892M [00:03<00:00, 190MB/s]\nmodel.safetensors:  99%|█████████▉| 881M/892M [00:04<00:00, 200MB/s]\nmodel.safetensors: 100%|██████████| 892M/892M [00:04<00:00, 217MB/s]",
         "error": null,
         "metrics": {
-            "predict_time": 33.489191,
-            "total_time": 131.350929
+            "predict_time": 14.638626,
+            "total_time": 110.299311
         },
-        "created_at": "2023-11-02T19:49:46.959655Z",
-        "started_at": "2023-11-02T19:51:24.821393Z",
-        "completed_at": "2023-11-02T19:51:58.310584Z",
+        "created_at": "2024-01-17T19:26:53.835883Z",
+        "started_at": "2024-01-17T19:28:29.496568Z",
+        "completed_at": "2024-01-17T19:28:44.135194Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie",
-            "cancel": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie/cancel"
+            "get": "https://api.replicate.com/v1/predictions/6usmrb3bog2on4b52tcnpt74oa",
+            "cancel": "https://api.replicate.com/v1/predictions/6usmrb3bog2on4b52tcnpt74oa/cancel"
         }
     },
     "latest_version": {
-        "id": "1251f6b5b8c3ce671f937d1262cc7d542b7729c30ae5e67a4bf0eef61fdb8d82",
-        "created_at": "2024-07-02T11:05:12.162271+00:00",
-        "cog_version": "0.9.4",
+        "id": "e8e2ecd4a1dabb58924aa8300b668290cafae166dd36baf65dad9875877de50e",
+        "created_at": "2024-01-17T19:21:50.415392+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -257,38 +271,122 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
-                        "required": [
-                            "target_image",
-                            "swap_image"
-                        ],
                         "properties": {
-                            "swap_image": {
-                                "type": "string",
-                                "title": "Swap Image",
-                                "format": "uri",
+                            "model": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/model"
+                                    }
+                                ],
+                                "default": "facebook/magnet-small-10secs",
                                 "x-order": 1,
-                                "description": "Swap/source image"
+                                "description": "Model to use"
                             },
-                            "target_image": {
+                            "top_p": {
+                                "type": "number",
+                                "title": "Top P",
+                                "default": 0.9,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 5,
+                                "description": "Top p for sampling"
+                            },
+                            "prompt": {
                                 "type": "string",
-                                "title": "Target Image",
-                                "format": "uri",
+                                "title": "Prompt",
+                                "default": "80s electronic track with melodic synthesizers, catchy beat and groovy bass",
                                 "x-order": 0,
-                                "description": "Target/base image"
+                                "description": "Input Text"
                             },
-                            "disable_safety_checker": {
-                                "type": "boolean",
-                                "title": "Disable Safety Checker",
-                                "default": false,
+                            "max_cfg": {
+                                "type": "number",
+                                "title": "Max Cfg",
+                                "default": 10,
+                                "x-order": 6,
+                                "description": "Max CFG coefficient"
+                            },
+                            "min_cfg": {
+                                "type": "number",
+                                "title": "Min Cfg",
+                                "default": 1,
+                                "x-order": 7,
+                                "description": "Min CFG coefficient"
+                            },
+                            "span_score": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/span_score"
+                                    }
+                                ],
+                                "default": "prod-stride1",
+                                "x-order": 3
+                            },
+                            "variations": {
+                                "type": "integer",
+                                "title": "Variations",
+                                "default": 3,
+                                "maximum": 4,
+                                "minimum": 1,
                                 "x-order": 2,
-                                "description": "Disable safety checker for swapped images"
+                                "description": "Number of variations to generate"
+                            },
+                            "temperature": {
+                                "type": "number",
+                                "title": "Temperature",
+                                "default": 3,
+                                "x-order": 4,
+                                "description": "Temperature for sampling"
+                            },
+                            "decoding_steps_stage_1": {
+                                "type": "integer",
+                                "title": "Decoding Steps Stage 1",
+                                "default": 20,
+                                "x-order": 8,
+                                "description": "Number of decoding steps for stage 1"
+                            },
+                            "decoding_steps_stage_2": {
+                                "type": "integer",
+                                "title": "Decoding Steps Stage 2",
+                                "default": 10,
+                                "x-order": 9,
+                                "description": "Number of decoding steps for stage 2"
+                            },
+                            "decoding_steps_stage_3": {
+                                "type": "integer",
+                                "title": "Decoding Steps Stage 3",
+                                "default": 10,
+                                "x-order": 10,
+                                "description": "Number of decoding steps for stage 3"
+                            },
+                            "decoding_steps_stage_4": {
+                                "type": "integer",
+                                "title": "Decoding Steps Stage 4",
+                                "default": 10,
+                                "x-order": 11,
+                                "description": "Number of decoding steps for stage 4"
                             }
                         }
                     },
-                    "Output": {
+                    "model": {
+                        "enum": [
+                            "facebook/magnet-small-10secs",
+                            "facebook/magnet-medium-10secs",
+                            "facebook/magnet-small-30secs",
+                            "facebook/magnet-medium-30secs",
+                            "facebook/audio-magnet-small",
+                            "facebook/audio-magnet-medium"
+                        ],
                         "type": "string",
-                        "title": "Output",
-                        "format": "uri"
+                        "title": "model",
+                        "description": "An enumeration."
+                    },
+                    "Output": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
                     },
                     "Status": {
                         "enum": [
@@ -300,6 +398,15 @@
                         ],
                         "type": "string",
                         "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "span_score": {
+                        "enum": [
+                            "max-nonoverlap",
+                            "prod-stride1"
+                        ],
+                        "type": "string",
+                        "title": "span_score",
                         "description": "An enumeration."
                     },
                     "WebhookEvent": {

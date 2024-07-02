@@ -1,5 +1,14 @@
 {
   "models": [
+    "suno-ai/bark",
+    "meta/musicgen",
+    "lucataco/magnet",
+    "nateraw/musicgen-songstarter-v0.2",
+    "nateraw/audio-super-resolution",
+    "zsxkib/realistic-voice-cloning",
+    "lucataco/xtts-v2",
+    "declare-lab/tango",
+    "cjwbw/seamless_communication",
     "ai-forever/kandinsky-2.2",
     "ai-forever/kandinsky-2",
     "andreasjansson/blip-2",

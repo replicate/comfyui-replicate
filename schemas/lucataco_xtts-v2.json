@@ -1,42 +1,44 @@
 {
-    "url": "https://replicate.com/omniedgeio/face-swap",
-    "owner": "omniedgeio",
-    "name": "face-swap",
-    "description": "Face Swap",
+    "url": "https://replicate.com/lucataco/xtts-v2",
+    "owner": "lucataco",
+    "name": "xtts-v2",
+    "description": "Coqui XTTS-v2: Multilingual Text To Speech Voice Cloning",
     "visibility": "public",
-    "github_url": null,
-    "paper_url": null,
-    "license_url": null,
+    "github_url": "https://github.com/lucataco/cog-xtts-v2",
+    "paper_url": "https://huggingface.co/coqui/XTTS-v2",
+    "license_url": "https://coqui.ai/cpml",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/760b1398-2ab5-4e9b-959e-f3fed025c82f/xtts.png",
     "default_example": {
-        "id": "oio7grdblfg4jssdg7ebbmzyie",
-        "model": "omniedgeio/face-swap",
-        "version": "c2d783366e8d32e6e82c40682fab6b4c23b9c6eff2692c0cf7585fc16c238cfe",
+        "id": "adinmbzbslyshwze5s6qmpzmzu",
+        "model": "lucataco/xtts-v2",
+        "version": "49ff6cfa14bd4e7f80f62e2279f82f23dfc2e7970f825f8db5599f8a6213c009",
         "status": "succeeded",
         "input": {
-            "swap_image": "https://replicate.delivery/pbxt/JoBuzfSVFLb5lBqkf3v9xMnqx3jFCYhM5JcVInFFwab8sLg0/long-trench-coat.png",
-            "target_image": "https://replicate.delivery/pbxt/JoBuz3wGiVFQ1TDEcsGZbYcNh0bHpvwOi32T1fmxhRujqcu7/9X2.png"
+            "text": "Hi there, I'm your new voice clone. Try your best to upload quality audio",
+            "speaker": "https://replicate.delivery/pbxt/Jt79w0xsT64R1JsiJ0LQRL8UcWspg5J4RFrU6YwEKpOT1ukS/male.wav",
+            "language": "en",
+            "cleanup_voice": false
         },
-        "output": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
-        "logs": "/root/.pyenv/versions/3.9.18/lib/python3.9/site-packages/insightface/utils/transform.py:68: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.\nP = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4\n(2048, 2048, 3) None None",
+        "output": "https://replicate.delivery/pbxt/eyESqfNPahnLY0gaohu50zm3nL6d5ZLxKdWMuqSPRqbihfxjA/output.wav",
+        "logs": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers\nbuilt with gcc 11 (Ubuntu 11.2.0-19ubuntu1)\nconfiguration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared\nlibavutil      56. 70.100 / 56. 70.100\nlibavcodec     58.134.100 / 58.134.100\nlibavformat    58. 76.100 / 58. 76.100\nlibavdevice    58. 13.100 / 58. 13.100\nlibavfilter     7.110.100 /  7.110.100\nlibswscale      5.  9.100 /  5.  9.100\nlibswresample   3.  9.100 /  3.  9.100\nlibpostproc    55.  9.100 / 55.  9.100\nGuessed Channel Layout for Input Stream #0.0 : mono\nInput #0, wav, from '/tmp/tmphmw6jd84male.wav':\nMetadata:\nencoder         : Lavf58.29.100\nDuration: 00:00:08.64, bitrate: 705 kb/s\nStream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, mono, s16, 705 kb/s\nStream mapping:\nStream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))\nPress [q] to stop, [?] for help\nOutput #0, wav, to '/tmp/speaker.wav':\nMetadata:\nISFT            : Lavf58.76.100\nStream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, mono, s16, 705 kb/s\nMetadata:\nencoder         : Lavc58.134.100 pcm_s16le\nsize=       4kB time=00:00:00.00 bitrate=N/A speed=N/A\nsize=     744kB time=00:00:08.63 bitrate= 705.9kbits/s speed=1.75e+03x\nvideo:0kB audio:744kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.010236%\n> Text splitted to sentences.\n[\"Hi there, I'm your new voice clone.\", 'Try your best to upload quality audio']\n> Processing time: 3.3411097526550293\n> Real-time factor: 0.613438166517148",
         "error": null,
         "metrics": {
-            "predict_time": 33.489191,
-            "total_time": 131.350929
+            "predict_time": 4.303438,
+            "total_time": 4.319136
         },
-        "created_at": "2023-11-02T19:49:46.959655Z",
-        "started_at": "2023-11-02T19:51:24.821393Z",
-        "completed_at": "2023-11-02T19:51:58.310584Z",
+        "created_at": "2023-11-16T16:42:06.735772Z",
+        "started_at": "2023-11-16T16:42:06.751470Z",
+        "completed_at": "2023-11-16T16:42:11.054908Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie",
-            "cancel": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie/cancel"
+            "get": "https://api.replicate.com/v1/predictions/adinmbzbslyshwze5s6qmpzmzu",
+            "cancel": "https://api.replicate.com/v1/predictions/adinmbzbslyshwze5s6qmpzmzu/cancel"
         }
     },
     "latest_version": {
-        "id": "1251f6b5b8c3ce671f937d1262cc7d542b7729c30ae5e67a4bf0eef61fdb8d82",
-        "created_at": "2024-07-02T11:05:12.162271+00:00",
-        "cog_version": "0.9.4",
+        "id": "684bc3855b37866c0c65add2ff39c78f3dea3f4ff103a436465326e0f438d55e",
+        "created_at": "2023-11-28T15:39:16.308105+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -258,30 +260,39 @@
                         "type": "object",
                         "title": "Input",
                         "required": [
-                            "target_image",
-                            "swap_image"
+                            "speaker"
                         ],
                         "properties": {
-                            "swap_image": {
+                            "text": {
                                 "type": "string",
-                                "title": "Swap Image",
+                                "title": "Text",
+                                "default": "Hi there, I'm your new voice clone. Try your best to upload quality audio",
+                                "x-order": 0,
+                                "description": "Text to synthesize"
+                            },
+                            "speaker": {
+                                "type": "string",
+                                "title": "Speaker",
                                 "format": "uri",
                                 "x-order": 1,
-                                "description": "Swap/source image"
+                                "description": "Original speaker audio (wav, mp3, m4a, ogg, or flv)"
                             },
-                            "target_image": {
-                                "type": "string",
-                                "title": "Target Image",
-                                "format": "uri",
-                                "x-order": 0,
-                                "description": "Target/base image"
-                            },
-                            "disable_safety_checker": {
-                                "type": "boolean",
-                                "title": "Disable Safety Checker",
-                                "default": false,
+                            "language": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/language"
+                                    }
+                                ],
+                                "default": "en",
                                 "x-order": 2,
-                                "description": "Disable safety checker for swapped images"
+                                "description": "Output language for the synthesised speech"
+                            },
+                            "cleanup_voice": {
+                                "type": "boolean",
+                                "title": "Cleanup Voice",
+                                "default": false,
+                                "x-order": 3,
+                                "description": "Whether to apply denoising to the speaker audio (microphone recordings)"
                             }
                         }
                     },
@@ -300,6 +311,29 @@
                         ],
                         "type": "string",
                         "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "language": {
+                        "enum": [
+                            "en",
+                            "es",
+                            "fr",
+                            "de",
+                            "it",
+                            "pt",
+                            "pl",
+                            "tr",
+                            "ru",
+                            "nl",
+                            "cs",
+                            "ar",
+                            "zh",
+                            "hu",
+                            "ko",
+                            "hi"
+                        ],
+                        "type": "string",
+                        "title": "language",
                         "description": "An enumeration."
                     },
                     "WebhookEvent": {
