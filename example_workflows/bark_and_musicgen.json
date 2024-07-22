@@ -1,0 +1,162 @@
+{
+  "last_node_id": 7,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "Replicate suno-ai/bark",
+      "pos": [
+        540,
+        264
+      ],
+      "size": {
+        "0": 400,
+        "1": 266
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            1
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Replicate suno-ai/bark"
+      },
+      "widgets_values": [
+        "Hello, my name is Suno. And, uh — and I like pizza. [laughs] But I also have other interests such as playing tic tac toe.",
+        "announcer",
+        "",
+        0.7,
+        0.7,
+        false,
+        false
+      ]
+    },
+    {
+      "id": 7,
+      "type": "PreviewAudio",
+      "pos": [
+        1457,
+        272
+      ],
+      "size": {
+        "0": 315,
+        "1": 76
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        null
+      ]
+    },
+    {
+      "id": 6,
+      "type": "Replicate meta/musicgen",
+      "pos": [
+        1001,
+        269
+      ],
+      "size": {
+        "0": 400,
+        "1": 436
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_audio",
+          "type": "AUDIO",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            2
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Replicate meta/musicgen"
+      },
+      "widgets_values": [
+        "stereo-melody-large",
+        "rap, rock",
+        20,
+        true,
+        0,
+        6,
+        false,
+        "loudness",
+        250,
+        0,
+        1,
+        3,
+        "wav",
+        1607,
+        "randomize",
+        false
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      5,
+      0,
+      6,
+      0,
+      "AUDIO"
+    ],
+    [
+      2,
+      6,
+      0,
+      7,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -123.2666015625,
+        -48.2666015625
+      ]
+    }
+  },
+  "version": 0.4
+}
