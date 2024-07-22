@@ -2,52 +2,51 @@
     "url": "https://replicate.com/batouresearch/high-resolution-controlnet-tile",
     "owner": "batouresearch",
     "name": "high-resolution-controlnet-tile",
-    "description": "Fermat.app open-source implementation of an efficient ControlNet 1.1 tile for high-quality upscales. Increase the creativity to encourage hallucination.",
+    "description": "UPDATE: new upscaling algorithm for a much improved image quality. Fermat.app open-source implementation of an efficient ControlNet 1.1 tile for high-quality upscales. Increase the creativity to encourage hallucination.",
     "visibility": "public",
-    "github_url": "https://github.com/BatouResearch/controlnet-tile-upscale",
+    "github_url": null,
     "paper_url": null,
     "license_url": null,
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/8Reu1zg6zAV6GShu5yiyP0ueFch9EddJPlVfIxyiMLWBlwJkA/out-0.png",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/06783125-aa9a-4c17-bac0-fab46cec490f/out-0.png",
     "default_example": {
-        "id": "jmbdgg3btnpkdebjf3xincdepa",
+        "id": "dnzz4dkgbhrgj0cgf008d20xjc",
         "model": "batouresearch/high-resolution-controlnet-tile",
-        "version": "4af11083a13ebb9bf97a88d7906ef21cf79d1f2e5fa9d87b70739ce6b8113d29",
+        "version": "53fd3af8e6b5efa0bdb9934285236dac568a407d7b821343b518acc16bb724e0",
         "status": "succeeded",
         "input": {
-            "hdr": 0.7,
-            "image": "https://replicate.delivery/pbxt/K2gjWl0c5hGCKrNBj2xyJpt7QhOpwNpYXfJ4pnJS56RoN1KK/4904b1be-61dc-4ef0-916b-2f33b2ca953a.webp",
+            "hdr": 0.5,
+            "image": "https://replicate.delivery/pbxt/LCeXdKMrL42FTur24eINAaLiJqIWByMkt2rLEe1Avi9g8J4o/fermat_app_realistic_portrait_of_a_girl_with_beautiful_backgrou_62e1eacd-1a76-483d-b495-9e8946347ca4.png",
             "steps": 20,
-            "prompt": "UHD 4k vogue, a woman wearing a colorful organic hat",
+            "prompt": "Professional portrait, a beautiful woman in a field of wheat, 4k UHD, fashion magazine cover, award winning photography, sunset light",
             "scheduler": "DDIM",
-            "creativity": 0.75,
+            "tile_size": 512,
+            "creativity": 0.55,
             "guess_mode": false,
             "resolution": 2048,
-            "resemblance": 1,
+            "resemblance": 0.5,
             "guidance_scale": 5,
             "negative_prompt": "Teeth, tooth, open mouth, longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, mutant"
         },
-        "output": [
-            "https://replicate.delivery/pbxt/8Reu1zg6zAV6GShu5yiyP0ueFch9EddJPlVfIxyiMLWBlwJkA/out-0.png"
-        ],
-        "logs": "Using seed: 39461\n  0%|          | 0/15 [00:00<?, ?it/s]\n  7%|▋         | 1/15 [00:01<00:21,  1.56s/it]\n 13%|█▎        | 2/15 [00:03<00:20,  1.56s/it]\n 20%|██        | 3/15 [00:04<00:18,  1.56s/it]\n 27%|██▋       | 4/15 [00:06<00:17,  1.56s/it]\n 33%|███▎      | 5/15 [00:07<00:15,  1.56s/it]\n 40%|████      | 6/15 [00:09<00:14,  1.56s/it]\n 47%|████▋     | 7/15 [00:10<00:12,  1.56s/it]\n 53%|█████▎    | 8/15 [00:12<00:10,  1.56s/it]\n 60%|██████    | 9/15 [00:14<00:09,  1.56s/it]\n 67%|██████▋   | 10/15 [00:15<00:07,  1.56s/it]\n 73%|███████▎  | 11/15 [00:17<00:06,  1.56s/it]\n 80%|████████  | 12/15 [00:18<00:04,  1.56s/it]\n 87%|████████▋ | 13/15 [00:20<00:03,  1.56s/it]\n 93%|█████████▎| 14/15 [00:21<00:01,  1.56s/it]\n100%|██████████| 15/15 [00:23<00:00,  1.56s/it]\n100%|██████████| 15/15 [00:23<00:00,  1.56s/it]",
+        "output": "https://replicate.delivery/pbxt/pZc9tHkjEap2PxwBH5de7X0CevIoiQihmo9XTkJZ8QWyEtETA/out-0.png",
+        "logs": "Using seed: 56674\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:02,  4.10it/s]\n 18%|█▊        | 2/11 [00:00<00:01,  5.09it/s]\n 27%|██▋       | 3/11 [00:00<00:01,  5.51it/s]\n 36%|███▋      | 4/11 [00:00<00:01,  5.73it/s]\n 45%|████▌     | 5/11 [00:00<00:01,  5.86it/s]\n 55%|█████▍    | 6/11 [00:01<00:00,  5.93it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  5.98it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  6.01it/s]\n 82%|████████▏ | 9/11 [00:01<00:00,  6.04it/s]\n 91%|█████████ | 10/11 [00:01<00:00,  6.05it/s]\n100%|██████████| 11/11 [00:01<00:00,  6.07it/s]\n100%|██████████| 11/11 [00:01<00:00,  5.84it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:03,  2.88it/s]\n 18%|█▊        | 2/11 [00:00<00:02,  3.57it/s]\n 27%|██▋       | 3/11 [00:00<00:02,  3.86it/s]\n 36%|███▋      | 4/11 [00:01<00:01,  4.00it/s]\n 45%|████▌     | 5/11 [00:01<00:01,  4.10it/s]\n 55%|█████▍    | 6/11 [00:01<00:01,  4.15it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  4.19it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  4.21it/s]\n 82%|████████▏ | 9/11 [00:02<00:00,  4.23it/s]\n 91%|█████████ | 10/11 [00:02<00:00,  4.24it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.24it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.09it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:05,  1.94it/s]\n 18%|█▊        | 2/11 [00:00<00:03,  2.38it/s]\n 27%|██▋       | 3/11 [00:01<00:03,  2.56it/s]\n 36%|███▋      | 4/11 [00:01<00:02,  2.66it/s]\n 45%|████▌     | 5/11 [00:01<00:02,  2.72it/s]\n 55%|█████▍    | 6/11 [00:02<00:01,  2.74it/s]\n 64%|██████▎   | 7/11 [00:02<00:01,  2.77it/s]\n 73%|███████▎  | 8/11 [00:02<00:01,  2.79it/s]\n 82%|████████▏ | 9/11 [00:03<00:00,  2.80it/s]\n 91%|█████████ | 10/11 [00:03<00:00,  2.80it/s]\n100%|██████████| 11/11 [00:04<00:00,  2.80it/s]\n100%|██████████| 11/11 [00:04<00:00,  2.71it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:03,  2.90it/s]\n 18%|█▊        | 2/11 [00:00<00:02,  3.59it/s]\n 27%|██▋       | 3/11 [00:00<00:02,  3.88it/s]\n 36%|███▋      | 4/11 [00:01<00:01,  4.02it/s]\n 45%|████▌     | 5/11 [00:01<00:01,  4.12it/s]\n 55%|█████▍    | 6/11 [00:01<00:01,  4.18it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  4.22it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  4.24it/s]\n 82%|████████▏ | 9/11 [00:02<00:00,  4.25it/s]\n 91%|█████████ | 10/11 [00:02<00:00,  4.26it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.28it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.11it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:03,  2.91it/s]\n 18%|█▊        | 2/11 [00:00<00:02,  3.59it/s]\n 27%|██▋       | 3/11 [00:00<00:02,  3.88it/s]\n 36%|███▋      | 4/11 [00:01<00:01,  4.04it/s]\n 45%|████▌     | 5/11 [00:01<00:01,  4.12it/s]\n 55%|█████▍    | 6/11 [00:01<00:01,  4.18it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  4.22it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  4.24it/s]\n 82%|████████▏ | 9/11 [00:02<00:00,  4.25it/s]\n 91%|█████████ | 10/11 [00:02<00:00,  4.26it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.27it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.11it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:05,  1.94it/s]\n 18%|█▊        | 2/11 [00:00<00:03,  2.38it/s]\n 27%|██▋       | 3/11 [00:01<00:03,  2.56it/s]\n 36%|███▋      | 4/11 [00:01<00:02,  2.66it/s]\n 45%|████▌     | 5/11 [00:01<00:02,  2.72it/s]\n 55%|█████▍    | 6/11 [00:02<00:01,  2.74it/s]\n 64%|██████▎   | 7/11 [00:02<00:01,  2.77it/s]\n 73%|███████▎  | 8/11 [00:02<00:01,  2.79it/s]\n 82%|████████▏ | 9/11 [00:03<00:00,  2.80it/s]\n 91%|█████████ | 10/11 [00:03<00:00,  2.80it/s]\n100%|██████████| 11/11 [00:04<00:00,  2.80it/s]\n100%|██████████| 11/11 [00:04<00:00,  2.71it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:03,  2.88it/s]\n 18%|█▊        | 2/11 [00:00<00:02,  3.55it/s]\n 27%|██▋       | 3/11 [00:00<00:02,  3.85it/s]\n 36%|███▋      | 4/11 [00:01<00:01,  3.99it/s]\n 45%|████▌     | 5/11 [00:01<00:01,  4.07it/s]\n 55%|█████▍    | 6/11 [00:01<00:01,  4.13it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  4.17it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  4.20it/s]\n 82%|████████▏ | 9/11 [00:02<00:00,  4.21it/s]\n 91%|█████████ | 10/11 [00:02<00:00,  4.22it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.23it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.07it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:02,  4.09it/s]\n 18%|█▊        | 2/11 [00:00<00:01,  5.06it/s]\n 27%|██▋       | 3/11 [00:00<00:01,  5.48it/s]\n 36%|███▋      | 4/11 [00:00<00:01,  5.69it/s]\n 45%|████▌     | 5/11 [00:00<00:01,  5.82it/s]\n 55%|█████▍    | 6/11 [00:01<00:00,  5.89it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  5.95it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  5.98it/s]\n 82%|████████▏ | 9/11 [00:01<00:00,  6.01it/s]\n 91%|█████████ | 10/11 [00:01<00:00,  6.03it/s]\n100%|██████████| 11/11 [00:01<00:00,  6.04it/s]\n100%|██████████| 11/11 [00:01<00:00,  5.81it/s]\n  0%|          | 0/5 [00:00<?, ?it/s]\n 20%|██        | 1/5 [00:05<00:22,  5.55s/it]\n 40%|████      | 2/5 [00:10<00:15,  5.09s/it]\n 60%|██████    | 3/5 [00:15<00:09,  4.94s/it]\n 80%|████████  | 4/5 [00:19<00:04,  4.87s/it]\n100%|██████████| 5/5 [00:24<00:00,  4.83s/it]\n100%|██████████| 5/5 [00:24<00:00,  4.92s/it]",
         "error": null,
         "metrics": {
-            "predict_time": 30.574068,
-            "total_time": 112.930229
+            "predict_time": 56.796384034,
+            "total_time": 94.221108
         },
-        "created_at": "2023-12-22T18:15:12.477144Z",
-        "started_at": "2023-12-22T18:16:34.833305Z",
-        "completed_at": "2023-12-22T18:17:05.407373Z",
+        "created_at": "2024-07-03T09:50:13.084000Z",
+        "started_at": "2024-07-03T09:50:50.508724Z",
+        "completed_at": "2024-07-03T09:51:47.305108Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/jmbdgg3btnpkdebjf3xincdepa",
-            "cancel": "https://api.replicate.com/v1/predictions/jmbdgg3btnpkdebjf3xincdepa/cancel"
+            "get": "https://api.replicate.com/v1/predictions/dnzz4dkgbhrgj0cgf008d20xjc",
+            "cancel": "https://api.replicate.com/v1/predictions/dnzz4dkgbhrgj0cgf008d20xjc/cancel"
         }
     },
     "latest_version": {
-        "id": "4af11083a13ebb9bf97a88d7906ef21cf79d1f2e5fa9d87b70739ce6b8113d29",
-        "created_at": "2023-12-22T18:11:38.655574+00:00",
-        "cog_version": "0.8.6",
+        "id": "674a90f4adea8d0887a9cfcdbd7cc36c14d61f1dae041f823f97c306e68216ca",
+        "created_at": "2024-07-05T10:57:59.303474+00:00",
+        "cog_version": "0.9.12",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -314,12 +313,22 @@
                                 "x-order": 6,
                                 "description": "Choose a scheduler."
                             },
+                            "tile_size": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/tile_size"
+                                    }
+                                ],
+                                "default": 512,
+                                "x-order": 12,
+                                "description": "Size of partitions of the image. A 1/4 of the final resolution is recommended for optimal."
+                            },
                             "creativity": {
                                 "type": "number",
                                 "title": "Creativity",
-                                "default": 0.5,
+                                "default": 0.35,
                                 "maximum": 1,
-                                "minimum": 0,
+                                "minimum": 0.1,
                                 "x-order": 4,
                                 "description": "Denoising strength. 1 means total destruction of the original image"
                             },
@@ -336,14 +345,14 @@
                                         "$ref": "#/components/schemas/resolution"
                                     }
                                 ],
-                                "default": 2048,
+                                "default": 2560,
                                 "x-order": 2,
                                 "description": "Image resolution"
                             },
                             "resemblance": {
                                 "type": "number",
                                 "title": "Resemblance",
-                                "default": 0.5,
+                                "default": 0.85,
                                 "maximum": 1,
                                 "minimum": 0,
                                 "x-order": 3,
@@ -364,16 +373,31 @@
                                 "default": "teeth, tooth, open mouth, longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, mutant",
                                 "x-order": 10,
                                 "description": "Negative prompt"
+                            },
+                            "lora_details_strength": {
+                                "type": "number",
+                                "title": "Lora Details Strength",
+                                "default": 1.25,
+                                "maximum": 3,
+                                "minimum": -3,
+                                "x-order": 14,
+                                "description": "Strength of the image's details"
+                            },
+                            "lora_sharpness_strength": {
+                                "type": "number",
+                                "title": "Lora Sharpness Strength",
+                                "default": 4.5,
+                                "maximum": 10,
+                                "minimum": -3,
+                                "x-order": 13,
+                                "description": "Strength of the image's sharpness. For it to be noticeable, it is recommended to use values between 2 and 5."
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -398,10 +422,25 @@
                         "title": "scheduler",
                         "description": "An enumeration."
                     },
+                    "tile_size": {
+                        "enum": [
+                            128,
+                            256,
+                            374,
+                            512,
+                            768,
+                            1024,
+                            1280
+                        ],
+                        "type": "integer",
+                        "title": "tile_size",
+                        "description": "An enumeration."
+                    },
                     "resolution": {
                         "enum": [
                             2048,
-                            2560
+                            2560,
+                            4096
                         ],
                         "type": "integer",
                         "title": "resolution",

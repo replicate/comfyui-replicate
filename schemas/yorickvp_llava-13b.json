@@ -96,9 +96,9 @@
         }
     },
     "latest_version": {
-        "id": "b5f6212d032508382d61ff00469ddda3e32fd8a0e75dc39d8a4191bb742157fb",
-        "created_at": "2024-03-21T14:03:14.481482+00:00",
-        "cog_version": "0.9.4",
+        "id": "80537f9eead1a5bfa72d5ac6ea6414379be41d4d4f6679fd776e9535d1eb58bb",
+        "created_at": "2024-07-17T14:00:16.459010+00:00",
+        "cog_version": "0.9.5",
         "openapi_schema": {
             "info": {
                 "title": "Cog",

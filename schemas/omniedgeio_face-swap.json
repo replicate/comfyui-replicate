@@ -34,8 +34,8 @@
         }
     },
     "latest_version": {
-        "id": "1251f6b5b8c3ce671f937d1262cc7d542b7729c30ae5e67a4bf0eef61fdb8d82",
-        "created_at": "2024-07-02T11:05:12.162271+00:00",
+        "id": "d28faa318942bf3f1cbed9714def03594f99b3c69b2eb279c39fc60993cee9ac",
+        "created_at": "2024-07-04T00:52:17.710235+00:00",
         "cog_version": "0.9.4",
         "openapi_schema": {
             "info": {
