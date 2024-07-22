@@ -1,42 +1,48 @@
 {
-    "url": "https://replicate.com/omniedgeio/face-swap",
-    "owner": "omniedgeio",
-    "name": "face-swap",
-    "description": "Face Swap",
+    "url": "https://replicate.com/luosiallen/latent-consistency-model",
+    "owner": "luosiallen",
+    "name": "latent-consistency-model",
+    "description": "Synthesizing High-Resolution Images with Few-Step Inference",
     "visibility": "public",
-    "github_url": null,
-    "paper_url": null,
-    "license_url": null,
+    "github_url": "https://github.com/luosiallen/latent-consistency-model",
+    "paper_url": "https://arxiv.org/abs/2310.04378",
+    "license_url": "https://github.com/chenxwh/latent-consistency-model/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
+    "cover_image_url": "https://pbxt.replicate.delivery/lE1UZOlbLiY7DpYlLvdUmyyt0Z0pu7tTTpgFn8a0ug3Jb4bE/out-0.png",
     "default_example": {
-        "id": "oio7grdblfg4jssdg7ebbmzyie",
-        "model": "omniedgeio/face-swap",
-        "version": "c2d783366e8d32e6e82c40682fab6b4c23b9c6eff2692c0cf7585fc16c238cfe",
+        "id": "5lwbdqdbyrilvvsm62mphlbghu",
+        "model": "luosiallen/latent-consistency-model",
+        "version": "553803fd018b3cf875a8bc774c99da9b33f36647badfd88a6eec90d61c5f62fc",
         "status": "succeeded",
         "input": {
-            "swap_image": "https://replicate.delivery/pbxt/JoBuzfSVFLb5lBqkf3v9xMnqx3jFCYhM5JcVInFFwab8sLg0/long-trench-coat.png",
-            "target_image": "https://replicate.delivery/pbxt/JoBuz3wGiVFQ1TDEcsGZbYcNh0bHpvwOi32T1fmxhRujqcu7/9X2.png"
+            "width": 768,
+            "height": 768,
+            "prompt": "Self-portrait oil painting, a beautiful cyborg with golden hair, 8k",
+            "num_images": 1,
+            "guidance_scale": 8,
+            "num_inference_steps": 8
         },
-        "output": "https://replicate.delivery/pbxt/3lvsB8jz09opHRTDTuZ75cbFen7Ndft77rQuhFSUEbTdf1ojA/1698954716.jpg",
-        "logs": "/root/.pyenv/versions/3.9.18/lib/python3.9/site-packages/insightface/utils/transform.py:68: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.\nP = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4\n(2048, 2048, 3) None None",
+        "output": [
+            "https://pbxt.replicate.delivery/lE1UZOlbLiY7DpYlLvdUmyyt0Z0pu7tTTpgFn8a0ug3Jb4bE/out-0.png"
+        ],
+        "logs": "Using seed: 49296\n  0%|          | 0/8 [00:00<?, ?it/s]\n 12%|█▎        | 1/8 [00:00<00:01,  3.73it/s]\n 25%|██▌       | 2/8 [00:00<00:01,  4.96it/s]\n 38%|███▊      | 3/8 [00:00<00:00,  5.53it/s]\n 50%|█████     | 4/8 [00:00<00:00,  5.85it/s]\n 62%|██████▎   | 5/8 [00:00<00:00,  6.04it/s]\n 75%|███████▌  | 6/8 [00:01<00:00,  6.16it/s]\n 88%|████████▊ | 7/8 [00:01<00:00,  6.23it/s]\n100%|██████████| 8/8 [00:01<00:00,  6.27it/s]\n100%|██████████| 8/8 [00:01<00:00,  5.88it/s]",
         "error": null,
         "metrics": {
-            "predict_time": 33.489191,
-            "total_time": 131.350929
+            "predict_time": 3.024376,
+            "total_time": 48.79153
         },
-        "created_at": "2023-11-02T19:49:46.959655Z",
-        "started_at": "2023-11-02T19:51:24.821393Z",
-        "completed_at": "2023-11-02T19:51:58.310584Z",
+        "created_at": "2023-10-18T23:23:35.514094Z",
+        "started_at": "2023-10-18T23:24:21.281248Z",
+        "completed_at": "2023-10-18T23:24:24.305624Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie",
-            "cancel": "https://api.replicate.com/v1/predictions/oio7grdblfg4jssdg7ebbmzyie/cancel"
+            "get": "https://api.replicate.com/v1/predictions/5lwbdqdbyrilvvsm62mphlbghu",
+            "cancel": "https://api.replicate.com/v1/predictions/5lwbdqdbyrilvvsm62mphlbghu/cancel"
         }
     },
     "latest_version": {
-        "id": "1251f6b5b8c3ce671f937d1262cc7d542b7729c30ae5e67a4bf0eef61fdb8d82",
-        "created_at": "2024-07-02T11:05:12.162271+00:00",
-        "cog_version": "0.9.4",
+        "id": "553803fd018b3cf875a8bc774c99da9b33f36647badfd88a6eec90d61c5f62fc",
+        "created_at": "2023-10-18T23:22:52.239431+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -257,38 +263,70 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
-                        "required": [
-                            "target_image",
-                            "swap_image"
-                        ],
                         "properties": {
-                            "swap_image": {
-                                "type": "string",
-                                "title": "Swap Image",
-                                "format": "uri",
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 6,
+                                "description": "Random seed. Leave blank to randomize the seed"
+                            },
+                            "width": {
+                                "type": "integer",
+                                "title": "Width",
+                                "default": 768,
                                 "x-order": 1,
-                                "description": "Swap/source image"
+                                "description": "Width of output image. Lower the setting if out of memory."
                             },
-                            "target_image": {
-                                "type": "string",
-                                "title": "Target Image",
-                                "format": "uri",
-                                "x-order": 0,
-                                "description": "Target/base image"
-                            },
-                            "disable_safety_checker": {
-                                "type": "boolean",
-                                "title": "Disable Safety Checker",
-                                "default": false,
+                            "height": {
+                                "type": "integer",
+                                "title": "Height",
+                                "default": 768,
                                 "x-order": 2,
-                                "description": "Disable safety checker for swapped images"
+                                "description": "Height of output image. Lower the setting if out of memory."
+                            },
+                            "prompt": {
+                                "type": "string",
+                                "title": "Prompt",
+                                "default": "Self-portrait oil painting, a beautiful cyborg with golden hair, 8k",
+                                "x-order": 0,
+                                "description": "Input prompt"
+                            },
+                            "num_images": {
+                                "type": "integer",
+                                "title": "Num Images",
+                                "default": 1,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 3,
+                                "description": "Number of images to output."
+                            },
+                            "guidance_scale": {
+                                "type": "number",
+                                "title": "Guidance Scale",
+                                "default": 8,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 5,
+                                "description": "Scale for classifier-free guidance"
+                            },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 8,
+                                "maximum": 50,
+                                "minimum": 1,
+                                "x-order": 4,
+                                "description": "Number of denoising steps. Can be set to 1~50 steps. LCM support fast inference even <= 4 steps. Recommend: 1~8 steps."
                             }
                         }
                     },
                     "Output": {
-                        "type": "string",
-                        "title": "Output",
-                        "format": "uri"
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
                     },
                     "Status": {
                         "enum": [

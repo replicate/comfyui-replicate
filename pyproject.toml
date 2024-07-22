@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-replicate"
 description = "Run Replicate models in ComfyUI"
-version = "1.0.4"
+version = "1.0.5"
 license = "LICENSE"
 
 [project.urls]
