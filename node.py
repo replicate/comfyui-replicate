@@ -196,8 +196,11 @@ def create_comfyui_node(schema):
         def remove_falsey_optional_inputs(self, kwargs):
             optional_inputs = self.INPUT_TYPES().get("optional", {})
             for key in list(kwargs.keys()):
-                if key in optional_inputs and not kwargs[key]:
-                    del kwargs[key]
+                if key in optional_inputs:
+                    if isinstance(kwargs[key], torch.Tensor):
+                        continue
+                    elif not kwargs[key]:
+                        del kwargs[key]
 
         def run_replicate_model(self, **kwargs):
             self.handle_array_inputs(kwargs)
