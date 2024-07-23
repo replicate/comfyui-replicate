@@ -1,0 +1,926 @@
+{
+    "url": "https://replicate.com/meta/meta-llama-3.1-405b-instruct",
+    "owner": "meta",
+    "name": "meta-llama-3.1-405b-instruct",
+    "description": "Meta's flagship 405 billion parameter language model, fine-tuned for chat completions",
+    "visibility": "public",
+    "github_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1",
+    "paper_url": null,
+    "license_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE",
+    "run_count": 0,
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/e24670d1-18de-472a-94d8-b48b33d14489/meta-logo.png",
+    "default_example": {
+        "id": "zjq6szssxdrm20cgw0fsntgvbg",
+        "model": "replicate-internal/llama-405b-instruct-vllm",
+        "version": "67ab67c1831a3d70db83b12594ec256b8a97bd45e9427e05d20b8fa09ebf4061",
+        "status": "succeeded",
+        "input": {
+            "top_p": 0.9,
+            "prompt": "Tina has one brother and one sister. How many sisters do Tina's siblings have?",
+            "max_tokens": 1024,
+            "min_tokens": 0,
+            "temperature": 0.6,
+            "system_prompt": "You are a helpful assistant.",
+            "presence_penalty": 0,
+            "frequency_penalty": 0
+        },
+        "output": [
+            "T",
+            "ina",
+            " has",
+            " one",
+            " brother",
+            " and",
+            " one",
+            " sister",
+            ".",
+            " From",
+            " the",
+            " brother",
+            "'s",
+            " perspective",
+            ",",
+            " he",
+            " has",
+            " one",
+            " sister",
+            ",",
+            " Tina",
+            ",",
+            " and",
+            " also",
+            " the",
+            " other",
+            " sister",
+            ".",
+            " So",
+            ",",
+            " Tina",
+            "'s",
+            " brother",
+            " has",
+            " ",
+            "2",
+            " sisters",
+            ".\n\n",
+            "From",
+            " the",
+            " sister",
+            "'s",
+            " perspective",
+            ",",
+            " she",
+            " also",
+            " has",
+            " one",
+            " sister",
+            ",",
+            " Tina",
+            ".",
+            " \n\n",
+            "So",
+            ",",
+            " Tina",
+            "'s",
+            " siblings",
+            " have",
+            " a",
+            " total",
+            " of",
+            " ",
+            "2",
+            " sisters",
+            " (",
+            "from",
+            " the",
+            " brother",
+            "'s",
+            " perspective",
+            ")",
+            " and",
+            " ",
+            "1",
+            " sister",
+            " (",
+            "from",
+            " the",
+            " sister",
+            "'s",
+            " perspective",
+            ").",
+            ""
+        ],
+        "logs": "INFO 07-23 15:04:21 async_llm_engine.py:173] Added request 3cd670c9b87b469ea9721ddfbcc6b67a.\nINFO 07-23 15:04:21 metrics.py:396] Avg prompt throughput: 7.8 tokens/s, Avg generation throughput: 17.7 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 0.3%, CPU KV cache usage: 0.0%.\nINFO 07-23 15:04:24 async_llm_engine.py:140] Finished request 3cd670c9b87b469ea9721ddfbcc6b67a.\nGeneration took 1721746720.08sFormatted prompt: <|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nTina has one brother and one sister. How many sisters do Tina's siblings have?<|eot_id|><|start_header_id|>assistant<|end_header_id|>",
+        "error": null,
+        "metrics": {
+            "batch_size": 1.000229398266064,
+            "total_time": 2.86309,
+            "input_token_count": 26,
+            "tokens_per_second": 29.74134035953616,
+            "output_token_count": 84,
+            "predict_time_share": 2.8200430870056152,
+            "predict_time": 2.826425468,
+            "time_to_first_token": 0.112068943
+        },
+        "created_at": "2024-07-23T15:04:21.227000Z",
+        "started_at": "2024-07-23T15:04:21.263665Z",
+        "completed_at": "2024-07-23T15:04:24.090090Z",
+        "urls": {
+            "stream": "https://streaming-api.svc.sea.v.replicate.net/v1/streams/6zoqtc6qgpxby7xzauee36qv6bktfaxugelxfqs6ifgg6q4s77sa",
+            "get": "https://api.replicate.com/v1/predictions/zjq6szssxdrm20cgw0fsntgvbg",
+            "cancel": "https://api.replicate.com/v1/predictions/zjq6szssxdrm20cgw0fsntgvbg/cancel"
+        }
+    },
+    "latest_version": {
+        "id": "e6cb7fc3ed90eae2c879c48deda8f49152391ad66349fe7694be24089c29f71c",
+        "created_at": "2024-07-23T15:24:35.230971+00:00",
+        "cog_version": "0.10.0-alpha17",
+        "openapi_schema": {
+            "info": {
+                "title": "Cog",
+                "version": "0.1.0"
+            },
+            "paths": {
+                "/": {
+                    "get": {
+                        "summary": "Root",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Root  Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "root__get"
+                    }
+                },
+                "/ready": {
+                    "get": {
+                        "summary": "Ready",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Ready Ready Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "ready_ready_get"
+                    }
+                },
+                "/shutdown": {
+                    "post": {
+                        "summary": "Start Shutdown",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Start Shutdown Shutdown Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "start_shutdown_shutdown_post"
+                    }
+                },
+                "/trainings": {
+                    "post": {
+                        "summary": "Train",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/TrainingResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "operationId": "train_trainings_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/TrainingRequest"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "/predictions": {
+                    "post": {
+                        "summary": "Predict",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model",
+                        "operationId": "predict_predictions_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/PredictionRequest"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "/health-check": {
+                    "get": {
+                        "summary": "Healthcheck",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Healthcheck Health Check Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "healthcheck_health_check_get"
+                    }
+                },
+                "/trainings/{training_id}": {
+                    "put": {
+                        "summary": "Train Idempotent",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "training_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Training ID"
+                                },
+                                "required": true
+                            },
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "operationId": "train_idempotent_trainings__training_id__put",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/components/schemas/TrainingRequest"
+                                            }
+                                        ],
+                                        "title": "Training Request"
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                },
+                "/predictions/{prediction_id}": {
+                    "put": {
+                        "summary": "Predict Idempotent",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            },
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model (idempotent creation).",
+                        "operationId": "predict_idempotent_predictions__prediction_id__put",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/components/schemas/PredictionRequest"
+                                            }
+                                        ],
+                                        "title": "Prediction Request"
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                },
+                "/trainings/{training_id}/cancel": {
+                    "post": {
+                        "summary": "Cancel Training",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Cancel Training Trainings  Training Id  Cancel Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "training_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Training ID"
+                                },
+                                "required": true
+                            }
+                        ],
+                        "operationId": "cancel_training_trainings__training_id__cancel_post"
+                    }
+                },
+                "/predictions/{prediction_id}/cancel": {
+                    "post": {
+                        "summary": "Cancel",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Cancel Predictions  Prediction Id  Cancel Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            }
+                        ],
+                        "description": "Cancel a running prediction",
+                        "operationId": "cancel_predictions__prediction_id__cancel_post"
+                    }
+                }
+            },
+            "openapi": "3.0.2",
+            "components": {
+                "schemas": {
+                    "Input": {
+                        "type": "object",
+                        "title": "Input",
+                        "properties": {
+                            "top_k": {
+                                "type": "integer",
+                                "title": "Top K",
+                                "default": 50,
+                                "x-order": 6,
+                                "description": "The number of highest probability tokens to consider for generating the output. If > 0, only keep the top k tokens with highest probability (top-k filtering)."
+                            },
+                            "top_p": {
+                                "type": "number",
+                                "title": "Top P",
+                                "default": 0.9,
+                                "x-order": 5,
+                                "description": "A probability threshold for generating the output. If < 1.0, only keep the top tokens with cumulative probability >= top_p (nucleus filtering). Nucleus filtering is described in Holtzman et al. (http://arxiv.org/abs/1904.09751)."
+                            },
+                            "prompt": {
+                                "type": "string",
+                                "title": "Prompt",
+                                "default": "",
+                                "x-order": 0,
+                                "description": "Prompt"
+                            },
+                            "max_tokens": {
+                                "type": "integer",
+                                "title": "Max Tokens",
+                                "default": 512,
+                                "x-order": 3,
+                                "description": "The maximum number of tokens the model should generate as output."
+                            },
+                            "min_tokens": {
+                                "type": "integer",
+                                "title": "Min Tokens",
+                                "default": 0,
+                                "x-order": 2,
+                                "description": "The minimum number of tokens the model should generate as output."
+                            },
+                            "temperature": {
+                                "type": "number",
+                                "title": "Temperature",
+                                "default": 0.6,
+                                "x-order": 4,
+                                "description": "The value used to modulate the next token probabilities."
+                            },
+                            "system_prompt": {
+                                "type": "string",
+                                "title": "System Prompt",
+                                "default": "You are a helpful assistant.",
+                                "x-order": 1,
+                                "description": "System prompt to send to the model. This is prepended to the prompt and helps guide system behavior. Ignored for non-chat models."
+                            },
+                            "stop_sequences": {
+                                "type": "string",
+                                "title": "Stop Sequences",
+                                "x-order": 9,
+                                "description": "A comma-separated list of sequences to stop generation at. For example, '<end>,<stop>' will stop generation at the first instance of 'end' or '<stop>'."
+                            },
+                            "presence_penalty": {
+                                "type": "number",
+                                "title": "Presence Penalty",
+                                "default": 0,
+                                "x-order": 7,
+                                "description": "Presence penalty"
+                            },
+                            "frequency_penalty": {
+                                "type": "number",
+                                "title": "Frequency Penalty",
+                                "default": 0,
+                                "x-order": 8,
+                                "description": "Frequency penalty"
+                            }
+                        }
+                    },
+                    "Output": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Output",
+                        "x-cog-array-type": "iterator",
+                        "x-cog-array-display": "concatenate"
+                    },
+                    "Status": {
+                        "enum": [
+                            "starting",
+                            "processing",
+                            "succeeded",
+                            "canceled",
+                            "failed"
+                        ],
+                        "type": "string",
+                        "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "WebhookEvent": {
+                        "enum": [
+                            "start",
+                            "output",
+                            "logs",
+                            "completed"
+                        ],
+                        "type": "string",
+                        "title": "WebhookEvent",
+                        "description": "An enumeration."
+                    },
+                    "TrainingInput": {
+                        "type": "object",
+                        "title": "TrainingInput",
+                        "required": [
+                            "hf_model_id"
+                        ],
+                        "properties": {
+                            "hf_token": {
+                                "type": "string",
+                                "title": "Hf Token",
+                                "format": "password",
+                                "x-order": 2,
+                                "description": "\n        Hugging Face API token. \n        Get your token at https://huggingface.co/settings/tokens\n        ",
+                                "x-cog-secret": true
+                            },
+                            "hf_model_id": {
+                                "type": "string",
+                                "title": "Hf Model Id",
+                                "x-order": 0,
+                                "description": "\n        Hugging Face model identifier \n        (e.g. NousResearch/Hermes-2-Theta-Llama-3-8B).\n        "
+                            },
+                            "hf_model_sha": {
+                                "type": "string",
+                                "title": "Hf Model Sha",
+                                "x-order": 1,
+                                "description": "\n        The version of the model.\n        If unspecified, the latest version is used.\n        "
+                            },
+                            "allow_patterns": {
+                                "type": "string",
+                                "title": "Allow Patterns",
+                                "x-order": 3,
+                                "description": "\n        Patterns constituting the allowlist. \n        If provided, item paths must match at least one pattern from the allowlist. \n        (e.g. \"*.safetensors\").\n        "
+                            },
+                            "ignore_patterns": {
+                                "type": "string",
+                                "title": "Ignore Patterns",
+                                "default": "*.gguf",
+                                "x-order": 4,
+                                "description": "\n        Patterns constituting the denylist. \n        If provided, item paths must not match any patterns from the denylist. \n        (e.g. \"*.gguf\").\n        "
+                            },
+                            "prompt_template": {
+                                "type": "string",
+                                "title": "Prompt Template",
+                                "x-order": 5,
+                                "description": "Prompt template. This is a Jinja2 template that overrides the HuggingFace tokenizer configuration. If this is set to None and nothing is configured on HuggingFace, no formatting is applied. To override HuggingFace configuration, set it to the string `{{messages[0]['content']}}`."
+                            }
+                        }
+                    },
+                    "TrainingOutput": {
+                        "type": "object",
+                        "title": "TrainingOutput",
+                        "required": [
+                            "weights"
+                        ],
+                        "properties": {
+                            "weights": {
+                                "type": "string",
+                                "title": "Weights",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "TrainingRequest": {
+                        "type": "object",
+                        "title": "TrainingRequest",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/TrainingInput"
+                            },
+                            "webhook": {
+                                "type": "string",
+                                "title": "Webhook",
+                                "format": "uri",
+                                "maxLength": 65536,
+                                "minLength": 1
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            },
+                            "webhook_events_filter": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/WebhookEvent"
+                                },
+                                "default": [
+                                    "start",
+                                    "output",
+                                    "logs",
+                                    "completed"
+                                ]
+                            }
+                        }
+                    },
+                    "ValidationError": {
+                        "type": "object",
+                        "title": "ValidationError",
+                        "required": [
+                            "loc",
+                            "msg",
+                            "type"
+                        ],
+                        "properties": {
+                            "loc": {
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "title": "Location"
+                            },
+                            "msg": {
+                                "type": "string",
+                                "title": "Message"
+                            },
+                            "type": {
+                                "type": "string",
+                                "title": "Error Type"
+                            }
+                        }
+                    },
+                    "TrainingResponse": {
+                        "type": "object",
+                        "title": "TrainingResponse",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "logs": {
+                                "type": "string",
+                                "title": "Logs",
+                                "default": ""
+                            },
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/TrainingInput"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/TrainingOutput"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            },
+                            "metrics": {
+                                "type": "object",
+                                "title": "Metrics"
+                            },
+                            "version": {
+                                "type": "string",
+                                "title": "Version"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "started_at": {
+                                "type": "string",
+                                "title": "Started At",
+                                "format": "date-time"
+                            },
+                            "completed_at": {
+                                "type": "string",
+                                "title": "Completed At",
+                                "format": "date-time"
+                            }
+                        }
+                    },
+                    "PredictionRequest": {
+                        "type": "object",
+                        "title": "PredictionRequest",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "webhook": {
+                                "type": "string",
+                                "title": "Webhook",
+                                "format": "uri",
+                                "maxLength": 65536,
+                                "minLength": 1
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            },
+                            "webhook_events_filter": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/WebhookEvent"
+                                },
+                                "default": [
+                                    "start",
+                                    "output",
+                                    "logs",
+                                    "completed"
+                                ]
+                            }
+                        }
+                    },
+                    "PredictionResponse": {
+                        "type": "object",
+                        "title": "PredictionResponse",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "logs": {
+                                "type": "string",
+                                "title": "Logs",
+                                "default": ""
+                            },
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/Output"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            },
+                            "metrics": {
+                                "type": "object",
+                                "title": "Metrics"
+                            },
+                            "version": {
+                                "type": "string",
+                                "title": "Version"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "started_at": {
+                                "type": "string",
+                                "title": "Started At",
+                                "format": "date-time"
+                            },
+                            "completed_at": {
+                                "type": "string",
+                                "title": "Completed At",
+                                "format": "date-time"
+                            }
+                        }
+                    },
+                    "HTTPValidationError": {
+                        "type": "object",
+                        "title": "HTTPValidationError",
+                        "properties": {
+                            "detail": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                },
+                                "title": "Detail"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

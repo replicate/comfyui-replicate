@@ -1,0 +1,550 @@
+{
+    "url": "https://replicate.com/fofr/ultrapixel",
+    "owner": "fofr",
+    "name": "ultrapixel",
+    "description": "Ultra high resolution images (up to 4096x4096) based on Stable Cascade",
+    "visibility": "public",
+    "github_url": "https://github.com/fofr/cog-ultrapixel",
+    "paper_url": null,
+    "license_url": "https://huggingface.co/stabilityai/stable-cascade/blob/main/LICENSE",
+    "run_count": 0,
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/692efefd-f64d-44ec-9e74-8c7f87fdd7c3/UltraPixel_00001_.webp",
+    "default_example": {
+        "id": "xpfkt7a8y5rj60cgv64tbed3ac",
+        "model": "fofr/ultrapixel",
+        "version": "48934fc160c585169143f55dde57966cf466c08541bc937746ef91408a9dac7b",
+        "status": "succeeded",
+        "input": {
+            "width": 2048,
+            "height": 2048,
+            "prompt": "Spiderpunk woman, Cinematic 8k HDR, Anime Eyes, artwork by Ilya Kuvshinov",
+            "stage_b_cfg": 1.1,
+            "stage_c_cfg": 4,
+            "output_format": "webp",
+            "stage_b_steps": 10,
+            "stage_c_steps": 20,
+            "output_quality": 90,
+            "controlnet_weight": 1
+        },
+        "output": [
+            "https://replicate.delivery/yhqm/iLYSujK5mhbBFFto73F2TkJ2rhxxQBCdxIpIWfoVrOFfk8KTA/UltraPixel_00001_.webp"
+        ],
+        "logs": "Random seed set to: 2980426308\nRunning workflow\ngot prompt\nExecuting node 16, title: UltraPixel Load, class type: UltraPixelLoad\nExecuting node 14, title: UltraPixel Process, class type: UltraPixelProcess\nLoading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]\nLoading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.37it/s]\nLoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.65it/s]\nLoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.32it/s]\nSTAGE C GENERATION***************************\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|▌         | 1/20 [00:07<02:29,  7.86s/it]\n 10%|█         | 2/20 [00:09<01:11,  3.96s/it]\n 15%|█▌        | 3/20 [00:10<00:46,  2.71s/it]\n 20%|██        | 4/20 [00:11<00:33,  2.12s/it]\n 25%|██▌       | 5/20 [00:12<00:26,  1.80s/it]\n 30%|███       | 6/20 [00:13<00:22,  1.60s/it]\n 35%|███▌      | 7/20 [00:15<00:19,  1.48s/it]\n 40%|████      | 8/20 [00:16<00:16,  1.40s/it]\n 45%|████▌     | 9/20 [00:17<00:14,  1.35s/it]\n 50%|█████     | 10/20 [00:18<00:13,  1.31s/it]\n 55%|█████▌    | 11/20 [00:20<00:11,  1.29s/it]\n 60%|██████    | 12/20 [00:21<00:10,  1.27s/it]\n 65%|██████▌   | 13/20 [00:22<00:08,  1.26s/it]\n 70%|███████   | 14/20 [00:23<00:07,  1.25s/it]\n 75%|███████▌  | 15/20 [00:25<00:06,  1.25s/it]\n 80%|████████  | 16/20 [00:26<00:04,  1.24s/it]\n 85%|████████▌ | 17/20 [00:27<00:03,  1.24s/it]\n 90%|█████████ | 18/20 [00:28<00:02,  1.24s/it]\n 95%|█████████▌| 19/20 [00:30<00:01,  1.24s/it]\n100%|██████████| 20/20 [00:31<00:00,  1.24s/it]\n100%|██████████| 20/20 [00:31<00:00,  1.56s/it]\nSTAGE B + A DECODING***************************\n  0%|          | 0/10 [00:00<?, ?it/s]\n 10%|█         | 1/10 [00:00<00:05,  1.51it/s]\n 20%|██        | 2/10 [00:01<00:04,  1.62it/s]\n 30%|███       | 3/10 [00:01<00:04,  1.52it/s]\n 40%|████      | 4/10 [00:02<00:04,  1.48it/s]\n 50%|█████     | 5/10 [00:03<00:03,  1.46it/s]\n 60%|██████    | 6/10 [00:04<00:02,  1.44it/s]\n 70%|███████   | 7/10 [00:04<00:02,  1.44it/s]\n 80%|████████  | 8/10 [00:05<00:01,  1.43it/s]\n 90%|█████████ | 9/10 [00:06<00:00,  1.43it/s]\n100%|██████████| 10/10 [00:06<00:00,  1.42it/s]\n100%|██████████| 10/10 [00:06<00:00,  1.45it/s]\n  0%|          | 0/225 [00:00<?, ?it/s]\n  0%|          | 1/225 [00:00<00:35,  6.29it/s]\n  2%|▏         | 5/225 [00:00<00:11, 19.83it/s]\n  4%|▎         | 8/225 [00:00<00:14, 15.27it/s]\n  4%|▍         | 10/225 [00:00<00:15, 14.15it/s]\n  5%|▌         | 12/225 [00:00<00:15, 13.48it/s]\n  6%|▌         | 14/225 [00:01<00:16, 13.06it/s]\n  7%|▋         | 16/225 [00:01<00:16, 12.78it/s]\n  8%|▊         | 18/225 [00:01<00:16, 12.60it/s]\n  9%|▉         | 20/225 [00:01<00:16, 12.47it/s]\n 10%|▉         | 22/225 [00:01<00:16, 12.39it/s]\n 11%|█         | 24/225 [00:01<00:16, 12.33it/s]\n 12%|█▏        | 26/225 [00:02<00:16, 12.29it/s]\n 12%|█▏        | 28/225 [00:02<00:16, 12.26it/s]\n 13%|█▎        | 30/225 [00:02<00:15, 12.24it/s]\n 14%|█▍        | 32/225 [00:02<00:15, 12.23it/s]\n 15%|█▌        | 34/225 [00:02<00:15, 12.22it/s]\n 16%|█▌        | 36/225 [00:02<00:15, 12.21it/s]\n 17%|█▋        | 38/225 [00:02<00:15, 12.20it/s]\n 18%|█▊        | 40/225 [00:03<00:15, 12.20it/s]\n 19%|█▊        | 42/225 [00:03<00:15, 12.20it/s]\n 20%|█▉        | 44/225 [00:03<00:14, 12.20it/s]\n 20%|██        | 46/225 [00:03<00:14, 12.20it/s]\n 21%|██▏       | 48/225 [00:03<00:14, 12.20it/s]\n 22%|██▏       | 50/225 [00:03<00:14, 12.19it/s]\n 23%|██▎       | 52/225 [00:04<00:14, 12.19it/s]\n 24%|██▍       | 54/225 [00:04<00:14, 12.19it/s]\n 25%|██▍       | 56/225 [00:04<00:13, 12.19it/s]\n 26%|██▌       | 58/225 [00:04<00:13, 12.19it/s]\n 27%|██▋       | 60/225 [00:04<00:13, 12.19it/s]\n 28%|██▊       | 62/225 [00:04<00:13, 12.19it/s]\n 28%|██▊       | 64/225 [00:05<00:13, 12.19it/s]\n 29%|██▉       | 66/225 [00:05<00:13, 12.19it/s]\n 30%|███       | 68/225 [00:05<00:12, 12.19it/s]\n 31%|███       | 70/225 [00:05<00:12, 12.19it/s]\n 32%|███▏      | 72/225 [00:05<00:12, 12.19it/s]\n 33%|███▎      | 74/225 [00:05<00:12, 12.19it/s]\n 34%|███▍      | 76/225 [00:06<00:12, 12.19it/s]\n 35%|███▍      | 78/225 [00:06<00:12, 12.19it/s]\n 36%|███▌      | 80/225 [00:06<00:11, 12.19it/s]\n 36%|███▋      | 82/225 [00:06<00:11, 12.19it/s]\n 37%|███▋      | 84/225 [00:06<00:11, 12.19it/s]\n 38%|███▊      | 86/225 [00:06<00:11, 12.19it/s]\n 39%|███▉      | 88/225 [00:07<00:11, 12.19it/s]\n 40%|████      | 90/225 [00:07<00:11, 12.19it/s]\n 41%|████      | 92/225 [00:07<00:10, 12.19it/s]\n 42%|████▏     | 94/225 [00:07<00:10, 12.19it/s]\n 43%|████▎     | 96/225 [00:07<00:10, 12.19it/s]\n 44%|████▎     | 98/225 [00:07<00:10, 12.19it/s]\n 44%|████▍     | 100/225 [00:08<00:10, 12.19it/s]\n 45%|████▌     | 102/225 [00:08<00:10, 12.19it/s]\n 46%|████▌     | 104/225 [00:08<00:09, 12.19it/s]\n 47%|████▋     | 106/225 [00:08<00:09, 12.19it/s]\n 48%|████▊     | 108/225 [00:08<00:09, 12.19it/s]\n 49%|████▉     | 110/225 [00:08<00:09, 12.19it/s]\n 50%|████▉     | 112/225 [00:09<00:09, 12.19it/s]\n 51%|█████     | 114/225 [00:09<00:09, 12.19it/s]\n 52%|█████▏    | 116/225 [00:09<00:08, 12.19it/s]\n 52%|█████▏    | 118/225 [00:09<00:08, 12.19it/s]\n 53%|█████▎    | 120/225 [00:09<00:08, 12.19it/s]\n 54%|█████▍    | 122/225 [00:09<00:08, 12.19it/s]\n 55%|█████▌    | 124/225 [00:10<00:08, 12.19it/s]\n 56%|█████▌    | 126/225 [00:10<00:08, 12.19it/s]\n 57%|█████▋    | 128/225 [00:10<00:07, 12.19it/s]\n 58%|█████▊    | 130/225 [00:10<00:07, 12.19it/s]\n 59%|█████▊    | 132/225 [00:10<00:07, 12.19it/s]\n 60%|█████▉    | 134/225 [00:10<00:07, 12.19it/s]\n 60%|██████    | 136/225 [00:11<00:07, 12.19it/s]\n 61%|██████▏   | 138/225 [00:11<00:07, 12.19it/s]\n 62%|██████▏   | 140/225 [00:11<00:06, 12.19it/s]\n 63%|██████▎   | 142/225 [00:11<00:06, 12.19it/s]\n 64%|██████▍   | 144/225 [00:11<00:06, 12.19it/s]\n 65%|██████▍   | 146/225 [00:11<00:06, 12.19it/s]\n 66%|██████▌   | 148/225 [00:12<00:06, 12.19it/s]\n 67%|██████▋   | 150/225 [00:12<00:06, 12.19it/s]\n 68%|██████▊   | 152/225 [00:12<00:05, 12.19it/s]\n 68%|██████▊   | 154/225 [00:12<00:05, 12.19it/s]\n 69%|██████▉   | 156/225 [00:12<00:05, 12.19it/s]\n 70%|███████   | 158/225 [00:12<00:05, 12.19it/s]\n 71%|███████   | 160/225 [00:12<00:05, 12.19it/s]\n 72%|███████▏  | 162/225 [00:13<00:05, 12.19it/s]\n 73%|███████▎  | 164/225 [00:13<00:05, 12.19it/s]\n 74%|███████▍  | 166/225 [00:13<00:04, 12.19it/s]\n 75%|███████▍  | 168/225 [00:13<00:04, 12.19it/s]\n 76%|███████▌  | 170/225 [00:13<00:04, 12.19it/s]\n 76%|███████▋  | 172/225 [00:13<00:04, 12.19it/s]\n 77%|███████▋  | 174/225 [00:14<00:04, 12.19it/s]\n 78%|███████▊  | 176/225 [00:14<00:04, 12.19it/s]\n 79%|███████▉  | 178/225 [00:14<00:03, 12.19it/s]\n 80%|████████  | 180/225 [00:14<00:03, 12.19it/s]\n 81%|████████  | 182/225 [00:14<00:03, 12.20it/s]\n 82%|████████▏ | 184/225 [00:14<00:03, 12.20it/s]\n 83%|████████▎ | 186/225 [00:15<00:03, 12.20it/s]\n 84%|████████▎ | 188/225 [00:15<00:03, 12.20it/s]\n 84%|████████▍ | 190/225 [00:15<00:02, 12.20it/s]\n 85%|████████▌ | 192/225 [00:15<00:02, 12.20it/s]\n 86%|████████▌ | 194/225 [00:15<00:02, 12.20it/s]\n 87%|████████▋ | 196/225 [00:15<00:02, 12.19it/s]\n 88%|████████▊ | 198/225 [00:16<00:02, 12.20it/s]\n 89%|████████▉ | 200/225 [00:16<00:02, 12.20it/s]\n 90%|████████▉ | 202/225 [00:16<00:01, 12.20it/s]\n 91%|█████████ | 204/225 [00:16<00:01, 12.20it/s]\n 92%|█████████▏| 206/225 [00:16<00:01, 12.19it/s]\n 92%|█████████▏| 208/225 [00:16<00:01, 12.19it/s]\n 93%|█████████▎| 210/225 [00:17<00:01, 12.19it/s]\n 94%|█████████▍| 212/225 [00:17<00:01, 12.19it/s]\n 95%|█████████▌| 214/225 [00:17<00:00, 12.19it/s]\n 96%|█████████▌| 216/225 [00:17<00:00, 12.20it/s]\n 97%|█████████▋| 218/225 [00:17<00:00, 12.20it/s]\n 98%|█████████▊| 220/225 [00:17<00:00, 12.19it/s]\n 99%|█████████▊| 222/225 [00:18<00:00, 12.19it/s]\n100%|█████████▉| 224/225 [00:18<00:00, 12.19it/s]\n100%|██████████| 225/225 [00:18<00:00, 12.28it/s]\nExecuting node 17, title: Save Image, class type: SaveImage\nPrompt executed in 74.41 seconds\noutputs:  {'17': {'images': [{'filename': 'UltraPixel_00001_.png', 'subfolder': '', 'type': 'output'}]}}\n====================================\nUltraPixel_00001_.png",
+        "error": null,
+        "metrics": {
+            "predict_time": 75.440356023,
+            "total_time": 99.721484
+        },
+        "created_at": "2024-07-22T08:22:51.377000Z",
+        "started_at": "2024-07-22T08:23:15.658128Z",
+        "completed_at": "2024-07-22T08:24:31.098484Z",
+        "urls": {
+            "get": "https://api.replicate.com/v1/predictions/xpfkt7a8y5rj60cgv64tbed3ac",
+            "cancel": "https://api.replicate.com/v1/predictions/xpfkt7a8y5rj60cgv64tbed3ac/cancel"
+        }
+    },
+    "latest_version": {
+        "id": "48934fc160c585169143f55dde57966cf466c08541bc937746ef91408a9dac7b",
+        "created_at": "2024-07-19T19:42:18.080200+00:00",
+        "cog_version": "0.9.13",
+        "openapi_schema": {
+            "info": {
+                "title": "Cog",
+                "version": "0.1.0"
+            },
+            "paths": {
+                "/": {
+                    "get": {
+                        "summary": "Root",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Root  Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "root__get"
+                    }
+                },
+                "/shutdown": {
+                    "post": {
+                        "summary": "Start Shutdown",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Start Shutdown Shutdown Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "start_shutdown_shutdown_post"
+                    }
+                },
+                "/predictions": {
+                    "post": {
+                        "summary": "Predict",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model",
+                        "operationId": "predict_predictions_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/PredictionRequest"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "/health-check": {
+                    "get": {
+                        "summary": "Healthcheck",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Healthcheck Health Check Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "healthcheck_health_check_get"
+                    }
+                },
+                "/predictions/{prediction_id}": {
+                    "put": {
+                        "summary": "Predict Idempotent",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/PredictionResponse"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            },
+                            {
+                                "in": "header",
+                                "name": "prefer",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prefer"
+                                },
+                                "required": false
+                            }
+                        ],
+                        "description": "Run a single prediction on the model (idempotent creation).",
+                        "operationId": "predict_idempotent_predictions__prediction_id__put",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/components/schemas/PredictionRequest"
+                                            }
+                                        ],
+                                        "title": "Prediction Request"
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                },
+                "/predictions/{prediction_id}/cancel": {
+                    "post": {
+                        "summary": "Cancel",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Cancel Predictions  Prediction Id  Cancel Post"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "in": "path",
+                                "name": "prediction_id",
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Prediction ID"
+                                },
+                                "required": true
+                            }
+                        ],
+                        "description": "Cancel a running prediction",
+                        "operationId": "cancel_predictions__prediction_id__cancel_post"
+                    }
+                }
+            },
+            "openapi": "3.0.2",
+            "components": {
+                "schemas": {
+                    "Input": {
+                        "type": "object",
+                        "title": "Input",
+                        "properties": {
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 11,
+                                "description": "Set a seed for reproducibility. Random by default."
+                            },
+                            "width": {
+                                "type": "integer",
+                                "title": "Width",
+                                "default": 2048,
+                                "maximum": 5120,
+                                "minimum": 1024,
+                                "x-order": 1
+                            },
+                            "height": {
+                                "type": "integer",
+                                "title": "Height",
+                                "default": 2048,
+                                "maximum": 5120,
+                                "minimum": 1024,
+                                "x-order": 2
+                            },
+                            "prompt": {
+                                "type": "string",
+                                "title": "Prompt",
+                                "default": "",
+                                "x-order": 0
+                            },
+                            "stage_b_cfg": {
+                                "type": "number",
+                                "title": "Stage B Cfg",
+                                "default": 1.1,
+                                "maximum": 10,
+                                "minimum": 0.1,
+                                "x-order": 4
+                            },
+                            "stage_c_cfg": {
+                                "type": "number",
+                                "title": "Stage C Cfg",
+                                "default": 4,
+                                "maximum": 10,
+                                "minimum": 0.1,
+                                "x-order": 6
+                            },
+                            "output_format": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/output_format"
+                                    }
+                                ],
+                                "default": "webp",
+                                "x-order": 9,
+                                "description": "Format of the output images"
+                            },
+                            "stage_b_steps": {
+                                "type": "integer",
+                                "title": "Stage B Steps",
+                                "default": 10,
+                                "maximum": 50,
+                                "minimum": 1,
+                                "x-order": 3
+                            },
+                            "stage_c_steps": {
+                                "type": "integer",
+                                "title": "Stage C Steps",
+                                "default": 20,
+                                "maximum": 50,
+                                "minimum": 1,
+                                "x-order": 5
+                            },
+                            "output_quality": {
+                                "type": "integer",
+                                "title": "Output Quality",
+                                "default": 80,
+                                "maximum": 100,
+                                "minimum": 0,
+                                "x-order": 10,
+                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
+                            },
+                            "controlnet_weight": {
+                                "type": "number",
+                                "title": "Controlnet Weight",
+                                "default": 0.7,
+                                "maximum": 1,
+                                "minimum": 0.1,
+                                "x-order": 8
+                            },
+                            "canny_control_image": {
+                                "type": "string",
+                                "title": "Canny Control Image",
+                                "format": "uri",
+                                "x-order": 7,
+                                "description": "Optional control image for canny controlnet"
+                            }
+                        }
+                    },
+                    "Output": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
+                    },
+                    "Status": {
+                        "enum": [
+                            "starting",
+                            "processing",
+                            "succeeded",
+                            "canceled",
+                            "failed"
+                        ],
+                        "type": "string",
+                        "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "WebhookEvent": {
+                        "enum": [
+                            "start",
+                            "output",
+                            "logs",
+                            "completed"
+                        ],
+                        "type": "string",
+                        "title": "WebhookEvent",
+                        "description": "An enumeration."
+                    },
+                    "output_format": {
+                        "enum": [
+                            "webp",
+                            "jpg",
+                            "png"
+                        ],
+                        "type": "string",
+                        "title": "output_format",
+                        "description": "An enumeration."
+                    },
+                    "ValidationError": {
+                        "type": "object",
+                        "title": "ValidationError",
+                        "required": [
+                            "loc",
+                            "msg",
+                            "type"
+                        ],
+                        "properties": {
+                            "loc": {
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "title": "Location"
+                            },
+                            "msg": {
+                                "type": "string",
+                                "title": "Message"
+                            },
+                            "type": {
+                                "type": "string",
+                                "title": "Error Type"
+                            }
+                        }
+                    },
+                    "PredictionRequest": {
+                        "type": "object",
+                        "title": "PredictionRequest",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "webhook": {
+                                "type": "string",
+                                "title": "Webhook",
+                                "format": "uri",
+                                "maxLength": 65536,
+                                "minLength": 1
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            },
+                            "webhook_events_filter": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/WebhookEvent"
+                                },
+                                "default": [
+                                    "start",
+                                    "output",
+                                    "logs",
+                                    "completed"
+                                ]
+                            }
+                        }
+                    },
+                    "PredictionResponse": {
+                        "type": "object",
+                        "title": "PredictionResponse",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Id"
+                            },
+                            "logs": {
+                                "type": "string",
+                                "title": "Logs",
+                                "default": ""
+                            },
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/Output"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            },
+                            "metrics": {
+                                "type": "object",
+                                "title": "Metrics"
+                            },
+                            "version": {
+                                "type": "string",
+                                "title": "Version"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created At",
+                                "format": "date-time"
+                            },
+                            "started_at": {
+                                "type": "string",
+                                "title": "Started At",
+                                "format": "date-time"
+                            },
+                            "completed_at": {
+                                "type": "string",
+                                "title": "Completed At",
+                                "format": "date-time"
+                            }
+                        }
+                    },
+                    "HTTPValidationError": {
+                        "type": "object",
+                        "title": "HTTPValidationError",
+                        "properties": {
+                            "detail": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                },
+                                "title": "Detail"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
