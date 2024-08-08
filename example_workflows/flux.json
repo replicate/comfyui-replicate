@@ -1,0 +1,337 @@
+{
+  "last_node_id": 21,
+  "last_link_id": 27,
+  "nodes": [
+    {
+      "id": 17,
+      "type": "DF_Text_Box",
+      "pos": [
+        -55,
+        -228
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            22,
+            23,
+            24
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Text_Box"
+      },
+      "widgets_values": [
+        "a neon light saying \"flux now in comfyui-replicate\""
+      ]
+    },
+    {
+      "id": 13,
+      "type": "SaveImage",
+      "pos": [
+        1023,
+        -699
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "flux-schnell"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "Replicate black-forest-labs/flux-schnell",
+      "pos": [
+        580,
+        -697
+      ],
+      "size": [
+        400,
+        268
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 22,
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Replicate black-forest-labs/flux-schnell"
+      },
+      "widgets_values": [
+        "",
+        "3:2",
+        1,
+        1331,
+        "randomize",
+        "webp",
+        80,
+        false,
+        false
+      ]
+    },
+    {
+      "id": 14,
+      "type": "SaveImage",
+      "pos": [
+        1027,
+        -375
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "flux-dev"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "Replicate black-forest-labs/flux-dev",
+      "pos": [
+        579,
+        -377
+      ],
+      "size": [
+        400,
+        316
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 23,
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            26
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Replicate black-forest-labs/flux-dev"
+      },
+      "widgets_values": [
+        "",
+        "3:2",
+        0.8,
+        1,
+        3.5,
+        1454,
+        "randomize",
+        "webp",
+        80,
+        false,
+        false
+      ]
+    },
+    {
+      "id": 15,
+      "type": "SaveImage",
+      "pos": [
+        1030,
+        -7
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 27
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "flux-pro"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "Replicate black-forest-labs/flux-pro",
+      "pos": [
+        579,
+        -3
+      ],
+      "size": [
+        400,
+        268
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 24,
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            27
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Replicate black-forest-labs/flux-pro"
+      },
+      "widgets_values": [
+        "",
+        "3:2",
+        25,
+        3,
+        2,
+        2,
+        1262,
+        "randomize",
+        false
+      ]
+    }
+  ],
+  "links": [
+    [
+      22,
+      17,
+      0,
+      21,
+      0,
+      "STRING"
+    ],
+    [
+      23,
+      17,
+      0,
+      20,
+      1,
+      "STRING"
+    ],
+    [
+      24,
+      17,
+      0,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      25,
+      21,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      20,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      19,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        189.2626953125,
+        773.8525390625
+      ]
+    }
+  },
+  "version": 0.4
+}
