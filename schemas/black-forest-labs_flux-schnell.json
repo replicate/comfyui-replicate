@@ -294,14 +294,14 @@
                                 "x-order": 0,
                                 "description": "Prompt for generated image"
                             },
-                            "guidance": {
-                                "type": "number",
-                                "title": "Guidance",
-                                "default": 3.5,
-                                "maximum": 10,
-                                "minimum": 0,
+                            "num_outputs": {
+                                "type": "integer",
+                                "title": "Num Outputs",
+                                "default": 1,
+                                "maximum": 4,
+                                "minimum": 1,
                                 "x-order": 2,
-                                "description": "Guidance for generated image. Ignored for flux-schnell"
+                                "description": "Number of outputs to generate"
                             },
                             "aspect_ratio": {
                                 "allOf": [
@@ -331,6 +331,13 @@
                                 "minimum": 0,
                                 "x-order": 5,
                                 "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
+                            },
+                            "disable_safety_checker": {
+                                "type": "boolean",
+                                "title": "Disable Safety Checker",
+                                "default": false,
+                                "x-order": 6,
+                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
                             }
                         }
                     },

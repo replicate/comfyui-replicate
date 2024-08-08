@@ -286,8 +286,15 @@
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 3,
+                                "x-order": 6,
                                 "description": "Random seed. Set for reproducible generation"
+                            },
+                            "image": {
+                                "type": "string",
+                                "title": "Image",
+                                "format": "uri",
+                                "x-order": 2,
+                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image"
                             },
                             "prompt": {
                                 "type": "string",
@@ -301,8 +308,17 @@
                                 "default": 3.5,
                                 "maximum": 10,
                                 "minimum": 0,
-                                "x-order": 2,
+                                "x-order": 5,
                                 "description": "Guidance for generated image. Ignored for flux-schnell"
+                            },
+                            "num_outputs": {
+                                "type": "integer",
+                                "title": "Num Outputs",
+                                "default": 1,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 4,
+                                "description": "Number of outputs to generate"
                             },
                             "aspect_ratio": {
                                 "allOf": [
@@ -321,7 +337,7 @@
                                     }
                                 ],
                                 "default": "webp",
-                                "x-order": 4,
+                                "x-order": 7,
                                 "description": "Format of the output images"
                             },
                             "output_quality": {
@@ -330,8 +346,24 @@
                                 "default": 80,
                                 "maximum": 100,
                                 "minimum": 0,
-                                "x-order": 5,
+                                "x-order": 8,
                                 "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
+                            },
+                            "prompt_strength": {
+                                "type": "number",
+                                "title": "Prompt Strength",
+                                "default": 0.8,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 3,
+                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
+                            },
+                            "disable_safety_checker": {
+                                "type": "boolean",
+                                "title": "Disable Safety Checker",
+                                "default": false,
+                                "x-order": 9,
+                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
                             }
                         }
                     },
