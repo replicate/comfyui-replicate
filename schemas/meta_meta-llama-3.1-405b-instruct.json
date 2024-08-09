@@ -1,104 +1,140 @@
 {
-    "url": "https://replicate.com/yorickvp/llava-13b",
-    "owner": "yorickvp",
-    "name": "llava-13b",
-    "description": "Visual instruction tuning towards large language and vision models with GPT-4 level capabilities",
+    "url": "https://replicate.com/meta/meta-llama-3.1-405b-instruct",
+    "owner": "meta",
+    "name": "meta-llama-3.1-405b-instruct",
+    "description": "Meta's flagship 405 billion parameter language model, fine-tuned for chat completions",
     "visibility": "public",
-    "github_url": "https://github.com/haotian-liu/LLaVA",
-    "paper_url": "https://arxiv.org/abs/2310.03744",
-    "license_url": "https://ai.meta.com/llama/license/",
+    "github_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1",
+    "paper_url": null,
+    "license_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/2c5dbfff-209d-4ab5-a294-b3e5e56105c0/dalle3.jpg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/e24670d1-18de-472a-94d8-b48b33d14489/meta-logo.png",
     "default_example": {
-        "id": "x5pthttb2mghadkxlvymeprkce",
-        "model": "yorickvp/llava-13b",
-        "version": "a0fdc44e4f2e1f20f2bb4e27846899953ac8e66c5886c5878fa1d6b73ce009e5",
+        "id": "zjq6szssxdrm20cgw0fsntgvbg",
+        "model": "replicate-internal/llama-405b-instruct-vllm",
+        "version": "67ab67c1831a3d70db83b12594ec256b8a97bd45e9427e05d20b8fa09ebf4061",
         "status": "succeeded",
         "input": {
-            "image": "https://replicate.delivery/pbxt/KRULC43USWlEx4ZNkXltJqvYaHpEx2uJ4IyUQPRPwYb8SzPf/view.jpg",
-            "top_p": 1,
-            "prompt": "Are you allowed to swim here?",
+            "top_p": 0.9,
+            "prompt": "Tina has one brother and one sister. How many sisters do Tina's siblings have?",
             "max_tokens": 1024,
-            "temperature": 0.2
+            "min_tokens": 0,
+            "temperature": 0.6,
+            "system_prompt": "You are a helpful assistant.",
+            "presence_penalty": 0,
+            "frequency_penalty": 0
         },
         "output": [
-            "Yes, ",
-            "you ",
-            "are ",
-            "allowed ",
-            "to ",
-            "swim ",
-            "in ",
-            "the ",
-            "lake ",
-            "near ",
-            "the ",
-            "pier. ",
-            "The ",
-            "image ",
-            "shows ",
-            "a ",
-            "pier ",
-            "extending ",
-            "out ",
-            "into ",
-            "the ",
-            "water, ",
-            "and ",
-            "the ",
-            "water ",
-            "appears ",
-            "to ",
-            "be ",
-            "calm, ",
-            "making ",
-            "it ",
-            "a ",
-            "suitable ",
-            "spot ",
-            "for ",
-            "swimming. ",
-            "However, ",
-            "it ",
-            "is ",
-            "always ",
-            "important ",
-            "to ",
-            "be ",
-            "cautious ",
-            "and ",
-            "aware ",
-            "of ",
-            "any ",
-            "potential ",
-            "hazards ",
-            "or ",
-            "regulations ",
-            "in ",
-            "the ",
-            "area ",
-            "before ",
-            "swimming."
+            "T",
+            "ina",
+            " has",
+            " one",
+            " brother",
+            " and",
+            " one",
+            " sister",
+            ".",
+            " From",
+            " the",
+            " brother",
+            "'s",
+            " perspective",
+            ",",
+            " he",
+            " has",
+            " one",
+            " sister",
+            ",",
+            " Tina",
+            ",",
+            " and",
+            " also",
+            " the",
+            " other",
+            " sister",
+            ".",
+            " So",
+            ",",
+            " Tina",
+            "'s",
+            " brother",
+            " has",
+            " ",
+            "2",
+            " sisters",
+            ".\n\n",
+            "From",
+            " the",
+            " sister",
+            "'s",
+            " perspective",
+            ",",
+            " she",
+            " also",
+            " has",
+            " one",
+            " sister",
+            ",",
+            " Tina",
+            ".",
+            " \n\n",
+            "So",
+            ",",
+            " Tina",
+            "'s",
+            " siblings",
+            " have",
+            " a",
+            " total",
+            " of",
+            " ",
+            "2",
+            " sisters",
+            " (",
+            "from",
+            " the",
+            " brother",
+            "'s",
+            " perspective",
+            ")",
+            " and",
+            " ",
+            "1",
+            " sister",
+            " (",
+            "from",
+            " the",
+            " sister",
+            "'s",
+            " perspective",
+            ").",
+            ""
         ],
-        "logs": null,
+        "logs": "INFO 07-23 15:04:21 async_llm_engine.py:173] Added request 3cd670c9b87b469ea9721ddfbcc6b67a.\nINFO 07-23 15:04:21 metrics.py:396] Avg prompt throughput: 7.8 tokens/s, Avg generation throughput: 17.7 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 0.3%, CPU KV cache usage: 0.0%.\nINFO 07-23 15:04:24 async_llm_engine.py:140] Finished request 3cd670c9b87b469ea9721ddfbcc6b67a.\nGeneration took 1721746720.08sFormatted prompt: <|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nTina has one brother and one sister. How many sisters do Tina's siblings have?<|eot_id|><|start_header_id|>assistant<|end_header_id|>",
         "error": null,
         "metrics": {
-            "predict_time": 5.331965,
-            "total_time": 108.061238
+            "batch_size": 1.000229398266064,
+            "total_time": 2.86309,
+            "input_token_count": 26,
+            "tokens_per_second": 29.74134035953616,
+            "output_token_count": 84,
+            "predict_time_share": 2.8200430870056152,
+            "predict_time": 2.826425468,
+            "time_to_first_token": 0.112068943
         },
-        "created_at": "2024-02-21T12:51:23.166549Z",
-        "started_at": "2024-02-21T12:53:05.895822Z",
-        "completed_at": "2024-02-21T12:53:11.227787Z",
+        "created_at": "2024-07-23T15:04:21.227000Z",
+        "started_at": "2024-07-23T15:04:21.263665Z",
+        "completed_at": "2024-07-23T15:04:24.090090Z",
         "urls": {
-            "stream": "https://streaming-api.svc.us.c.replicate.net/v1/streams/ektia4t2ommprjapf67bszhlrckwdevipz2pjbzfxhcc6cseoyva",
-            "get": "https://api.replicate.com/v1/predictions/x5pthttb2mghadkxlvymeprkce",
-            "cancel": "https://api.replicate.com/v1/predictions/x5pthttb2mghadkxlvymeprkce/cancel"
+            "stream": "https://streaming-api.svc.sea.v.replicate.net/v1/streams/6zoqtc6qgpxby7xzauee36qv6bktfaxugelxfqs6ifgg6q4s77sa",
+            "get": "https://api.replicate.com/v1/predictions/zjq6szssxdrm20cgw0fsntgvbg",
+            "cancel": "https://api.replicate.com/v1/predictions/zjq6szssxdrm20cgw0fsntgvbg/cancel"
         }
     },
     "latest_version": {
-        "id": "80537f9eead1a5bfa72d5ac6ea6414379be41d4d4f6679fd776e9535d1eb58bb",
-        "created_at": "2024-07-17T14:00:16.459010+00:00",
-        "cog_version": "0.9.5",
+        "id": "e6cb7fc3ed90eae2c879c48deda8f49152391ad66349fe7694be24089c29f71c",
+        "created_at": "2024-07-23T15:24:35.230971+00:00",
+        "cog_version": "0.10.0-alpha17",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -121,6 +157,24 @@
                             }
                         },
                         "operationId": "root__get"
+                    }
+                },
+                "/ready": {
+                    "get": {
+                        "summary": "Ready",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Ready Ready Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "ready_ready_get"
                     }
                 },
                 "/shutdown": {
@@ -469,48 +523,75 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
-                        "required": [
-                            "image",
-                            "prompt"
-                        ],
                         "properties": {
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 0,
-                                "description": "Input image"
+                            "top_k": {
+                                "type": "integer",
+                                "title": "Top K",
+                                "default": 50,
+                                "x-order": 6,
+                                "description": "The number of highest probability tokens to consider for generating the output. If > 0, only keep the top k tokens with highest probability (top-k filtering)."
                             },
                             "top_p": {
                                 "type": "number",
                                 "title": "Top P",
-                                "default": 1,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 2,
-                                "description": "When decoding text, samples from the top p percentage of most likely tokens; lower to ignore less likely tokens"
+                                "default": 0.9,
+                                "x-order": 5,
+                                "description": "A probability threshold for generating the output. If < 1.0, only keep the top tokens with cumulative probability >= top_p (nucleus filtering). Nucleus filtering is described in Holtzman et al. (http://arxiv.org/abs/1904.09751)."
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "x-order": 1,
-                                "description": "Prompt to use for text generation"
+                                "default": "",
+                                "x-order": 0,
+                                "description": "Prompt"
                             },
                             "max_tokens": {
                                 "type": "integer",
                                 "title": "Max Tokens",
-                                "default": 1024,
-                                "minimum": 0,
-                                "x-order": 4,
-                                "description": "Maximum number of tokens to generate. A word is generally 2-3 tokens"
+                                "default": 512,
+                                "x-order": 3,
+                                "description": "The maximum number of tokens the model should generate as output."
+                            },
+                            "min_tokens": {
+                                "type": "integer",
+                                "title": "Min Tokens",
+                                "default": 0,
+                                "x-order": 2,
+                                "description": "The minimum number of tokens the model should generate as output."
                             },
                             "temperature": {
                                 "type": "number",
                                 "title": "Temperature",
-                                "default": 0.2,
-                                "minimum": 0,
-                                "x-order": 3,
-                                "description": "Adjusts randomness of outputs, greater than 1 is random and 0 is deterministic"
+                                "default": 0.6,
+                                "x-order": 4,
+                                "description": "The value used to modulate the next token probabilities."
+                            },
+                            "system_prompt": {
+                                "type": "string",
+                                "title": "System Prompt",
+                                "default": "You are a helpful assistant.",
+                                "x-order": 1,
+                                "description": "System prompt to send to the model. This is prepended to the prompt and helps guide system behavior. Ignored for non-chat models."
+                            },
+                            "stop_sequences": {
+                                "type": "string",
+                                "title": "Stop Sequences",
+                                "x-order": 9,
+                                "description": "A comma-separated list of sequences to stop generation at. For example, '<end>,<stop>' will stop generation at the first instance of 'end' or '<stop>'."
+                            },
+                            "presence_penalty": {
+                                "type": "number",
+                                "title": "Presence Penalty",
+                                "default": 0,
+                                "x-order": 7,
+                                "description": "Presence penalty"
+                            },
+                            "frequency_penalty": {
+                                "type": "number",
+                                "title": "Frequency Penalty",
+                                "default": 0,
+                                "x-order": 8,
+                                "description": "Frequency penalty"
                             }
                         }
                     },
@@ -550,39 +631,47 @@
                         "type": "object",
                         "title": "TrainingInput",
                         "required": [
-                            "train_data"
+                            "hf_model_id"
                         ],
                         "properties": {
-                            "train_data": {
+                            "hf_token": {
                                 "type": "string",
-                                "title": "Train Data",
-                                "x-order": 0,
-                                "description": "https url or path name of a zipfile containing training data. Training data should have a json file data.json and an images/ folder. data.json should link the images from images/ to conversations."
-                            },
-                            "learning_rate": {
-                                "type": "number",
-                                "title": "Learning Rate",
-                                "default": 0.0002,
-                                "minimum": 1e-10,
+                                "title": "Hf Token",
+                                "format": "password",
                                 "x-order": 2,
-                                "description": "The learning rate during training"
+                                "description": "\n        Hugging Face API token. \n        Get your token at https://huggingface.co/settings/tokens\n        ",
+                                "x-cog-secret": true
                             },
-                            "model_max_length": {
-                                "type": "integer",
-                                "title": "Model Max Length",
-                                "default": 2048,
-                                "minimum": 1,
-                                "x-order": 3,
-                                "description": "The maximum length (in number of tokens) for the inputs to the model."
+                            "hf_model_id": {
+                                "type": "string",
+                                "title": "Hf Model Id",
+                                "x-order": 0,
+                                "description": "\n        Hugging Face model identifier \n        (e.g. NousResearch/Hermes-2-Theta-Llama-3-8B).\n        "
                             },
-                            "num_train_epochs": {
-                                "type": "integer",
-                                "title": "Num Train Epochs",
-                                "default": 1,
-                                "maximum": 1000,
-                                "minimum": 1,
+                            "hf_model_sha": {
+                                "type": "string",
+                                "title": "Hf Model Sha",
                                 "x-order": 1,
-                                "description": "The number of training epochs"
+                                "description": "\n        The version of the model.\n        If unspecified, the latest version is used.\n        "
+                            },
+                            "allow_patterns": {
+                                "type": "string",
+                                "title": "Allow Patterns",
+                                "x-order": 3,
+                                "description": "\n        Patterns constituting the allowlist. \n        If provided, item paths must match at least one pattern from the allowlist. \n        (e.g. \"*.safetensors\").\n        "
+                            },
+                            "ignore_patterns": {
+                                "type": "string",
+                                "title": "Ignore Patterns",
+                                "default": "*.gguf",
+                                "x-order": 4,
+                                "description": "\n        Patterns constituting the denylist. \n        If provided, item paths must not match any patterns from the denylist. \n        (e.g. \"*.gguf\").\n        "
+                            },
+                            "prompt_template": {
+                                "type": "string",
+                                "title": "Prompt Template",
+                                "x-order": 5,
+                                "description": "Prompt template. This is a Jinja2 template that overrides the HuggingFace tokenizer configuration. If this is set to None and nothing is configured on HuggingFace, no formatting is applied. To override HuggingFace configuration, set it to the string `{{messages[0]['content']}}`."
                             }
                         }
                     },

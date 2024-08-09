@@ -34,8 +34,8 @@
         }
     },
     "latest_version": {
-        "id": "3ba6c05c93f84644dda18df05bcd36745f600efd3d401238baa6ffff3317dc0f",
-        "created_at": "2024-06-28T07:13:42.455791+00:00",
+        "id": "d28faa318942bf3f1cbed9714def03594f99b3c69b2eb279c39fc60993cee9ac",
+        "created_at": "2024-07-04T00:52:17.710235+00:00",
         "cog_version": "0.9.4",
         "openapi_schema": {
             "info": {
@@ -275,6 +275,13 @@
                                 "format": "uri",
                                 "x-order": 0,
                                 "description": "Target/base image"
+                            },
+                            "disable_safety_checker": {
+                                "type": "boolean",
+                                "title": "Disable Safety Checker",
+                                "default": false,
+                                "x-order": 2,
+                                "description": "Disable safety checker for swapped images"
                             }
                         }
                     },

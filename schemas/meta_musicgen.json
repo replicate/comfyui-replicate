@@ -1,49 +1,52 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/meta/musicgen",
+    "owner": "meta",
+    "name": "musicgen",
+    "description": "Generate music from a prompt or melody",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/replicate/cog-musicgen",
+    "paper_url": "https://arxiv.org/abs/2306.05284",
+    "license_url": "https://github.com/facebookresearch/audiocraft/blob/main/LICENSE_weights",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/e3d6b391-571b-4e24-8531-936a0fee9fba/musicgen.jpeg",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "soub5pjbe5g5u62q536t73ltku",
+        "model": "meta/musicgen",
+        "version": "671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "top_k": 250,
+            "top_p": 0,
+            "prompt": "Edo25 major g melodies that sound triumphant and cinematic. Leading up to a crescendo that resolves in a 9th harmonic",
+            "duration": 8,
+            "temperature": 1,
+            "continuation": false,
+            "model_version": "stereo-large",
+            "output_format": "mp3",
+            "continuation_start": 0,
+            "multi_band_diffusion": false,
+            "normalization_strategy": "peak",
+            "classifier_free_guidance": 3
         },
-        "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "output": "https://replicate.delivery/pbxt/OeLYIQiltdzMaCex1shlEFy6wuvnvExi0kdjF0gYKEzG5wkSA/out.mp3",
+        "logs": "Loading model stereo-large...\nDownloading models--facebook--musicgen-stereo-large to models\nDownloaded models--facebook--musicgen-stereo-large in 9.88s\nModel stereo-large loaded successfully.\nUsing seed 187926229\n1 /    400\n2 /    400\n3 /    400\n4 /    400\n5 /    400\n6 /    400\n7 /    400\n8 /    400\n9 /    400\n10 /    400\n11 /    400\n12 /    400\n13 /    400\n14 /    400\n15 /    400\n16 /    400\n17 /    400\n18 /    400\n19 /    400\n20 /    400\n21 /    400\n22 /    400\n23 /    400\n24 /    400\n25 /    400\n26 /    400\n27 /    400\n28 /    400\n29 /    400\n30 /    400\n31 /    400\n32 /    400\n33 /    400\n34 /    400\n35 /    400\n36 /    400\n37 /    400\n38 /    400\n39 /    400\n40 /    400\n41 /    400\n42 /    400\n43 /    400\n44 /    400\n45 /    400\n46 /    400\n47 /    400\n48 /    400\n49 /    400\n50 /    400\n51 /    400\n52 /    400\n53 /    400\n54 /    400\n55 /    400\n56 /    400\n57 /    400\n58 /    400\n59 /    400\n60 /    400\n61 /    400\n62 /    400\n63 /    400\n64 /    400\n65 /    400\n66 /    400\n67 /    400\n68 /    400\n69 /    400\n70 /    400\n71 /    400\n72 /    400\n73 /    400\n74 /    400\n75 /    400\n76 /    400\n77 /    400\n78 /    400\n79 /    400\n80 /    400\n81 /    400\n82 /    400\n83 /    400\n    84 /    400\n85 /    400\n86 /    400\n87 /    400\n88 /    400\n89 /    400\n90 /    400\n91 /    400\n92 /    400\n93 /    400\n94 /    400\n95 /    400\n96 /    400\n97 /    400\n98 /    400\n99 /    400\n100 /    400\n101 /    400\n102 /    400\n103 /    400\n104 /    400\n105 /    400\n106 /    400\n107 /    400\n108 /    400\n109 /    400\n110 /    400\n111 /    400\n112 /    400\n113 /    400\n114 /    400\n115 /    400\n116 /    400\n117 /    400\n118 /    400\n119 /    400\n120 /    400\n121 /    400\n122 /    400\n123 /    400\n124 /    400\n125 /    400\n126 /    400\n127 /    400\n128 /    400\n129 /    400\n130 /    400\n131 /    400\n132 /    400\n133 /    400\n134 /    400\n135 /    400\n136 /    400\n137 /    400\n138 /    400\n139 /    400\n140 /    400\n141 /    400\n142 /    400\n143 /    400\n144 /    400\n145 /    400\n146 /    400\n147 /    400\n148 /    400\n149 /    400\n150 /    400\n151 /    400\n152 /    400\n153 /    400\n154 /    400\n155 /    400\n156 /    400\n157 /    400\n158 /    400\n159 /    400\n160 /    400\n161 /    400\n162 /    400\n163 /    400\n164 /    400\n165 /    400\n166 /    400\n167 /    400\n168 /    400\n169 /    400\n170 /    400\n171 /    400\n172 /    400\n173 /    400\n174 /    400\n175 /    400\n176 /    400\n177 /    400\n178 /    400\n179 /    400\n180 /    400\n181 /    400\n182 /    400\n183 /    400\n184 /    400\n185 /    400\n186 /    400\n187 /    400\n188 /    400\n189 /    400\n190 /    400\n191 /    400\n192 /    400\n193 /    400\n194 /    400\n195 /    400\n196 /    400\n197 /    400\n198 /    400\n199 /    400\n200 /    400\n201 /    400\n202 /    400\n203 /    400\n204 /    400\n205 /    400\n206 /    400\n207 /    400\n208 /    400\n209 /    400\n210 /    400\n211 /    400\n212 /    400\n213 /    400\n214 /    400\n215 /    400\n216 /    400\n217 /    400\n218 /    400\n219 /    400\n220 /    400\n221 /    400\n222 /    400\n223 /    400\n224 /    400\n225 /    400\n226 /    400\n227 /    400\n228 /    400\n229 /    400\n230 /    400\n231 /    400\n232 /    400\n233 /    400\n234 /    400\n235 /    400\n236 /    400\n237 /    400\n238 /    400\n239 /    400\n240 /    400\n241 /    400\n242 /    400\n243 /    400\n244 /    400\n245 /    400\n246 /    400\n247 /    400\n248 /    400\n249 /    400\n250 /    400\n251 /    400\n252 /    400\n253 /    400\n254 /    400\n255 /    400\n256 /    400\n257 /    400\n258 /    400\n259 /    400\n260 /    400\n261 /    400\n262 /    400\n263 /    400\n264 /    400\n265 /    400\n266 /    400\n267 /    400\n268 /    400\n269 /    400\n270 /    400\n271 /    400\n272 /    400\n273 /    400\n274 /    400\n275 /    400\n276 /    400\n277 /    400\n278 /    400\n279 /    400\n280 /    400\n281 /    400\n282 /    400\n283 /    400\n284 /    400\n285 /    400\n286 /    400\n287 /    400\n288 /    400\n289 /    400\n290 /    400\n291 /    400\n292 /    400\n293 /    400\n294 /    400\n295 /    400\n296 /    400\n297 /    400\n298 /    400\n299 /    400\n300 /    400\n301 /    400\n302 /    400\n303 /    400\n304 /    400\n305 /    400\n306 /    400\n307 /    400\n308 /    400\n309 /    400\n310 /    400\n311 /    400\n312 /    400\n313 /    400\n314 /    400\n315 /    400\n316 /    400\n317 /    400\n318 /    400\n319 /    400\n320 /    400\n321 /    400\n322 /    400\n323 /    400\n324 /    400\n325 /    400\n326 /    400\n327 /    400\n328 /    400\n329 /    400\n330 /    400\n331 /    400\n332 /    400\n333 /    400\n334 /    400\n335 /    400\n336 /    400\n337 /    400\n338 /    400\n339 /    400\n340 /    400\n341 /    400\n342 /    400\n343 /    400\n344 /    400\n345 /    400\n346 /    400\n347 /    400\n348 /    400\n349 /    400\n350 /    400\n351 /    400\n352 /    400\n353 /    400\n354 /    400\n355 /    400\n356 /    400\n357 /    400\n358 /    400\n359 /    400\n360 /    400\n361 /    400\n362 /    400\n363 /    400\n364 /    400\n365 /    400\n366 /    400\n367 /    400\n368 /    400\n369 /    400\n370 /    400\n371 /    400\n372 /    400\n373 /    400\n374 /    400\n375 /    400\n376 /    400\n377 /    400\n378 /    400\n379 /    400\n380 /    400\n381 /    400\n382 /    400\n383 /    400\n384 /    400\n385 /    400\n386 /    400\n387 /    400\n388 /    400\n389 /    400\n390 /    400\n391 /    400\n392 /    400\n393 /    400\n394 /    400\n395 /    400\n396 /    400\n397 /    400\n398 /    400\n399 /    400\n400 /    400\n401 /    400\n402 /    400\n403 /    400\nffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers\nbuilt with gcc 11 (Ubuntu 11.2.0-19ubuntu1)\nconfiguration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared\nlibavutil      56. 70.100 / 56. 70.100\nlibavcodec     58.134.100 / 58.134.100\nlibavformat    58. 76.100 / 58. 76.100\nlibavdevice    58. 13.100 / 58. 13.100\nlibavfilter     7.110.100 /  7.110.100\nlibswscale      5.  9.100 /  5.  9.100\nlibswresample   3.  9.100 /  3.  9.100\nlibpostproc    55.  9.100 / 55.  9.100\nGuessed Channel Layout for Input Stream #0.0 : stereo\nInput #0, wav, from 'out.wav':\nMetadata:\nencoder         : Lavf58.76.100\nDuration: 00:00:08.00, bitrate: 1024 kb/s\nStream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 32000 Hz, stereo, s16, 1024 kb/s\nStream mapping:\nStream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))\nPress [q] to stop, [?] for help\nOutput #0, mp3, to 'out.mp3':\nMetadata:\nTSSE            : Lavf58.76.100\nStream #0:0: Audio: mp3, 32000 Hz, stereo, s16p\nMetadata:\nencoder         : Lavc58.134.100 libmp3lame\nsize=       0kB time=00:00:00.00 bitrate=N/A speed=N/A\nsize=      95kB time=00:00:07.99 bitrate=  97.1kbits/s speed=45.6x\nvideo:0kB audio:94kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.269717%",
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 66.371701,
+            "total_time": 66.463286
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2024-03-28T12:01:08.688755Z",
+        "started_at": "2024-03-28T12:01:08.780340Z",
+        "completed_at": "2024-03-28T12:02:15.152041Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/soub5pjbe5g5u62q536t73ltku",
+            "cancel": "https://api.replicate.com/v1/predictions/soub5pjbe5g5u62q536t73ltku/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
+        "created_at": "2024-03-28T11:07:13.003999+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -265,52 +268,69 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "cfg": {
-                                "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
-                            },
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
+                                "x-order": 14,
+                                "description": "Seed for random number generator. If None or -1, a random seed will be used."
                             },
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
-                            },
-                            "steps": {
+                            "top_k": {
                                 "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
+                                "title": "Top K",
+                                "default": 250,
+                                "x-order": 9,
+                                "description": "Reduces sampling to the k most likely tokens."
+                            },
+                            "top_p": {
+                                "type": "number",
+                                "title": "Top P",
+                                "default": 0,
+                                "x-order": 10,
+                                "description": "Reduces sampling to tokens with cumulative probability of p. When set to  `0` (default), top_k sampling is used."
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
+                                "x-order": 1,
+                                "description": "A description of the music you want to generate."
                             },
-                            "aspect_ratio": {
+                            "duration": {
+                                "type": "integer",
+                                "title": "Duration",
+                                "default": 8,
+                                "x-order": 3,
+                                "description": "Duration of the generated audio in seconds."
+                            },
+                            "input_audio": {
+                                "type": "string",
+                                "title": "Input Audio",
+                                "format": "uri",
+                                "x-order": 2,
+                                "description": "An audio file that will influence the generated music. If `continuation` is `True`, the generated music will be a continuation of the audio file. Otherwise, the generated music will mimic the audio file's melody."
+                            },
+                            "temperature": {
+                                "type": "number",
+                                "title": "Temperature",
+                                "default": 1,
+                                "x-order": 11,
+                                "description": "Controls the 'conservativeness' of the sampling process. Higher temperature means more diversity."
+                            },
+                            "continuation": {
+                                "type": "boolean",
+                                "title": "Continuation",
+                                "default": false,
+                                "x-order": 4,
+                                "description": "If `True`, generated music will continue from `input_audio`. Otherwise, generated music will mimic `input_audio`'s melody."
+                            },
+                            "model_version": {
                                 "allOf": [
                                     {
-                                        "$ref": "#/components/schemas/aspect_ratio"
+                                        "$ref": "#/components/schemas/model_version"
                                     }
                                 ],
-                                "default": "1:1",
-                                "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
+                                "default": "stereo-melody-large",
+                                "x-order": 0,
+                                "description": "Model to use for generation"
                             },
                             "output_format": {
                                 "allOf": [
@@ -318,44 +338,55 @@
                                         "$ref": "#/components/schemas/output_format"
                                     }
                                 ],
-                                "default": "webp",
-                                "x-order": 6,
-                                "description": "Format of the output images"
+                                "default": "wav",
+                                "x-order": 13,
+                                "description": "Output format for generated audio."
                             },
-                            "output_quality": {
+                            "continuation_end": {
                                 "type": "integer",
-                                "title": "Output Quality",
-                                "default": 90,
-                                "maximum": 100,
+                                "title": "Continuation End",
                                 "minimum": 0,
+                                "x-order": 6,
+                                "description": "End time of the audio file to use for continuation. If -1 or None, will default to the end of the audio clip."
+                            },
+                            "continuation_start": {
+                                "type": "integer",
+                                "title": "Continuation Start",
+                                "default": 0,
+                                "minimum": 0,
+                                "x-order": 5,
+                                "description": "Start time of the audio file to use for continuation."
+                            },
+                            "multi_band_diffusion": {
+                                "type": "boolean",
+                                "title": "Multi Band Diffusion",
+                                "default": false,
                                 "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
+                                "description": "If `True`, the EnCodec tokens will be decoded with MultiBand Diffusion. Only works with non-stereo models."
                             },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
+                            "normalization_strategy": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/normalization_strategy"
+                                    }
+                                ],
+                                "default": "loudness",
+                                "x-order": 8,
+                                "description": "Strategy for normalizing audio."
                             },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                            "classifier_free_guidance": {
+                                "type": "integer",
+                                "title": "Classifier Free Guidance",
+                                "default": 3,
+                                "x-order": 12,
+                                "description": "Increases the influence of inputs on the output. Higher values produce lower-varience outputs that adhere more closely to inputs."
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -380,27 +411,21 @@
                         "title": "WebhookEvent",
                         "description": "An enumeration."
                     },
-                    "aspect_ratio": {
+                    "model_version": {
                         "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
+                            "stereo-melody-large",
+                            "stereo-large",
+                            "melody-large",
+                            "large"
                         ],
                         "type": "string",
-                        "title": "aspect_ratio",
+                        "title": "model_version",
                         "description": "An enumeration."
                     },
                     "output_format": {
                         "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
+                            "wav",
+                            "mp3"
                         ],
                         "type": "string",
                         "title": "output_format",
@@ -543,6 +568,17 @@
                                 "title": "Detail"
                             }
                         }
+                    },
+                    "normalization_strategy": {
+                        "enum": [
+                            "loudness",
+                            "clip",
+                            "peak",
+                            "rms"
+                        ],
+                        "type": "string",
+                        "title": "normalization_strategy",
+                        "description": "An enumeration."
                     }
                 }
             }

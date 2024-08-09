@@ -1,0 +1,361 @@
+{
+    "url": "https://replicate.com/tstramer/material-diffusion",
+    "owner": "tstramer",
+    "name": "material-diffusion",
+    "description": "Stable diffusion fork for generating tileable outputs using v1.5 model",
+    "visibility": "public",
+    "github_url": null,
+    "paper_url": null,
+    "license_url": null,
+    "run_count": 0,
+    "cover_image_url": "https://replicate.delivery/pbxt/XcklpSF1o7Z1I91xQQQHFvJfltWEa3HuQpoeVVTvN7GVJhffA/out-0.png",
+    "default_example": {
+        "id": "itzymcxcyrddxelbfae6jkpb7i",
+        "model": "tstramer/material-diffusion",
+        "version": "a42692c54c0f407f803a0a8a9066160976baedb77c91171a01730f9b0d7beeff",
+        "status": "succeeded",
+        "input": {
+            "width": 512,
+            "height": 512,
+            "prompt": "Mossy Runic Bricks seamless texture, trending on artstation, stone, moss, base color, albedo, 4k",
+            "scheduler": "K-LMS",
+            "num_outputs": 1,
+            "guidance_scale": 7.5,
+            "prompt_strength": 0.8,
+            "num_inference_steps": 50
+        },
+        "output": [
+            "https://replicate.delivery/pbxt/XcklpSF1o7Z1I91xQQQHFvJfltWEa3HuQpoeVVTvN7GVJhffA/out-0.png"
+        ],
+        "logs": "Using seed: 52336\n  0%|          | 0/50 [00:00<?, ?it/s]\n  2%|▏         | 1/50 [00:03<02:57,  3.63s/it]\n  6%|▌         | 3/50 [00:03<00:47,  1.00s/it]\n 10%|█         | 5/50 [00:03<00:23,  1.90it/s]\n 14%|█▍        | 7/50 [00:04<00:14,  2.98it/s]\n 18%|█▊        | 9/50 [00:04<00:09,  4.22it/s]\n 22%|██▏       | 11/50 [00:04<00:07,  5.54it/s]\n 26%|██▌       | 13/50 [00:04<00:05,  6.88it/s]\n 30%|███       | 15/50 [00:04<00:04,  8.07it/s]\n 34%|███▍      | 17/50 [00:04<00:03,  9.02it/s]\n 38%|███▊      | 19/50 [00:05<00:03, 10.04it/s]\n 42%|████▏     | 21/50 [00:05<00:02, 10.78it/s]\n 46%|████▌     | 23/50 [00:05<00:02, 11.48it/s]\n 50%|█████     | 25/50 [00:05<00:02, 12.04it/s]\n 54%|█████▍    | 27/50 [00:05<00:01, 12.43it/s]\n 58%|█████▊    | 29/50 [00:05<00:01, 12.67it/s]\n 62%|██████▏   | 31/50 [00:05<00:01, 12.72it/s]\n 66%|██████▌   | 33/50 [00:06<00:01, 12.94it/s]\n 70%|███████   | 35/50 [00:06<00:01, 13.11it/s]\n 74%|███████▍  | 37/50 [00:06<00:00, 13.23it/s]\n 78%|███████▊  | 39/50 [00:06<00:00, 13.30it/s]\n 82%|████████▏ | 41/50 [00:06<00:00, 13.38it/s]\n 86%|████████▌ | 43/50 [00:06<00:00, 13.29it/s]\n 90%|█████████ | 45/50 [00:06<00:00, 13.07it/s]\n 94%|█████████▍| 47/50 [00:07<00:00, 13.14it/s]\n 98%|█████████▊| 49/50 [00:07<00:00, 13.14it/s]\n100%|██████████| 50/50 [00:07<00:00,  6.79it/s]",
+        "error": null,
+        "metrics": {
+            "predict_time": 9.265848,
+            "total_time": 254.158255
+        },
+        "created_at": "2022-11-13T03:07:03.790192Z",
+        "started_at": "2022-11-13T03:11:08.682599Z",
+        "completed_at": "2022-11-13T03:11:17.948447Z",
+        "urls": {
+            "get": "https://api.replicate.com/v1/predictions/itzymcxcyrddxelbfae6jkpb7i",
+            "cancel": "https://api.replicate.com/v1/predictions/itzymcxcyrddxelbfae6jkpb7i/cancel"
+        }
+    },
+    "latest_version": {
+        "id": "a42692c54c0f407f803a0a8a9066160976baedb77c91171a01730f9b0d7beeff",
+        "created_at": "2022-11-13T03:04:18.885453+00:00",
+        "cog_version": "0.4.4",
+        "openapi_schema": {
+            "info": {
+                "title": "Cog",
+                "version": "0.1.0"
+            },
+            "paths": {
+                "/": {
+                    "get": {
+                        "summary": "Root",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {}
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "root__get"
+                    }
+                },
+                "/predictions": {
+                    "post": {
+                        "summary": "Predict",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/Response"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            },
+                            "422": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/HTTPValidationError"
+                                        }
+                                    }
+                                },
+                                "description": "Validation Error"
+                            }
+                        },
+                        "description": "Run a single prediction on the model",
+                        "operationId": "predict_predictions_post",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/Request"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "openapi": "3.0.2",
+            "components": {
+                "schemas": {
+                    "Input": {
+                        "type": "object",
+                        "title": "Input",
+                        "properties": {
+                            "mask": {
+                                "type": "string",
+                                "title": "Mask",
+                                "format": "uri",
+                                "x-order": 4,
+                                "description": "Black and white image to use as mask for inpainting over init_image. Black pixels are inpainted and white pixels are preserved. Tends to work better with prompt strength of 0.5-0.7. Consider using https://replicate.com/andreasjansson/stable-diffusion-inpainting instead."
+                            },
+                            "seed": {
+                                "type": "integer",
+                                "title": "Seed",
+                                "x-order": 10,
+                                "description": "Random seed. Leave blank to randomize the seed"
+                            },
+                            "width": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/width"
+                                    }
+                                ],
+                                "default": 512,
+                                "x-order": 1,
+                                "description": "Width of output image. Maximum size is 1024x768 or 768x1024 because of memory limits"
+                            },
+                            "height": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/height"
+                                    }
+                                ],
+                                "default": 512,
+                                "x-order": 2,
+                                "description": "Height of output image. Maximum size is 1024x768 or 768x1024 because of memory limits"
+                            },
+                            "prompt": {
+                                "type": "string",
+                                "title": "Prompt",
+                                "default": "",
+                                "x-order": 0,
+                                "description": "Input prompt"
+                            },
+                            "scheduler": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/scheduler"
+                                    }
+                                ],
+                                "default": "K-LMS",
+                                "x-order": 9,
+                                "description": "Choose a scheduler. If you use an init image, PNDM will be used"
+                            },
+                            "init_image": {
+                                "type": "string",
+                                "title": "Init Image",
+                                "format": "uri",
+                                "x-order": 3,
+                                "description": "Inital image to generate variations of. Will be resized to the specified width and height"
+                            },
+                            "num_outputs": {
+                                "type": "integer",
+                                "title": "Num Outputs",
+                                "default": 1,
+                                "maximum": 10,
+                                "minimum": 1,
+                                "x-order": 6,
+                                "description": "Number of images to output. If the NSFW filter is triggered, you may get fewer outputs than this."
+                            },
+                            "guidance_scale": {
+                                "type": "number",
+                                "title": "Guidance Scale",
+                                "default": 7.5,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 8,
+                                "description": "Scale for classifier-free guidance"
+                            },
+                            "prompt_strength": {
+                                "type": "number",
+                                "title": "Prompt Strength",
+                                "default": 0.8,
+                                "x-order": 5,
+                                "description": "Prompt strength when using init image. 1.0 corresponds to full destruction of information in init image"
+                            },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 50,
+                                "maximum": 500,
+                                "minimum": 1,
+                                "x-order": 7,
+                                "description": "Number of denoising steps"
+                            }
+                        }
+                    },
+                    "width": {
+                        "enum": [
+                            128,
+                            256,
+                            384,
+                            448,
+                            512,
+                            576,
+                            640,
+                            704,
+                            768,
+                            832,
+                            896,
+                            960,
+                            1024
+                        ],
+                        "type": "integer",
+                        "title": "width",
+                        "description": "An enumeration."
+                    },
+                    "Output": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
+                    },
+                    "Status": {
+                        "enum": [
+                            "processing",
+                            "succeeded",
+                            "failed"
+                        ],
+                        "type": "string",
+                        "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "height": {
+                        "enum": [
+                            128,
+                            256,
+                            384,
+                            448,
+                            512,
+                            576,
+                            640,
+                            704,
+                            768,
+                            832,
+                            896,
+                            960,
+                            1024
+                        ],
+                        "type": "integer",
+                        "title": "height",
+                        "description": "An enumeration."
+                    },
+                    "Request": {
+                        "type": "object",
+                        "title": "Request",
+                        "properties": {
+                            "input": {
+                                "$ref": "#/components/schemas/Input"
+                            },
+                            "output_file_prefix": {
+                                "type": "string",
+                                "title": "Output File Prefix"
+                            }
+                        },
+                        "description": "The request body for a prediction"
+                    },
+                    "Response": {
+                        "type": "object",
+                        "title": "Response",
+                        "required": [
+                            "status"
+                        ],
+                        "properties": {
+                            "error": {
+                                "type": "string",
+                                "title": "Error"
+                            },
+                            "output": {
+                                "$ref": "#/components/schemas/Output"
+                            },
+                            "status": {
+                                "$ref": "#/components/schemas/Status"
+                            }
+                        },
+                        "description": "The response body for a prediction"
+                    },
+                    "scheduler": {
+                        "enum": [
+                            "DDIM",
+                            "K-LMS",
+                            "PNDM"
+                        ],
+                        "type": "string",
+                        "title": "scheduler",
+                        "description": "An enumeration."
+                    },
+                    "ValidationError": {
+                        "type": "object",
+                        "title": "ValidationError",
+                        "required": [
+                            "loc",
+                            "msg",
+                            "type"
+                        ],
+                        "properties": {
+                            "loc": {
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "title": "Location"
+                            },
+                            "msg": {
+                                "type": "string",
+                                "title": "Message"
+                            },
+                            "type": {
+                                "type": "string",
+                                "title": "Error Type"
+                            }
+                        }
+                    },
+                    "HTTPValidationError": {
+                        "type": "object",
+                        "title": "HTTPValidationError",
+                        "properties": {
+                            "detail": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                },
+                                "title": "Detail"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

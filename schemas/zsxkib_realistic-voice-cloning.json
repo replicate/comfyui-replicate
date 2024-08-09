@@ -1,49 +1,58 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/zsxkib/realistic-voice-cloning",
+    "owner": "zsxkib",
+    "name": "realistic-voice-cloning",
+    "description": "Create song covers with any RVC v2 trained AI voice from audio files.",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/zsxkib/AICoverGen.git",
+    "paper_url": null,
+    "license_url": "https://github.com/SociallyIneptWeeb/AICoverGen/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/7a110507-8a38-4fcb-8826-61aec80309cb/Out_0_1024x1024.png",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "opfbdorbymurmp2ykemgwe23qa",
+        "model": "zsxkib/realistic-voice-cloning",
+        "version": "a0076ea13a704d9fa6d02535bc8951d3b141c84dc95d2d3f2f5016eabfcb8d94",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "protect": 0.33,
+            "rvc_model": "Squidward",
+            "index_rate": 0.5,
+            "song_input": "https://replicate.delivery/pbxt/JsPIizFfRy54Jk5LuXdnrNdV1JHJ6oLmPPdRuIfh3lvpoNai/gangnam.mp3",
+            "reverb_size": 0.15,
+            "pitch_change": "no-change",
+            "rms_mix_rate": 0.25,
+            "filter_radius": 3,
+            "output_format": "mp3",
+            "reverb_damping": 0.7,
+            "reverb_dryness": 0.8,
+            "reverb_wetness": 0.2,
+            "crepe_hop_length": 128,
+            "pitch_change_all": 0,
+            "main_vocals_volume_change": 10,
+            "pitch_detection_algorithm": "rmvpe",
+            "instrumental_volume_change": 0,
+            "backup_vocals_volume_change": 0
         },
-        "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "output": "https://replicate.delivery/pbxt/TqYjsueAmlVePUapV0rf7MCDCDBfAJxhw2aE5euzA6Gw4rCPC/tmp11cudxj_gangnam%20%28Squidward%20Ver%29.mp3",
+        "logs": "[~] Starting AI Cover Generation Pipeline...\n[~] Applying audio effects to Vocals...\n[~] Combining AI Vocals and Instrumentals...\n[~] Removing intermediate audio files...\n[+] Cover generated at /src/song_output/d0386572142/tmp11cudxj_gangnam (Squidward Ver).mp3",
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 2.811273,
+            "total_time": 2.832374
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2023-11-14T16:52:20.000859Z",
+        "started_at": "2023-11-14T16:52:20.021960Z",
+        "completed_at": "2023-11-14T16:52:22.833233Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/opfbdorbymurmp2ykemgwe23qa",
+            "cancel": "https://api.replicate.com/v1/predictions/opfbdorbymurmp2ykemgwe23qa/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "0a9c7c558af4c0f20667c1bd1260ce32a2879944a0b9e44e1398660c077b1550",
+        "created_at": "2023-11-15T16:00:55.551923+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -265,52 +274,77 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "cfg": {
+                            "protect": {
                                 "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
+                                "title": "Protect",
+                                "default": 0.33,
+                                "maximum": 0.5,
                                 "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
+                                "x-order": 9,
+                                "description": "Control how much of the original vocals' breath and voiceless consonants to leave in the AI vocals. Set 0.5 to disable."
                             },
-                            "seed": {
-                                "type": "integer",
-                                "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
-                            },
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
-                            },
-                            "steps": {
-                                "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
-                            },
-                            "prompt": {
-                                "type": "string",
-                                "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
-                            },
-                            "aspect_ratio": {
+                            "rvc_model": {
                                 "allOf": [
                                     {
-                                        "$ref": "#/components/schemas/aspect_ratio"
+                                        "$ref": "#/components/schemas/rvc_model"
                                     }
                                 ],
-                                "default": "1:1",
+                                "default": "Squidward",
                                 "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
+                                "description": "RVC model for a specific voice. If using a custom model, this should match the name of the downloaded model. If a 'custom_rvc_model_download_url' is provided, this will be automatically set to the name of the downloaded model."
+                            },
+                            "index_rate": {
+                                "type": "number",
+                                "title": "Index Rate",
+                                "default": 0.5,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 4,
+                                "description": "Control how much of the AI's accent to leave in the vocals."
+                            },
+                            "song_input": {
+                                "type": "string",
+                                "title": "Song Input",
+                                "format": "uri",
+                                "x-order": 0,
+                                "description": "Upload your audio file here."
+                            },
+                            "reverb_size": {
+                                "type": "number",
+                                "title": "Reverb Size",
+                                "default": 0.15,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 14,
+                                "description": "The larger the room, the longer the reverb time."
+                            },
+                            "pitch_change": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/pitch_change"
+                                    }
+                                ],
+                                "default": "no-change",
+                                "x-order": 3,
+                                "description": "Adjust pitch of AI vocals. Options: `no-change`, `male-to-female`, `female-to-male`."
+                            },
+                            "rms_mix_rate": {
+                                "type": "number",
+                                "title": "Rms Mix Rate",
+                                "default": 0.25,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 6,
+                                "description": "Control how much to use the original vocal's loudness (0) or a fixed loudness (1)."
+                            },
+                            "filter_radius": {
+                                "type": "integer",
+                                "title": "Filter Radius",
+                                "default": 3,
+                                "maximum": 7,
+                                "minimum": 0,
+                                "x-order": 5,
+                                "description": "If >=3: apply median filtering median filtering to the harvested pitch results."
                             },
                             "output_format": {
                                 "allOf": [
@@ -318,44 +352,94 @@
                                         "$ref": "#/components/schemas/output_format"
                                     }
                                 ],
-                                "default": "webp",
-                                "x-order": 6,
-                                "description": "Format of the output images"
+                                "default": "mp3",
+                                "x-order": 18,
+                                "description": "wav for best quality and large file size, mp3 for decent quality and small file size."
                             },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 90,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
-                            },
-                            "prompt_strength": {
+                            "reverb_damping": {
                                 "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
+                                "title": "Reverb Damping",
+                                "default": 0.7,
                                 "maximum": 1,
                                 "minimum": 0,
-                                "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                                "x-order": 17,
+                                "description": "Absorption of high frequencies in the reverb."
+                            },
+                            "reverb_dryness": {
+                                "type": "number",
+                                "title": "Reverb Dryness",
+                                "default": 0.8,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 16,
+                                "description": "Level of AI vocals without reverb."
+                            },
+                            "reverb_wetness": {
+                                "type": "number",
+                                "title": "Reverb Wetness",
+                                "default": 0.2,
+                                "maximum": 1,
+                                "minimum": 0,
+                                "x-order": 15,
+                                "description": "Level of AI vocals with reverb."
+                            },
+                            "crepe_hop_length": {
+                                "type": "integer",
+                                "title": "Crepe Hop Length",
+                                "default": 128,
+                                "x-order": 8,
+                                "description": "When `pitch_detection_algo` is set to `mangio-crepe`, this controls how often it checks for pitch changes in milliseconds. Lower values lead to longer conversions and higher risk of voice cracks, but better pitch accuracy."
+                            },
+                            "pitch_change_all": {
+                                "type": "number",
+                                "title": "Pitch Change All",
+                                "default": 0,
+                                "x-order": 13,
+                                "description": "Change pitch/key of background music, backup vocals and AI vocals in semitones. Reduces sound quality slightly."
+                            },
+                            "main_vocals_volume_change": {
+                                "type": "number",
+                                "title": "Main Vocals Volume Change",
+                                "default": 0,
+                                "x-order": 10,
+                                "description": "Control volume of main AI vocals. Use -3 to decrease the volume by 3 decibels, or 3 to increase the volume by 3 decibels."
+                            },
+                            "pitch_detection_algorithm": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/pitch_detection_algorithm"
+                                    }
+                                ],
+                                "default": "rmvpe",
+                                "x-order": 7,
+                                "description": "Best option is rmvpe (clarity in vocals), then mangio-crepe (smoother vocals)."
+                            },
+                            "instrumental_volume_change": {
+                                "type": "number",
+                                "title": "Instrumental Volume Change",
+                                "default": 0,
+                                "x-order": 12,
+                                "description": "Control volume of the background music/instrumentals."
+                            },
+                            "backup_vocals_volume_change": {
+                                "type": "number",
+                                "title": "Backup Vocals Volume Change",
+                                "default": 0,
+                                "x-order": 11,
+                                "description": "Control volume of backup AI vocals."
+                            },
+                            "custom_rvc_model_download_url": {
+                                "type": "string",
+                                "title": "Custom Rvc Model Download Url",
+                                "x-order": 2,
+                                "description": "URL to download a custom RVC model. If provided, the model will be downloaded (if it doesn't already exist) and used for prediction, regardless of the 'rvc_model' value."
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -369,6 +453,24 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "rvc_model": {
+                        "enum": [
+                            "Squidward",
+                            "MrKrabs",
+                            "Plankton",
+                            "Drake",
+                            "Vader",
+                            "Trump",
+                            "Biden",
+                            "Obama",
+                            "Guitar",
+                            "Voilin",
+                            "CUSTOM"
+                        ],
+                        "type": "string",
+                        "title": "rvc_model",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -380,27 +482,20 @@
                         "title": "WebhookEvent",
                         "description": "An enumeration."
                     },
-                    "aspect_ratio": {
+                    "pitch_change": {
                         "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
+                            "no-change",
+                            "male-to-female",
+                            "female-to-male"
                         ],
                         "type": "string",
-                        "title": "aspect_ratio",
+                        "title": "pitch_change",
                         "description": "An enumeration."
                     },
                     "output_format": {
                         "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
+                            "mp3",
+                            "wav"
                         ],
                         "type": "string",
                         "title": "output_format",
@@ -543,6 +638,15 @@
                                 "title": "Detail"
                             }
                         }
+                    },
+                    "pitch_detection_algorithm": {
+                        "enum": [
+                            "rmvpe",
+                            "mangio-crepe"
+                        ],
+                        "type": "string",
+                        "title": "pitch_detection_algorithm",
+                        "description": "An enumeration."
                     }
                 }
             }

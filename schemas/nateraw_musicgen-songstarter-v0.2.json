@@ -1,49 +1,56 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/nateraw/musicgen-songstarter-v0.2",
+    "owner": "nateraw",
+    "name": "musicgen-songstarter-v0.2",
+    "description": "A large, stereo MusicGen that acts as a useful tool for music producers",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": null,
+    "paper_url": null,
+    "license_url": null,
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/4ee6eda3-5e8e-40b9-9a37-48f8c2ff6076/songstarter-v0.2.jpeg",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "qrn4751khhrgg0cetkdv7fpv2g",
+        "model": "nateraw/musicgen-songstarter-v0.2",
+        "version": "020ac56a613f4494065e2e5544c7377788a8abcfbe645ecb8146634de0bc383e",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "top_k": 250,
+            "top_p": 0,
+            "prompt": "trap, synthesizer, dark, D minor, 155 bpm",
+            "duration": 10,
+            "input_audio": "https://replicate.delivery/pbxt/KjlMvXLwAyqS5zCXOEhU09gscXC1g35oAYPIjNMeRIvhug65/assets_bach.mp3",
+            "temperature": 1,
+            "continuation": false,
+            "output_format": "wav",
+            "continuation_start": 0,
+            "normalization_strategy": "loudness",
+            "classifier_free_guidance": 3
         },
         "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
+            "https://replicate.delivery/pbxt/8g0wPEkUFi4qBRR8uuVUGlE3lS4hAfGsYeszG4QO0ffu8gnKB/2024-04-13_00-28-58_out_000.wav",
+            "https://replicate.delivery/pbxt/y5Z2otTMghb6NRm0wSueiSwTFrlh4IhfidfDv2qaxnex8gnKB/2024-04-13_00-28-58_out_001.wav",
+            "https://replicate.delivery/pbxt/Yhq3OQwsbj7EHJQnYzsj84kHskS0IHVNaJxdcjC9v7BzDeUJA/2024-04-13_00-28-58_out_002.wav",
+            "https://replicate.delivery/pbxt/lvfk9WQUy0RjC6J273RqzUA9I53f1RfcteCua5jAi3Vz8gnKB/2024-04-13_00-28-58_out_003.wav"
         ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "logs": "Using seed 3419052878\nMelody wavform shape! torch.Size([4, 2, 442368])\n1 /    500\n2 /    500\n3 /    500\n4 /    500\n5 /    500\n6 /    500\n7 /    500\n8 /    500\n9 /    500\n10 /    500\n11 /    500\n12 /    500\n13 /    500\n14 /    500\n15 /    500\n16 /    500\n17 /    500\n18 /    500\n19 /    500\n20 /    500\n21 /    500\n22 /    500\n23 /    500\n24 /    500\n25 /    500\n26 /    500\n27 /    500\n28 /    500\n29 /    500\n30 /    500\n31 /    500\n32 /    500\n33 /    500\n34 /    500\n35 /    500\n36 /    500\n37 /    500\n38 /    500\n39 /    500\n40 /    500\n41 /    500\n42 /    500\n43 /    500\n44 /    500\n45 /    500\n46 /    500\n47 /    500\n48 /    500\n49 /    500\n50 /    500\n51 /    500\n52 /    500\n53 /    500\n54 /    500\n55 /    500\n56 /    500\n57 /    500\n58 /    500\n59 /    500\n60 /    500\n61 /    500\n62 /    500\n63 /    500\n64 /    500\n65 /    500\n66 /    500\n67 /    500\n68 /    500\n69 /    500\n70 /    500\n71 /    500\n72 /    500\n73 /    500\n74 /    500\n75 /    500\n76 /    500\n77 /    500\n78 /    500\n79 /    500\n80 /    500\n81 /    500\n82 /    500\n83 /    500\n84 /    500\n85 /    500\n86 /    500\n87 /    500\n88 /    500\n89 /    500\n90 /    500\n91 /    500\n92 /    500\n93 /    500\n94 /    500\n95 /    500\n96 /    500\n97 /    500\n98 /    500\n99 /    500\n100 /    500\n101 /    500\n102 /    500\n103 /    500\n104 /    500\n105 /    500\n106 /    500\n107 /    500\n108 /    500\n109 /    500\n110 /    500\n111 /    500\n112 /    500\n113 /    500\n114 /    500\n115 /    500\n116 /    500\n117 /    500\n118 /    500\n119 /    500\n120 /    500\n121 /    500\n122 /    500\n123 /    500\n124 /    500\n125 /    500\n126 /    500\n127 /    500\n128 /    500\n129 /    500\n130 /    500\n131 /    500\n132 /    500\n133 /    500\n134 /    500\n135 /    500\n136 /    500\n137 /    500\n138 /    500\n139 /    500\n140 /    500\n141 /    500\n142 /    500\n143 /    500\n144 /    500\n145 /    500\n146 /    500\n147 /    500\n148 /    500\n149 /    500\n150 /    500\n151 /    500\n152 /    500\n153 /    500\n154 /    500\n155 /    500\n156 /    500\n157 /    500\n158 /    500\n159 /    500\n160 /    500\n161 /    500\n162 /    500\n163 /    500\n164 /    500\n165 /    500\n166 /    500\n167 /    500\n168 /    500\n169 /    500\n170 /    500\n171 /    500\n172 /    500\n173 /    500\n174 /    500\n175 /    500\n176 /    500\n177 /    500\n178 /    500\n179 /    500\n180 /    500\n181 /    500\n182 /    500\n183 /    500\n184 /    500\n185 /    500\n186 /    500\n187 /    500\n188 /    500\n189 /    500\n190 /    500\n191 /    500\n192 /    500\n193 /    500\n194 /    500\n195 /    500\n196 /    500\n197 /    500\n198 /    500\n199 /    500\n200 /    500\n201 /    500\n202 /    500\n203 /    500\n204 /    500\n205 /    500\n206 /    500\n207 /    500\n208 /    500\n209 /    500\n210 /    500\n211 /    500\n212 /    500\n213 /    500\n214 /    500\n215 /    500\n216 /    500\n217 /    500\n218 /    500\n219 /    500\n220 /    500\n221 /    500\n222 /    500\n223 /    500\n224 /    500\n225 /    500\n226 /    500\n227 /    500\n228 /    500\n229 /    500\n230 /    500\n231 /    500\n232 /    500\n233 /    500\n234 /    500\n235 /    500\n236 /    500\n237 /    500\n238 /    500\n239 /    500\n240 /    500\n241 /    500\n242 /    500\n243 /    500\n244 /    500\n245 /    500\n246 /    500\n247 /    500\n248 /    500\n249 /    500\n250 /    500\n251 /    500\n252 /    500\n253 /    500\n254 /    500\n255 /    500\n256 /    500\n257 /    500\n258 /    500\n259 /    500\n260 /    500\n261 /    500\n262 /    500\n263 /    500\n264 /    500\n265 /    500\n266 /    500\n267 /    500\n268 /    500\n269 /    500\n270 /    500\n271 /    500\n272 /    500\n273 /    500\n274 /    500\n275 /    500\n276 /    500\n277 /    500\n278 /    500\n279 /    500\n280 /    500\n281 /    500\n282 /    500\n283 /    500\n284 /    500\n285 /    500\n286 /    500\n287 /    500\n288 /    500\n289 /    500\n290 /    500\n291 /    500\n292 /    500\n293 /    500\n294 /    500\n295 /    500\n296 /    500\n297 /    500\n298 /    500\n299 /    500\n300 /    500\n301 /    500\n302 /    500\n303 /    500\n304 /    500\n305 /    500\n306 /    500\n307 /    500\n308 /    500\n309 /    500\n310 /    500\n311 /    500\n312 /    500\n313 /    500\n314 /    500\n315 /    500\n316 /    500\n317 /    500\n318 /    500\n319 /    500\n320 /    500\n321 /    500\n322 /    500\n323 /    500\n324 /    500\n325 /    500\n326 /    500\n327 /    500\n328 /    500\n329 /    500\n330 /    500\n331 /    500\n332 /    500\n333 /    500\n334 /    500\n335 /    500\n336 /    500\n337 /    500\n338 /    500\n339 /    500\n340 /    500\n341 /    500\n342 /    500\n343 /    500\n344 /    500\n345 /    500\n346 /    500\n347 /    500\n348 /    500\n349 /    500\n350 /    500\n351 /    500\n352 /    500\n353 /    500\n354 /    500\n355 /    500\n356 /    500\n357 /    500\n358 /    500\n359 /    500\n360 /    500\n361 /    500\n362 /    500\n363 /    500\n364 /    500\n365 /    500\n366 /    500\n367 /    500\n368 /    500\n369 /    500\n370 /    500\n371 /    500\n372 /    500\n373 /    500\n374 /    500\n375 /    500\n376 /    500\n377 /    500\n378 /    500\n379 /    500\n380 /    500\n381 /    500\n382 /    500\n383 /    500\n384 /    500\n385 /    500\n386 /    500\n387 /    500\n388 /    500\n389 /    500\n390 /    500\n391 /    500\n392 /    500\n393 /    500\n394 /    500\n395 /    500\n396 /    500\n397 /    500\n398 /    500\n399 /    500\n400 /    500\n401 /    500\n402 /    500\n403 /    500\n404 /    500\n405 /    500\n406 /    500\n407 /    500\n408 /    500\n409 /    500\n410 /    500\n411 /    500\n412 /    500\n413 /    500\n414 /    500\n415 /    500\n416 /    500\n417 /    500\n418 /    500\n419 /    500\n420 /    500\n421 /    500\n422 /    500\n423 /    500\n424 /    500\n425 /    500\n426 /    500\n427 /    500\n428 /    500\n429 /    500\n430 /    500\n431 /    500\n432 /    500\n433 /    500\n434 /    500\n435 /    500\n436 /    500\n437 /    500\n438 /    500\n439 /    500\n440 /    500\n441 /    500\n442 /    500\n443 /    500\n444 /    500\n445 /    500\n446 /    500\n447 /    500\n448 /    500\n449 /    500\n450 /    500\n451 /    500\n452 /    500\n453 /    500\n454 /    500\n455 /    500\n456 /    500\n457 /    500\n458 /    500\n459 /    500\n460 /    500\n461 /    500\n462 /    500\n463 /    500\n464 /    500\n465 /    500\n466 /    500\n467 /    500\n468 /    500\n469 /    500\n470 /    500\n471 /    500\n472 /    500\n473 /    500\n474 /    500\n475 /    500\n476 /    500\n477 /    500\n478 /    500\n479 /    500\n480 /    500\n481 /    500\n482 /    500\n483 /    500\n484 /    500\n485 /    500\n486 /    500\n487 /    500\n488 /    500\n489 /    500\n490 /    500\n491 /    500\n492 /    500\n493 /    500\n494 /    500\n495 /    500\n496 /    500\n497 /    500\n498 /    500\n499 /    500\n500 /    500\n501 /    500\n502 /    500\n503 /    500",
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 21.56634,
+            "total_time": 21.577753
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2024-04-13T00:28:39.180000Z",
+        "started_at": "2024-04-13T00:28:39.191413Z",
+        "completed_at": "2024-04-13T00:29:00.757753Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/qrn4751khhrgg0cetkdv7fpv2g",
+            "cancel": "https://api.replicate.com/v1/predictions/qrn4751khhrgg0cetkdv7fpv2g/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "020ac56a613f4494065e2e5544c7377788a8abcfbe645ecb8146634de0bc383e",
+        "created_at": "2024-04-12T23:54:57.532959+00:00",
+        "cog_version": "0.9.0-beta10",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -265,52 +272,59 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "cfg": {
-                                "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
-                            },
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
+                                "x-order": 12,
+                                "description": "Seed for random number generator. If None or -1, a random seed will be used."
                             },
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
-                            },
-                            "steps": {
+                            "top_k": {
                                 "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
+                                "title": "Top K",
+                                "default": 250,
+                                "x-order": 7,
+                                "description": "Reduces sampling to the k most likely tokens."
+                            },
+                            "top_p": {
+                                "type": "number",
+                                "title": "Top P",
+                                "default": 0,
+                                "x-order": 8,
+                                "description": "Reduces sampling to tokens with cumulative probability of p. When set to  `0` (default), top_k sampling is used."
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
+                                "x-order": 0,
+                                "description": "A description of the music you want to generate."
                             },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
+                            "duration": {
+                                "type": "integer",
+                                "title": "Duration",
+                                "default": 8,
+                                "x-order": 2,
+                                "description": "Duration of the generated audio in seconds."
+                            },
+                            "input_audio": {
+                                "type": "string",
+                                "title": "Input Audio",
+                                "format": "uri",
                                 "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
+                                "description": "An audio file that will influence the generated music. If `continuation` is `True`, the generated music will be a continuation of the audio file. Otherwise, the generated music will mimic the audio file's melody."
+                            },
+                            "temperature": {
+                                "type": "number",
+                                "title": "Temperature",
+                                "default": 1,
+                                "x-order": 9,
+                                "description": "Controls the 'conservativeness' of the sampling process. Higher temperature means more diversity."
+                            },
+                            "continuation": {
+                                "type": "boolean",
+                                "title": "Continuation",
+                                "default": false,
+                                "x-order": 3,
+                                "description": "If `True`, generated music will continue from `input_audio`. Otherwise, generated music will mimic `input_audio`'s melody."
                             },
                             "output_format": {
                                 "allOf": [
@@ -318,34 +332,41 @@
                                         "$ref": "#/components/schemas/output_format"
                                     }
                                 ],
-                                "default": "webp",
-                                "x-order": 6,
-                                "description": "Format of the output images"
+                                "default": "wav",
+                                "x-order": 11,
+                                "description": "Output format for generated audio."
                             },
-                            "output_quality": {
+                            "continuation_end": {
                                 "type": "integer",
-                                "title": "Output Quality",
-                                "default": 90,
-                                "maximum": 100,
+                                "title": "Continuation End",
                                 "minimum": 0,
-                                "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
+                                "x-order": 5,
+                                "description": "End time of the audio file to use for continuation. If -1 or None, will default to the end of the audio clip."
                             },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
-                            },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
-                                "maximum": 1,
+                            "continuation_start": {
+                                "type": "integer",
+                                "title": "Continuation Start",
+                                "default": 0,
                                 "minimum": 0,
                                 "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                                "description": "Start time of the audio file to use for continuation."
+                            },
+                            "normalization_strategy": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/normalization_strategy"
+                                    }
+                                ],
+                                "default": "loudness",
+                                "x-order": 6,
+                                "description": "Strategy for normalizing audio."
+                            },
+                            "classifier_free_guidance": {
+                                "type": "integer",
+                                "title": "Classifier Free Guidance",
+                                "default": 3,
+                                "x-order": 10,
+                                "description": "Increases the influence of inputs on the output. Higher values produce lower-varience outputs that adhere more closely to inputs."
                             }
                         }
                     },
@@ -380,27 +401,10 @@
                         "title": "WebhookEvent",
                         "description": "An enumeration."
                     },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
                     "output_format": {
                         "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
+                            "wav",
+                            "mp3"
                         ],
                         "type": "string",
                         "title": "output_format",
@@ -543,6 +547,17 @@
                                 "title": "Detail"
                             }
                         }
+                    },
+                    "normalization_strategy": {
+                        "enum": [
+                            "loudness",
+                            "clip",
+                            "peak",
+                            "rms"
+                        ],
+                        "type": "string",
+                        "title": "normalization_strategy",
+                        "description": "An enumeration."
                     }
                 }
             }

@@ -1,49 +1,44 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/lucataco/xtts-v2",
+    "owner": "lucataco",
+    "name": "xtts-v2",
+    "description": "Coqui XTTS-v2: Multilingual Text To Speech Voice Cloning",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/lucataco/cog-xtts-v2",
+    "paper_url": "https://huggingface.co/coqui/XTTS-v2",
+    "license_url": "https://coqui.ai/cpml",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/760b1398-2ab5-4e9b-959e-f3fed025c82f/xtts.png",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "adinmbzbslyshwze5s6qmpzmzu",
+        "model": "lucataco/xtts-v2",
+        "version": "49ff6cfa14bd4e7f80f62e2279f82f23dfc2e7970f825f8db5599f8a6213c009",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "text": "Hi there, I'm your new voice clone. Try your best to upload quality audio",
+            "speaker": "https://replicate.delivery/pbxt/Jt79w0xsT64R1JsiJ0LQRL8UcWspg5J4RFrU6YwEKpOT1ukS/male.wav",
+            "language": "en",
+            "cleanup_voice": false
         },
-        "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "output": "https://replicate.delivery/pbxt/eyESqfNPahnLY0gaohu50zm3nL6d5ZLxKdWMuqSPRqbihfxjA/output.wav",
+        "logs": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers\nbuilt with gcc 11 (Ubuntu 11.2.0-19ubuntu1)\nconfiguration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared\nlibavutil      56. 70.100 / 56. 70.100\nlibavcodec     58.134.100 / 58.134.100\nlibavformat    58. 76.100 / 58. 76.100\nlibavdevice    58. 13.100 / 58. 13.100\nlibavfilter     7.110.100 /  7.110.100\nlibswscale      5.  9.100 /  5.  9.100\nlibswresample   3.  9.100 /  3.  9.100\nlibpostproc    55.  9.100 / 55.  9.100\nGuessed Channel Layout for Input Stream #0.0 : mono\nInput #0, wav, from '/tmp/tmphmw6jd84male.wav':\nMetadata:\nencoder         : Lavf58.29.100\nDuration: 00:00:08.64, bitrate: 705 kb/s\nStream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, mono, s16, 705 kb/s\nStream mapping:\nStream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))\nPress [q] to stop, [?] for help\nOutput #0, wav, to '/tmp/speaker.wav':\nMetadata:\nISFT            : Lavf58.76.100\nStream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, mono, s16, 705 kb/s\nMetadata:\nencoder         : Lavc58.134.100 pcm_s16le\nsize=       4kB time=00:00:00.00 bitrate=N/A speed=N/A\nsize=     744kB time=00:00:08.63 bitrate= 705.9kbits/s speed=1.75e+03x\nvideo:0kB audio:744kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.010236%\n> Text splitted to sentences.\n[\"Hi there, I'm your new voice clone.\", 'Try your best to upload quality audio']\n> Processing time: 3.3411097526550293\n> Real-time factor: 0.613438166517148",
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 4.303438,
+            "total_time": 4.319136
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2023-11-16T16:42:06.735772Z",
+        "started_at": "2023-11-16T16:42:06.751470Z",
+        "completed_at": "2023-11-16T16:42:11.054908Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/adinmbzbslyshwze5s6qmpzmzu",
+            "cancel": "https://api.replicate.com/v1/predictions/adinmbzbslyshwze5s6qmpzmzu/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "684bc3855b37866c0c65add2ff39c78f3dea3f4ff103a436465326e0f438d55e",
+        "created_at": "2023-11-28T15:39:16.308105+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -264,98 +259,47 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "speaker"
+                        ],
                         "properties": {
-                            "cfg": {
-                                "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
-                            },
-                            "seed": {
-                                "type": "integer",
-                                "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
-                            },
-                            "image": {
+                            "text": {
                                 "type": "string",
-                                "title": "Image",
+                                "title": "Text",
+                                "default": "Hi there, I'm your new voice clone. Try your best to upload quality audio",
+                                "x-order": 0,
+                                "description": "Text to synthesize"
+                            },
+                            "speaker": {
+                                "type": "string",
+                                "title": "Speaker",
                                 "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
-                            },
-                            "steps": {
-                                "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
-                            },
-                            "prompt": {
-                                "type": "string",
-                                "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
-                            },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
                                 "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
+                                "description": "Original speaker audio (wav, mp3, m4a, ogg, or flv)"
                             },
-                            "output_format": {
+                            "language": {
                                 "allOf": [
                                     {
-                                        "$ref": "#/components/schemas/output_format"
+                                        "$ref": "#/components/schemas/language"
                                     }
                                 ],
-                                "default": "webp",
-                                "x-order": 6,
-                                "description": "Format of the output images"
+                                "default": "en",
+                                "x-order": 2,
+                                "description": "Output language for the synthesised speech"
                             },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 90,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
-                            },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                            "cleanup_voice": {
+                                "type": "boolean",
+                                "title": "Cleanup Voice",
+                                "default": false,
+                                "x-order": 3,
+                                "description": "Whether to apply denoising to the speaker audio (microphone recordings)"
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -369,6 +313,29 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "language": {
+                        "enum": [
+                            "en",
+                            "es",
+                            "fr",
+                            "de",
+                            "it",
+                            "pt",
+                            "pl",
+                            "tr",
+                            "ru",
+                            "nl",
+                            "cs",
+                            "ar",
+                            "zh",
+                            "hu",
+                            "ko",
+                            "hi"
+                        ],
+                        "type": "string",
+                        "title": "language",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -378,32 +345,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

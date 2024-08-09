@@ -1,49 +1,56 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/lucataco/magnet",
+    "owner": "lucataco",
+    "name": "magnet",
+    "description": "MAGNeT: Masked Audio Generation using a Single Non-Autoregressive Transformer",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/lucataco/audiocraft",
+    "paper_url": "https://arxiv.org/abs/2401.04577",
+    "license_url": "https://github.com/facebookresearch/audiocraft?tab=MIT-1-ov-file#readme",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/b958c60f-aa4a-44ac-b251-34317cd96245/magnet.jpeg",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "6usmrb3bog2on4b52tcnpt74oa",
+        "model": "lucataco/magnet",
+        "version": "e8e2ecd4a1dabb58924aa8300b668290cafae166dd36baf65dad9875877de50e",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "model": "facebook/magnet-small-10secs",
+            "top_p": 0.9,
+            "prompt": "80s electronic track with melodic synthesizers, catchy beat and groovy bass",
+            "max_cfg": 10,
+            "min_cfg": 1,
+            "span_score": "prod-stride1",
+            "variations": 3,
+            "temperature": 3,
+            "decoding_steps_stage_1": 20,
+            "decoding_steps_stage_2": 10,
+            "decoding_steps_stage_3": 10,
+            "decoding_steps_stage_4": 10
         },
         "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
+            "https://replicate.delivery/pbxt/A09884lLfO3qWidseZLbU90KjWL3eteHOcSafheMaucmacXjE/0.wav",
+            "https://replicate.delivery/pbxt/dG0LoAeZINxcf0xueWgwgNHyF2tQv3Lvo7S7HfEew2JbNurRC/1.wav",
+            "https://replicate.delivery/pbxt/K55hoe139wzvBqXV4pkfDMfqbqRMaYVnJ6O8M1efLbteacXjE/2.wav"
         ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "logs": "/root/.pyenv/versions/3.10.13/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.\nwarnings.warn(\"torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.\")\nspiece.model:   0%|          | 0.00/792k [00:00<?, ?B/s]\nspiece.model: 100%|██████████| 792k/792k [00:00<00:00, 31.9MB/s]\ntokenizer.json:   0%|          | 0.00/1.39M [00:00<?, ?B/s]\ntokenizer.json: 100%|██████████| 1.39M/1.39M [00:00<00:00, 24.7MB/s]\nconfig.json:   0%|          | 0.00/1.21k [00:00<?, ?B/s]\nconfig.json: 100%|██████████| 1.21k/1.21k [00:00<00:00, 10.4MB/s]\nmodel.safetensors:   0%|          | 0.00/892M [00:00<?, ?B/s]\nmodel.safetensors:   4%|▎         | 31.5M/892M [00:00<00:05, 171MB/s]\nmodel.safetensors:   7%|▋         | 62.9M/892M [00:00<00:04, 193MB/s]\nmodel.safetensors:  11%|█         | 94.4M/892M [00:00<00:03, 208MB/s]\nmodel.safetensors:  14%|█▍        | 126M/892M [00:00<00:03, 231MB/s] \nmodel.safetensors:  18%|█▊        | 157M/892M [00:00<00:03, 213MB/s]\nmodel.safetensors:  22%|██▏       | 199M/892M [00:00<00:03, 227MB/s]\nmodel.safetensors:  26%|██▌       | 231M/892M [00:01<00:02, 232MB/s]\nmodel.safetensors:  29%|██▉       | 262M/892M [00:01<00:02, 234MB/s]\nmodel.safetensors:  33%|███▎      | 294M/892M [00:01<00:02, 235MB/s]\nmodel.safetensors:  36%|███▋      | 325M/892M [00:01<00:02, 239MB/s]\nmodel.safetensors:  40%|███▉      | 357M/892M [00:01<00:02, 233MB/s]\nmodel.safetensors:  44%|████▎     | 388M/892M [00:01<00:02, 233MB/s]\nmodel.safetensors:  47%|████▋     | 419M/892M [00:01<00:02, 235MB/s]\nmodel.safetensors:  51%|█████     | 451M/892M [00:01<00:01, 236MB/s]\nmodel.safetensors:  54%|█████▍    | 482M/892M [00:02<00:01, 227MB/s]\nmodel.safetensors:  58%|█████▊    | 514M/892M [00:02<00:01, 229MB/s]\nmodel.safetensors:  61%|██████    | 545M/892M [00:02<00:01, 228MB/s]\nmodel.safetensors:  65%|██████▍   | 577M/892M [00:02<00:01, 230MB/s]\nmodel.safetensors:  68%|██████▊   | 608M/892M [00:02<00:01, 238MB/s]\nmodel.safetensors:  72%|███████▏  | 640M/892M [00:02<00:01, 246MB/s]\nmodel.safetensors:  75%|███████▌  | 671M/892M [00:02<00:00, 245MB/s]\nmodel.safetensors:  79%|███████▉  | 703M/892M [00:03<00:00, 244MB/s]\nmodel.safetensors:  82%|████████▏ | 734M/892M [00:03<00:00, 242MB/s]\nmodel.safetensors:  86%|████████▌ | 765M/892M [00:03<00:00, 175MB/s]\nmodel.safetensors:  88%|████████▊ | 786M/892M [00:03<00:00, 155MB/s]\nmodel.safetensors:  92%|█████████▏| 818M/892M [00:03<00:00, 175MB/s]\nmodel.safetensors:  95%|█████████▌| 849M/892M [00:03<00:00, 190MB/s]\nmodel.safetensors:  99%|█████████▉| 881M/892M [00:04<00:00, 200MB/s]\nmodel.safetensors: 100%|██████████| 892M/892M [00:04<00:00, 217MB/s]",
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 14.638626,
+            "total_time": 110.299311
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2024-01-17T19:26:53.835883Z",
+        "started_at": "2024-01-17T19:28:29.496568Z",
+        "completed_at": "2024-01-17T19:28:44.135194Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/6usmrb3bog2on4b52tcnpt74oa",
+            "cancel": "https://api.replicate.com/v1/predictions/6usmrb3bog2on4b52tcnpt74oa/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "e8e2ecd4a1dabb58924aa8300b668290cafae166dd36baf65dad9875877de50e",
+        "created_at": "2024-01-17T19:21:50.415392+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -265,89 +272,113 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "cfg": {
+                            "model": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/model"
+                                    }
+                                ],
+                                "default": "facebook/magnet-small-10secs",
+                                "x-order": 1,
+                                "description": "Model to use"
+                            },
+                            "top_p": {
                                 "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
+                                "title": "Top P",
+                                "default": 0.9,
+                                "maximum": 1,
                                 "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
-                            },
-                            "seed": {
-                                "type": "integer",
-                                "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
-                            },
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
-                            },
-                            "steps": {
-                                "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
                                 "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
+                                "description": "Top p for sampling"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
+                                "default": "80s electronic track with melodic synthesizers, catchy beat and groovy bass",
+                                "x-order": 0,
+                                "description": "Input Text"
                             },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
-                                "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
-                            },
-                            "output_format": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/output_format"
-                                    }
-                                ],
-                                "default": "webp",
-                                "x-order": 6,
-                                "description": "Format of the output images"
-                            },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 90,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
-                            },
-                            "prompt_strength": {
+                            "max_cfg": {
                                 "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
-                                "maximum": 1,
-                                "minimum": 0,
+                                "title": "Max Cfg",
+                                "default": 10,
+                                "x-order": 6,
+                                "description": "Max CFG coefficient"
+                            },
+                            "min_cfg": {
+                                "type": "number",
+                                "title": "Min Cfg",
+                                "default": 1,
+                                "x-order": 7,
+                                "description": "Min CFG coefficient"
+                            },
+                            "span_score": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/span_score"
+                                    }
+                                ],
+                                "default": "prod-stride1",
+                                "x-order": 3
+                            },
+                            "variations": {
+                                "type": "integer",
+                                "title": "Variations",
+                                "default": 3,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 2,
+                                "description": "Number of variations to generate"
+                            },
+                            "temperature": {
+                                "type": "number",
+                                "title": "Temperature",
+                                "default": 3,
                                 "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                                "description": "Temperature for sampling"
+                            },
+                            "decoding_steps_stage_1": {
+                                "type": "integer",
+                                "title": "Decoding Steps Stage 1",
+                                "default": 20,
+                                "x-order": 8,
+                                "description": "Number of decoding steps for stage 1"
+                            },
+                            "decoding_steps_stage_2": {
+                                "type": "integer",
+                                "title": "Decoding Steps Stage 2",
+                                "default": 10,
+                                "x-order": 9,
+                                "description": "Number of decoding steps for stage 2"
+                            },
+                            "decoding_steps_stage_3": {
+                                "type": "integer",
+                                "title": "Decoding Steps Stage 3",
+                                "default": 10,
+                                "x-order": 10,
+                                "description": "Number of decoding steps for stage 3"
+                            },
+                            "decoding_steps_stage_4": {
+                                "type": "integer",
+                                "title": "Decoding Steps Stage 4",
+                                "default": 10,
+                                "x-order": 11,
+                                "description": "Number of decoding steps for stage 4"
                             }
                         }
+                    },
+                    "model": {
+                        "enum": [
+                            "facebook/magnet-small-10secs",
+                            "facebook/magnet-medium-10secs",
+                            "facebook/magnet-small-30secs",
+                            "facebook/magnet-medium-30secs",
+                            "facebook/audio-magnet-small",
+                            "facebook/audio-magnet-medium"
+                        ],
+                        "type": "string",
+                        "title": "model",
+                        "description": "An enumeration."
                     },
                     "Output": {
                         "type": "array",
@@ -369,6 +400,15 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "span_score": {
+                        "enum": [
+                            "max-nonoverlap",
+                            "prod-stride1"
+                        ],
+                        "type": "string",
+                        "title": "span_score",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -378,32 +418,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

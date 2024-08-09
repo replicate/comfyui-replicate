@@ -1,49 +1,44 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/declare-lab/tango",
+    "owner": "declare-lab",
+    "name": "tango",
+    "description": "Tango 2: Use text prompts to make sound effects",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/declare-lab/tango",
+    "paper_url": "https://arxiv.org/pdf/2304.13731.pdf",
+    "license_url": "https://github.com/declare-lab/tango/blob/master/LICENSE.md",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/3e074eeb-6f95-4c4c-b7d8-38f5b9c3a2fd/tango2.png",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "4gahgg8fa1rgm0cf6sg80rcgn4",
+        "model": "declare-lab/tango",
+        "version": "740e4f5e59bd3b871c9e5b4efbff7ded516d40aa6abf4e95fd5e8dd149b7bc3f",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "model": "tango2",
+            "steps": 100,
+            "prompt": "Quiet speech and then and airplane flying away",
+            "guidance": 3
         },
-        "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "output": "https://replicate.delivery/pbxt/RqTLAYe5ZM0DEaHQlDwvA9PGLud8TeEwrGkG3fAWY5e62eAWC/output.wav",
+        "logs": null,
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 12.386586,
+            "total_time": 184.047861
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2024-05-01T22:56:56.144000Z",
+        "started_at": "2024-05-01T22:59:47.805275Z",
+        "completed_at": "2024-05-01T23:00:00.191861Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/4gahgg8fa1rgm0cf6sg80rcgn4",
+            "cancel": "https://api.replicate.com/v1/predictions/4gahgg8fa1rgm0cf6sg80rcgn4/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "740e4f5e59bd3b871c9e5b4efbff7ded516d40aa6abf4e95fd5e8dd149b7bc3f",
+        "created_at": "2024-05-01T22:29:30.165543+00:00",
+        "cog_version": "v0.9.6+dev",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -265,97 +260,52 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "cfg": {
-                                "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
-                            },
-                            "seed": {
-                                "type": "integer",
-                                "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
-                            },
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
+                            "model": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/model"
+                                    }
+                                ],
+                                "default": "tango2",
+                                "x-order": 1,
+                                "description": "choose a model"
                             },
                             "steps": {
                                 "type": "integer",
                                 "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
+                                "default": 100,
+                                "x-order": 2,
+                                "description": "inference steps"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
+                                "default": "Quiet speech and then and airplane flying away",
+                                "x-order": 0,
+                                "description": "Input prompt"
                             },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
-                                "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
-                            },
-                            "output_format": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/output_format"
-                                    }
-                                ],
-                                "default": "webp",
-                                "x-order": 6,
-                                "description": "Format of the output images"
-                            },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 90,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
-                            },
-                            "prompt_strength": {
+                            "guidance": {
                                 "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                                "title": "Guidance",
+                                "default": 3,
+                                "x-order": 3,
+                                "description": "guidance scale"
                             }
                         }
                     },
+                    "model": {
+                        "enum": [
+                            "tango2",
+                            "tango2-full"
+                        ],
+                        "type": "string",
+                        "title": "model",
+                        "description": "An enumeration."
+                    },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -378,32 +328,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

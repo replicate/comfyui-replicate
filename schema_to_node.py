@@ -1,17 +1,41 @@
 DEFAULT_STEP = 0.01
 DEFAULT_ROUND = 0.001
 
+IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".gif", ".webp")
+VIDEO_EXTENSIONS = (".mp4", ".mkv", ".webm", ".mov", ".mpg", ".mpeg")
+AUDIO_EXTENSIONS = (".mp3", ".wav", ".flac", ".mpga", ".m4a")
 
-def convert_to_comfyui_input_type(openapi_type, openapi_format=None):
-    type_mapping = {
-        "string": "STRING",
-        "integer": "INT",
-        "number": "FLOAT",
-        "boolean": "BOOLEAN",
-    }
+TYPE_MAPPING = {
+    "string": "STRING",
+    "integer": "INT",
+    "number": "FLOAT",
+    "boolean": "BOOLEAN",
+}
+
+
+def convert_to_comfyui_input_type(
+    input_name, openapi_type, openapi_format=None, default_example_input=None
+):
     if openapi_type == "string" and openapi_format == "uri":
-        return "IMAGE"
-    return type_mapping.get(openapi_type, "STRING")
+        if (
+            default_example_input
+            and isinstance(default_example_input, dict)
+            and input_name in default_example_input
+        ):
+            if is_type(default_example_input[input_name], IMAGE_EXTENSIONS):
+                return "IMAGE"
+            elif is_type(default_example_input[input_name], VIDEO_EXTENSIONS):
+                return "VIDEO"
+            elif is_type(default_example_input[input_name], AUDIO_EXTENSIONS):
+                return "AUDIO"
+        elif "image" in input_name.lower():
+            return "IMAGE"
+        elif "audio" in input_name.lower():
+            return "AUDIO"
+        else:
+            return "STRING"
+
+    return TYPE_MAPPING.get(openapi_type, "STRING")
 
 
 def name_and_version(schema):
@@ -23,11 +47,13 @@ def name_and_version(schema):
     return replicate_model, node_name
 
 
-def resolve_schema(prop_data, openapi_schemas):
+def resolve_schema(prop_data, openapi_schema):
     if "$ref" in prop_data:
         ref_path = prop_data["$ref"].split("/")
-        current = openapi_schemas
+        current = openapi_schema
         for path in ref_path[1:]:  # Skip the first '#' element
+            if path not in current:
+                return prop_data  # Return original if path is invalid
             current = current[path]
         return current
     return prop_data
@@ -37,6 +63,7 @@ def schema_to_comfyui_input_types(schema):
     openapi_schema = schema["latest_version"]["openapi_schema"]
     input_schema = openapi_schema["components"]["schemas"]["Input"]
     input_types = {"required": {}, "optional": {}}
+    default_example_input = get_default_example_input(schema)
 
     required_props = input_schema.get("required", [])
 
@@ -51,7 +78,10 @@ def schema_to_comfyui_input_types(schema):
             input_type = prop_data["enum"]
         elif "type" in prop_data:
             input_type = convert_to_comfyui_input_type(
-                prop_data["type"], prop_data.get("format")
+                prop_name,
+                prop_data["type"],
+                prop_data.get("format"),
+                default_example_input,
             )
         else:
             input_type = "STRING"
@@ -134,22 +164,65 @@ def is_type(default_example_output, extensions):
     return False
 
 
-def get_return_type(schema):
-    image_extensions = (".png", ".jpg", ".jpeg", ".gif", ".webp")
-    video_extensions = (".mp4", ".mkv", ".webm", ".mov", ".mpg", ".mpeg")
-    audio_extensions = (".mp3", ".wav")
-
-    openapi_schema = schema["latest_version"]["openapi_schema"]
-    output_schema = openapi_schema["components"]["schemas"].get("Output")
+def get_default_example(schema):
     default_example = schema.get("default_example")
-    default_example_output = default_example.get("output") if default_example else None
+    return default_example if default_example else None
 
-    if is_type(default_example_output, image_extensions):
+
+def get_default_example_input(schema):
+    default_example = get_default_example(schema)
+    return default_example.get("input") if default_example else None
+
+
+def get_default_example_output(schema):
+    default_example = get_default_example(schema)
+    return default_example.get("output") if default_example else None
+
+
+def get_return_type(schema):
+    openapi_schema = schema["latest_version"]["openapi_schema"]
+    output_schema = (
+        openapi_schema.get("components", {}).get("schemas", {}).get("Output")
+    )
+    default_example_output = get_default_example_output(schema)
+
+    if output_schema and "$ref" in output_schema:
+        output_schema = resolve_schema(output_schema, openapi_schema)
+
+    if isinstance(output_schema, dict) and output_schema.get("properties"):
+        return_types = {}
+        for prop_name, prop_data in output_schema["properties"].items():
+            if isinstance(default_example_output, dict):
+                prop_value = default_example_output.get(prop_name)
+
+                if is_type(prop_value, IMAGE_EXTENSIONS):
+                    return_types[prop_name] = "IMAGE"
+                elif is_type(prop_value, AUDIO_EXTENSIONS):
+                    return_types[prop_name] = "AUDIO"
+                elif is_type(prop_value, VIDEO_EXTENSIONS):
+                    return_types[prop_name] = "VIDEO_URI"
+                else:
+                    return_types[prop_name] = "STRING"
+            elif prop_data.get("format") == "uri":
+                if "audio" in prop_name.lower():
+                    return_types[prop_name] = "AUDIO"
+                elif "image" in prop_name.lower():
+                    return_types[prop_name] = "IMAGE"
+                else:
+                    return_types[prop_name] = "STRING"
+            elif prop_data.get("type") == "string":
+                return_types[prop_name] = "STRING"
+            else:
+                return_types[prop_name] = "STRING"
+
+        return return_types
+
+    if is_type(default_example_output, IMAGE_EXTENSIONS):
         return "IMAGE"
-    elif is_type(default_example_output, video_extensions):
+    elif is_type(default_example_output, VIDEO_EXTENSIONS):
         return "VIDEO_URI"
-    elif is_type(default_example_output, audio_extensions):
-        return "AUDIO_URI"
+    elif is_type(default_example_output, AUDIO_EXTENSIONS):
+        return "AUDIO"
 
     if output_schema:
         if (
@@ -160,8 +233,8 @@ def get_return_type(schema):
             return "IMAGE"
         elif (
             output_schema.get("type") == "array"
-            and output_schema["items"].get("type") == "string"
-            and output_schema["items"].get("format") == "uri"
+            and output_schema.get("items", {}).get("type") == "string"
+            and output_schema.get("items", {}).get("format") == "uri"
         ):
             # Handle multiple image output
             return "IMAGE"

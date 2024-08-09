@@ -1,49 +1,46 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/black-forest-labs/flux-dev",
+    "owner": "black-forest-labs",
+    "name": "flux-dev",
+    "description": "A 12 billion parameter rectified flow transformer capable of generating images from text descriptions",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/black-forest-labs/flux",
+    "paper_url": null,
+    "license_url": "https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-dev",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/4c0ff159-ab97-4962-acdf-a0f422694a81/Replicate_Prediction_15.webp",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "b94wgvxmz9rm40ch1rqtkjja6c",
+        "model": "replicate/flux-dev-internal-model",
+        "version": "21bd4fdfaff8c94de425081803719d30f2d0e6c9c2249f8995eaa428aea0a7f4",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
+            "prompt": "black forest gateau cake spelling out the words \"FLUX DEV\", tasty, food photography, dynamic shot",
+            "guidance": 3.5,
+            "aspect_ratio": "1:1",
             "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "output_quality": 80
         },
-        "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "output": "https://replicate.delivery/yhqm/QWK1NynxhJqlN9EsMfIrufeLYl88RlBGwVCWdio1d1TDbocmA/out-0.webp",
+        "logs": null,
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
             "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 12.326882126,
+            "total_time": 12.363237
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2024-08-01T13:44:53.242000Z",
+        "started_at": "2024-08-01T13:44:53.278355Z",
+        "completed_at": "2024-08-01T13:45:05.605237Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/b94wgvxmz9rm40ch1rqtkjja6c",
+            "cancel": "https://api.replicate.com/v1/predictions/b94wgvxmz9rm40ch1rqtkjja6c/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "2d27e06ff0ee2494eb3ae8e3da0be637763f59bf6a488b32b2f89cd928c3faba",
+        "created_at": "2024-07-29T23:42:53.742826+00:00",
+        "cog_version": "0.10.0-alpha16",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -66,6 +63,24 @@
                             }
                         },
                         "operationId": "root__get"
+                    }
+                },
+                "/ready": {
+                    "get": {
+                        "summary": "Ready",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Ready Ready Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "ready_ready_get"
                     }
                 },
                 "/shutdown": {
@@ -264,43 +279,46 @@
                     "Input": {
                         "type": "object",
                         "title": "Input",
+                        "required": [
+                            "prompt"
+                        ],
                         "properties": {
-                            "cfg": {
-                                "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
-                            },
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
+                                "x-order": 6,
+                                "description": "Random seed. Set for reproducible generation"
                             },
                             "image": {
                                 "type": "string",
                                 "title": "Image",
                                 "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
-                            },
-                            "steps": {
-                                "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
+                                "x-order": 2,
+                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image"
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
+                                "x-order": 0,
+                                "description": "Prompt for generated image"
+                            },
+                            "guidance": {
+                                "type": "number",
+                                "title": "Guidance",
+                                "default": 3.5,
+                                "maximum": 10,
+                                "minimum": 0,
+                                "x-order": 5,
+                                "description": "Guidance for generated image. Ignored for flux-schnell"
+                            },
+                            "num_outputs": {
+                                "type": "integer",
+                                "title": "Num Outputs",
+                                "default": 1,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 4,
+                                "description": "Number of outputs to generate"
                             },
                             "aspect_ratio": {
                                 "allOf": [
@@ -310,7 +328,7 @@
                                 ],
                                 "default": "1:1",
                                 "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
+                                "description": "Aspect ratio for the generated image"
                             },
                             "output_format": {
                                 "allOf": [
@@ -319,43 +337,40 @@
                                     }
                                 ],
                                 "default": "webp",
-                                "x-order": 6,
+                                "x-order": 7,
                                 "description": "Format of the output images"
                             },
                             "output_quality": {
                                 "type": "integer",
                                 "title": "Output Quality",
-                                "default": 90,
+                                "default": 80,
                                 "maximum": 100,
                                 "minimum": 0,
-                                "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
+                                "x-order": 8,
+                                "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
                             },
                             "prompt_strength": {
                                 "type": "number",
                                 "title": "Prompt Strength",
-                                "default": 0.85,
+                                "default": 0.8,
                                 "maximum": 1,
                                 "minimum": 0,
-                                "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                                "x-order": 3,
+                                "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
+                            },
+                            "disable_safety_checker": {
+                                "type": "boolean",
+                                "title": "Disable Safety Checker",
+                                "default": false,
+                                "x-order": 9,
+                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "title": "Output"
+                        "type": "string",
+                        "title": "Output",
+                        "format": "uri"
                     },
                     "Status": {
                         "enum": [
@@ -385,8 +400,8 @@
                             "1:1",
                             "16:9",
                             "21:9",
-                            "3:2",
                             "2:3",
+                            "3:2",
                             "4:5",
                             "5:4",
                             "9:16",

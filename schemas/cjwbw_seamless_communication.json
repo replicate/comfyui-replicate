@@ -1,49 +1,49 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/cjwbw/seamless_communication",
+    "owner": "cjwbw",
+    "name": "seamless_communication",
+    "description": "SeamlessM4T—Massively Multilingual & Multimodal Machine Translation",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/chenxwh/seamless_communication",
+    "paper_url": "https://dl.fbaipublicfiles.com/seamless/seamless_m4t_paper.pdf",
+    "license_url": "https://github.com/chenxwh/seamless_communication/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": null,
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "habhkrlbto7c6tm7apuk5amq6u",
+        "model": "cjwbw/seamless_communication",
+        "version": "668a4fec05a887143e5fe8d45df25ec4c794dd43169b9a11562309b2d45873b0",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "task_name": "S2ST (Speech to Speech translation)",
+            "input_audio": "https://replicate.delivery/pbxt/JWSAJpKxUszI0scNYatExIXZX2rJ78UBilGXCTq4Ct9BDwTA/sample_input_2.mp3",
+            "input_text_language": "None",
+            "max_input_audio_length": 60,
+            "target_language_text_only": "Norwegian Nynorsk",
+            "target_language_with_speech": "French"
         },
-        "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "output": {
+            "text_output": "Le modèle M4T sans faille de MetaAI démocratise la communication parlée à travers les barrières linguistiques.",
+            "audio_output": "https://pbxt.replicate.delivery/HSuWXcQA0PbWIBQ3renLWSxbFBKcsCQojUtAQK6eys5038jRA/out.wav"
+        },
+        "logs": null,
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 5.103559,
+            "total_time": 84.660864
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2023-09-13T20:29:20.589970Z",
+        "started_at": "2023-09-13T20:30:40.147275Z",
+        "completed_at": "2023-09-13T20:30:45.250834Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/habhkrlbto7c6tm7apuk5amq6u",
+            "cancel": "https://api.replicate.com/v1/predictions/habhkrlbto7c6tm7apuk5amq6u/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "668a4fec05a887143e5fe8d45df25ec4c794dd43169b9a11562309b2d45873b0",
+        "created_at": "2023-09-13T20:28:44.472205+00:00",
+        "cog_version": "0.8.3",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -265,96 +265,70 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "cfg": {
-                                "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
-                                "minimum": 0,
+                            "task_name": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/task_name"
+                                    }
+                                ],
+                                "default": "S2ST (Speech to Speech translation)",
+                                "x-order": 0,
+                                "description": "Choose a task"
+                            },
+                            "input_text": {
+                                "type": "string",
+                                "title": "Input Text",
                                 "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
+                                "description": "Provide input for tasks with text: T2ST and T2TT."
                             },
-                            "seed": {
-                                "type": "integer",
-                                "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
-                            },
-                            "image": {
+                            "input_audio": {
                                 "type": "string",
-                                "title": "Image",
+                                "title": "Input Audio",
                                 "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
-                            },
-                            "steps": {
-                                "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
-                            },
-                            "prompt": {
-                                "type": "string",
-                                "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
-                            },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
                                 "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
+                                "description": "Provide input file for tasks with speech input: S2ST, S2TT and ASR."
                             },
-                            "output_format": {
+                            "input_text_language": {
                                 "allOf": [
                                     {
-                                        "$ref": "#/components/schemas/output_format"
+                                        "$ref": "#/components/schemas/input_text_language"
                                     }
                                 ],
-                                "default": "webp",
-                                "x-order": 6,
-                                "description": "Format of the output images"
+                                "default": "None",
+                                "x-order": 3,
+                                "description": "Specify language of the input_text for T2ST and T2TT"
                             },
-                            "output_quality": {
-                                "type": "integer",
-                                "title": "Output Quality",
-                                "default": 90,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
-                            },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
-                            },
-                            "prompt_strength": {
+                            "max_input_audio_length": {
                                 "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
-                                "maximum": 1,
-                                "minimum": 0,
+                                "title": "Max Input Audio Length",
+                                "default": 60,
+                                "x-order": 6,
+                                "description": "Set maximum input audio length."
+                            },
+                            "target_language_text_only": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/target_language_text_only"
+                                    }
+                                ],
+                                "default": "Norwegian Nynorsk",
+                                "x-order": 5,
+                                "description": "Set target language for tasks with text output only: S2TT, T2TT and ASR."
+                            },
+                            "target_language_with_speech": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/target_language_with_speech"
+                                    }
+                                ],
+                                "default": "French",
                                 "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                                "description": "Set target language for tasks with speech output: S2ST or T2ST. Less languages are available for speech compared to text output."
                             }
                         }
                     },
                     "Output": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
+                        "$ref": "#/components/schemas/ModelOutput",
                         "title": "Output"
                     },
                     "Status": {
@@ -369,6 +343,36 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "task_name": {
+                        "enum": [
+                            "S2ST (Speech to Speech translation)",
+                            "S2TT (Speech to Text translation)",
+                            "T2ST (Text to Speech translation)",
+                            "T2TT (Text to Text translation)",
+                            "ASR (Automatic Speech Recognition)"
+                        ],
+                        "type": "string",
+                        "title": "task_name",
+                        "description": "An enumeration."
+                    },
+                    "ModelOutput": {
+                        "type": "object",
+                        "title": "ModelOutput",
+                        "required": [
+                            "text_output"
+                        ],
+                        "properties": {
+                            "text_output": {
+                                "type": "string",
+                                "title": "Text Output"
+                            },
+                            "audio_output": {
+                                "type": "string",
+                                "title": "Audio Output",
+                                "format": "uri"
+                            }
+                        }
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -378,32 +382,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {
@@ -472,11 +450,12 @@
                                     "$ref": "#/components/schemas/WebhookEvent"
                                 },
                                 "default": [
+                                    "completed",
                                     "start",
-                                    "output",
                                     "logs",
-                                    "completed"
-                                ]
+                                    "output"
+                                ],
+                                "uniqueItems": true
                             }
                         }
                     },
@@ -543,6 +522,254 @@
                                 "title": "Detail"
                             }
                         }
+                    },
+                    "input_text_language": {
+                        "enum": [
+                            "None",
+                            "Afrikaans",
+                            "Amharic",
+                            "Armenian",
+                            "Assamese",
+                            "Basque",
+                            "Belarusian",
+                            "Bengali",
+                            "Bosnian",
+                            "Bulgarian",
+                            "Burmese",
+                            "Cantonese",
+                            "Catalan",
+                            "Cebuano",
+                            "Central Kurdish",
+                            "Croatian",
+                            "Czech",
+                            "Danish",
+                            "Dutch",
+                            "Egyptian Arabic",
+                            "English",
+                            "Estonian",
+                            "Finnish",
+                            "French",
+                            "Galician",
+                            "Ganda",
+                            "Georgian",
+                            "German",
+                            "Greek",
+                            "Gujarati",
+                            "Halh Mongolian",
+                            "Hebrew",
+                            "Hindi",
+                            "Hungarian",
+                            "Icelandic",
+                            "Igbo",
+                            "Indonesian",
+                            "Irish",
+                            "Italian",
+                            "Japanese",
+                            "Javanese",
+                            "Kannada",
+                            "Kazakh",
+                            "Khmer",
+                            "Korean",
+                            "Kyrgyz",
+                            "Lao",
+                            "Lithuanian",
+                            "Luo",
+                            "Macedonian",
+                            "Maithili",
+                            "Malayalam",
+                            "Maltese",
+                            "Mandarin Chinese",
+                            "Marathi",
+                            "Meitei",
+                            "Modern Standard Arabic",
+                            "Moroccan Arabic",
+                            "Nepali",
+                            "North Azerbaijani",
+                            "Northern Uzbek",
+                            "Norwegian Bokmål",
+                            "Norwegian Nynorsk",
+                            "Nyanja",
+                            "Odia",
+                            "Polish",
+                            "Portuguese",
+                            "Punjabi",
+                            "Romanian",
+                            "Russian",
+                            "Serbian",
+                            "Shona",
+                            "Sindhi",
+                            "Slovak",
+                            "Slovenian",
+                            "Somali",
+                            "Southern Pashto",
+                            "Spanish",
+                            "Standard Latvian",
+                            "Standard Malay",
+                            "Swahili",
+                            "Swedish",
+                            "Tagalog",
+                            "Tajik",
+                            "Tamil",
+                            "Telugu",
+                            "Thai",
+                            "Turkish",
+                            "Ukrainian",
+                            "Urdu",
+                            "Vietnamese",
+                            "Welsh",
+                            "West Central Oromo",
+                            "Western Persian",
+                            "Yoruba",
+                            "Zulu"
+                        ],
+                        "type": "string",
+                        "title": "input_text_language",
+                        "description": "An enumeration."
+                    },
+                    "target_language_text_only": {
+                        "enum": [
+                            "Afrikaans",
+                            "Amharic",
+                            "Armenian",
+                            "Assamese",
+                            "Basque",
+                            "Belarusian",
+                            "Bengali",
+                            "Bosnian",
+                            "Bulgarian",
+                            "Burmese",
+                            "Cantonese",
+                            "Catalan",
+                            "Cebuano",
+                            "Central Kurdish",
+                            "Croatian",
+                            "Czech",
+                            "Danish",
+                            "Dutch",
+                            "Egyptian Arabic",
+                            "English",
+                            "Estonian",
+                            "Finnish",
+                            "French",
+                            "Galician",
+                            "Ganda",
+                            "Georgian",
+                            "German",
+                            "Greek",
+                            "Gujarati",
+                            "Halh Mongolian",
+                            "Hebrew",
+                            "Hindi",
+                            "Hungarian",
+                            "Icelandic",
+                            "Igbo",
+                            "Indonesian",
+                            "Irish",
+                            "Italian",
+                            "Japanese",
+                            "Javanese",
+                            "Kannada",
+                            "Kazakh",
+                            "Khmer",
+                            "Korean",
+                            "Kyrgyz",
+                            "Lao",
+                            "Lithuanian",
+                            "Luo",
+                            "Macedonian",
+                            "Maithili",
+                            "Malayalam",
+                            "Maltese",
+                            "Mandarin Chinese",
+                            "Marathi",
+                            "Meitei",
+                            "Modern Standard Arabic",
+                            "Moroccan Arabic",
+                            "Nepali",
+                            "North Azerbaijani",
+                            "Northern Uzbek",
+                            "Norwegian Bokmål",
+                            "Norwegian Nynorsk",
+                            "Nyanja",
+                            "Odia",
+                            "Polish",
+                            "Portuguese",
+                            "Punjabi",
+                            "Romanian",
+                            "Russian",
+                            "Serbian",
+                            "Shona",
+                            "Sindhi",
+                            "Slovak",
+                            "Slovenian",
+                            "Somali",
+                            "Southern Pashto",
+                            "Spanish",
+                            "Standard Latvian",
+                            "Standard Malay",
+                            "Swahili",
+                            "Swedish",
+                            "Tagalog",
+                            "Tajik",
+                            "Tamil",
+                            "Telugu",
+                            "Thai",
+                            "Turkish",
+                            "Ukrainian",
+                            "Urdu",
+                            "Vietnamese",
+                            "Welsh",
+                            "West Central Oromo",
+                            "Western Persian",
+                            "Yoruba",
+                            "Zulu"
+                        ],
+                        "type": "string",
+                        "title": "target_language_text_only",
+                        "description": "An enumeration."
+                    },
+                    "target_language_with_speech": {
+                        "enum": [
+                            "Bengali",
+                            "Catalan",
+                            "Czech",
+                            "Danish",
+                            "Dutch",
+                            "English",
+                            "Estonian",
+                            "Finnish",
+                            "French",
+                            "German",
+                            "Hindi",
+                            "Indonesian",
+                            "Italian",
+                            "Japanese",
+                            "Korean",
+                            "Maltese",
+                            "Mandarin Chinese",
+                            "Modern Standard Arabic",
+                            "Northern Uzbek",
+                            "Polish",
+                            "Portuguese",
+                            "Romanian",
+                            "Russian",
+                            "Slovak",
+                            "Spanish",
+                            "Swahili",
+                            "Swedish",
+                            "Tagalog",
+                            "Telugu",
+                            "Thai",
+                            "Turkish",
+                            "Ukrainian",
+                            "Urdu",
+                            "Vietnamese",
+                            "Welsh",
+                            "Western Persian"
+                        ],
+                        "type": "string",
+                        "title": "target_language_with_speech",
+                        "description": "An enumeration."
                     }
                 }
             }

@@ -1,49 +1,46 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/ai-forever/kandinsky-2",
+    "owner": "ai-forever",
+    "name": "kandinsky-2",
+    "description": "text2img model trained on LAION HighRes and fine-tuned on internal datasets",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/chenxwh/Kandinsky-2",
+    "paper_url": null,
+    "license_url": "https://github.com/ai-forever/Kandinsky-2/blob/main/license",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://replicate.delivery/pbxt/NsOpfQRos43e40IzSq4SY7NTtxGodmSWo1m74K17SVpoUzuQA/out.png",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "wixq75uo65glnjcdgrqtngdz4q",
+        "model": "ai-forever/kandinsky-2",
+        "version": "9c0bf7d5cf2ed934c5921faf61882657c03c4def9d9cb88330c15bd795edb098",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "prompt": "red cat, 4k photo",
+            "scheduler": "p_sampler",
+            "prior_steps": "5",
+            "guidance_scale": 4,
+            "prior_cf_scale": 4,
+            "num_inference_steps": 100
         },
-        "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
-        ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "output": "https://replicate.delivery/pbxt/NsOpfQRos43e40IzSq4SY7NTtxGodmSWo1m74K17SVpoUzuQA/out.png",
+        "logs": "0%|          | 0/100 [00:00<?, ?it/s]\n  1%|          | 1/100 [00:00<01:21,  1.21it/s]\n  2%|▏         | 2/100 [00:01<01:08,  1.42it/s]\n  3%|▎         | 3/100 [00:02<01:04,  1.51it/s]\n  4%|▍         | 4/100 [00:02<01:02,  1.54it/s]\n  5%|▌         | 5/100 [00:03<01:00,  1.56it/s]\n  6%|▌         | 6/100 [00:03<01:00,  1.57it/s]\n  7%|▋         | 7/100 [00:04<00:59,  1.57it/s]\n  8%|▊         | 8/100 [00:05<00:58,  1.58it/s]\n  9%|▉         | 9/100 [00:05<00:57,  1.58it/s]\n 10%|█         | 10/100 [00:06<00:56,  1.58it/s]\n 11%|█         | 11/100 [00:07<00:56,  1.58it/s]\n 12%|█▏        | 12/100 [00:07<00:55,  1.58it/s]\n 13%|█▎        | 13/100 [00:08<00:54,  1.59it/s]\n 14%|█▍        | 14/100 [00:08<00:54,  1.58it/s]\n 15%|█▌        | 15/100 [00:09<00:53,  1.58it/s]\n 16%|█▌        | 16/100 [00:10<00:53,  1.58it/s]\n 17%|█▋        | 17/100 [00:10<00:52,  1.59it/s]\n 18%|█▊        | 18/100 [00:11<00:51,  1.59it/s]\n 19%|█▉        | 19/100 [00:12<00:51,  1.59it/s]\n 20%|██        | 20/100 [00:12<00:50,  1.58it/s]\n 21%|██        | 21/100 [00:13<00:50,  1.58it/s]\n 22%|██▏       | 22/100 [00:14<00:49,  1.58it/s]\n 23%|██▎       | 23/100 [00:14<00:48,  1.58it/s]\n 24%|██▍       | 24/100 [00:15<00:48,  1.58it/s]\n 25%|██▌       | 25/100 [00:15<00:47,  1.57it/s]\n 26%|██▌       | 26/100 [00:16<00:46,  1.58it/s]\n 27%|██▋       | 27/100 [00:17<00:46,  1.57it/s]\n 28%|██▊       | 28/100 [00:17<00:45,  1.58it/s]\n 29%|██▉       | 29/100 [00:18<00:45,  1.57it/s]\n 30%|███       | 30/100 [00:19<00:44,  1.57it/s]\n 31%|███       | 31/100 [00:19<00:44,  1.57it/s]\n 32%|███▏      | 32/100 [00:20<00:43,  1.57it/s]\n 33%|███▎      | 33/100 [00:21<00:42,  1.57it/s]\n 34%|███▍      | 34/100 [00:21<00:42,  1.57it/s]\n 35%|███▌      | 35/100 [00:22<00:41,  1.56it/s]\n 36%|███▌      | 36/100 [00:22<00:40,  1.56it/s]\n 37%|███▋      | 37/100 [00:23<00:40,  1.56it/s]\n 38%|███▊      | 38/100 [00:24<00:39,  1.56it/s]\n 39%|███▉      | 39/100 [00:24<00:39,  1.56it/s]\n 40%|████      | 40/100 [00:25<00:38,  1.56it/s]\n 41%|████      | 41/100 [00:26<00:37,  1.56it/s]\n 42%|████▏     | 42/100 [00:26<00:37,  1.55it/s]\n 43%|████▎     | 43/100 [00:27<00:36,  1.56it/s]\n 44%|████▍     | 44/100 [00:28<00:35,  1.56it/s]\n 45%|████▌     | 45/100 [00:28<00:35,  1.56it/s]\n 46%|████▌     | 46/100 [00:29<00:34,  1.56it/s]\n 47%|████▋     | 47/100 [00:30<00:33,  1.56it/s]\n 48%|████▊     | 48/100 [00:30<00:33,  1.56it/s]\n 49%|████▉     | 49/100 [00:31<00:32,  1.56it/s]\n 50%|█████     | 50/100 [00:31<00:32,  1.56it/s]\n 51%|█████     | 51/100 [00:32<00:31,  1.56it/s]\n 52%|█████▏    | 52/100 [00:33<00:30,  1.55it/s]\n 53%|█████▎    | 53/100 [00:33<00:30,  1.55it/s]\n 54%|█████▍    | 54/100 [00:34<00:29,  1.55it/s]\n 55%|█████▌    | 55/100 [00:35<00:28,  1.55it/s]\n 56%|█████▌    | 56/100 [00:35<00:28,  1.55it/s]\n 57%|█████▋    | 57/100 [00:36<00:27,  1.55it/s]\n 58%|█████▊    | 58/100 [00:37<00:27,  1.54it/s]\n 59%|█████▉    | 59/100 [00:37<00:26,  1.54it/s]\n 60%|██████    | 60/100 [00:38<00:25,  1.54it/s]\n 61%|██████    | 61/100 [00:39<00:25,  1.54it/s]\n 62%|██████▏   | 62/100 [00:39<00:24,  1.54it/s]\n 63%|██████▎   | 63/100 [00:40<00:24,  1.54it/s]\n 64%|██████▍   | 64/100 [00:41<00:23,  1.54it/s]\n 65%|██████▌   | 65/100 [00:41<00:22,  1.54it/s]\n 66%|██████▌   | 66/100 [00:42<00:22,  1.54it/s]\n 67%|██████▋   | 67/100 [00:42<00:21,  1.54it/s]\n 68%|██████▊   | 68/100 [00:43<00:20,  1.54it/s]\n 69%|██████▉   | 69/100 [00:44<00:20,  1.54it/s]\n 70%|███████   | 70/100 [00:44<00:19,  1.54it/s]\n 71%|███████   | 71/100 [00:45<00:18,  1.54it/s]\n 72%|███████▏  | 72/100 [00:46<00:18,  1.54it/s]\n 73%|███████▎  | 73/100 [00:46<00:17,  1.53it/s]\n 74%|███████▍  | 74/100 [00:47<00:16,  1.54it/s]\n 75%|███████▌  | 75/100 [00:48<00:16,  1.53it/s]\n 76%|███████▌  | 76/100 [00:48<00:15,  1.54it/s]\n 77%|███████▋  | 77/100 [00:49<00:14,  1.54it/s]\n 78%|███████▊  | 78/100 [00:50<00:14,  1.54it/s]\n 79%|███████▉  | 79/100 [00:50<00:13,  1.54it/s]\n 80%|████████  | 80/100 [00:51<00:13,  1.54it/s]\n 81%|████████  | 81/100 [00:52<00:12,  1.54it/s]\n 82%|████████▏ | 82/100 [00:52<00:11,  1.54it/s]\n 83%|████████▎ | 83/100 [00:53<00:11,  1.54it/s]\n 84%|████████▍ | 84/100 [00:54<00:10,  1.54it/s]\n 85%|████████▌ | 85/100 [00:54<00:09,  1.54it/s]\n 86%|████████▌ | 86/100 [00:55<00:09,  1.54it/s]\n 87%|████████▋ | 87/100 [00:55<00:08,  1.54it/s]\n 88%|████████▊ | 88/100 [00:56<00:07,  1.54it/s]\n 89%|████████▉ | 89/100 [00:57<00:07,  1.54it/s]\n 90%|█████████ | 90/100 [00:57<00:06,  1.54it/s]\n 91%|█████████ | 91/100 [00:58<00:05,  1.54it/s]\n 92%|█████████▏| 92/100 [00:59<00:05,  1.54it/s]\n 93%|█████████▎| 93/100 [00:59<00:04,  1.54it/s]\n 94%|█████████▍| 94/100 [01:00<00:03,  1.54it/s]\n 95%|█████████▌| 95/100 [01:01<00:03,  1.53it/s]\n 96%|█████████▌| 96/100 [01:01<00:02,  1.53it/s]\n 97%|█████████▋| 97/100 [01:02<00:01,  1.53it/s]\n 98%|█████████▊| 98/100 [01:03<00:01,  1.53it/s]\n 99%|█████████▉| 99/100 [01:03<00:00,  1.52it/s]\n100%|██████████| 100/100 [01:04<00:00,  1.52it/s]\n100%|██████████| 100/100 [01:04<00:00,  1.55it/s]",
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 71.261476,
+            "total_time": 71.555553
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2023-04-05T14:17:05.824020Z",
+        "started_at": "2023-04-05T14:17:06.118097Z",
+        "completed_at": "2023-04-05T14:18:17.379573Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/wixq75uo65glnjcdgrqtngdz4q",
+            "cancel": "https://api.replicate.com/v1/predictions/wixq75uo65glnjcdgrqtngdz4q/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "3c6374e7a9a17e01afe306a5218cc67de55b19ea536466d6ea2602cfecea40a9",
+        "created_at": "2024-04-19T17:37:12.036077+00:00",
+        "cog_version": "v0.9.5+dev",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -265,52 +262,64 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "cfg": {
-                                "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
-                            },
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
+                                "x-order": 9,
+                                "description": "Random seed. Leave blank to randomize the seed"
                             },
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
+                            "width": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/width"
+                                    }
+                                ],
+                                "default": 512,
+                                "x-order": 6,
+                                "description": "Choose width. Lower the setting if out of memory."
                             },
-                            "steps": {
-                                "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
+                            "height": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/height"
+                                    }
+                                ],
+                                "default": 512,
+                                "x-order": 7,
+                                "description": "Choose height. Lower the setting if out of memory."
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
+                                "default": "red cat, 4k photo",
+                                "x-order": 0,
+                                "description": "Input Prompt"
                             },
-                            "aspect_ratio": {
+                            "scheduler": {
                                 "allOf": [
                                     {
-                                        "$ref": "#/components/schemas/aspect_ratio"
+                                        "$ref": "#/components/schemas/scheduler"
                                     }
                                 ],
-                                "default": "1:1",
-                                "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
+                                "default": "p_sampler",
+                                "x-order": 3,
+                                "description": "Choose a scheduler"
+                            },
+                            "batch_size": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/batch_size"
+                                    }
+                                ],
+                                "default": 1,
+                                "x-order": 8,
+                                "description": "Choose batch size. Lower the setting if out of memory."
+                            },
+                            "prior_steps": {
+                                "type": "string",
+                                "title": "Prior Steps",
+                                "default": "5",
+                                "x-order": 5
                             },
                             "output_format": {
                                 "allOf": [
@@ -319,35 +328,57 @@
                                     }
                                 ],
                                 "default": "webp",
-                                "x-order": 6,
+                                "x-order": 10,
                                 "description": "Format of the output images"
+                            },
+                            "guidance_scale": {
+                                "type": "number",
+                                "title": "Guidance Scale",
+                                "default": 4,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 2,
+                                "description": "Scale for classifier-free guidance"
                             },
                             "output_quality": {
                                 "type": "integer",
                                 "title": "Output Quality",
-                                "default": 90,
+                                "default": 80,
                                 "maximum": 100,
                                 "minimum": 0,
-                                "x-order": 7,
+                                "x-order": 11,
                                 "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
                             },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
+                            "prior_cf_scale": {
+                                "type": "integer",
+                                "title": "Prior Cf Scale",
+                                "default": 4,
+                                "x-order": 4
                             },
-                            "prompt_strength": {
-                                "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
-                                "maximum": 1,
-                                "minimum": 0,
-                                "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 50,
+                                "maximum": 500,
+                                "minimum": 1,
+                                "x-order": 1,
+                                "description": "Number of denoising steps"
                             }
                         }
+                    },
+                    "width": {
+                        "enum": [
+                            256,
+                            288,
+                            432,
+                            512,
+                            576,
+                            768,
+                            1024
+                        ],
+                        "type": "integer",
+                        "title": "width",
+                        "description": "An enumeration."
                     },
                     "Output": {
                         "type": "array",
@@ -369,6 +400,41 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "height": {
+                        "enum": [
+                            256,
+                            288,
+                            432,
+                            512,
+                            576,
+                            768,
+                            1024
+                        ],
+                        "type": "integer",
+                        "title": "height",
+                        "description": "An enumeration."
+                    },
+                    "scheduler": {
+                        "enum": [
+                            "ddim_sampler",
+                            "p_sampler",
+                            "plms_sampler"
+                        ],
+                        "type": "string",
+                        "title": "scheduler",
+                        "description": "An enumeration."
+                    },
+                    "batch_size": {
+                        "enum": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "type": "integer",
+                        "title": "batch_size",
+                        "description": "An enumeration."
+                    },
                     "WebhookEvent": {
                         "enum": [
                             "start",
@@ -378,22 +444,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
                         "description": "An enumeration."
                     },
                     "output_format": {

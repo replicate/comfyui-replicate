@@ -1,49 +1,48 @@
 {
-    "url": "https://replicate.com/stability-ai/stable-diffusion-3",
-    "owner": "stability-ai",
-    "name": "stable-diffusion-3",
-    "description": "A text-to-image model with greatly improved performance in image quality, typography, complex prompt understanding, and resource-efficiency",
+    "url": "https://replicate.com/luosiallen/latent-consistency-model",
+    "owner": "luosiallen",
+    "name": "latent-consistency-model",
+    "description": "Synthesizing High-Resolution Images with Few-Step Inference",
     "visibility": "public",
-    "github_url": "https://github.com/fofr/cog-comfyui-sd3",
-    "paper_url": "https://arxiv.org/pdf/2403.03206",
-    "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
+    "github_url": "https://github.com/luosiallen/latent-consistency-model",
+    "paper_url": "https://arxiv.org/abs/2310.04378",
+    "license_url": "https://github.com/chenxwh/latent-consistency-model/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://pbxt.replicate.delivery/lE1UZOlbLiY7DpYlLvdUmyyt0Z0pu7tTTpgFn8a0ug3Jb4bE/out-0.png",
     "default_example": {
-        "id": "9qcv99vaxdrm00cgapvbt3fh4c",
-        "model": "stability-ai/stable-diffusion-3",
-        "version": "72c05df2daf615fb5cc07c28b662a2a58feb6a4d0a652e67e5a9959d914a9ed2",
+        "id": "5lwbdqdbyrilvvsm62mphlbghu",
+        "model": "luosiallen/latent-consistency-model",
+        "version": "553803fd018b3cf875a8bc774c99da9b33f36647badfd88a6eec90d61c5f62fc",
         "status": "succeeded",
         "input": {
-            "cfg": 3.5,
-            "prompt": "a photo of vibrant artistic graffiti on a wall saying \"SD3 medium\"",
-            "aspect_ratio": "3:2",
-            "output_format": "webp",
-            "output_quality": 90,
-            "negative_prompt": ""
+            "width": 768,
+            "height": 768,
+            "prompt": "Self-portrait oil painting, a beautiful cyborg with golden hair, 8k",
+            "num_images": 1,
+            "guidance_scale": 8,
+            "num_inference_steps": 8
         },
         "output": [
-            "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp"
+            "https://pbxt.replicate.delivery/lE1UZOlbLiY7DpYlLvdUmyyt0Z0pu7tTTpgFn8a0ug3Jb4bE/out-0.png"
         ],
-        "logs": "Seed set to: 448433150\r\nRunning workflow\r\ngot prompt\r\nExecuting node 6, title: CLIP Text Encode (Prompt), class type: CLIPTextEncode\r\nExecuting node 71, title: CLIP Text Encode (Negative Prompt), class type: CLIPTextEncode\r\nExecuting node 67, title: ConditioningZeroOut, class type: ConditioningZeroOut\r\nExecuting node 68, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 70, title: ConditioningSetTimestepRange, class type: ConditioningSetTimestepRange\r\nExecuting node 69, title: Conditioning (Combine), class type: ConditioningCombine\r\nExecuting node 135, title: EmptySD3LatentImage, class type: EmptySD3LatentImage\r\nExecuting node 271, title: KSampler, class type: KSampler\r\n  0%|          | 0/28 [00:00<?, ?it/s]\r\n  7%|▋         | 2/28 [00:00<00:01, 14.59it/s]\r\n 14%|█▍        | 4/28 [00:00<00:01, 15.14it/s]\r\n 21%|██▏       | 6/28 [00:00<00:01, 15.31it/s]\r\n 29%|██▊       | 8/28 [00:00<00:01, 15.40it/s]\r\n 36%|███▌      | 10/28 [00:00<00:01, 15.44it/s]\r\n 43%|████▎     | 12/28 [00:00<00:01, 15.47it/s]\r\n 50%|█████     | 14/28 [00:00<00:00, 15.48it/s]\r\n 57%|█████▋    | 16/28 [00:01<00:00, 15.50it/s]\r\n 64%|██████▍   | 18/28 [00:01<00:00, 15.51it/s]\r\n 71%|███████▏  | 20/28 [00:01<00:00, 15.51it/s]\r\n 79%|███████▊  | 22/28 [00:01<00:00, 15.52it/s]\r\n 86%|████████▌ | 24/28 [00:01<00:00, 15.52it/s]\r\n 93%|█████████▎| 26/28 [00:01<00:00, 15.51it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.49it/s]\r\n100%|██████████| 28/28 [00:01<00:00, 15.44it/s]\r\nExecuting node 231, title: VAE Decode, class type: VAEDecode\r\nExecuting node 273, title: Save Image, class type: SaveImage\r\nPrompt executed in 2.28 seconds\r\noutputs:  {'273': {'images': [{'filename': 'R8_SD3_00001_.png', 'subfolder': '', 'type': 'output'}]}}\r\n====================================\r\nR8_SD3_00001_.png",
-        "error": "",
+        "logs": "Using seed: 49296\n  0%|          | 0/8 [00:00<?, ?it/s]\n 12%|█▎        | 1/8 [00:00<00:01,  3.73it/s]\n 25%|██▌       | 2/8 [00:00<00:01,  4.96it/s]\n 38%|███▊      | 3/8 [00:00<00:00,  5.53it/s]\n 50%|█████     | 4/8 [00:00<00:00,  5.85it/s]\n 62%|██████▎   | 5/8 [00:00<00:00,  6.04it/s]\n 75%|███████▌  | 6/8 [00:01<00:00,  6.16it/s]\n 88%|████████▊ | 7/8 [00:01<00:00,  6.23it/s]\n100%|██████████| 8/8 [00:01<00:00,  6.27it/s]\n100%|██████████| 8/8 [00:01<00:00,  5.88it/s]",
+        "error": null,
         "metrics": {
-            "total_time": 2.317,
-            "image_count": 1,
-            "predict_time": 2.781864785
+            "predict_time": 3.024376,
+            "total_time": 48.79153
         },
-        "created_at": "2024-06-26T18:02:16.683000Z",
-        "started_at": "2024-06-26T18:02:16Z",
-        "completed_at": "2024-06-26T18:02:19Z",
+        "created_at": "2023-10-18T23:23:35.514094Z",
+        "started_at": "2023-10-18T23:24:21.281248Z",
+        "completed_at": "2023-10-18T23:24:24.305624Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c",
-            "cancel": "https://api.replicate.com/v1/predictions/9qcv99vaxdrm00cgapvbt3fh4c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/5lwbdqdbyrilvvsm62mphlbghu",
+            "cancel": "https://api.replicate.com/v1/predictions/5lwbdqdbyrilvvsm62mphlbghu/cancel"
         }
     },
     "latest_version": {
-        "id": "527d2a6296facb8e47ba1eaf17f142c240c19a30894f437feee9b91cc29d8e4f",
-        "created_at": "2024-07-16T15:57:20.180462+00:00",
-        "cog_version": "0.9.7",
+        "id": "553803fd018b3cf875a8bc774c99da9b33f36647badfd88a6eec90d61c5f62fc",
+        "created_at": "2023-10-18T23:22:52.239431+00:00",
+        "cog_version": "0.8.6",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -265,87 +264,59 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "cfg": {
-                                "type": "number",
-                                "title": "Cfg",
-                                "default": 3.5,
-                                "maximum": 20,
-                                "minimum": 0,
-                                "x-order": 2,
-                                "description": "The guidance scale tells the model how similar the output should be to the prompt."
-                            },
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 8,
-                                "description": "Set a seed for reproducibility. Random by default."
+                                "x-order": 6,
+                                "description": "Random seed. Leave blank to randomize the seed"
                             },
-                            "image": {
-                                "type": "string",
-                                "title": "Image",
-                                "format": "uri",
-                                "x-order": 3,
-                                "description": "Input image for image to image mode. The aspect ratio of your output will match this image."
-                            },
-                            "steps": {
+                            "width": {
                                 "type": "integer",
-                                "title": "Steps",
-                                "default": 28,
-                                "maximum": 28,
-                                "minimum": 1,
-                                "x-order": 5,
-                                "description": "Number of steps to run the sampler for."
+                                "title": "Width",
+                                "default": 768,
+                                "x-order": 1,
+                                "description": "Width of output image. Lower the setting if out of memory."
+                            },
+                            "height": {
+                                "type": "integer",
+                                "title": "Height",
+                                "default": 768,
+                                "x-order": 2,
+                                "description": "Height of output image. Lower the setting if out of memory."
                             },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
-                                "default": "",
-                                "x-order": 0
+                                "default": "Self-portrait oil painting, a beautiful cyborg with golden hair, 8k",
+                                "x-order": 0,
+                                "description": "Input prompt"
                             },
-                            "aspect_ratio": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/aspect_ratio"
-                                    }
-                                ],
-                                "default": "1:1",
-                                "x-order": 1,
-                                "description": "The aspect ratio of your output image. This value is ignored if you are using an input image."
-                            },
-                            "output_format": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/output_format"
-                                    }
-                                ],
-                                "default": "webp",
-                                "x-order": 6,
-                                "description": "Format of the output images"
-                            },
-                            "output_quality": {
+                            "num_images": {
                                 "type": "integer",
-                                "title": "Output Quality",
-                                "default": 90,
-                                "maximum": 100,
-                                "minimum": 0,
-                                "x-order": 7,
-                                "description": "Quality of the output images, from 0 to 100. 100 is best quality, 0 is lowest quality."
+                                "title": "Num Images",
+                                "default": 1,
+                                "maximum": 4,
+                                "minimum": 1,
+                                "x-order": 3,
+                                "description": "Number of images to output."
                             },
-                            "negative_prompt": {
-                                "type": "string",
-                                "title": "Negative Prompt",
-                                "default": "",
-                                "x-order": 9,
-                                "description": "Negative prompts do not really work in SD3. Using a negative prompt will change your output in unpredictable ways."
-                            },
-                            "prompt_strength": {
+                            "guidance_scale": {
                                 "type": "number",
-                                "title": "Prompt Strength",
-                                "default": 0.85,
-                                "maximum": 1,
-                                "minimum": 0,
+                                "title": "Guidance Scale",
+                                "default": 8,
+                                "maximum": 20,
+                                "minimum": 1,
+                                "x-order": 5,
+                                "description": "Scale for classifier-free guidance"
+                            },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 8,
+                                "maximum": 50,
+                                "minimum": 1,
                                 "x-order": 4,
-                                "description": "Prompt strength (or denoising strength) when using image to image. 1.0 corresponds to full destruction of information in image."
+                                "description": "Number of denoising steps. Can be set to 1~50 steps. LCM support fast inference even <= 4 steps. Recommend: 1~8 steps."
                             }
                         }
                     },
@@ -378,32 +349,6 @@
                         ],
                         "type": "string",
                         "title": "WebhookEvent",
-                        "description": "An enumeration."
-                    },
-                    "aspect_ratio": {
-                        "enum": [
-                            "1:1",
-                            "16:9",
-                            "21:9",
-                            "3:2",
-                            "2:3",
-                            "4:5",
-                            "5:4",
-                            "9:16",
-                            "9:21"
-                        ],
-                        "type": "string",
-                        "title": "aspect_ratio",
-                        "description": "An enumeration."
-                    },
-                    "output_format": {
-                        "enum": [
-                            "webp",
-                            "jpg",
-                            "png"
-                        ],
-                        "type": "string",
-                        "title": "output_format",
                         "description": "An enumeration."
                     },
                     "ValidationError": {

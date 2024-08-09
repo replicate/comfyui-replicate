@@ -34,9 +34,9 @@
         }
     },
     "latest_version": {
-        "id": "a75c919339f65bf00afa96511af653fdbd0ec3cb0f5e6f4350809445eee0e14f",
-        "created_at": "2024-06-11T18:23:49.034977+00:00",
-        "cog_version": "v0.9.5+dev",
+        "id": "69196a237cdc310988a4b12ad64f4b36d10189428c19a18526af708546e1856f",
+        "created_at": "2024-07-02T06:00:03.657728+00:00",
+        "cog_version": "v0.10.0-alpha13+dev",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -59,6 +59,24 @@
                             }
                         },
                         "operationId": "root__get"
+                    }
+                },
+                "/ready": {
+                    "get": {
+                        "summary": "Ready",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Ready Ready Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "ready_ready_get"
                     }
                 },
                 "/shutdown": {
@@ -269,17 +287,40 @@
                                 "x-order": 0,
                                 "description": "Image input"
                             },
+                            "top_k": {
+                                "type": "integer",
+                                "title": "Top K",
+                                "default": 1,
+                                "maximum": 1000,
+                                "minimum": 1,
+                                "x-order": 3,
+                                "description": "Top-K sampling"
+                            },
                             "prompt": {
                                 "type": "string",
                                 "title": "Prompt",
                                 "x-order": 1,
-                                "description": "Propmt"
+                                "description": "Prompt"
+                            },
+                            "max_length": {
+                                "type": "integer",
+                                "title": "Max Length",
+                                "default": 512,
+                                "maximum": 8192,
+                                "minimum": 1,
+                                "x-order": 2,
+                                "description": "Maximum number of tokens to generate."
                             }
                         }
                     },
                     "Output": {
-                        "type": "string",
-                        "title": "Output"
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Output",
+                        "x-cog-array-type": "iterator",
+                        "x-cog-array-display": "concatenate"
                     },
                     "Status": {
                         "enum": [
