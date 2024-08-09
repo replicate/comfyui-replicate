@@ -2,7 +2,7 @@
 name = "comfyui-replicate"
 description = "Run Replicate models in ComfyUI"
 version = "1.0.7"
-license = "LICENSE"
+license = { file = "LICENSE" }
 
 [project.urls]
 Repository = "https://github.com/replicate/comfyui-replicate"
