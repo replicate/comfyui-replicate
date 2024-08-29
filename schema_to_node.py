@@ -86,7 +86,7 @@ def schema_to_comfyui_input_types(schema):
         else:
             input_type = "STRING"
 
-        input_config = {"default": default_value}
+        input_config = {"default": default_value} if default_value is not None else {}
 
         if "minimum" in prop_data:
             input_config["min"] = prop_data["minimum"]
