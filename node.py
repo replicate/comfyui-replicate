@@ -125,21 +125,15 @@ def create_comfyui_node(schema):
             if output_list:
                 output_tensors = []
                 transform = transforms.ToTensor()
-                for image_url in output_list:
-                    response = requests.get(image_url)
-                    if response.status_code == 200:
-                        image = Image.open(BytesIO(response.content))
-                        if image.mode != "RGB":
-                            image = image.convert("RGB")
+                for file in output_list:
+                    image = Image.open(BytesIO(file.read()))
+                    if image.mode != "RGB":
+                        image = image.convert("RGB")
 
-                        tensor_image = transform(image)
-                        tensor_image = tensor_image.unsqueeze(0)
-                        tensor_image = tensor_image.permute(0, 2, 3, 1).cpu().float()
-                        output_tensors.append(tensor_image)
-                    else:
-                        print(
-                            f"Failed to download image. Status code: {response.status_code}"
-                        )
+                    tensor_image = transform(image)
+                    tensor_image = tensor_image.unsqueeze(0)
+                    tensor_image = tensor_image.permute(0, 2, 3, 1).cpu().float()
+                    output_tensors.append(tensor_image)
                 # Combine all tensors into a single batch if multiple images
                 return (
                     torch.cat(output_tensors, dim=0)
