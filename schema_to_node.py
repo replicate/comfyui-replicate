@@ -28,7 +28,7 @@ def convert_to_comfyui_input_type(
                 return "VIDEO"
             elif is_type(default_example_input[input_name], AUDIO_EXTENSIONS):
                 return "AUDIO"
-        elif "image" in input_name.lower():
+        elif any(x in input_name.lower() for x in ["image", "mask"]):
             return "IMAGE"
         elif "audio" in input_name.lower():
             return "AUDIO"

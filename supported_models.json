@@ -25,6 +25,8 @@
     "fofr/sd3-with-chaos",
     "fofr/style-transfer",
     "fofr/ultrapixel",
+    "ideogram-ai/ideogram-v2-turbo",
+    "ideogram-ai/ideogram-v2",
     "lucataco/hunyuandit-v1.1",
     "lucataco/llama-3-vision-alpha",
     "lucataco/magnet",
