@@ -38,10 +38,14 @@ def update_schemas(update=False):
         schema_path = os.path.join(schemas_directory, schema_filename)
 
         if update or schema_filename not in existing_schemas:
-            m = replicate.models.get(model)
-            with open(schema_path, "w", encoding="utf-8") as f:
-                f.write(m.json())
-            print(f"{'Updated' if update else 'Added'} schema for {model}")
+            try:
+                m = replicate.models.get(model)
+                with open(schema_path, "w", encoding="utf-8") as f:
+                    f.write(m.json())
+                print(f"{'Updated' if update else 'Added'} schema for {model}")
+            except replicate.exceptions.ReplicateError as e:
+                print(f"Error fetching schema for {model}: {str(e)}")
+                continue
 
     format_json_files_in_directory(schemas_directory)
 
