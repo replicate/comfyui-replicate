@@ -1,1 +1,1 @@
-replicate>=0.27.0
+replicate>=1.0.3
