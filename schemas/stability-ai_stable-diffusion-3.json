@@ -8,7 +8,7 @@
     "paper_url": "https://arxiv.org/pdf/2403.03206",
     "license_url": "https://github.com/replicate/cog-stable-diffusion-3/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/yhqm/i4mS31BVDBYVIF0ol6UV2dwHwuztMDbsnlVJBeJ75ViVTQhJA/R8_SD3_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/0411f758-80e6-4794-bd5d-d04198d891a5/image-90.png",
     "default_example": {
         "id": "9qcv99vaxdrm00cgapvbt3fh4c",
         "model": "stability-ai/stable-diffusion-3",

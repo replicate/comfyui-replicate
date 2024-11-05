@@ -6,7 +6,7 @@
     "visibility": "public",
     "github_url": null,
     "paper_url": null,
-    "license_url": "https://docs.bfl.ml/agreement/",
+    "license_url": "https://replicate.com/black-forest-labs/flux-pro#license",
     "run_count": 0,
     "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/ae5d9d40-31f5-4c33-bd66-2f22b0e8d459/Flux_Pro_Sample.jpg",
     "default_example": {
@@ -40,8 +40,8 @@
         }
     },
     "latest_version": {
-        "id": "74346f05d975befd8e33db3d639761186019ea4b1a7dd8b236695c785100afbe",
-        "created_at": "2024-08-01T10:55:08.089482+00:00",
+        "id": "caf8d6bf110808c53bb90767ea81e1bbd0f0690ba37a4a24b27b17e2f9a5c011",
+        "created_at": "2024-08-08T15:32:24.388565+00:00",
         "cog_version": "0.10.0-alpha20",
         "openapi_schema": {
             "info": {

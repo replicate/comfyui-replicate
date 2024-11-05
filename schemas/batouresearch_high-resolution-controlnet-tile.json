@@ -8,45 +8,48 @@
     "paper_url": null,
     "license_url": null,
     "run_count": 0,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/06783125-aa9a-4c17-bac0-fab46cec490f/out-0.png",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/db4434b4-7b0f-49f7-b78a-774fe9e630a7/batou.jpeg",
     "default_example": {
-        "id": "dnzz4dkgbhrgj0cgf008d20xjc",
+        "id": "4xg26j3bc9rgm0cgxs28xehaag",
         "model": "batouresearch/high-resolution-controlnet-tile",
-        "version": "53fd3af8e6b5efa0bdb9934285236dac568a407d7b821343b518acc16bb724e0",
+        "version": "13c637d35ebfe5e44a5297c370134b0f6921d0ee73f103ccfee7349dcaf59c76",
         "status": "succeeded",
         "input": {
-            "hdr": 0.5,
-            "image": "https://replicate.delivery/pbxt/LCeXdKMrL42FTur24eINAaLiJqIWByMkt2rLEe1Avi9g8J4o/fermat_app_realistic_portrait_of_a_girl_with_beautiful_backgrou_62e1eacd-1a76-483d-b495-9e8946347ca4.png",
-            "steps": 20,
-            "prompt": "Professional portrait, a beautiful woman in a field of wheat, 4k UHD, fashion magazine cover, award winning photography, sunset light",
+            "hdr": 0,
+            "image": "https://replicate.delivery/pbxt/LKnw8rSgafZf4IlAVyPhzpX1TpTVcyfRa1saoaoiSfUYZLiL/fermat_app_a_living_room_modern_and_minimalistic_39b5a58a-e05b-4281-ac24-e87435256333-1.webp",
+            "steps": 8,
+            "format": "jpg",
+            "prompt": "a nordic livingroom, 4k interior photography, uhd",
             "scheduler": "DDIM",
-            "tile_size": 512,
-            "creativity": 0.55,
+            "tile_size": 768,
+            "creativity": 0.4,
             "guess_mode": false,
-            "resolution": 2048,
-            "resemblance": 0.5,
-            "guidance_scale": 5,
-            "negative_prompt": "Teeth, tooth, open mouth, longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, mutant"
+            "resolution": 2560,
+            "resemblance": 0.85,
+            "guidance_scale": 0,
+            "negative_prompt": "Teeth, tooth, open mouth, longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, mutant",
+            "lora_details_strength": -0.25,
+            "lora_sharpness_strength": 0.75
         },
-        "output": "https://replicate.delivery/pbxt/pZc9tHkjEap2PxwBH5de7X0CevIoiQihmo9XTkJZ8QWyEtETA/out-0.png",
-        "logs": "Using seed: 56674\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:02,  4.10it/s]\n 18%|█▊        | 2/11 [00:00<00:01,  5.09it/s]\n 27%|██▋       | 3/11 [00:00<00:01,  5.51it/s]\n 36%|███▋      | 4/11 [00:00<00:01,  5.73it/s]\n 45%|████▌     | 5/11 [00:00<00:01,  5.86it/s]\n 55%|█████▍    | 6/11 [00:01<00:00,  5.93it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  5.98it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  6.01it/s]\n 82%|████████▏ | 9/11 [00:01<00:00,  6.04it/s]\n 91%|█████████ | 10/11 [00:01<00:00,  6.05it/s]\n100%|██████████| 11/11 [00:01<00:00,  6.07it/s]\n100%|██████████| 11/11 [00:01<00:00,  5.84it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:03,  2.88it/s]\n 18%|█▊        | 2/11 [00:00<00:02,  3.57it/s]\n 27%|██▋       | 3/11 [00:00<00:02,  3.86it/s]\n 36%|███▋      | 4/11 [00:01<00:01,  4.00it/s]\n 45%|████▌     | 5/11 [00:01<00:01,  4.10it/s]\n 55%|█████▍    | 6/11 [00:01<00:01,  4.15it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  4.19it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  4.21it/s]\n 82%|████████▏ | 9/11 [00:02<00:00,  4.23it/s]\n 91%|█████████ | 10/11 [00:02<00:00,  4.24it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.24it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.09it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:05,  1.94it/s]\n 18%|█▊        | 2/11 [00:00<00:03,  2.38it/s]\n 27%|██▋       | 3/11 [00:01<00:03,  2.56it/s]\n 36%|███▋      | 4/11 [00:01<00:02,  2.66it/s]\n 45%|████▌     | 5/11 [00:01<00:02,  2.72it/s]\n 55%|█████▍    | 6/11 [00:02<00:01,  2.74it/s]\n 64%|██████▎   | 7/11 [00:02<00:01,  2.77it/s]\n 73%|███████▎  | 8/11 [00:02<00:01,  2.79it/s]\n 82%|████████▏ | 9/11 [00:03<00:00,  2.80it/s]\n 91%|█████████ | 10/11 [00:03<00:00,  2.80it/s]\n100%|██████████| 11/11 [00:04<00:00,  2.80it/s]\n100%|██████████| 11/11 [00:04<00:00,  2.71it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:03,  2.90it/s]\n 18%|█▊        | 2/11 [00:00<00:02,  3.59it/s]\n 27%|██▋       | 3/11 [00:00<00:02,  3.88it/s]\n 36%|███▋      | 4/11 [00:01<00:01,  4.02it/s]\n 45%|████▌     | 5/11 [00:01<00:01,  4.12it/s]\n 55%|█████▍    | 6/11 [00:01<00:01,  4.18it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  4.22it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  4.24it/s]\n 82%|████████▏ | 9/11 [00:02<00:00,  4.25it/s]\n 91%|█████████ | 10/11 [00:02<00:00,  4.26it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.28it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.11it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:03,  2.91it/s]\n 18%|█▊        | 2/11 [00:00<00:02,  3.59it/s]\n 27%|██▋       | 3/11 [00:00<00:02,  3.88it/s]\n 36%|███▋      | 4/11 [00:01<00:01,  4.04it/s]\n 45%|████▌     | 5/11 [00:01<00:01,  4.12it/s]\n 55%|█████▍    | 6/11 [00:01<00:01,  4.18it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  4.22it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  4.24it/s]\n 82%|████████▏ | 9/11 [00:02<00:00,  4.25it/s]\n 91%|█████████ | 10/11 [00:02<00:00,  4.26it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.27it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.11it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:05,  1.94it/s]\n 18%|█▊        | 2/11 [00:00<00:03,  2.38it/s]\n 27%|██▋       | 3/11 [00:01<00:03,  2.56it/s]\n 36%|███▋      | 4/11 [00:01<00:02,  2.66it/s]\n 45%|████▌     | 5/11 [00:01<00:02,  2.72it/s]\n 55%|█████▍    | 6/11 [00:02<00:01,  2.74it/s]\n 64%|██████▎   | 7/11 [00:02<00:01,  2.77it/s]\n 73%|███████▎  | 8/11 [00:02<00:01,  2.79it/s]\n 82%|████████▏ | 9/11 [00:03<00:00,  2.80it/s]\n 91%|█████████ | 10/11 [00:03<00:00,  2.80it/s]\n100%|██████████| 11/11 [00:04<00:00,  2.80it/s]\n100%|██████████| 11/11 [00:04<00:00,  2.71it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:03,  2.88it/s]\n 18%|█▊        | 2/11 [00:00<00:02,  3.55it/s]\n 27%|██▋       | 3/11 [00:00<00:02,  3.85it/s]\n 36%|███▋      | 4/11 [00:01<00:01,  3.99it/s]\n 45%|████▌     | 5/11 [00:01<00:01,  4.07it/s]\n 55%|█████▍    | 6/11 [00:01<00:01,  4.13it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  4.17it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  4.20it/s]\n 82%|████████▏ | 9/11 [00:02<00:00,  4.21it/s]\n 91%|█████████ | 10/11 [00:02<00:00,  4.22it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.23it/s]\n100%|██████████| 11/11 [00:02<00:00,  4.07it/s]\n  0%|          | 0/11 [00:00<?, ?it/s]\n  9%|▉         | 1/11 [00:00<00:02,  4.09it/s]\n 18%|█▊        | 2/11 [00:00<00:01,  5.06it/s]\n 27%|██▋       | 3/11 [00:00<00:01,  5.48it/s]\n 36%|███▋      | 4/11 [00:00<00:01,  5.69it/s]\n 45%|████▌     | 5/11 [00:00<00:01,  5.82it/s]\n 55%|█████▍    | 6/11 [00:01<00:00,  5.89it/s]\n 64%|██████▎   | 7/11 [00:01<00:00,  5.95it/s]\n 73%|███████▎  | 8/11 [00:01<00:00,  5.98it/s]\n 82%|████████▏ | 9/11 [00:01<00:00,  6.01it/s]\n 91%|█████████ | 10/11 [00:01<00:00,  6.03it/s]\n100%|██████████| 11/11 [00:01<00:00,  6.04it/s]\n100%|██████████| 11/11 [00:01<00:00,  5.81it/s]\n  0%|          | 0/5 [00:00<?, ?it/s]\n 20%|██        | 1/5 [00:05<00:22,  5.55s/it]\n 40%|████      | 2/5 [00:10<00:15,  5.09s/it]\n 60%|██████    | 3/5 [00:15<00:09,  4.94s/it]\n 80%|████████  | 4/5 [00:19<00:04,  4.87s/it]\n100%|██████████| 5/5 [00:24<00:00,  4.83s/it]\n100%|██████████| 5/5 [00:24<00:00,  4.92s/it]",
+        "output": "https://replicate.delivery/pbxt/YFlNVWt9oEpTMVEKg69wXDRGtjHSHKV02ESZeChKj69ffiYmA/output.jpg",
+        "logs": "Using seed: 20941\nThe config attributes {'solver_order': 2, 'algorithm_type': 'deis', 'solver_type': 'logrho', 'lower_order_final': True, 'use_karras_sigmas': False} were passed to LCMScheduler, but are not expected and will be ignored. Please verify your scheduler_config.json configuration file.\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:00,  2.53it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  3.74it/s]\n100%|██████████| 3/3 [00:00<00:00,  4.42it/s]\n100%|██████████| 3/3 [00:00<00:00,  4.00it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:01,  1.95it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  2.87it/s]\n100%|██████████| 3/3 [00:00<00:00,  3.39it/s]\n100%|██████████| 3/3 [00:00<00:00,  3.07it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:01,  1.19it/s]\n 67%|██████▋   | 2/3 [00:01<00:00,  1.72it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.01it/s]\n100%|██████████| 3/3 [00:01<00:00,  1.83it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:00,  3.68it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  5.52it/s]\n100%|██████████| 3/3 [00:00<00:00,  6.58it/s]\n100%|██████████| 3/3 [00:00<00:00,  5.92it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:01,  1.96it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  2.89it/s]\n100%|██████████| 3/3 [00:00<00:00,  3.41it/s]\n100%|██████████| 3/3 [00:00<00:00,  3.09it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:01,  1.52it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  2.22it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.60it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.36it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:00,  3.60it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  5.34it/s]\n100%|██████████| 3/3 [00:00<00:00,  6.30it/s]\n100%|██████████| 3/3 [00:00<00:00,  5.70it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:00,  9.58it/s]\n100%|██████████| 3/3 [00:00<00:00, 14.86it/s]\n100%|██████████| 3/3 [00:00<00:00, 14.07it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:01,  1.76it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  2.59it/s]\n100%|██████████| 3/3 [00:01<00:00,  3.05it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.76it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:00,  5.07it/s]\n100%|██████████| 3/3 [00:00<00:00,  8.61it/s]\n100%|██████████| 3/3 [00:00<00:00,  8.05it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:01,  1.76it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  2.61it/s]\n100%|██████████| 3/3 [00:01<00:00,  3.08it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.78it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:01,  1.34it/s]\n 67%|██████▋   | 2/3 [00:01<00:00,  1.95it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.28it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.08it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:01,  1.34it/s]\n 67%|██████▋   | 2/3 [00:01<00:00,  1.95it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.27it/s]\n100%|██████████| 3/3 [00:01<00:00,  2.07it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:00,  4.06it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  6.06it/s]\n100%|██████████| 3/3 [00:00<00:00,  7.20it/s]\n100%|██████████| 3/3 [00:00<00:00,  6.49it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:00,  4.88it/s]\n100%|██████████| 3/3 [00:00<00:00,  8.16it/s]\n100%|██████████| 3/3 [00:00<00:00,  7.65it/s]\n  0%|          | 0/3 [00:00<?, ?it/s]\n 33%|███▎      | 1/3 [00:00<00:00,  3.97it/s]\n 67%|██████▋   | 2/3 [00:00<00:00,  5.86it/s]\n100%|██████████| 3/3 [00:00<00:00,  6.92it/s]\n100%|██████████| 3/3 [00:00<00:00,  6.26it/s]\n  0%|          | 0/2 [00:00<?, ?it/s]\n 50%|█████     | 1/2 [00:03<00:03,  3.98s/it]\n100%|██████████| 2/2 [00:06<00:00,  2.94s/it]\n100%|██████████| 2/2 [00:06<00:00,  3.10s/it]",
         "error": null,
         "metrics": {
-            "predict_time": 56.796384034,
-            "total_time": 94.221108
+            "predict_time": 59.897140822,
+            "total_time": 133.557407
         },
-        "created_at": "2024-07-03T09:50:13.084000Z",
-        "started_at": "2024-07-03T09:50:50.508724Z",
-        "completed_at": "2024-07-03T09:51:47.305108Z",
+        "created_at": "2024-07-26T08:59:39.746000Z",
+        "started_at": "2024-07-26T09:00:53.406266Z",
+        "completed_at": "2024-07-26T09:01:53.303407Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/dnzz4dkgbhrgj0cgf008d20xjc",
-            "cancel": "https://api.replicate.com/v1/predictions/dnzz4dkgbhrgj0cgf008d20xjc/cancel"
+            "get": "https://api.replicate.com/v1/predictions/4xg26j3bc9rgm0cgxs28xehaag",
+            "cancel": "https://api.replicate.com/v1/predictions/4xg26j3bc9rgm0cgxs28xehaag/cancel"
         }
     },
     "latest_version": {
-        "id": "674a90f4adea8d0887a9cfcdbd7cc36c14d61f1dae041f823f97c306e68216ca",
-        "created_at": "2024-07-05T10:57:59.303474+00:00",
-        "cog_version": "0.9.12",
+        "id": "8e6a54d7b2848c48dc741a109d3fb0ea2a7f554eb4becd39a25cc532536ea975",
+        "created_at": "2024-08-07T17:30:34.693912+00:00",
+        "cog_version": "0.9.13",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -293,9 +296,19 @@
                             "steps": {
                                 "type": "integer",
                                 "title": "Steps",
-                                "default": 20,
+                                "default": 8,
                                 "x-order": 7,
                                 "description": "Steps"
+                            },
+                            "format": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/format"
+                                    }
+                                ],
+                                "default": "jpg",
+                                "x-order": 14,
+                                "description": "Format of the output."
                             },
                             "prompt": {
                                 "type": "string",
@@ -313,16 +326,6 @@
                                 "x-order": 6,
                                 "description": "Choose a scheduler."
                             },
-                            "tile_size": {
-                                "allOf": [
-                                    {
-                                        "$ref": "#/components/schemas/tile_size"
-                                    }
-                                ],
-                                "default": 512,
-                                "x-order": 12,
-                                "description": "Size of partitions of the image. A 1/4 of the final resolution is recommended for optimal."
-                            },
                             "creativity": {
                                 "type": "number",
                                 "title": "Creativity",
@@ -337,7 +340,7 @@
                                 "title": "Guess Mode",
                                 "default": false,
                                 "x-order": 11,
-                                "description": "In this mode, the ControlNet encoder will try best to recognize the content of the input image even if you remove all prompts. The `guidance_scale` between 3.0 and 5.0 is recommended."
+                                "description": "In this mode, the ControlNet encoder will try best to recognize the content of the input image even if you remove all prompts."
                             },
                             "resolution": {
                                 "allOf": [
@@ -361,11 +364,11 @@
                             "guidance_scale": {
                                 "type": "number",
                                 "title": "Guidance Scale",
-                                "default": 7,
+                                "default": 0,
                                 "maximum": 30,
-                                "minimum": 0.1,
+                                "minimum": 0,
                                 "x-order": 8,
-                                "description": "Scale for classifier-free guidance"
+                                "description": "Scale for classifier-free guidance, should be 0."
                             },
                             "negative_prompt": {
                                 "type": "string",
@@ -377,20 +380,20 @@
                             "lora_details_strength": {
                                 "type": "number",
                                 "title": "Lora Details Strength",
-                                "default": 1.25,
+                                "default": 1,
                                 "maximum": 3,
-                                "minimum": -3,
-                                "x-order": 14,
+                                "minimum": -5,
+                                "x-order": 13,
                                 "description": "Strength of the image's details"
                             },
                             "lora_sharpness_strength": {
                                 "type": "number",
                                 "title": "Lora Sharpness Strength",
-                                "default": 4.5,
+                                "default": 1.25,
                                 "maximum": 10,
-                                "minimum": -3,
-                                "x-order": 13,
-                                "description": "Strength of the image's sharpness. For it to be noticeable, it is recommended to use values between 2 and 5."
+                                "minimum": -5,
+                                "x-order": 12,
+                                "description": "Strength of the image's sharpness. We don't recommend values above 2."
                             }
                         }
                     },
@@ -411,6 +414,15 @@
                         "title": "Status",
                         "description": "An enumeration."
                     },
+                    "format": {
+                        "enum": [
+                            "jpg",
+                            "png"
+                        ],
+                        "type": "string",
+                        "title": "format",
+                        "description": "An enumeration."
+                    },
                     "scheduler": {
                         "enum": [
                             "DDIM",
@@ -420,20 +432,6 @@
                         ],
                         "type": "string",
                         "title": "scheduler",
-                        "description": "An enumeration."
-                    },
-                    "tile_size": {
-                        "enum": [
-                            128,
-                            256,
-                            374,
-                            512,
-                            768,
-                            1024,
-                            1280
-                        ],
-                        "type": "integer",
-                        "title": "tile_size",
                         "description": "An enumeration."
                     },
                     "resolution": {

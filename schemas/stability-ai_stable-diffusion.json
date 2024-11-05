@@ -8,7 +8,7 @@
     "paper_url": "https://arxiv.org/abs/2112.10752",
     "license_url": "https://huggingface.co/spaces/CompVis/stable-diffusion-license",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/sWeZFZou6v3CPKuoJbqX46ugPaHT1DcsWYx0srPmGrMOCPYIA/out-0.png",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/710f5e9f-9561-4e4f-9d1e-614205f62597/stable-diffusion.webp",
     "default_example": {
         "id": "uvb7ynit4bhpjds3vn4bx7npeq",
         "model": "stability-ai/stable-diffusion",

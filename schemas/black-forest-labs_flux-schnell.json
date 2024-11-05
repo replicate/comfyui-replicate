@@ -4,42 +4,46 @@
     "name": "flux-schnell",
     "description": "The fastest image generation model tailored for local development and personal use",
     "visibility": "public",
-    "github_url": "https://github.com/replicate/cog-flux-schnell",
+    "github_url": "https://github.com/replicate/cog-flux",
     "paper_url": null,
     "license_url": "https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-schnell",
     "run_count": 0,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/1f550ddf-344a-481b-aa2b-8f662983f7d4/Replicate_Prediction_14.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/67c990ba-bb67-4355-822f-2bd8c42b2f0d/flux-schnell.webp",
     "default_example": {
-        "id": "da9aj0hx9xrm40ch1ptaj3cb44",
+        "id": "jd96x0dyqsrm00cj1jp90zeye0",
         "model": "replicate/flux-schnell-internal-model",
-        "version": "a6ad06b0260bf44c5beb738f4c0985a6759c25c982173acab5cab0ec6b035a33",
+        "version": "2f1eb45e847c8630c66e55520e5f91103ec821353910028a30ad746f35978107",
         "status": "succeeded",
         "input": {
             "prompt": "black forest gateau cake spelling out the words \"FLUX SCHNELL\", tasty, food photography, dynamic shot",
+            "go_fast": true,
+            "num_outputs": 1,
             "aspect_ratio": "1:1",
             "output_format": "webp",
-            "output_quality": 90
+            "output_quality": 80
         },
-        "output": "https://replicate.delivery/yhqm/SBdmNAnv2eWgdCnoKp1YqXJufQrkwsL3kBZstQfYs961dkcmA/out-0.webp",
-        "logs": null,
+        "output": [
+            "https://replicate.delivery/yhqm/hcDDSNf633zeDUz9sWkKfaftcfJLWIvuhn9vfCFWmufxelmemA/out-0.webp"
+        ],
+        "logs": "running quantized prediction\ngenerating\nUsing seed: 68235\n  0%|          | 0/4 [00:00<?, ?it/s]\n 50%|█████     | 2/4 [00:00<00:00, 18.61it/s]\n100%|██████████| 4/4 [00:00<00:00, 13.49it/s]\n100%|██████████| 4/4 [00:00<00:00, 14.07it/s]\nTotal safe images: 1 out of 1",
         "error": null,
         "metrics": {
             "image_count": 1,
-            "predict_time": 1.242813822,
-            "total_time": 1.278731
+            "predict_time": 0.829263399,
+            "total_time": 0.840202
         },
-        "created_at": "2024-08-01T11:30:01.679000Z",
-        "started_at": "2024-08-01T11:30:01.714917Z",
-        "completed_at": "2024-08-01T11:30:02.957731Z",
+        "created_at": "2024-09-19T23:45:00.606000Z",
+        "started_at": "2024-09-19T23:45:00.616939Z",
+        "completed_at": "2024-09-19T23:45:01.446202Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/da9aj0hx9xrm40ch1ptaj3cb44",
-            "cancel": "https://api.replicate.com/v1/predictions/da9aj0hx9xrm40ch1ptaj3cb44/cancel"
+            "get": "https://api.replicate.com/v1/predictions/jd96x0dyqsrm00cj1jp90zeye0",
+            "cancel": "https://api.replicate.com/v1/predictions/jd96x0dyqsrm00cj1jp90zeye0/cancel"
         }
     },
     "latest_version": {
-        "id": "f2ab8a5bfe79f02f0789a146cf5e73d2a4ff2684a98c2b303d1e1ff3814271db",
-        "created_at": "2024-07-30T00:32:53.657122+00:00",
-        "cog_version": "0.10.0-alpha16",
+        "id": "bf53bdb93d739c9c915091cfa5f49ca662d11273a5eb30e7a2ec1939bcf27a00",
+        "created_at": "2024-10-02T01:37:54.199755+00:00",
+        "cog_version": "0.9.21",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -62,24 +66,6 @@
                             }
                         },
                         "operationId": "root__get"
-                    }
-                },
-                "/ready": {
-                    "get": {
-                        "summary": "Ready",
-                        "responses": {
-                            "200": {
-                                "content": {
-                                    "application/json": {
-                                        "schema": {
-                                            "title": "Response Ready Ready Get"
-                                        }
-                                    }
-                                },
-                                "description": "Successful Response"
-                            }
-                        },
-                        "operationId": "ready_ready_get"
                     }
                 },
                 "/shutdown": {
@@ -294,6 +280,23 @@
                                 "x-order": 0,
                                 "description": "Prompt for generated image"
                             },
+                            "go_fast": {
+                                "type": "boolean",
+                                "title": "Go Fast",
+                                "default": true,
+                                "x-order": 7,
+                                "description": "Run faster predictions with model optimized for speed (currently fp8 quantized); disable to run in original bf16"
+                            },
+                            "megapixels": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/megapixels"
+                                    }
+                                ],
+                                "default": "1",
+                                "x-order": 8,
+                                "description": "Approximate number of megapixels for generated image"
+                            },
                             "num_outputs": {
                                 "type": "integer",
                                 "title": "Num Outputs",
@@ -337,14 +340,17 @@
                                 "title": "Disable Safety Checker",
                                 "default": false,
                                 "x-order": 6,
-                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                                "description": "Disable safety checker for generated images."
                             }
                         }
                     },
                     "Output": {
-                        "type": "string",
-                        "title": "Output",
-                        "format": "uri"
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
                     },
                     "Status": {
                         "enum": [
@@ -356,6 +362,15 @@
                         ],
                         "type": "string",
                         "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "megapixels": {
+                        "enum": [
+                            "1",
+                            "0.25"
+                        ],
+                        "type": "string",
+                        "title": "megapixels",
                         "description": "An enumeration."
                     },
                     "WebhookEvent": {
@@ -374,10 +389,12 @@
                             "1:1",
                             "16:9",
                             "21:9",
-                            "2:3",
                             "3:2",
+                            "2:3",
                             "4:5",
                             "5:4",
+                            "3:4",
+                            "4:3",
                             "9:16",
                             "9:21"
                         ],

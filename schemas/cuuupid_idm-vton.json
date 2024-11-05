@@ -37,9 +37,9 @@
         }
     },
     "latest_version": {
-        "id": "906425dbca90663ff5427624839572cc56ea7d380343d13e2a4c4b09d3f0c30f",
-        "created_at": "2024-04-25T03:18:00.940610+00:00",
-        "cog_version": "v0.9.5+dev",
+        "id": "c871bb9b046607b680449ecbae55fd8c6d945e0a1948644bf2361b3d021d3ff4",
+        "created_at": "2024-08-24T22:47:35.535214+00:00",
+        "cog_version": "v0.10.0-alpha13+dev",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -62,6 +62,24 @@
                             }
                         },
                         "operationId": "root__get"
+                    }
+                },
+                "/ready": {
+                    "get": {
+                        "summary": "Ready",
+                        "responses": {
+                            "200": {
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "title": "Response Ready Ready Get"
+                                        }
+                                    }
+                                },
+                                "description": "Successful Response"
+                            }
+                        },
+                        "operationId": "ready_ready_get"
                     }
                 },
                 "/shutdown": {

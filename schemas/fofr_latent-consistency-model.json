@@ -8,7 +8,7 @@
     "paper_url": null,
     "license_url": "https://github.com/fofr/cog-lcm/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/LF23xWrMie2vMCmbiswetET2BLperpEtNodZSN4yNfDkAClHB/out-0.jpg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/859c8ec6-4046-4d4e-9826-b7b575e5b79f/cover.webp",
     "default_example": {
         "id": "uzzsxzjb2sus5xl5jqnxpjlyoq",
         "model": "fofr/latent-consistency-model",

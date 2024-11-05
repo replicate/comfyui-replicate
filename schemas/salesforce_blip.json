@@ -8,7 +8,7 @@
     "paper_url": "https://arxiv.org/abs/2201.12086",
     "license_url": "https://github.com/salesforce/BLIP/blob/main/LICENSE.txt",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/mgxm/f4e50a7b-e8ca-432f-8e68-082034ebcc70/demo.jpg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/b59b459c-c475-414f-ba67-c424a7e6e6ca/demo.jpg",
     "default_example": {
         "id": "i5xhgehjkjfyhlx7dg2f5tnrti",
         "model": "salesforce/blip",

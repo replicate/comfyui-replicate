@@ -8,7 +8,7 @@
     "paper_url": null,
     "license_url": "https://github.com/fofr/cog-face-to-many/blob/main/weights_licenses.md",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/R1ayGe5efoQbaoRzgDEJdLsIZ20lWRiprvoW1F4uKAZIha6kA/ComfyUI_00001_.png",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/583bfb50-534d-4835-a856-80bd2abb332e/mona-list-emoji.webp",
     "default_example": {
         "id": "pft2dadbcdnh25z5ktctsj3sze",
         "model": "fofr/face-to-many",

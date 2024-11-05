@@ -8,7 +8,7 @@
     "paper_url": null,
     "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
     "run_count": 0,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/18259dd0-6c42-441b-90f2-b67af9e4320b/Snowflake_Arctic_Opengraph_1200x6.png",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/793e32b4-913c-4036-a847-4afb38e42fc1/Snowflake_Arctic_Opengraph_120.png",
     "default_example": {
         "id": "3knp1rt7ksrhw0cf1s0vgxh2s0",
         "model": "replicate-internal/test-staging",
@@ -264,9 +264,9 @@
         }
     },
     "latest_version": {
-        "id": "6133ce49e79282dc4fdbd984779921aa2160fb557ab17e0854aa2a7d690afb9c",
-        "created_at": "2024-04-24T03:32:23.817495+00:00",
-        "cog_version": "v0.10.0-alpha6+dev",
+        "id": "081f548e9a59c93b8355abe28ca52680c8305bc8f4a186a3de62ea41b25db8dd",
+        "created_at": "2024-04-24T02:04:53.961055+00:00",
+        "cog_version": "v0.10.0-alpha3+dev",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -289,24 +289,6 @@
                             }
                         },
                         "operationId": "root__get"
-                    }
-                },
-                "/ready": {
-                    "get": {
-                        "summary": "Ready",
-                        "responses": {
-                            "200": {
-                                "content": {
-                                    "application/json": {
-                                        "schema": {
-                                            "title": "Response Ready Ready Get"
-                                        }
-                                    }
-                                },
-                                "description": "Successful Response"
-                            }
-                        },
-                        "operationId": "ready_ready_get"
                     }
                 },
                 "/shutdown": {
@@ -506,75 +488,16 @@
                         "type": "object",
                         "title": "Input",
                         "properties": {
-                            "top_k": {
-                                "type": "integer",
-                                "title": "Top K",
-                                "default": 50,
-                                "x-order": 5,
-                                "description": "The number of highest probability tokens to consider for generating the output. If > 0, only keep the top k tokens with highest probability (top-k filtering). Lower to ignore less likely tokens"
-                            },
-                            "top_p": {
-                                "type": "number",
-                                "title": "Top P",
-                                "default": 0.9,
-                                "x-order": 4,
-                                "description": "A probability threshold for generating the output. If < 1.0, only keep the top tokens with cumulative probability >= top_p (nucleus filtering). Nucleus filtering is described in Holtzman et al. (http://arxiv.org/abs/1904.09751). Lower to ignore less likely tokens."
-                            },
-                            "prompt": {
+                            "name": {
                                 "type": "string",
-                                "title": "Prompt",
-                                "default": "",
-                                "x-order": 0,
-                                "description": "Prompt to send to the model."
+                                "title": "Name",
+                                "x-order": 0
                             },
-                            "temperature": {
-                                "type": "number",
-                                "title": "Temperature",
-                                "default": 0.6,
-                                "x-order": 3,
-                                "description": "The value used to modulate the next token probabilities. Adjusts randomness of outputs, greater than 1 is random and 0 is deterministic, 0.75 is a good starting value."
-                            },
-                            "max_new_tokens": {
-                                "type": "integer",
-                                "title": "Max New Tokens",
-                                "default": 512,
-                                "x-order": 2,
-                                "description": "The maximum number of tokens the model should generate as output. A word is generally 2-3 tokens."
-                            },
-                            "min_new_tokens": {
-                                "type": "integer",
-                                "title": "Min New Tokens",
-                                "default": 0,
-                                "x-order": 1,
-                                "description": "The minimum number of tokens the model should generate as output. A word is generally 2-3 tokens."
-                            },
-                            "stop_sequences": {
+                            "name_file": {
                                 "type": "string",
-                                "title": "Stop Sequences",
-                                "default": "<|im_end|>",
-                                "x-order": 9,
-                                "description": "A comma-separated list of sequences to stop generation at. For example, '<end>,<stop>' will stop generation at the first instance of 'end' or '<stop>'."
-                            },
-                            "prompt_template": {
-                                "type": "string",
-                                "title": "Prompt Template",
-                                "default": "<|im_start|>system\nYou're a helpful assistant<|im_end|>\n<|im_start|>user\n{prompt}<|im_end|>\n\n<|im_start|>assistant\n",
-                                "x-order": 8,
-                                "description": "Prompt template. The string `{prompt}` will be substituted for the input prompt. If you want to generate dialog output, use this template as a starting point and construct the prompt string manually, leaving `prompt_template={prompt}`."
-                            },
-                            "presence_penalty": {
-                                "type": "number",
-                                "title": "Presence Penalty",
-                                "default": 1.15,
-                                "x-order": 6,
-                                "description": "A parameter that penalizes repeated tokens regardless of the number of appearances. As the value increases, the model will be less likely to repeat tokens in the output."
-                            },
-                            "frequency_penalty": {
-                                "type": "number",
-                                "title": "Frequency Penalty",
-                                "default": 0.2,
-                                "x-order": 7,
-                                "description": "Frequency penalty is similar to presence penalty, but while presence penalty applies to all tokens that have been sampled at least once, the frequency penalty proportional to how often a particular token has already been sampled."
+                                "title": "Name File",
+                                "format": "uri",
+                                "x-order": 1
                             }
                         }
                     },
@@ -584,8 +507,7 @@
                             "type": "string"
                         },
                         "title": "Output",
-                        "x-cog-array-type": "iterator",
-                        "x-cog-array-display": "concatenate"
+                        "x-cog-array-type": "iterator"
                     },
                     "Status": {
                         "enum": [

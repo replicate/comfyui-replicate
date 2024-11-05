@@ -4,43 +4,49 @@
     "name": "flux-dev",
     "description": "A 12 billion parameter rectified flow transformer capable of generating images from text descriptions",
     "visibility": "public",
-    "github_url": "https://github.com/black-forest-labs/flux",
+    "github_url": "https://github.com/replicate/cog-flux",
     "paper_url": null,
     "license_url": "https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-dev",
     "run_count": 0,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/4c0ff159-ab97-4962-acdf-a0f422694a81/Replicate_Prediction_15.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/cb4203e5-9ece-42e7-b326-98ff3fa35c3a/Replicate_Prediction_15.webp",
     "default_example": {
-        "id": "b94wgvxmz9rm40ch1rqtkjja6c",
+        "id": "jbwzpaxs71rm40cj1e5rqq33c0",
         "model": "replicate/flux-dev-internal-model",
-        "version": "21bd4fdfaff8c94de425081803719d30f2d0e6c9c2249f8995eaa428aea0a7f4",
+        "version": "2081ff3a5490ce6b6a2040d3d280a6beb2efbcf63851aabce421fbed8be6e9a2",
         "status": "succeeded",
         "input": {
             "prompt": "black forest gateau cake spelling out the words \"FLUX DEV\", tasty, food photography, dynamic shot",
+            "go_fast": true,
             "guidance": 3.5,
+            "num_outputs": 1,
             "aspect_ratio": "1:1",
             "output_format": "webp",
-            "output_quality": 80
+            "output_quality": 80,
+            "prompt_strength": 0.8,
+            "num_inference_steps": 28
         },
-        "output": "https://replicate.delivery/yhqm/QWK1NynxhJqlN9EsMfIrufeLYl88RlBGwVCWdio1d1TDbocmA/out-0.webp",
-        "logs": null,
+        "output": [
+            "https://replicate.delivery/yhqm/xU3wLlAQcGpZLVQipTVxaZMaL4omk9n7d1suU0byMnngfQvJA/out-0.webp"
+        ],
+        "logs": "running quantized prediction\ngenerating\nUsing seed: 9337\n  0%|          | 0/28 [00:00<?, ?it/s]\n  7%|▋         | 2/28 [00:00<00:01, 17.38it/s]\n 14%|█▍        | 4/28 [00:00<00:01, 12.53it/s]\n 21%|██▏       | 6/28 [00:00<00:01, 11.49it/s]\n 29%|██▊       | 8/28 [00:00<00:01, 11.06it/s]\n 36%|███▌      | 10/28 [00:00<00:01, 10.76it/s]\n 43%|████▎     | 12/28 [00:01<00:01, 10.50it/s]\n 50%|█████     | 14/28 [00:01<00:01, 10.46it/s]\n 57%|█████▋    | 16/28 [00:01<00:01, 10.46it/s]\n 64%|██████▍   | 18/28 [00:01<00:00, 10.44it/s]\n 71%|███████▏  | 20/28 [00:01<00:00, 10.40it/s]\n 79%|███████▊  | 22/28 [00:02<00:00, 10.26it/s]\n 86%|████████▌ | 24/28 [00:02<00:00, 10.29it/s]\n 93%|█████████▎| 26/28 [00:02<00:00, 10.34it/s]\n100%|██████████| 28/28 [00:02<00:00, 10.37it/s]\n100%|██████████| 28/28 [00:02<00:00, 10.65it/s]\nTotal safe images: 1 out of 1",
         "error": null,
         "metrics": {
             "image_count": 1,
-            "predict_time": 12.326882126,
-            "total_time": 12.363237
+            "predict_time": 3.200260047,
+            "total_time": 3.208556
         },
-        "created_at": "2024-08-01T13:44:53.242000Z",
-        "started_at": "2024-08-01T13:44:53.278355Z",
-        "completed_at": "2024-08-01T13:45:05.605237Z",
+        "created_at": "2024-09-19T18:29:19.288000Z",
+        "started_at": "2024-09-19T18:29:19.296296Z",
+        "completed_at": "2024-09-19T18:29:22.496556Z",
         "urls": {
-            "get": "https://api.replicate.com/v1/predictions/b94wgvxmz9rm40ch1rqtkjja6c",
-            "cancel": "https://api.replicate.com/v1/predictions/b94wgvxmz9rm40ch1rqtkjja6c/cancel"
+            "get": "https://api.replicate.com/v1/predictions/jbwzpaxs71rm40cj1e5rqq33c0",
+            "cancel": "https://api.replicate.com/v1/predictions/jbwzpaxs71rm40cj1e5rqq33c0/cancel"
         }
     },
     "latest_version": {
-        "id": "2d27e06ff0ee2494eb3ae8e3da0be637763f59bf6a488b32b2f89cd928c3faba",
-        "created_at": "2024-07-29T23:42:53.742826+00:00",
-        "cog_version": "0.10.0-alpha16",
+        "id": "0cce3d40843963ebc7b6d976778e977c8f3ae3d0980a37cb5204f8fa0289e3d2",
+        "created_at": "2024-10-02T01:36:05.962718+00:00",
+        "cog_version": "0.9.21",
         "openapi_schema": {
             "info": {
                 "title": "Cog",
@@ -63,24 +69,6 @@
                             }
                         },
                         "operationId": "root__get"
-                    }
-                },
-                "/ready": {
-                    "get": {
-                        "summary": "Ready",
-                        "responses": {
-                            "200": {
-                                "content": {
-                                    "application/json": {
-                                        "schema": {
-                                            "title": "Response Ready Ready Get"
-                                        }
-                                    }
-                                },
-                                "description": "Successful Response"
-                            }
-                        },
-                        "operationId": "ready_ready_get"
                     }
                 },
                 "/shutdown": {
@@ -286,7 +274,7 @@
                             "seed": {
                                 "type": "integer",
                                 "title": "Seed",
-                                "x-order": 6,
+                                "x-order": 7,
                                 "description": "Random seed. Set for reproducible generation"
                             },
                             "image": {
@@ -302,14 +290,31 @@
                                 "x-order": 0,
                                 "description": "Prompt for generated image"
                             },
+                            "go_fast": {
+                                "type": "boolean",
+                                "title": "Go Fast",
+                                "default": true,
+                                "x-order": 11,
+                                "description": "Run faster predictions with model optimized for speed (currently fp8 quantized); disable to run in original bf16"
+                            },
                             "guidance": {
                                 "type": "number",
                                 "title": "Guidance",
-                                "default": 3.5,
+                                "default": 3,
                                 "maximum": 10,
                                 "minimum": 0,
-                                "x-order": 5,
-                                "description": "Guidance for generated image. Ignored for flux-schnell"
+                                "x-order": 6,
+                                "description": "Guidance for generated image"
+                            },
+                            "megapixels": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/megapixels"
+                                    }
+                                ],
+                                "default": "1",
+                                "x-order": 12,
+                                "description": "Approximate number of megapixels for generated image"
                             },
                             "num_outputs": {
                                 "type": "integer",
@@ -337,7 +342,7 @@
                                     }
                                 ],
                                 "default": "webp",
-                                "x-order": 7,
+                                "x-order": 8,
                                 "description": "Format of the output images"
                             },
                             "output_quality": {
@@ -346,7 +351,7 @@
                                 "default": 80,
                                 "maximum": 100,
                                 "minimum": 0,
-                                "x-order": 8,
+                                "x-order": 9,
                                 "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
                             },
                             "prompt_strength": {
@@ -358,19 +363,31 @@
                                 "x-order": 3,
                                 "description": "Prompt strength when using img2img. 1.0 corresponds to full destruction of information in image"
                             },
+                            "num_inference_steps": {
+                                "type": "integer",
+                                "title": "Num Inference Steps",
+                                "default": 28,
+                                "maximum": 50,
+                                "minimum": 1,
+                                "x-order": 5,
+                                "description": "Number of denoising steps. Recommended range is 28-50"
+                            },
                             "disable_safety_checker": {
                                 "type": "boolean",
                                 "title": "Disable Safety Checker",
                                 "default": false,
-                                "x-order": 9,
-                                "description": "Disable safety checker for generated images. This feature is only available through the API. See [https://replicate.com/docs/how-does-replicate-work#safety](https://replicate.com/docs/how-does-replicate-work#safety)"
+                                "x-order": 10,
+                                "description": "Disable safety checker for generated images."
                             }
                         }
                     },
                     "Output": {
-                        "type": "string",
-                        "title": "Output",
-                        "format": "uri"
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "title": "Output"
                     },
                     "Status": {
                         "enum": [
@@ -382,6 +399,15 @@
                         ],
                         "type": "string",
                         "title": "Status",
+                        "description": "An enumeration."
+                    },
+                    "megapixels": {
+                        "enum": [
+                            "1",
+                            "0.25"
+                        ],
+                        "type": "string",
+                        "title": "megapixels",
                         "description": "An enumeration."
                     },
                     "WebhookEvent": {
@@ -400,10 +426,12 @@
                             "1:1",
                             "16:9",
                             "21:9",
-                            "2:3",
                             "3:2",
+                            "2:3",
                             "4:5",
                             "5:4",
+                            "3:4",
+                            "4:3",
                             "9:16",
                             "9:21"
                         ],

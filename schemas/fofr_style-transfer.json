@@ -8,7 +8,7 @@
     "paper_url": null,
     "license_url": "https://github.com/fofr/cog-style-transfer/blob/main/LICENSE",
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/wmtBOf7pSlzHF6RBbeG5YpIXEYkRlGcoTpnOMi2Fqg9EUeWlA/ComfyUI_00001_.webp",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/fd0ac369-c6ac-4927-b882-ece29cffc45d/cover.webp",
     "default_example": {
         "id": "k95qy9gahdrgp0cexq38bkrrsr",
         "model": "fofr/style-transfer",

@@ -8,7 +8,7 @@
     "paper_url": "https://arxiv.org/abs/2306.05284",
     "license_url": "https://github.com/facebookresearch/audiocraft/blob/main/LICENSE_weights",
     "run_count": 0,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/e3d6b391-571b-4e24-8531-936a0fee9fba/musicgen.jpeg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/a921a8b3-3e9e-48ef-995c-29143ea11bec/musicgen.jpeg",
     "default_example": {
         "id": "soub5pjbe5g5u62q536t73ltku",
         "model": "meta/musicgen",

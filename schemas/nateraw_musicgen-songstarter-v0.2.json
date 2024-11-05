@@ -8,7 +8,7 @@
     "paper_url": null,
     "license_url": null,
     "run_count": 0,
-    "cover_image_url": "https://tjzk.replicate.delivery/models_models_cover_image/4ee6eda3-5e8e-40b9-9a37-48f8c2ff6076/songstarter-v0.2.jpeg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/98ee001d-80f8-4562-956f-d8b07dd0a671/songstarter.jpeg",
     "default_example": {
         "id": "qrn4751khhrgg0cetkdv7fpv2g",
         "model": "nateraw/musicgen-songstarter-v0.2",

@@ -8,7 +8,7 @@
     "paper_url": "https://arxiv.org/abs/2301.12597",
     "license_url": null,
     "run_count": 0,
-    "cover_image_url": "https://replicate.delivery/pbxt/IJEPmgAlL2zNBNDoRRKFegTEcxnlRhoQxlNjPHSZEy0pSIKn/gg_bridge.jpeg",
+    "cover_image_url": "https://tjzk.replicate.delivery/models_models_featured_image/031b9aee-ed15-4429-a7e4-813b72e9edc5/gg_bridge.jpeg",
     "default_example": {
         "id": "uhd4lhedtvdlbnm2cyhzx65zpe",
         "model": "andreasjansson/blip-2",
