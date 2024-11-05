@@ -1,6 +1,5 @@
 import os
 import json
-import requests
 from PIL import Image
 from io import BytesIO
 import io
@@ -120,26 +119,21 @@ def create_comfyui_node(schema):
                 print("No image output received")
                 return None
 
-            # Handle both string and list outputs
-            output_list = [output] if isinstance(output, str) else list(output)
+            output_list = [output] if not isinstance(output, list) else output
             if output_list:
                 output_tensors = []
                 transform = transforms.ToTensor()
-                for image_url in output_list:
-                    response = requests.get(image_url)
-                    if response.status_code == 200:
-                        image = Image.open(BytesIO(response.content))
-                        if image.mode != "RGB":
-                            image = image.convert("RGB")
+                for file_obj in output_list:
+                    image_data = file_obj.read()
+                    image = Image.open(BytesIO(image_data))
+                    if image.mode != "RGB":
+                        image = image.convert("RGB")
 
-                        tensor_image = transform(image)
-                        tensor_image = tensor_image.unsqueeze(0)
-                        tensor_image = tensor_image.permute(0, 2, 3, 1).cpu().float()
-                        output_tensors.append(tensor_image)
-                    else:
-                        print(
-                            f"Failed to download image. Status code: {response.status_code}"
-                        )
+                    tensor_image = transform(image)
+                    tensor_image = tensor_image.unsqueeze(0)
+                    tensor_image = tensor_image.permute(0, 2, 3, 1).cpu().float()
+                    output_tensors.append(tensor_image)
+
                 # Combine all tensors into a single batch if multiple images
                 return (
                     torch.cat(output_tensors, dim=0)
@@ -155,42 +149,26 @@ def create_comfyui_node(schema):
                 print("No audio output received from the model")
                 return None
 
-            if isinstance(output, str):
-                output_list = [output]
-            elif isinstance(output, (list, tuple)):
-                output_list = list(output)
-            else:
-                print(f"Unexpected output type: {type(output)}")
-                return None
+            output_list = [output] if not isinstance(output, list) else output
 
-            if output_list:
-                audio_data = []
-                for audio_url in output_list:
-                    if audio_url:
-                        response = requests.get(audio_url)
-                        if response.status_code == 200:
-                            audio_content = BytesIO(response.content)
-                            waveform, sample_rate = torchaudio.load(audio_content)
-                            audio_data.append(
-                                {
-                                    "waveform": waveform.unsqueeze(0),
-                                    "sample_rate": sample_rate,
-                                }
-                            )
-                        else:
-                            print(
-                                f"Failed to download audio. Status code: {response.status_code}"
-                            )
-                    else:
-                        print("Empty audio URL received")
+            audio_data = []
+            for audio_file in output_list:
+                if audio_file:
+                    audio_content = BytesIO(audio_file.read())
+                    waveform, sample_rate = torchaudio.load(audio_content)
+                    audio_data.append({
+                        "waveform": waveform.unsqueeze(0),
+                        "sample_rate": sample_rate
+                    })
+                else:
+                    print("Empty audio file received")
 
-                # If there's only one audio file, return it directly
-                if len(audio_data) == 1:
-                    return audio_data[0]
-                # If there are multiple audio files, return them as a list
+            if len(audio_data) == 1:
+                return audio_data[0]
+            elif len(audio_data) > 0:
                 return audio_data
             else:
-                print("No valid audio URLs in the output")
+                print("No valid audio files processed")
                 return None
 
         def remove_falsey_optional_inputs(self, kwargs):
