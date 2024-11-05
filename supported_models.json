@@ -38,7 +38,6 @@
     "meta/llama-2-70b-chat",
     "meta/llama-2-7b-chat",
     "meta/musicgen",
-    "mistralai/mixtral-8x7b-instruct-v0.1",
     "nateraw/audio-super-resolution",
     "nateraw/musicgen-songstarter-v0.2",
     "omniedgeio/face-swap",
